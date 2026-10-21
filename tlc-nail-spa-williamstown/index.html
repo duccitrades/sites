@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TLC Nail Spa | Williamstown, NJ</title>
+<meta name="description" content="TLC Nail Spa on S Black Horse Pike in Williamstown, NJ. Manicures, pedicures, nail art and brows. Call (856) 875-9960.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F3F0; --card:#FFFFFF; --ink:#1A1D1B; --muted:#4A504D;
+  --em:#14523F; --em-deep:#0F3F31; --em-tint:#E2ECE6; --brass:#A88B4A;
+  --frame:#E7E4DE; --line:#DCD8D0;
+  --head:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:clip;padding-bottom:64px}
+img{display:block;max-width:100%}
+a{color:var(--em)}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,5vw,42px);font-weight:400}
+h3{font-size:21px}
+p{margin:0 0 1em}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+.kicker{font-family:var(--head);font-size:14px;letter-spacing:.04em;color:var(--em);margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:1px;background:var(--brass)}
+section{padding:64px 0}
+.sec-head{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;max-width:620px}
+.sec-head p{color:var(--muted);margin:0}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--em);color:#fff;border-bottom:1px solid var(--brass)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;height:60px}
+.brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-family:var(--head);font-size:19px;font-weight:500;white-space:nowrap}
+.brand svg{flex:none}
+.nav{display:none;gap:22px}
+.nav a{color:#fff;text-decoration:none;font-family:var(--head);font-size:15px;opacity:.92}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.pill{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--em-deep);text-decoration:none;font-family:var(--head);font-weight:500;font-size:15px;padding:8px 13px;border-radius:999px;white-space:nowrap;position:relative;overflow:hidden}
+@media (max-width:420px){.brand{font-size:17px;gap:7px}.brand svg{width:22px;height:22px}.pill{font-size:14px;padding:7px 10px;gap:5px}.top .wrap{gap:6px}}
+
+/* buttons + brush swipe */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--head);font-size:16px;font-weight:500;text-decoration:none;border-radius:10px;padding:13px 20px;border:1.5px solid var(--em);cursor:pointer;line-height:1.2;isolation:isolate}
+.btn-solid{background:var(--em);color:#fff}
+.btn-solid:hover{background:var(--em-deep)}
+.btn-line{background:var(--card);color:var(--em-deep)}
+.btn-line:hover{background:var(--em-tint)}
+.swipe-stroke{position:absolute;left:-40%;top:50%;width:40%;height:150%;transform:translateY(-50%) skewX(-18deg);pointer-events:none;z-index:-1;border-radius:40% 60% 55% 45%/50%;opacity:0}
+.btn-solid .swipe-stroke,.pill .swipe-stroke,.callbar .swipe-stroke{background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.28) 35%,rgba(255,255,255,.36) 60%,rgba(255,255,255,0))}
+.btn-line .swipe-stroke,.chip .swipe-stroke{background:linear-gradient(90deg,rgba(20,82,63,0),rgba(20,82,63,.16) 40%,rgba(20,82,63,.22) 60%,rgba(20,82,63,0))}
+.pill .swipe-stroke{background:linear-gradient(90deg,rgba(20,82,63,0),rgba(20,82,63,.16) 40%,rgba(20,82,63,.2) 60%,rgba(20,82,63,0))}
+.swiping .swipe-stroke{animation:brush .5s cubic-bezier(.3,.7,.3,1) forwards}
+@keyframes brush{0%{left:-45%;opacity:0;width:30%}15%{opacity:1}70%{opacity:1;width:70%}100%{left:105%;opacity:0;width:40%}}
+
+/* photo frames */
+.ph{position:relative;overflow:hidden;background:var(--frame);border-radius:14px}
+.ph .lbl{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;color:#2E3431;font-family:var(--head);font-size:14px;line-height:1.3;gap:4px}
+.ph .lbl small{font-family:var(--body);font-style:italic;font-size:13px;color:#454B48}
+.ph .lbl::before{content:"";width:26px;height:1px;background:var(--brass);margin-bottom:6px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.hero{padding:28px 0 52px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.hero-text .loc{font-family:var(--head);font-size:14px;color:var(--muted);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.hero-text .loc::before{content:"";width:28px;height:1px;background:var(--brass)}
+.hero h1{font-size:clamp(42px,7vw,68px);font-weight:500;letter-spacing:-.02em}
+.hero .sub{font-size:18px;color:var(--muted);margin:12px 0 18px;max-width:30em}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.stack{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:96px 96px;gap:8px}
+.stack .ph:nth-child(1){grid-row:1 / span 2}
+.stack .ph{border-radius:12px;border:5px solid #fff;box-shadow:0 8px 22px -14px rgba(20,40,30,.5)}
+.hours-card{background:var(--card);border-radius:16px;padding:20px 20px 14px;box-shadow:0 1px 0 var(--line),0 10px 30px -18px rgba(20,40,30,.35);position:relative}
+.hours-card::before{content:"";position:absolute;left:20px;right:20px;top:0;height:2px;background:var(--brass);border-radius:2px}
+.hc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.hc-top h2{font-size:22px;font-weight:500}
+.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--head);font-size:15px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--em-tint);color:var(--em-deep)}
+.status .dot{width:9px;height:9px;border-radius:50%;background:var(--em)}
+.status.closed{background:#F2E7E2;color:#6E2A1E}
+.status.closed .dot{background:#9A3B2B}
+.status.open .dot{animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(20,82,63,.45)}70%{box-shadow:0 0 0 7px rgba(20,82,63,0)}100%{box-shadow:0 0 0 0 rgba(20,82,63,0)}}
+.days{list-style:none;margin:0;padding:0}
+.days li{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-radius:8px;font-size:16px;border-left:3px solid transparent}
+.days li + li{border-top:1px solid #EEEBE6}
+.days li.today{background:var(--em-tint);border-left-color:var(--em);color:var(--em-deep);font-weight:600}
+.days li.today + li{border-top-color:transparent}
+.days .d{font-family:var(--head)}
+.days .tag{font-family:var(--head);font-size:12px;font-weight:500;margin-left:6px;color:var(--em-deep)}
+.hc-foot{font-size:14px;color:var(--muted);margin:10px 0 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.hc-foot a{font-family:var(--head)}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .nav{display:flex}
+  section{padding:88px 0}
+  .hero{padding:44px 0 72px}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px 48px;align-items:start}
+  .hero-text{grid-column:1;grid-row:1}
+  .hours-card{grid-column:1;grid-row:2}
+  .stack{grid-column:2;grid-row:1 / span 2;grid-template-columns:1fr 1fr;grid-template-rows:230px 230px 120px;gap:14px}
+  .stack .ph:nth-child(1){grid-row:1 / span 2;grid-column:1}
+  .stack .ph:nth-child(1){transform:rotate(-1.2deg)}
+  .stack .ph:nth-child(2){grid-row:1;grid-column:2;transform:rotate(1.4deg) translateY(22px)}
+  .stack .ph:nth-child(3){grid-row:2 / span 2;grid-column:2;transform:rotate(-.8deg) translateY(30px)}
+}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.svc{background:var(--card);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)}
+.svc .ph{border-radius:0;height:170px}
+.svc .body{padding:18px 20px 20px}
+.svc h3{margin-bottom:6px}
+.svc p{color:var(--muted);margin:0;font-size:16px}
+.svc .num{font-family:var(--head);font-size:13px;color:var(--em);display:block;margin-bottom:6px}
+@media (min-width:760px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.svc{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.svc .ph{height:100%;min-height:200px}}
+
+/* shapes */
+.shapes{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shape-box{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chip{position:relative;overflow:hidden;isolation:isolate;font-family:var(--head);font-size:16px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--em);background:var(--em);color:#fff}
+.chip[aria-pressed="true"] .swipe-stroke{background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.3) 50%,rgba(255,255,255,0))}
+.note{background:var(--bg);border-radius:14px;padding:16px 18px;border-left:3px solid var(--em);min-height:96px}
+.note strong{font-family:var(--head);font-weight:500;font-size:20px;display:block;margin-bottom:4px;color:var(--em-deep)}
+.note p{margin:0;color:var(--muted)}
+.nail-stage{background:var(--bg);border-radius:20px;display:flex;justify-content:center;align-items:flex-end;padding:20px 10px 0;height:300px;position:relative;overflow:hidden}
+.nail-stage svg{height:280px;width:auto}
+.stage-line{position:absolute;left:24px;right:24px;bottom:22px;height:1px;background:var(--brass);opacity:.8}
+.shape-cta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.shape-cta span{font-size:15px;color:var(--muted)}
+@media (min-width:760px){.shape-box{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}.nail-stage{height:380px}.nail-stage svg{height:350px}}
+
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.rev{background:var(--card);border-radius:16px;padding:22px 22px 18px;margin:0;position:relative}
+.rev::before{content:"";position:absolute;left:22px;top:0;width:34px;height:2px;background:var(--brass)}
+.rev .theme{font-family:var(--head);font-size:13px;color:var(--em);margin:0 0 8px}
+.rev blockquote{margin:0 0 12px;font-size:19px;line-height:1.45}
+.rev figcaption{font-family:var(--head);font-size:14px;color:var(--muted)}
+.rev.big blockquote{font-size:22px}
+.rev-note{font-size:14px;color:var(--muted);margin-top:16px}
+@media (min-width:760px){.rev-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}.rev{grid-column:span 2}.rev.big{grid-column:span 3}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-flow:dense;gap:10px}
+.gal .ph{aspect-ratio:1/1;border-radius:12px}
+.gal .ph.tall{grid-row:span 2;aspect-ratio:auto}
+@media (min-width:760px){.gal{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+.card{background:var(--card);border-radius:16px;padding:22px}
+.addr{font-family:var(--head);font-size:24px;line-height:1.25;margin:4px 0 14px}
+.mapart{background:var(--em-tint);border-radius:14px;height:200px;margin-bottom:16px;overflow:hidden}
+.mapart svg{width:100%;height:100%}
+form label{display:block;font-family:var(--head);font-size:14px;margin:12px 0 5px}
+form input,form select{width:100%;font:inherit;font-size:16px;padding:11px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+form input:focus,form select:focus{outline:2px solid var(--em);outline-offset:1px}
+form .btn{margin-top:16px;width:100%}
+.form-msg{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;background:var(--em-tint);color:var(--em-deep);font-size:15px}
+.form-msg.show{display:block}
+@media (min-width:760px){.visit-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px}}
+
+/* call band + footer */
+.band{background:var(--em);color:#fff;padding:52px 0;border-top:1px solid var(--brass)}
+.band .wrap{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.band h2{color:#fff}
+.band p{margin:0;color:#fff;opacity:.95}
+.btn-white{background:#fff;color:var(--em-deep);border-color:#fff}
+.btn-white .swipe-stroke{background:linear-gradient(90deg,rgba(20,82,63,0),rgba(20,82,63,.18) 50%,rgba(20,82,63,0))}
+@media (min-width:760px){.band .wrap{flex-direction:row;justify-content:space-between;align-items:center}}
+footer{background:var(--em-deep);color:#fff;padding:30px 0 34px;font-size:15px}
+footer .wrap{display:flex;flex-direction:column;gap:8px}
+footer a{color:#fff}
+footer .fine{opacity:.9;font-size:14px}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--em);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;height:60px;font-family:var(--head);font-size:17px;font-weight:500;border-top:1px solid var(--brass);overflow:hidden;isolation:isolate}
+@media (min-width:760px){.callbar{display:none}}
+.badge{position:fixed;right:10px;bottom:70px;z-index:60;background:#1A1D1B;color:#fff;font-family:var(--head);font-size:12px;padding:5px 10px;border-radius:999px;letter-spacing:.02em}
+@media (min-width:760px){.badge{bottom:14px;right:14px}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .swiping .swipe-stroke{animation:none}
+  .status.open .dot{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="TLC Nail Spa, back to top">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 24V12C7 6 9.5 2 13 2s6 4 6 10v12" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M8.6 11.5c1-4 2.6-6.4 4.4-6.4" fill="none" stroke="#A88B4A" stroke-width="1.6" stroke-linecap="round"/></svg>
+      TLC Nail Spa
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#hours">Hours</a><a href="#services">Services</a><a href="#shapes">Shapes</a><a href="#reviews">Reviews</a><a href="#photos">Photos</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="pill js-swipe" href="tel:+18568759960" aria-label="Call TLC Nail Spa at (856) 875-9960">
+      <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      (856) 875-9960
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="TLC Nail Spa">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="loc">103 S Black Horse Pike, Williamstown</p>
+      <h1>TLC Nail Spa</h1>
+      <p class="sub">Manicures, pedicures, nail art and brows, right on the Black Horse Pike. Open six days a week. Call to book or stop in.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid js-swipe" href="tel:+18568759960">Call (856) 875-9960</a>
+        <a class="btn btn-line js-swipe" href="https://www.google.com/maps/search/?api=1&amp;query=103%20S%20Black%20Horse%20Pike%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+
+    <div class="stack" aria-label="Photos of the salon">
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here<small>salon</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/AlsbcgyIgNTEQePYh7pa9Q/l.jpg" alt="TLC Nail Spa photo from Yelp" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here<small>salon</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/1_Qwk9z2X7eadBsThOCwTg/l.jpg" alt="TLC Nail Spa photo from Yelp" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here<small>salon</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/VFmjg_H7ytDd8-7ft9QHpQ/l.jpg" alt="TLC Nail Spa photo from Yelp" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+    </div>
+
+    <div class="hours-card" id="hours">
+      <div class="hc-top">
+        <h2>Hours</h2>
+        <span class="status" id="status" aria-live="polite"><span class="dot"></span><span id="statusText">Mon-Fri 10-7, Sat 10-6</span></span>
+      </div>
+      <ul class="days" id="days">
+        <li data-d="1"><span class="d">Monday</span><span>10 am - 7 pm</span></li>
+        <li data-d="2"><span class="d">Tuesday</span><span>10 am - 7 pm</span></li>
+        <li data-d="3"><span class="d">Wednesday</span><span>10 am - 7 pm</span></li>
+        <li data-d="4"><span class="d">Thursday</span><span>10 am - 7 pm</span></li>
+        <li data-d="5"><span class="d">Friday</span><span>10 am - 7 pm</span></li>
+        <li data-d="6"><span class="d">Saturday</span><span>10 am - 6 pm</span></li>
+        <li data-d="0"><span class="d">Sunday</span><span>Closed</span></li>
+      </ul>
+      <p class="hc-foot"><span>Times in Williamstown (Eastern)</span><a href="#visit">Map and directions</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">What we do</p>
+      <h2 id="svc-h">Hands, feet and brows</h2>
+      <p>The basics, done well. Call and ask what fits your visit.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="ph"><div class="lbl">Your photo here<small>a fresh manicure</small></div></div>
+        <div class="body"><span class="num">01</span><h3>Manicures</h3><p>Shaping, cuticle care and polish. A plain, clean color or something with more going on.</p></div>
+      </article>
+      <article class="svc">
+        <div class="ph"><div class="lbl">Your photo here<small>the pedicure chairs</small></div></div>
+        <div class="body"><span class="num">02</span><h3>Pedicures</h3><p>Sit back in a spa pedicure chair and pick your polish. A good reset after a long week.</p></div>
+      </article>
+      <article class="svc">
+        <div class="ph"><div class="lbl">Your photo here<small>nail art</small></div></div>
+        <div class="body"><span class="num">03</span><h3>Nail art</h3><p>Bring a picture or an idea. Your tech will talk it through with you before starting.</p></div>
+      </article>
+      <article class="svc">
+        <div class="ph"><div class="lbl">Your photo here<small>brows</small></div></div>
+        <div class="body"><span class="num">04</span><h3>Brows</h3><p>Eyebrow waxing for a clean shape. Easy to add on to a nail visit.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="shapes" id="shapes" aria-labelledby="shape-h">
+  <div class="wrap shape-box">
+    <div>
+      <p class="kicker">Pick your shape</p>
+      <h2 id="shape-h">Not sure what shape to ask for?</h2>
+      <p style="color:var(--muted);margin-top:10px">Tap a shape and watch the nail change. Then tell your tech when you sit down.</p>
+      <div class="chips" role="group" aria-label="Nail shapes">
+        <button type="button" class="chip js-swipe" data-shape="square" aria-pressed="false">Square</button>
+        <button type="button" class="chip js-swipe" data-shape="round" aria-pressed="false">Round</button>
+        <button type="button" class="chip js-swipe" data-shape="oval" aria-pressed="true">Oval</button>
+        <button type="button" class="chip js-swipe" data-shape="almond" aria-pressed="false">Almond</button>
+        <button type="button" class="chip js-swipe" data-shape="coffin" aria-pressed="false">Coffin</button>
+      </div>
+      <div class="note" aria-live="polite"><strong id="shapeName">Oval</strong><p id="shapeNote">A soft curve that makes fingers look longer. A classic that suits most hands.</p></div>
+      <div class="shape-cta">
+        <a class="btn btn-solid js-swipe" href="tel:+18568759960">Call to book this shape</a>
+        <span>No guessing at the chair.</span>
+      </div>
+    </div>
+    <div class="nail-stage" aria-hidden="true">
+      <svg viewBox="0 0 160 260" role="img">
+        <defs>
+          <linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#E8D7C8"/><stop offset=".5" stop-color="#F1E3D6"/><stop offset="1" stop-color="#E3D0BF"/></linearGradient>
+          <linearGradient id="polish" x1="0" x2="1"><stop offset="0" stop-color="#0F3F31"/><stop offset=".45" stop-color="#1F6B53"/><stop offset="1" stop-color="#14523F"/></linearGradient>
+        </defs>
+        <path d="M22 260V120C22 72 46 52 80 52s58 20 58 68v140z" fill="url(#skin)"/>
+                <g transform="translate(20 0)">
+          <path id="nail" d="" fill="url(#polish)"/>
+          <path id="shine" d="M30 162 C 29 145 30 128 33 112" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="stage-line"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">What people say</p>
+      <h2 id="rev-h">From Yelp and Google</h2>
+    </div>
+    <div class="rev-grid">
+      <figure class="rev big"><p class="theme">The room</p><blockquote>"The salon is clean and the staffs are attentive &amp; friendly."</blockquote><figcaption>Thai D., Yelp</figcaption></figure>
+      <figure class="rev big"><p class="theme">The techs</p><blockquote>"Every nail tech is friendly and are very good at nails"</blockquote><figcaption>Merlisa A., Yelp</figcaption></figure>
+      <figure class="rev"><p class="theme">Brows</p><blockquote>"They do a great job at eyebrows waxing"</blockquote><figcaption>Tyler D., Yelp</figcaption></figure>
+      <figure class="rev"><p class="theme">Service</p><blockquote>"Great service by Nancy"</blockquote><figcaption>Maureen F., Google</figcaption></figure>
+      <figure class="rev"><p class="theme">The people</p><blockquote>"Great people"</blockquote><figcaption>Margie M., Google</figcaption></figure>
+    </div>
+    <p class="rev-note">Quotes copied word for word from public Yelp and Google reviews.</p>
+  </div>
+</section>
+
+<section id="photos" aria-labelledby="gal-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Inside the salon</p>
+      <h2 id="gal-h">Have a look around</h2>
+      <p>More of your latest sets can go here, straight from your Instagram.</p>
+    </div>
+    <div class="gal">
+      <figure class="ph tall" style="margin:0"><div class="lbl">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/xUB1c53_1tZzzsxfp0KaVw/l.jpg" alt="TLC Nail Spa photo from Yelp" loading="lazy" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/s62dnHS4ZKKdBk71t_tRKw/l.jpg" alt="TLC Nail Spa photo from Yelp" loading="lazy" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/SFk_a9th-B8n65Q39KgCbA/l.jpg" alt="TLC Nail Spa photo from Yelp" loading="lazy" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/qgvYFzQGevqw-RUpP4gSPQ/l.jpg" alt="TLC Nail Spa photo from Yelp" loading="lazy" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/9Fjzb2Zaw0eUqmGTlCMdtw/l.jpg" alt="TLC Nail Spa photo from Yelp" loading="lazy" onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.remove()"></figure>
+      <figure class="ph tall" style="margin:0"><div class="lbl">Your photo here<small>your latest set</small></div></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here<small>your latest set</small></div></figure>
+      <figure class="ph" style="margin:0"><div class="lbl">Your photo here<small>your team</small></div></figure>
+      <figure class="ph tall" style="margin:0"><div class="lbl">Your photo here<small>a happy client</small></div></figure>
+    </div>
+    <div class="social">
+      <a class="btn btn-line js-swipe" href="https://www.instagram.com/tlcnailspa3/" target="_blank" rel="noopener">Instagram @tlcnailspa3</a>
+      <a class="btn btn-line js-swipe" href="https://www.facebook.com/TLCNAILSPA3/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" aria-labelledby="visit-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Visit</p>
+      <h2 id="visit-h">On the Black Horse Pike</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card">
+        <div class="mapart" aria-hidden="true">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="200" fill="#E2ECE6"/>
+            <path d="M-10 170 C 90 160 150 106 230 100 S 360 76 420 66" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+            <path d="M-10 170 C 90 160 150 106 230 100 S 360 76 420 66" fill="none" stroke="#A88B4A" stroke-width="1.2" stroke-dasharray="8 8"/>
+            <g transform="translate(232 98)">
+              <path d="M0 0c-12-16-18-24-18-33a18 18 0 0 1 36 0c0 9-6 17-18 33z" fill="#14523F"/>
+              <circle cx="0" cy="-33" r="6.5" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+        <p class="kicker" style="margin-bottom:0">Address</p>
+        <p class="addr">103 S Black Horse Pike<br>Williamstown, NJ 08094</p>
+        <div class="cta-row">
+          <a class="btn btn-solid js-swipe" href="https://www.google.com/maps/search/?api=1&amp;query=103%20S%20Black%20Horse%20Pike%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-line js-swipe" href="tel:+18568759960">(856) 875-9960</a>
+        </div>
+        <p style="margin:16px 0 0;color:var(--muted);font-size:15px">Mon-Fri 10 am - 7 pm. Sat 10 am - 6 pm. Closed Sunday.</p>
+      </div>
+      <div class="card">
+        <p class="kicker">Ask for a time</p>
+        <h3>Want us to call you back?</h3>
+        <form id="bookForm" novalidate>
+          <label for="fname">Your name</label>
+          <input id="fname" name="name" autocomplete="name" placeholder="First name">
+          <label for="fphone">Phone</label>
+          <input id="fphone" name="phone" type="tel" autocomplete="tel" placeholder="(856) 555-0123">
+          <label for="fsvc">What are you coming in for?</label>
+          <select id="fsvc" name="service">
+            <option>Manicure</option><option>Pedicure</option><option>Mani + pedi</option><option>Nail art</option><option>Brows</option>
+          </select>
+          <button class="btn btn-solid js-swipe" type="submit">Send</button>
+          <p class="form-msg" id="formMsg" role="status">This is a demo. On your real site this sends straight to you.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Call TLC Nail Spa">
+  <div class="wrap">
+    <div>
+      <h2>Your nails, sorted this week.</h2>
+      <p>Call the salon and they will find you a time.</p>
+    </div>
+    <a class="btn btn-white js-swipe" href="tel:+18568759960">Call (856) 875-9960</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong style="font-family:var(--head);font-weight:500;font-size:18px">TLC Nail Spa</strong>
+    <span>103 S Black Horse Pike, Williamstown, NJ 08094 · <a href="tel:+18568759960">(856) 875-9960</a></span>
+    <span><a href="https://www.instagram.com/tlcnailspa3/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/TLCNAILSPA3/" target="_blank" rel="noopener">Facebook</a> · <a href="#top">Back to top</a></span>
+    <span class="fine">Demo preview prepared for TLC Nail Spa</span>
+  </div>
+</footer>
+
+<a class="callbar js-swipe" href="tel:+18568759960">
+  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+  Call TLC Nail Spa
+</a>
+<div class="badge">Demo preview</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* brush-stroke swipe on buttons */
+  document.querySelectorAll('.js-swipe').forEach(function(el){
+    var s = document.createElement('span'); s.className = 'swipe-stroke'; s.setAttribute('aria-hidden','true');
+    el.appendChild(s);
+    el.addEventListener('click', function(){
+      if (reduce) return;
+      el.classList.remove('swiping'); void el.offsetWidth; el.classList.add('swiping');
+      setTimeout(function(){ el.classList.remove('swiping'); }, 560);
+    });
+  });
+
+  /* hours: America/New_York */
+  var HOURS = {0:null,1:[10,19],2:[10,19],3:[10,19],4:[10,19],5:[10,19],6:[10,18]};
+  var NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(h){ return (h > 12 ? h - 12 : h) + (h >= 12 ? ' pm' : ' am'); }
+  function nyNow(){
+    try{
+      var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+      var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+      var d = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);
+      var h = parseInt(o.hour,10) % 24, m = parseInt(o.minute,10);
+      return {d:d, t:h + m/60};
+    }catch(e){ var n = new Date(); return {d:n.getDay(), t:n.getHours() + n.getMinutes()/60}; }
+  }
+  function nextOpen(d){
+    for (var i = 1; i <= 7; i++){ var k = (d + i) % 7; if (HOURS[k]) return {d:k, i:i}; }
+  }
+  function render(){
+    var n = nyNow(), today = HOURS[n.d], st = document.getElementById('status'), tx = document.getElementById('statusText');
+    document.querySelectorAll('#days li').forEach(function(li){
+      var on = +li.getAttribute('data-d') === n.d;
+      li.classList.toggle('today', on);
+      var old = li.querySelector('.tag'); if (old) old.remove();
+      if (on){ var t = document.createElement('span'); t.className = 'tag'; t.textContent = 'Today'; li.querySelector('.d').appendChild(t); }
+    });
+    if (today && n.t >= today[0] && n.t < today[1]){
+      st.className = 'status open';
+      tx.textContent = 'Open now · until ' + fmt(today[1]);
+    } else {
+      st.className = 'status closed';
+      if (today && n.t < today[0]) tx.textContent = 'Closed · opens ' + fmt(today[0]) + ' today';
+      else { var no = nextOpen(n.d); tx.textContent = 'Closed · opens ' + (no.i === 1 ? 'tomorrow' : NAMES[no.d]) + ' ' + fmt(HOURS[no.d][0]); }
+    }
+  }
+  render(); setInterval(render, 60000);
+
+  /* nail shape morph */
+  var SHAPES = {
+    square:{v:[14,40, 14,30, 18,28, 60,28], name:'Square', note:'Straight across with crisp corners. A clean look that holds up well on shorter nails.'},
+    round:{v:[14,62, 14,34, 34,22, 60,22], name:'Round', note:'Follows the line of your fingertip. Easy to keep up and good if you work with your hands.'},
+    oval:{v:[18,72, 18,30, 38,8, 60,8], name:'Oval', note:'A soft curve that makes fingers look longer. A classic that suits most hands.'},
+    almond:{v:[16,50, 18,22, 48,2, 60,0], name:'Almond', note:'Slim sides that rise to a rounded peak. Looks elegant and works best with a little length.'},
+    coffin:{v:[30,18, 30,16, 34,14, 60,14], name:'Coffin', note:'Tapered sides with a flat tip. A bold pick for longer nails and nail art.'}
+  };
+  /* nail sits between x 14..106 (width 92), base at y 176, centered on 60 */
+  function path(v){
+    var lx=v[0], sy=v[1]+60, c1x=v[2], c1y=v[3]+60, c2x=v[4], c2y=v[5]+60, tx=v[6], ty=v[7]+60;
+    var R = function(x){ return (120 - x).toFixed(2); }, f = function(n){ return n.toFixed(2); };
+    return 'M14 176 L'+f(lx)+' '+f(sy)+' C'+f(c1x)+' '+f(c1y)+' '+f(c2x)+' '+f(c2y)+' '+f(tx)+' '+f(ty)+
+           ' C'+R(c2x)+' '+f(c2y)+' '+R(c1x)+' '+f(c1y)+' '+R(lx)+' '+f(sy)+
+           ' L106 176 C106 196 14 196 14 176Z';
+  }
+  var nail = document.getElementById('nail'), cur = SHAPES.oval.v.slice(), raf;
+  nail.setAttribute('d', path(cur));
+  function morph(to){
+    cancelAnimationFrame(raf);
+    if (reduce){ cur = to.slice(); nail.setAttribute('d', path(cur)); return; }
+    var from = cur.slice(), t0 = performance.now(), dur = 520;
+    (function step(now){
+      var k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      cur = from.map(function(a, i){ return a + (to[i] - a) * e; });
+      nail.setAttribute('d', path(cur));
+      if (k < 1) raf = requestAnimationFrame(step);
+    })(t0);
+  }
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      var s = SHAPES[c.getAttribute('data-shape')];
+      document.querySelectorAll('.chip').forEach(function(o){ o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      document.getElementById('shapeName').textContent = s.name;
+      document.getElementById('shapeNote').textContent = s.note;
+      morph(s.v);
+    });
+  });
+
+  /* demo form */
+  document.getElementById('bookForm').addEventListener('submit', function(e){
+    e.preventDefault(); document.getElementById('formMsg').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

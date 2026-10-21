@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Custom Auto Repair | Glassboro, NJ</title>
+<meta name="description" content="Custom Auto Repair on South Delsea Drive in Glassboro, NJ. Auto repair and service, body repair and painting. Call (856) 881-6600.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --putty:#F3F1EC; --putty-2:#E9E5DC; --frame:#E2DDD2; --line:#CFC9BD;
+  --graphite:#1F262B; --graphite-2:#2A3238;
+  --cherry:#B3242C; --cherry-deep:#8E1B22; --cherry-tint:#F4DEDF;
+  --ink:#16191C; --ink-2:#454B50; --white:#FFFFFF; --mist:#C9CED1;
+  --head:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--putty);color:var(--ink);font:400 16px/1.6 var(--body);padding-bottom:76px}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.12;margin:0;letter-spacing:.005em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--graphite);color:var(--white);border-bottom:2px solid var(--cherry)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:58px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--white);min-width:0}
+.brand svg{flex:none}
+.brand b{font:500 16px/1.1 var(--head);white-space:nowrap}
+.brand small{display:block;font:400 11px/1.2 var(--body);color:var(--mist);letter-spacing:.06em}
+.nav{display:none;gap:22px;font-size:14px}
+.nav a{color:var(--white);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--cherry)}
+.pill{display:inline-flex;align-items:center;gap:7px;background:var(--cherry);color:var(--white);text-decoration:none;font:600 14px/1 var(--body);padding:10px 13px;border-radius:3px;white-space:nowrap}
+@media (max-width:420px){.brand small{display:none}.brand b{font-size:15px}.pill{padding:9px 10px;font-size:13px}.top .wrap{gap:6px}}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--body);text-decoration:none;padding:15px 20px;border-radius:3px;border:1.5px solid var(--cherry);background:var(--cherry);color:var(--white);cursor:pointer;overflow:hidden;isolation:isolate}
+.btn:hover{background:var(--cherry-deep);border-color:var(--cherry-deep)}
+.btn.ghost{background:transparent;border-color:#5C666D;color:var(--white)}
+.btn.ghost:hover{border-color:var(--white)}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--white)}
+.mist{position:absolute;pointer-events:none;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;z-index:-1;
+  background:
+   radial-gradient(circle at 50% 50%,rgba(255,255,255,.55) 0 8px,transparent 9px),
+   radial-gradient(circle at 30% 38%,rgba(255,255,255,.5) 0 3px,transparent 4px),
+   radial-gradient(circle at 70% 30%,rgba(255,255,255,.45) 0 2px,transparent 3px),
+   radial-gradient(circle at 64% 70%,rgba(255,255,255,.5) 0 3px,transparent 4px),
+   radial-gradient(circle at 24% 66%,rgba(255,255,255,.4) 0 2px,transparent 3px),
+   radial-gradient(circle at 80% 54%,rgba(255,255,255,.4) 0 2px,transparent 3px),
+   radial-gradient(circle,rgba(255,255,255,.28),transparent 62%);
+  animation:puff .5s ease-out forwards}
+.btn.line .mist{filter:invert(1) sepia(1) saturate(4) hue-rotate(-30deg)}
+@keyframes puff{from{transform:scale(.2);opacity:.95}to{transform:scale(1.7);opacity:0}}
+
+/* hero: gallery first */
+.hero{padding:16px 0 0}
+.hero .wrap{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.mosaic{display:grid;gap:8px;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:104px 96px 88px}
+.frame{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:var(--frame);color:#2B2F33;border-radius:4px;font:500 13px/1.25 var(--head);padding:10px;
+  outline:1.5px dashed #9C968A;outline-offset:-7px}
+.frame::after{content:attr(data-cap);display:block;margin-top:4px;font:400 11.5px/1.3 var(--body);color:#3F4448}
+.frame::before{content:"";width:26px;height:2px;background:var(--cherry);margin-bottom:8px}
+.m1{grid-column:1/3;grid-row:1/3;font-size:15px}
+.m2{grid-column:3;grid-row:1}
+.m3{grid-column:3;grid-row:2}
+.m4{grid-column:1;grid-row:3}
+.m5{grid-column:2/4;grid-row:3}
+
+.plate{background:var(--graphite);color:var(--white);border-radius:4px;padding:22px 20px 24px;display:grid;gap:16px;align-content:start;position:relative}
+.fanbox{height:104px;position:relative}
+.fan{transform:scale(.8);transform-origin:50% 100%}
+.fan{position:absolute;left:50%;bottom:6px;width:0;height:0}
+.chip{position:absolute;left:-15px;bottom:0;width:30px;height:118px;border-radius:4px 4px 3px 3px;transform-origin:50% 100%;
+  box-shadow:0 1px 0 rgba(0,0,0,.35),inset 0 -14px 0 rgba(255,255,255,.18);
+  transform:translateX(160px) rotate(0deg);opacity:0;transition:transform .7s cubic-bezier(.2,.8,.25,1),opacity .35s}
+.fan.go .chip{opacity:1;transform:translateX(0) rotate(var(--a))}
+.chip::after{content:"";position:absolute;left:50%;bottom:6px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--graphite);box-shadow:0 0 0 1.5px #8A9298}
+.fancap{font-size:13px;color:var(--mist)}
+.kicker{font:400 12.5px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--mist);display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:22px;height:2px;background:var(--cherry)}
+.hero h1{font-size:40px}
+.hero .sub{color:#DADFE2;font-size:16px;max-width:34em}
+.biz{font:500 18px/1.3 var(--head);color:var(--white)}
+.addr{font-size:14.5px;color:#DADFE2}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--white);border:1px solid #4A545B;border-radius:30px;padding:6px 12px;width:max-content;max-width:100%}
+.dot{width:9px;height:9px;border-radius:50%;background:#8A9298;flex:none}
+.dot.on{background:#57C27A}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.ctas .btn{flex:1 1 auto}
+
+/* sections */
+section{padding:56px 0}
+.eyebrow{font:400 12.5px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--cherry);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--cherry)}
+h2{font-size:32px;margin-bottom:12px}
+.lede{color:var(--ink-2);max-width:40em}
+
+.svc{display:grid;gap:16px;margin-top:28px;grid-template-columns:minmax(0,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.card .frame{height:170px;border-radius:0}
+.card .in{padding:18px 18px 20px;border-top:2px solid var(--cherry)}
+.card h3{font-size:21px;margin-bottom:6px}
+.card p{color:var(--ink-2);font-size:15px}
+.card ul{margin:10px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--ink)}
+.card li{padding:6px 0;border-top:1px solid #ECE8E0}
+
+/* tap the damage */
+.damage{background:var(--putty-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dmg{display:grid;gap:20px;margin-top:24px;grid-template-columns:minmax(0,1fr)}
+.carbox{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:14px 10px 10px;position:relative}
+.car{width:100%;height:auto;display:block}
+.zone{fill:#ECE8E0;stroke:var(--graphite);stroke-width:2;stroke-linejoin:round;cursor:pointer;transition:fill .2s}
+.zone:hover{fill:#F1E3E3}
+.zone.sel{fill:#EFCACC;stroke:var(--cherry);stroke-width:2.5}
+.zone:focus{outline:none}
+.zone:focus-visible{stroke:var(--cherry);stroke-width:3.5}
+.glass{fill:#D5DADD;stroke:var(--graphite);stroke-width:2}
+.tire{fill:var(--graphite)}
+.rim{fill:#BFC4C7;stroke:var(--graphite);stroke-width:2}
+.eng{fill:none;stroke:#7A746A;stroke-width:1.6;stroke-dasharray:4 3;pointer-events:none}
+.eng.hot{stroke:var(--cherry);stroke-dasharray:none;stroke-width:2}
+.ground{stroke:#B8B1A4;stroke-width:2;stroke-dasharray:2 6}
+.pins{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pinb{font:400 14px/1 var(--body);background:var(--white);color:var(--ink);border:1px solid #A9A296;border-radius:30px;padding:10px 14px;cursor:pointer}
+.pinb[aria-pressed="true"]{background:var(--graphite);color:var(--white);border-color:var(--graphite)}
+.readout{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--cherry);border-radius:4px;padding:20px;display:grid;gap:10px;align-content:start}
+.readout .tag{font:400 12.5px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.readout h3{font-size:24px}
+.readout .svcname{display:inline-block;width:max-content;max-width:100%;font-size:13.5px;font-weight:600;color:var(--cherry-deep);background:var(--cherry-tint);padding:5px 10px;border-radius:3px}
+.readout p{color:var(--ink-2)}
+.readout .btn{justify-self:start;margin-top:6px}
+
+/* reviews */
+.revnote{margin-top:24px;display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+.qslot{background:var(--white);border:1px dashed #A9A296;border-radius:4px;padding:22px 20px}
+.qslot .q{font:500 19px/1.35 var(--head);color:#3A3F44}
+.qslot .who{margin-top:10px;font-size:14px;color:var(--ink-2)}
+
+/* visit */
+.visit{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.hours{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:8px 18px}
+.hours table{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:11px 0;border-bottom:1px solid #ECE8E0}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:600;color:var(--ink)}
+.hours tr.today td:first-child::before{content:"";display:inline-block;width:8px;height:8px;background:var(--cherry);border-radius:50%;margin-right:8px;vertical-align:1px}
+.where{display:grid;gap:14px;align-content:start}
+.where .frame{height:200px}
+.where address{font-style:normal;font-size:17px}
+.where .note{font-size:14px;color:var(--ink-2)}
+
+/* call band + footer */
+.band{background:var(--graphite);color:var(--white);padding:44px 0;border-top:2px solid var(--cherry)}
+.band .wrap{display:grid;gap:18px;align-items:center}
+.band h2{font-size:30px;margin:0}
+.band p{color:#DADFE2}
+footer{background:#171C20;color:#DADFE2;padding:28px 0 30px;font-size:14px}
+footer .wrap{display:grid;gap:8px}
+footer a{color:var(--white)}
+
+.badge{position:fixed;right:10px;bottom:84px;z-index:60;background:var(--white);color:var(--ink);border:1px solid var(--ink);font:600 11.5px/1 var(--body);letter-spacing:.06em;padding:7px 9px;border-radius:3px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--graphite);padding:10px 12px;display:flex;gap:8px;border-top:2px solid var(--cherry)}
+.callbar .btn{flex:1;padding:14px 10px}
+.callbar .btn.ghost{flex:0 0 auto}
+
+@media (min-width:760px){
+  .svc{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .revnote{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .visit{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .band .wrap{grid-template-columns:minmax(0,1fr) auto}
+}
+@media (min-width:980px){
+  body{padding-bottom:0}
+  .callbar{display:none}
+  .badge{bottom:16px;right:16px}
+  .nav{display:flex}
+  .hero{padding-top:22px}
+  .hero .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:14px}
+  .mosaic{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));min-height:600px;gap:10px}
+  .m1{grid-column:1/3;grid-row:1/3;font-size:17px}
+  .m2{grid-column:3/5;grid-row:1}
+  .m3{grid-column:3;grid-row:2}
+  .m4{grid-column:4;grid-row:2/4}
+  .m5{grid-column:1/4;grid-row:3}
+  .plate{padding:26px 30px 30px;align-content:space-between}
+  .fanbox{height:124px}
+  .fan{transform:none}
+  .hero h1{font-size:48px}
+  h2{font-size:40px}
+  .dmg{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);align-items:start}
+  section{padding:84px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .chip{transition:none}
+  .mist{display:none}
+  .zone{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Custom Auto Repair, back to top">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="2" y="3" width="5" height="16" rx="1" fill="#B3242C"/><rect x="8.5" y="3" width="5" height="16" rx="1" fill="#8C8A84"/><rect x="15" y="3" width="5" height="16" rx="1" fill="#E9E5DC"/></svg>
+      <span><b>Custom Auto Repair</b><small>GLASSBORO, NJ</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#damage">Tap the damage</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours</a>
+    </nav>
+    <a class="pill btn" href="tel:+18568816600">
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      (856) 881-6600
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Custom Auto Repair">
+  <div class="wrap">
+    <div class="mosaic" aria-label="Shop photos">
+      <div class="frame m1" data-cap="A finished paint job">Your photo here</div>
+      <div class="frame m2" data-cap="The shop">Your photo here</div>
+      <div class="frame m3" data-cap="Body work">Your photo here</div>
+      <div class="frame m4" data-cap="In the bay">Your photo here</div>
+      <div class="frame m5" data-cap="Before and after">Your photo here</div>
+    </div>
+
+    <div class="plate">
+      <div>
+        <div class="fanbox" aria-hidden="true">
+          <div class="fan" id="fan">
+            <span class="chip" style="--a:-48deg;background:#E9E5DC;transition-delay:.05s"></span>
+            <span class="chip" style="--a:-32deg;background:#B9BDC0;transition-delay:.1s"></span>
+            <span class="chip" style="--a:-16deg;background:#8C8A84;transition-delay:.15s"></span>
+            <span class="chip" style="--a:0deg;background:#2C3E55;transition-delay:.2s"></span>
+            <span class="chip" style="--a:16deg;background:#4E5A4A;transition-delay:.25s"></span>
+            <span class="chip" style="--a:32deg;background:#C7A35A;transition-delay:.3s"></span>
+            <span class="chip" style="--a:48deg;background:#B3242C;transition-delay:.35s"></span>
+          </div>
+        </div>
+        <p class="fancap">Repair, body work and painting, all at one shop.</p>
+      </div>
+      <div style="display:grid;gap:14px">
+        <p class="kicker">Custom Auto Repair · Glassboro</p>
+        <h1>Fixed up, straightened out and painted.</h1>
+        <p class="sub">Custom Auto Repair is an independent repair and body shop at 100 Delsea Dr S. Bring the car in for mechanical work, dents, or a fresh coat of paint.</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <p class="addr">100 Delsea Dr S, Ste 5, Glassboro, NJ 08028</p>
+        <p class="status"><span class="dot" id="dot"></span><span id="status">Mon to Fri 8 to 5, Sat 8 to 12</span></p>
+        <div class="ctas">
+          <a class="btn" href="tel:+18568816600">Call (856) 881-6600</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=100%20Delsea%20Dr%20S%20Ste%205%2C%20Glassboro%2C%20NJ%2008028" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">What they do</p>
+    <h2>Under the hood and on the outside</h2>
+    <p class="lede">One stop for the stuff that keeps the car running and the stuff that makes it look right again.</p>
+    <div class="svc">
+      <article class="card">
+        <div class="frame" data-cap="Mechanical work">Your photo here</div>
+        <div class="in">
+          <h3>Auto repair and service</h3>
+          <p>Something sounds off, a light came on, or it's just due. Call and tell them what the car is doing.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame" data-cap="Dent and panel work">Your photo here</div>
+        <div class="in">
+          <h3>Body repair</h3>
+          <p>Dents, dings, scrapes and bumpers that took a hit. Body work is done right here in the shop.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame" data-cap="In the paint booth">Your photo here</div>
+        <div class="in">
+          <h3>Painting</h3>
+          <p>Paint goes on after the body work, so the fix and the finish happen under one roof. Ask about parts for your job too.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="damage" class="damage">
+  <div class="wrap">
+    <p class="eyebrow">Tap the damage</p>
+    <h2>Where does it hurt?</h2>
+    <p class="lede">Tap a spot on the car to see which service covers it.</p>
+    <div class="dmg">
+      <div class="carbox">
+        <svg class="car" viewBox="0 0 620 250" role="group" aria-label="Side view of a car with tappable panels">
+          <line class="ground" x1="10" y1="232" x2="610" y2="232"/>
+          <!-- rear fender -->
+          <path class="zone" data-z="fender" tabindex="0" role="button" aria-label="Rear fender" d="M372 132 L498 114 L574 122 Q582 124 582 134 L580 176 Q578 196 566 198 L374 198 Z"/>
+          <!-- door -->
+          <path class="zone" data-z="door" tabindex="0" role="button" aria-label="Door" d="M228 136 L372 132 L374 198 L230 198 Z"/>
+          <!-- engine area under the hood -->
+          <path class="zone" data-z="engine" tabindex="0" role="button" aria-label="Under the hood" d="M74 148 L224 140 L228 136 L230 198 L74 198 Z"/>
+          <!-- hood -->
+          <path class="zone" data-z="hood" tabindex="0" role="button" aria-label="Hood" d="M48 136 Q60 128 90 126 L218 116 L228 136 L74 148 Z"/>
+          <g class="eng" id="eng" aria-hidden="true"><rect x="108" y="150" width="62" height="30" rx="3"/><path d="M118 150v-6h14v6M146 150v-6h14v6M170 160h12v12h-12M108 166h-10"/></g>
+          <!-- front bumper -->
+          <path class="zone" data-z="bumper" tabindex="0" role="button" aria-label="Front bumper" d="M48 136 L74 148 L74 198 L50 198 Q36 196 34 180 L34 160 Q36 142 48 136 Z"/>
+          <!-- glass -->
+          <path class="glass" d="M222 114 L286 72 Q292 68 300 68 L356 68 L358 128 L230 132 Z"/>
+          <path class="glass" d="M368 68 L424 68 Q434 68 442 74 L494 112 L370 128 Z"/>
+          <path d="M218 116 L286 66 Q294 60 304 60 L428 60 Q440 60 450 68 L500 112" fill="none" stroke="#1F262B" stroke-width="2.5"/>
+          <line x1="362" y1="62" x2="370" y2="198" stroke="#1F262B" stroke-width="2"/>
+          <rect x="300" y="150" width="22" height="5" rx="2.5" fill="#1F262B"/>
+          <!-- wheel wells -->
+          <path d="M96 198 A50 50 0 0 1 196 198 Z" fill="#F3F1EC" stroke="#1F262B" stroke-width="2"/>
+          <path d="M418 198 A50 50 0 0 1 518 198 Z" fill="#F3F1EC" stroke="#1F262B" stroke-width="2"/>
+          <!-- wheels -->
+          <g class="wheel" data-z="wheel" tabindex="0" role="button" aria-label="Wheels and brakes" style="cursor:pointer">
+            <circle class="tire" cx="146" cy="196" r="38"/><circle class="rim zone-rim" cx="146" cy="196" r="21"/><path d="M126 186 A22 22 0 0 1 140 174" stroke="#B3242C" stroke-width="6" fill="none"/>
+            <circle class="tire" cx="468" cy="196" r="38"/><circle class="rim zone-rim" cx="468" cy="196" r="21"/><path d="M448 186 A22 22 0 0 1 462 174" stroke="#B3242C" stroke-width="6" fill="none"/>
+          </g>
+          <!-- lights -->
+          <path d="M40 152 L56 150 L56 160 L38 162 Z" fill="#F4DEDF" stroke="#1F262B" stroke-width="1.5"/>
+          <path d="M570 132 L580 133 L580 148 L568 148 Z" fill="#B3242C"/>
+        </svg>
+        <div class="pins" role="group" aria-label="Pick a spot">
+          <button class="pinb" data-z="bumper" aria-pressed="false">Front bumper</button>
+          <button class="pinb" data-z="hood" aria-pressed="false">Hood</button>
+          <button class="pinb" data-z="engine" aria-pressed="false">Under the hood</button>
+          <button class="pinb" data-z="door" aria-pressed="false">Door</button>
+          <button class="pinb" data-z="fender" aria-pressed="false">Rear fender</button>
+          <button class="pinb" data-z="wheel" aria-pressed="false">Wheels and brakes</button>
+        </div>
+      </div>
+      <div class="readout" id="readout" aria-live="polite">
+        <p class="tag" id="r-tag">Spot</p>
+        <h3 id="r-title">Front bumper</h3>
+        <span class="svcname" id="r-svc">Body repair and painting</span>
+        <p id="r-text">Scuffs, cracks and parking-lot bumps. Body work and painting are both done here, so the fix and the paint happen at one shop.</p>
+        <a class="btn" href="tel:+18568816600">Call about it</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>What drivers say</h2>
+    <p class="lede">Real reviews from your customers go here, word for word, with first names and where they posted them.</p>
+    <div class="revnote">
+      <div class="qslot"><p class="q">Reviews will go here.</p><p class="who">First name, Google</p></div>
+      <div class="qslot"><p class="q">Reviews will go here.</p><p class="who">First name, Yelp</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="damage">
+  <div class="wrap">
+    <p class="eyebrow">Hours and visit</p>
+    <h2>Stop by the shop</h2>
+    <div class="visit">
+      <div class="hours">
+        <table aria-label="Shop hours">
+          <tbody id="hrs">
+            <tr data-d="1"><td>Monday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="2"><td>Tuesday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="3"><td>Wednesday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="4"><td>Thursday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="5"><td>Friday</td><td>8 am to 5 pm</td></tr>
+            <tr data-d="6"><td>Saturday</td><td>8 am to 12 pm</td></tr>
+            <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="where">
+        <div class="frame" data-cap="Out front on Delsea Dr">Your photo here</div>
+        <address>100 Delsea Dr S, Ste 5<br>Glassboro, NJ 08028</address>
+        <p class="note">On South Delsea Drive in Glassboro.</p>
+        <div class="ctas">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=100%20Delsea%20Dr%20S%20Ste%205%2C%20Glassboro%2C%20NJ%2008028" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn line" href="tel:+18568816600">(856) 881-6600</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div>
+      <h2>Got a dent or a noise?</h2>
+      <p>Call the shop and tell them what's going on.</p>
+    </div>
+    <a class="btn" href="tel:+18568816600">Call (856) 881-6600</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Custom Auto Repair</strong> · 100 Delsea Dr S, Ste 5, Glassboro, NJ 08028 · <a href="tel:+18568816600">(856) 881-6600</a></p>
+    <p>Demo preview prepared for Custom Auto Repair</p>
+  </div>
+</footer>
+
+<div class="badge" aria-hidden="true">Demo preview</div>
+<nav class="callbar" aria-label="Quick call">
+  <a class="btn" href="tel:+18568816600">Call (856) 881-6600</a>
+  <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=100%20Delsea%20Dr%20S%20Ste%205%2C%20Glassboro%2C%20NJ%2008028" target="_blank" rel="noopener">Directions</a>
+</nav>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* paint chip fan */
+  var fan = document.getElementById('fan');
+  if (reduce) { fan.querySelectorAll('.chip').forEach(function(c){ c.style.transition='none'; }); fan.classList.add('go'); }
+  else { setTimeout(function(){ fan.classList.add('go'); }, 250); }
+
+  /* spray mist puff on buttons */
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.btn'); if (!b || reduce) return;
+    var r = b.getBoundingClientRect(), m = document.createElement('span');
+    m.className = 'mist';
+    m.style.left = ((e.clientX || r.left + r.width/2) - r.left) + 'px';
+    m.style.top = ((e.clientY || r.top + r.height/2) - r.top) + 'px';
+    b.appendChild(m); setTimeout(function(){ m.remove(); }, 560);
+  });
+
+  /* tap the damage */
+  var info = {
+    bumper:{t:'Front bumper', s:'Body repair and painting', p:'Scuffs, cracks and parking-lot bumps. Body work and painting are both done here, so the fix and the paint happen at one shop.'},
+    hood:{t:'Hood', s:'Body repair and painting', p:'A dent on top, chips from the highway, or paint that has gone dull. Ask about body work and a fresh coat.'},
+    engine:{t:'Under the hood', s:'Auto repair and service', p:'A light on the dash, a new noise, or it is just not running right. Call and describe what the car is doing.'},
+    door:{t:'Door', s:'Body repair and painting', p:'Door dings, a long key scratch or a dent from a cart. Body work first, then paint.'},
+    fender:{t:'Rear fender', s:'Body repair and painting', p:'A tap from behind or a scrape along the side. The panel gets worked and painted in the same shop.'},
+    wheel:{t:'Wheels and brakes', s:'Auto repair and service', p:'Squeaking, grinding or a pull when you stop. That falls under repair work, so give the shop a call.'}
+  };
+  var zones = document.querySelectorAll('[data-z]');
+  function pick(z){
+    var d = info[z]; if (!d) return;
+    zones.forEach(function(el){
+      var on = el.getAttribute('data-z') === z;
+      if (el.classList.contains('zone')) el.classList.toggle('sel', on);
+      if (el.classList.contains('pinb')) el.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (el.classList.contains('wheel')) el.querySelectorAll('.rim').forEach(function(c){ c.style.fill = on ? '#F4DEDF' : ''; c.style.stroke = on ? '#B3242C' : ''; });
+    });
+    document.getElementById('eng').classList.toggle('hot', z === 'engine');
+    document.getElementById('r-title').textContent = d.t;
+    document.getElementById('r-svc').textContent = d.s;
+    document.getElementById('r-text').textContent = d.p;
+  }
+  zones.forEach(function(el){
+    el.addEventListener('click', function(){ pick(el.getAttribute('data-z')); });
+    el.addEventListener('keydown', function(e){ if ((e.key === 'Enter' || e.key === ' ') && el.tagName !== 'BUTTON') { e.preventDefault(); pick(el.getAttribute('data-z')); } });
+  });
+  pick('bumper');
+
+  /* hours in America/New_York */
+  var hours = {0:null,1:[8,17],2:[8,17],3:[8,17],4:[8,17],5:[8,17],6:[8,12]};
+  var names = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(h){ return h === 12 ? '12 pm' : (h > 12 ? (h-12) + ' pm' : h + ' am'); }
+  try {
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var get = function(t){ var p = parts.find(function(x){ return x.type === t; }); return p ? p.value : ''; };
+    var day = names.indexOf(get('weekday')), hr = parseInt(get('hour'),10) % 24, mn = parseInt(get('minute'),10);
+    var now = hr + mn/60, h = hours[day], txt, open = false;
+    if (h && now >= h[0] && now < h[1]) { open = true; txt = 'Open now · until ' + fmt(h[1]); }
+    else {
+      var nd = day, add = 0, found = null;
+      if (h && now < h[0]) found = day;
+      else { for (var i = 1; i <= 7; i++) { nd = (day + i) % 7; if (hours[nd]) { found = nd; add = i; break; } } }
+      txt = 'Closed now · opens ' + (found === day ? 'today' : (add === 1 ? 'tomorrow' : names[found])) + ' at ' + fmt(hours[found][0]);
+    }
+    document.getElementById('status').textContent = txt;
+    document.getElementById('dot').classList.toggle('on', open);
+    var row = document.querySelector('#hrs tr[data-d="' + day + '"]'); if (row) row.classList.add('today');
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

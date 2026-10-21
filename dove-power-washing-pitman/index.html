@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Dove Power Washing | Pitman, NJ</title>
+<meta name="description" content="Dove Power Washing: power washing and pressure washing, based in Pitman, NJ. Call (856) 693-7011.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --light:#F7F8FA; --night:#232A33; --accent:#46566B; --accent-deep:#3A4859; --text:#1C2128; --sky:#DDE8F2;
+  --muted:#4A5260; --line:#C9D6E3; --card:#FFFFFF;
+  --head:'Lexend',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Spectral',Georgia,'Times New Roman',serif;
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--light);color:var(--text);font-family:var(--body);font-size:18px;line-height:1.6;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+h1,h2,h3,h4{font-family:var(--head);font-weight:400;letter-spacing:-.01em;line-height:1.15;margin:0}
+p{margin:0 0 1em}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:var(--night);color:#fff;border-bottom:1px solid #3A4452}
+.top .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--head);font-weight:400;font-size:19px;white-space:nowrap}
+.brand svg{width:34px;height:34px;flex:none}
+.brand small{display:block;font-size:11.5px;letter-spacing:.08em;color:#C9D3DE;font-weight:300}
+.nav{display:flex;gap:20px;margin-left:auto}
+.nav a{color:#E6ECF2;text-decoration:none;font-family:var(--head);font-size:14.5px;font-weight:300;padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--sky)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--night);text-decoration:none;font-family:var(--head);font-size:15px;font-weight:500;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.pill svg{width:16px;height:16px}
+@media (max-width:900px){.nav{display:none}.top .pill{margin-left:auto}}
+@media (max-width:420px){.brand{font-size:16px;gap:7px}.brand svg{width:28px;height:28px}.brand small{display:none}.top .wrap{gap:10px}.pill{padding:8px 12px;font-size:14px}}
+
+/* ---------- buttons + mist ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;font-family:var(--head);font-weight:400;font-size:16.5px;padding:14px 24px;border-radius:14px;border:0;cursor:pointer;overflow:visible;transition:background .2s,transform .2s}
+.btn:hover{background:var(--accent-deep);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.btn.ghost:hover{background:#fff}
+.btn svg{width:18px;height:18px}
+.mist{position:absolute;pointer-events:none;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle,rgba(221,232,242,.95),rgba(176,198,220,.5) 60%,rgba(176,198,220,0) 72%);z-index:5;animation:mist .75s ease-out forwards}
+@keyframes mist{0%{opacity:.95;transform:translate(0,0) scale(.6)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(2.6)}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:64px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40px -10%;height:180px;background:radial-gradient(60% 100% at 50% 100%,#E8EFF6,rgba(232,239,246,0));pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-size:14px;font-weight:400;color:var(--accent);letter-spacing:.04em;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--accent)}
+.hero h1{font-size:clamp(40px,5.6vw,66px);font-weight:400;max-width:12.5em}
+.hero h1 em{font-family:var(--body);font-style:italic;font-weight:400;color:var(--accent)}
+.hero .sub{font-size:19px;color:var(--muted);max-width:33em;margin:22px 0 30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.based{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;font-family:var(--head);font-size:14px;font-weight:300;color:var(--muted)}
+.based span{display:inline-flex;align-items:center;gap:8px}
+.based i{width:8px;height:8px;border-radius:50%;background:#9AA7B6;display:inline-block}
+.based .open i{background:#2F7A55}
+.based .closed i{background:#A0522D}
+
+/* hero wash panel */
+.wash{position:relative;aspect-ratio:4/4.3;border-radius:200px 200px 26px 26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(35,42,51,.45);border:1px solid var(--line)}
+.wash .dirty,.wash .clean{position:absolute;inset:0}
+.wash .dirty{background:
+  radial-gradient(40% 30% at 30% 30%,rgba(60,58,44,.55),transparent 70%),
+  radial-gradient(30% 25% at 70% 60%,rgba(74,82,52,.6),transparent 70%),
+  radial-gradient(25% 18% at 40% 80%,rgba(48,44,36,.5),transparent 70%),
+  repeating-linear-gradient(0deg,#6E6B5C 0 54px,#5F5C4E 54px 56px),#6E6B5C}
+.wash .clean{background:
+  repeating-linear-gradient(0deg,#EEF3F8 0 54px,#C9D6E3 54px 55px);
+  clip-path:inset(0 100% 0 0);animation:washon 2.6s .5s cubic-bezier(.6,.05,.3,1) forwards}
+.wash .nozzle{position:absolute;top:0;bottom:0;left:0;width:46px;margin-left:-23px;background:linear-gradient(90deg,rgba(221,232,242,0),rgba(255,255,255,.85) 50%,rgba(221,232,242,0));filter:blur(2px);animation:nozzle 2.6s .5s cubic-bezier(.6,.05,.3,1) forwards;opacity:0}
+@keyframes washon{to{clip-path:inset(0 0 0 0)}}
+@keyframes nozzle{0%{left:0;opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+.wash .tag{position:absolute;left:22px;right:22px;bottom:22px;background:#fff;border-radius:16px;padding:16px 18px;display:flex;gap:14px;align-items:center;border:1px solid var(--line)}
+.wash .tag b{font-family:var(--head);font-weight:400;font-size:20px;display:block;color:var(--text)}
+.wash .tag span{font-size:15px;color:var(--muted)}
+.wash .tag svg{width:40px;height:40px;flex:none}
+.wash .label{position:absolute;top:44px;left:50%;transform:translateX(-50%);background:var(--night);color:#fff;font-family:var(--head);font-size:13px;font-weight:300;letter-spacing:.06em;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.hero .dove-trail{position:absolute;right:-30px;top:-20px;width:160px;opacity:.5;pointer-events:none}
+
+@media (max-width:860px){
+  .hero{padding:40px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:34px}
+  .wash{aspect-ratio:auto;height:300px;border-radius:150px 150px 22px 22px;max-width:440px;width:100%;margin-inline:auto}
+  .hero .sub{font-size:18px}
+}
+
+/* ---------- section heads ---------- */
+.sec{padding:72px 0}
+.shead{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px;flex-wrap:wrap}
+.shead h2{font-size:clamp(30px,3.6vw,42px)}
+.shead p{max-width:28em;color:var(--muted);margin:0;font-size:17px}
+.kicker{font-family:var(--head);font-size:13.5px;letter-spacing:.08em;color:var(--accent);margin-bottom:10px;display:block}
+
+/* ---------- bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:16px}
+.tile{position:relative;border-radius:var(--r);background:var(--card);border:1px solid var(--line);overflow:hidden}
+.tile.sky{background:var(--sky);border-color:#C3D3E3}
+.tile.night{background:var(--night);color:#fff;border-color:var(--night)}
+.tile.pad{padding:24px 26px}
+
+/* scrub tiles */
+.scrub{cursor:crosshair;touch-action:none;user-select:none;-webkit-user-select:none}
+.scrub .surface{position:absolute;inset:0}
+.s-drive{background:repeating-linear-gradient(90deg,transparent 0 118px,#C3CDD8 118px 120px),repeating-linear-gradient(0deg,#E9EDF1 0 118px,#C3CDD8 118px 120px)}
+.s-siding{background:repeating-linear-gradient(180deg,#F1F5F9 0 26px,#D9E2EB 26px 29px,#C2CEDA 29px 30px)}
+.s-deck{background:repeating-linear-gradient(90deg,#F3EEE6 0 40px,#E3D9CB 40px 42px,#D7CBBA 42px 43px)}
+.s-patio{background:repeating-linear-gradient(90deg,transparent 0 58px,#CBD4DD 58px 61px),repeating-linear-gradient(0deg,#EEF1F4 0 58px,#CBD4DD 58px 61px)}
+.scrub canvas{position:absolute;inset:0;width:100%;height:100%;transition:opacity .7s ease}
+.scrub.done canvas{opacity:0;pointer-events:none}
+.scrub .name{position:absolute;top:14px;left:14px;z-index:3;background:#fff;color:var(--text);font-family:var(--head);font-size:14px;font-weight:400;padding:5px 12px;border-radius:999px;border:1px solid var(--line)}
+.scrub .hint{position:absolute;bottom:14px;left:14px;z-index:3;background:var(--night);color:#fff;font-family:var(--head);font-size:12.5px;font-weight:300;padding:5px 11px;border-radius:999px;transition:opacity .3s}
+.scrub.done .hint{opacity:0}
+.scrub .reveal{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;background:#fff;border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);opacity:0;transform:translateY(8px);transition:opacity .5s .2s,transform .5s .2s}
+.scrub.done .reveal{opacity:1;transform:none}
+.scrub .reveal b{font-family:var(--head);font-weight:400;font-size:15px;color:var(--text)}
+.scrub .reveal a{font-family:var(--head);font-size:14px;color:#fff;background:var(--accent);text-decoration:none;padding:8px 12px;border-radius:10px;white-space:nowrap}
+.b-intro{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.b-intro h3{font-size:26px;margin-bottom:10px}
+.b-intro p{font-size:16.5px;color:var(--muted)}
+.b-intro .meter{font-family:var(--head);font-size:14px;color:var(--text)}
+.b-intro .bar{height:6px;background:#fff;border-radius:9px;margin-top:8px;overflow:hidden;border:1px solid #C3D3E3}
+.b-intro .bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .4s}
+.linkish{background:none;border:0;padding:0;font:inherit;font-family:var(--head);font-size:14.5px;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer;margin-top:10px;align-self:flex-start}
+.t-drive{grid-column:span 4;grid-row:span 2}
+.t-siding{grid-column:span 2;grid-row:span 2}
+.t-deck{grid-column:span 2;grid-row:span 2}
+.t-patio{grid-column:span 2;grid-row:span 2}
+.scrub-note{font-size:14.5px;color:var(--muted);margin-top:16px}
+
+/* photo + info bento */
+.photo{background:var(--sky)}
+.photo .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:16px;color:var(--text);font-family:var(--head);font-size:14px;font-weight:300}
+.photo .ph svg{width:30px;height:30px;opacity:.7}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.photo .cap{position:absolute;z-index:2;left:12px;bottom:12px;background:rgba(255,255,255,.96);color:var(--text);font-family:var(--head);font-size:12.5px;font-weight:300;padding:4px 10px;border-radius:999px}
+.p1{grid-column:span 3;grid-row:span 3}
+.p2{grid-column:span 6;grid-row:span 2}
+.p3{grid-column:span 2;grid-row:span 2}
+.p4{grid-column:span 2;grid-row:span 2}
+.p5{grid-column:span 2;grid-row:span 2}
+.p6{grid-column:span 3;grid-row:span 1}
+.svc{grid-column:span 3;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.svc h3{font-size:24px}
+.svc ul{list-style:none;padding:0;margin:14px 0 0}
+.svc li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid var(--line);font-size:17px}
+.svc li:first-child{border-top:0}
+.svc li b{font-family:var(--head);font-weight:400;font-size:18px;min-width:9.5em}
+.svc li span{color:var(--muted);font-size:16px}
+
+/* review */
+.review{position:relative;padding:76px 0 64px}
+.quote{position:relative;max-width:900px;margin-inline:auto;text-align:center}
+.quote .mark{position:absolute;left:50%;top:-70px;transform:translateX(-50%);font-family:var(--body);font-size:180px;line-height:1;color:var(--sky);pointer-events:none;z-index:0}
+.quote blockquote{position:relative;z-index:1;margin:0;font-family:var(--body);font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.45;color:var(--text)}
+.quote .who{margin-top:22px;font-family:var(--head);font-size:15px;color:var(--muted)}
+.stars{display:inline-flex;gap:3px;vertical-align:-2px;margin-right:8px}
+.stars svg{width:16px;height:16px;fill:var(--accent)}
+.chips{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chips span{font-family:var(--head);font-size:14px;font-weight:300;color:var(--text);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+
+/* hours band */
+.band{background:var(--night);color:#fff;padding:70px 0;position:relative;overflow:hidden}
+.band::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;border:1px solid #3E4A58;box-shadow:0 0 0 50px rgba(62,74,88,.18),0 0 0 110px rgba(62,74,88,.1);pointer-events:none}
+.band .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.band h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:16px}
+.band p{color:#D5DDE6}
+.band .kicker{color:#C9D8E8}
+.band .btn{background:#fff;color:var(--night)}
+.band .btn:hover{background:var(--sky)}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-size:15px;background:#2E3743;border:1px solid #47525F;border-radius:999px;padding:7px 14px;margin-bottom:22px;color:#fff}
+.status i{width:9px;height:9px;border-radius:50%;background:#9AA7B6}
+.status.open i{background:#6FD39F;box-shadow:0 0 0 4px rgba(111,211,159,.2)}
+.status.closed i{background:#E8A27A}
+.hours{list-style:none;margin:0;padding:0;border-top:1px solid #3E4A58}
+.hours li{display:flex;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #3E4A58;font-family:var(--head);font-weight:300;font-size:16px;color:#E6ECF2;border-radius:10px}
+.hours li.today{background:#fff;color:var(--night);font-weight:400;border-bottom-color:transparent}
+.hours li.today span:first-child::after{content:"  · today";color:var(--accent);font-size:13px}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact h2{font-size:clamp(30px,3.6vw,42px);margin-bottom:14px}
+.contact .side p{color:var(--muted)}
+.facts{list-style:none;padding:0;margin:24px 0 0;border-top:1px solid var(--line)}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;font-size:17px}
+.facts li b{font-family:var(--head);font-weight:400;min-width:5.5em;font-size:15px;color:var(--accent);padding-top:2px}
+.facts a{color:var(--text)}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative}
+form::before{content:"";position:absolute;left:30px;right:30px;top:-1px;height:3px;background:var(--sky);border-radius:0 0 4px 4px}
+label{display:block;font-family:var(--head);font-size:14.5px;font-weight:400;margin:0 0 6px;color:var(--text)}
+input,textarea,select{width:100%;font:inherit;font-size:17px;color:var(--text);background:var(--light);border:1px solid #BFCBD8;border-radius:12px;padding:12px 14px;margin-bottom:18px}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{display:none;margin-top:16px;background:var(--sky);color:var(--text);border-radius:12px;padding:12px 16px;font-size:16px}
+.note.show{display:block}
+
+/* footer */
+footer{background:var(--night);color:#D5DDE6;padding:44px 0 90px;font-size:15.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:#fff}
+footer .brand{font-size:18px}
+
+/* watermark + call bar */
+.wm{position:fixed;right:14px;bottom:14px;z-index:60;background:#fff;color:var(--night);font-family:var(--head);font-size:12px;font-weight:400;padding:6px 12px;border-radius:999px;border:1px solid var(--line);box-shadow:0 6px 18px -8px rgba(35,42,51,.4)}
+.callbar{display:none}
+@media (max-width:700px){
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--night);padding:10px 16px calc(10px + env(safe-area-inset-bottom));gap:10px;border-top:1px solid #3A4452}
+  .callbar a{flex:1;justify-content:center}
+  .wm{bottom:78px;right:10px}
+  footer{padding-bottom:120px}
+}
+
+@media (max-width:860px){
+  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;gap:12px}
+  .b-intro{grid-column:span 2;grid-row:span 2}
+  .t-drive{grid-column:span 2;grid-row:span 2}
+  .t-siding,.t-deck,.t-patio{grid-column:span 1;grid-row:span 2}
+  .t-patio{grid-column:span 2;grid-row:span 1}
+  .p1{grid-column:span 2;grid-row:span 2}
+  .p2,.p3,.p4,.p5{grid-column:span 1;grid-row:span 1}
+  .p6{grid-column:span 2;grid-row:span 1}
+  .svc{grid-column:span 2;grid-row:auto}
+  .scrub .reveal{flex-direction:column;align-items:flex-start;padding:10px}
+  .t-drive .reveal,.t-patio .reveal{flex-direction:row;align-items:center}
+  .band .wrap,.contact .wrap{grid-template-columns:1fr;gap:36px}
+  .sec{padding:56px 0}
+  .row2{grid-template-columns:1fr;gap:0}
+  form{padding:22px}
+  .svc li{flex-direction:column;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .wash .clean{animation:none;clip-path:none}
+  .wash .nozzle{display:none}
+  .mist{display:none}
+  .scrub canvas{display:none}
+  .scrub .reveal{opacity:1;transform:none;transition:none}
+  .scrub .hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Dove Power Washing, back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DDE8F2"/><path d="M7 25c5 1 9-1 12-5 3-5 6-9 11-9 2 0 3 1 3.6 2.2L37 14l-3.4 1.3c-.4 6.5-5 11.6-12.2 12.7-5.2.8-10.3-.6-14.4-3z" fill="#46566B"/><path d="M14 22c3-5 7-8 12-8.6" fill="none" stroke="#DDE8F2" stroke-width="1.4" stroke-linecap="round"/><circle cx="31" cy="14" r="1" fill="#DDE8F2"/></svg>
+      <span>Dove Power Washing<small>BASED IN PITMAN, NJ</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#scrub">Scrub it clean</a>
+      <a href="#work">Photos</a>
+      <a href="#review">Review</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="pill" href="tel:+18566937011"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(856) 693-7011</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Power washing &middot; Pressure washing</span>
+        <h1>Let the outside of your home look <em>new again.</em></h1>
+        <p class="sub">Dove Power Washing is a local power washing and pressure washing business based in Pitman, NJ. Call, tell us what needs a wash, and we will come take a look.</p>
+        <div class="ctas">
+          <a class="btn spray" href="tel:+18566937011"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (856) 693-7011</a>
+          <a class="btn ghost spray" href="#scrub">Try scrubbing a tile</a>
+        </div>
+        <div class="based">
+          <span><i></i>Based in Pitman, NJ</span>
+          <span id="heroStatus"><i></i>Mon&ndash;Fri 7am&ndash;5pm, Sat 9am&ndash;3pm</span>
+          <span><i></i>5-star review on Yelp</span>
+        </div>
+      </div>
+      <div class="wash" aria-label="Animation of a grimy surface being washed clean">
+        <div class="dirty"></div>
+        <div class="clean"><svg viewBox="0 0 40 40" aria-hidden="true" style="position:absolute;left:50%;top:40%;width:46%;transform:translate(-50%,-50%);opacity:.9"><path d="M7 25c5 1 9-1 12-5 3-5 6-9 11-9 2 0 3 1 3.6 2.2L37 14l-3.4 1.3c-.4 6.5-5 11.6-12.2 12.7-5.2.8-10.3-.6-14.4-3z" fill="#DDE8F2" stroke="#46566B" stroke-width=".5"/><path d="M14 22c3-5 7-8 12-8.6" fill="none" stroke="#46566B" stroke-width=".5" stroke-linecap="round"/></svg></div>
+        <div class="nozzle"></div>
+        <span class="label">One clean pass</span>
+        <div class="tag">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DDE8F2"/><path d="M12 20.5l5.2 5L28 14.5" fill="none" stroke="#46566B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b>&ldquo;Look brand new!&rdquo;</b><span>A Yelp reviewer on their driveway, siding and walkway</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="scrub" style="padding-top:24px">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="kicker">SCRUB IT CLEAN</span><h2>Rub a tile. Watch the grime go.</h2></div>
+        <p>Drag your finger or mouse across each surface, or tap it a few times. It is a little like what a good wash does, only quieter.</p>
+      </div>
+      <div class="bento">
+        <div class="tile sky pad b-intro">
+          <div>
+            <h3>Four surfaces, one phone call</h3>
+            <p>Grime, green film and dull spots build up on the outside of a home. Clear all four tiles, then call Dove Power Washing about yours.</p>
+          </div>
+          <div>
+            <div class="meter"><span id="cleanCount">0</span> of 4 clean</div>
+            <div class="bar"><i id="cleanBar"></i></div>
+            <button class="linkish" type="button" id="cleanAll">Or clean them all at once</button>
+          </div>
+        </div>
+        <div class="tile scrub t-drive" data-kind="drive">
+          <div class="surface s-drive"></div>
+          <span class="name">Driveway</span>
+          <canvas aria-hidden="true"></canvas>
+          <span class="hint">Rub to clean</span>
+          <div class="reveal"><b>Driveway, done.</b><a href="tel:+18566937011">Call Dove to set up a look</a></div>
+        </div>
+        <div class="tile scrub t-siding" data-kind="siding">
+          <div class="surface s-siding"></div>
+          <span class="name">Siding</span>
+          <canvas aria-hidden="true"></canvas>
+          <span class="hint">Rub to clean</span>
+          <div class="reveal"><b>Siding, done.</b><a href="tel:+18566937011">Call Dove to set up a look</a></div>
+        </div>
+        <div class="tile scrub t-deck" data-kind="deck">
+          <div class="surface s-deck"></div>
+          <span class="name">Deck</span>
+          <canvas aria-hidden="true"></canvas>
+          <span class="hint">Rub to clean</span>
+          <div class="reveal"><b>Deck, done.</b><a href="tel:+18566937011">Call Dove to set up a look</a></div>
+        </div>
+        <div class="tile scrub t-patio" data-kind="patio">
+          <div class="surface s-patio"></div>
+          <span class="name">Patio</span>
+          <canvas aria-hidden="true"></canvas>
+          <span class="hint">Rub to clean</span>
+          <div class="reveal"><b>Patio, done.</b><a href="tel:+18566937011">Call Dove to set up a look</a></div>
+        </div>
+      </div>
+      <p class="scrub-note">Not sure if your surface is a fit? Ask when you call.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="work" style="padding-top:20px">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="kicker">PHOTOS AND SERVICES</span><h2>From the Dove Power Washing page</h2></div>
+        <p>These photos come from the business's Yelp listing. On your real site, your own before and after shots go here.</p>
+      </div>
+      <div class="bento">
+        <figure class="tile photo p1" style="margin:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#46566B" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Personalized photos will go here</div>
+          <img src="https://s3-media0.fl.yelpcdn.com/bphoto/GgyWY7p9PAjbbsyep570Hw/l.jpg" alt="Photo from Dove Power Washing's Yelp page" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Photo from Yelp</figcaption>
+        </figure>
+        <div class="tile pad svc">
+          <div>
+            <span class="kicker">WHAT WE DO</span>
+            <h3>Two services, done with care</h3>
+            <ul>
+              <li><b>Power washing</b><span>For the outside surfaces around your home.</span></li>
+              <li><b>Pressure washing</b><span>Ask about the job you have in mind.</span></li>
+            </ul>
+          </div>
+          <a class="btn spray" href="tel:+18566937011" style="align-self:flex-start;margin-top:14px">Call (856) 693-7011</a>
+        </div>
+        <div class="tile night pad p6" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+          <span style="font-family:var(--head);font-size:19px;font-weight:300">Have a before and after? It belongs right here.</span>
+        </div>
+        <figure class="tile photo p3" style="margin:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#46566B" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Your photo here</div>
+          <img src="https://s3-media0.fl.yelpcdn.com/bphoto/Ut1SREJN3TgW5Mq-U5Q2UQ/l.jpg" alt="Photo from Dove Power Washing's Yelp page" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Photo from Yelp</figcaption>
+        </figure>
+        <figure class="tile photo p4" style="margin:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#46566B" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Your photo here</div>
+          <img src="https://s3-media0.fl.yelpcdn.com/bphoto/aJ83zLgKc3JD8SMN0jnoIw/l.jpg" alt="Photo from Dove Power Washing's Yelp page" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Photo from Yelp</figcaption>
+        </figure>
+        <figure class="tile photo p5" style="margin:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#46566B" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Your photo here</div>
+          <img src="https://s3-media0.fl.yelpcdn.com/bphoto/Hq0rFV_gbWZ1Bmj2By4dHg/l.jpg" alt="Photo from Dove Power Washing's Yelp page" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Photo from Yelp</figcaption>
+        </figure>
+        <figure class="tile photo p2" style="margin:0">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="#46566B" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Personalized photos will go here</div>
+          <img src="https://s3-media0.fl.yelpcdn.com/bphoto/G4RrfkT6kDqCKVlCVRO8ug/l.jpg" alt="Photo from Dove Power Washing's Yelp page" loading="lazy" onerror="this.remove()">
+          <figcaption class="cap">Photo from Yelp</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="review" id="review">
+    <div class="wrap">
+      <div class="quote">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>I had a great experience with Manny. He was professional, punctual, and did an amazing job. My driveway, siding, and walkway look brand new!</blockquote>
+        <div class="who"><span class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .6-5.3 4.7L18.5 22 12 18l-6.5 4 1.8-7.7L2 9.6 9 9z"/></svg></span>Eliza D. on Yelp</div>
+        <div class="chips"><span>Professional</span><span>Punctual</span><span>Driveway</span><span>Siding</span><span>Walkway</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="hours">
+    <div class="wrap">
+      <div>
+        <span class="kicker">HOURS</span>
+        <h2>Call during the day. We will set up a time.</h2>
+        <div class="status" id="status"><i></i><span>Checking hours&hellip;</span></div>
+        <p>Dove Power Washing is based in Pitman, NJ. The fastest way to get a look at your job is a quick phone call.</p>
+        <a class="btn spray" href="tel:+18566937011"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call (856) 693-7011</a>
+      </div>
+      <ul class="hours" id="hoursList">
+        <li data-d="1"><span>Monday</span><span>7am &ndash; 5pm</span></li>
+        <li data-d="2"><span>Tuesday</span><span>7am &ndash; 5pm</span></li>
+        <li data-d="3"><span>Wednesday</span><span>7am &ndash; 5pm</span></li>
+        <li data-d="4"><span>Thursday</span><span>7am &ndash; 5pm</span></li>
+        <li data-d="5"><span>Friday</span><span>7am &ndash; 5pm</span></li>
+        <li data-d="6"><span>Saturday</span><span>9am &ndash; 3pm</span></li>
+        <li data-d="0"><span>Sunday</span><span>Closed</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="side">
+        <span class="kicker">CONTACT</span>
+        <h2>Tell us what needs a wash</h2>
+        <p>Send a short note or just call. Either way, you talk to a local business based right here in Pitman.</p>
+        <ul class="facts">
+          <li><b>Phone</b><a href="tel:+18566937011">(856) 693-7011</a></li>
+          <li><b>Based in</b><span>Pitman, NJ</span></li>
+          <li><b>Hours</b><span>Mon&ndash;Fri 7am&ndash;5pm, Sat 9am&ndash;3pm, Sun closed</span></li>
+        </ul>
+      </div>
+      <form id="quoteForm">
+        <div class="row2">
+          <div><label for="fName">Your name</label><input id="fName" name="name" autocomplete="name" required></div>
+          <div><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <label for="fWhat">What needs a wash?</label>
+        <select id="fWhat" name="what">
+          <option>Driveway or walkway</option>
+          <option>Siding</option>
+          <option>Deck or patio</option>
+          <option>Something else</option>
+        </select>
+        <label for="fMsg">Anything else we should know?</label>
+        <textarea id="fMsg" name="msg" rows="4"></textarea>
+        <button class="btn spray" type="submit">Send my note</button>
+        <div class="note" id="formNote" role="status">This is a demo. On your real site this sends straight to you.</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DDE8F2"/><path d="M7 25c5 1 9-1 12-5 3-5 6-9 11-9 2 0 3 1 3.6 2.2L37 14l-3.4 1.3c-.4 6.5-5 11.6-12.2 12.7-5.2.8-10.3-.6-14.4-3z" fill="#46566B"/></svg>
+      <span>Dove Power Washing</span>
+    </a>
+    <div>Power washing and pressure washing &middot; Based in Pitman, NJ &middot; <a href="tel:+18566937011">(856) 693-7011</a></div>
+    <div style="width:100%;font-size:14px;color:#C9D3DE">Demo preview prepared for Dove Power Washing</div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn spray" href="tel:+18566937011" style="background:#fff;color:#232A33">Call (856) 693-7011</a></div>
+<div class="wm">Demo preview</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ----- open / closed (Pitman time) ----- */
+  var H = {0:null,1:[7,17],2:[7,17],3:[7,17],4:[7,17],5:[7,17],6:[9,15]};
+  var names = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var day, hr;
+  try{
+    var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var map = {}; parts.forEach(function(p){map[p.type]=p.value;});
+    day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(map.weekday);
+    hr = (parseInt(map.hour,10)%24) + parseInt(map.minute,10)/60;
+  }catch(e){ var d=new Date(); day=d.getDay(); hr=d.getHours()+d.getMinutes()/60; }
+  var li = document.querySelector('#hoursList li[data-d="'+day+'"]'); if(li) li.classList.add('today');
+  var fmt = function(h){ return (h%12||12)+(h<12?'am':'pm'); };
+  var t = H[day], open = t && hr>=t[0] && hr<t[1], msg;
+  if(open){ msg = 'Open now · until '+fmt(t[1]); }
+  else{
+    if(t && hr<t[0]) msg = 'Closed now · opens today at '+fmt(t[0]);
+    else { var n=(day+1)%7; while(!H[n]) n=(n+1)%7; msg = 'Closed now · opens '+names[n]+' at '+fmt(H[n][0]); }
+  }
+  var st = document.getElementById('status');
+  st.classList.add(open?'open':'closed'); st.querySelector('span').textContent = msg;
+  var hs = document.getElementById('heroStatus');
+  hs.classList.add(open?'open':'closed'); hs.lastChild.textContent = open ? 'Open now until '+fmt(t[1]) : 'Closed now, '+msg.split('· ')[1];
+
+  /* ----- spray mist on buttons ----- */
+  document.querySelectorAll('.spray').forEach(function(b){
+    b.addEventListener('click', function(e){
+      if(reduce) return;
+      var r = b.getBoundingClientRect();
+      var x = (e.clientX || r.left + r.width/2) - r.left, y = (e.clientY || r.top + r.height/2) - r.top;
+      for(var i=0;i<12;i++){
+        var m = document.createElement('span'); m.className='mist';
+        var a = (-Math.PI/2) + (Math.random()-.5)*Math.PI*1.3, dist = 26 + Math.random()*34;
+        m.style.left = (x-3)+'px'; m.style.top = (y-3)+'px';
+        m.style.setProperty('--dx', Math.cos(a)*dist+'px'); m.style.setProperty('--dy', Math.sin(a)*dist+'px');
+        m.style.animationDelay = (Math.random()*90)+'ms';
+        b.appendChild(m); setTimeout(function(n){return function(){n.remove();};}(m), 950);
+      }
+    });
+  });
+
+  /* ----- scrub it clean ----- */
+  var tiles = [].slice.call(document.querySelectorAll('.scrub'));
+  var countEl = document.getElementById('cleanCount'), bar = document.getElementById('cleanBar');
+  function tally(){ var n = document.querySelectorAll('.scrub.done').length; countEl.textContent = n; bar.style.width = (n*25)+'%'; }
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+  function grime(c, kind){
+    var w = c.width, h = c.height, x = c.getContext('2d');
+    x.globalCompositeOperation='source-over';
+    x.fillStyle = '#5E5B4C'; x.fillRect(0,0,w,h);
+    var tones = ['rgba(70,78,48,','rgba(48,44,36,','rgba(96,88,66,','rgba(58,66,52,','rgba(110,100,78,'];
+    for(var i=0;i<70;i++){
+      var cx=rnd(0,w), cy=rnd(0,h), r=rnd(w*.04,w*.22), g=x.createRadialGradient(cx,cy,0,cx,cy,r), tn=tones[i%tones.length];
+      g.addColorStop(0,tn+rnd(.35,.7)+')'); g.addColorStop(1,tn+'0)'); x.fillStyle=g; x.beginPath(); x.arc(cx,cy,r,0,Math.PI*2); x.fill();
+    }
+    if(kind==='siding'){ for(var j=0;j<26;j++){ x.strokeStyle='rgba(40,38,30,'+rnd(.2,.45)+')'; x.lineWidth=rnd(2,6); var sx=rnd(0,w); x.beginPath(); x.moveTo(sx,rnd(0,h*.3)); x.lineTo(sx+rnd(-4,4),rnd(h*.4,h)); x.stroke(); } }
+    for(var k=0;k<900;k++){ x.fillStyle='rgba('+(Math.random()<.5?'30,28,22':'140,130,100')+','+rnd(.15,.5)+')'; x.fillRect(rnd(0,w),rnd(0,h),rnd(1,3),rnd(1,3)); }
+  }
+  function setup(tile){
+    var c = tile.querySelector('canvas'); if(!c) return;
+    var dpr = Math.min(window.devicePixelRatio||1,2), r = tile.getBoundingClientRect();
+    if(r.width<2) return;
+    c.width = Math.round(r.width*dpr); c.height = Math.round(r.height*dpr);
+    if(!tile.classList.contains('done')) grime(c, tile.dataset.kind);
+    var ctx = c.getContext('2d'), down=false, last=null, moves=0;
+    function brush(px,py,rad){
+      ctx.globalCompositeOperation='destination-out';
+      var g = ctx.createRadialGradient(px,py,0,px,py,rad); g.addColorStop(0,'rgba(0,0,0,1)'); g.addColorStop(.6,'rgba(0,0,0,.8)'); g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(px,py,rad,0,Math.PI*2); ctx.fill();
+    }
+    function pos(e){ var b=c.getBoundingClientRect(); return [(e.clientX-b.left)*dpr,(e.clientY-b.top)*dpr]; }
+    function check(){
+      var d = ctx.getImageData(0,0,c.width,c.height).data, step = 4*24, clear=0, tot=0;
+      for(var i=3;i<d.length;i+=step){ tot++; if(d[i]<60) clear++; }
+      if(clear/tot > .45) finish(tile);
+    }
+    c.onpointerdown = function(e){ down=true; try{c.setPointerCapture(e.pointerId);}catch(_){} var p=pos(e); brush(p[0],p[1],Math.max(46*dpr,Math.min(c.width,c.height)*.3)); last=p; moves++; if(moves%3===0) check(); };
+    c.onpointermove = function(e){
+      if(!down) return; var p=pos(e), rad=30*dpr;
+      if(last){ var dx=p[0]-last[0], dy=p[1]-last[1], dist=Math.sqrt(dx*dx+dy*dy), n=Math.ceil(dist/(rad*.4)); for(var i=1;i<=n;i++) brush(last[0]+dx*i/n,last[1]+dy*i/n,rad); }
+      last=p; if(++moves%8===0) check();
+    };
+    c.onpointerup = c.onpointercancel = function(){ down=false; last=null; check(); };
+  }
+  function finish(tile){ if(tile.classList.contains('done')) return; tile.classList.add('done'); tally(); }
+  if(reduce){ tiles.forEach(function(t){ t.classList.add('done'); }); tally(); }
+  else{
+    tiles.forEach(setup);
+    var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(function(){ tiles.forEach(setup); },200); });
+  }
+  document.getElementById('cleanAll').addEventListener('click', function(){ tiles.forEach(function(t,i){ setTimeout(function(){ finish(t); }, reduce?0:i*220); }); });
+
+  /* ----- demo form ----- */
+  document.getElementById('quoteForm').addEventListener('submit', function(e){ e.preventDefault(); document.getElementById('formNote').classList.add('show'); });
+})();
+</script>
+</body>
+</html>

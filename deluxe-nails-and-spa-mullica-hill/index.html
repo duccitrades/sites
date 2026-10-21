@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Deluxe Nails and Spa | Nail Salon in Mullica Hill, NJ</title>
+<meta name="description" content="Deluxe Nails and Spa, 157 Bridgeton Pike Ste 420, Mullica Hill NJ. Manicures, pedicures, gel polish, gel refills and acrylic nails. Call (856) 418-1641.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#FBF6F4; --paper:#FFFFFF; --cocoa:#3A2A30; --cocoa2:#4A3740; --plum:#6E4A8E; --plum-d:#5A3C76;
+  --text:#241D21; --muted:#5A4D54; --lilac:#EDE4F3; --line:#E6D9DC; --rose:#F3E6E3;
+  --head:'Marcellus',Georgia,'Times New Roman',serif;
+  --body:'Quicksand','Trebuchet MS',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--body);font-weight:400;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.12;margin:0;letter-spacing:.005em}
+p{margin:0 0 1em}
+a{color:var(--plum)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--plum-d);font-weight:500}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--plum)}
+section{position:relative}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--cocoa);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:20px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--head);font-size:21px;white-space:nowrap}
+.brand svg{flex:none}
+.brand small{font-family:var(--body);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#E9DDE4;display:block;line-height:1}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:#fff;text-decoration:none;font-size:15px}
+.nav a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-color:#C9B3DA}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--plum);color:#fff;text-decoration:none;padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap}
+@media(max-width:920px){.nav{display:none}.pill{margin-left:auto}}
+@media(max-width:430px){.top .wrap{gap:8px;padding:0 14px}.brand{font-size:17px;gap:7px}.brand svg{width:22px;height:22px}.brand small{display:none}.pill{padding:8px 11px;font-size:14px}}
+
+/* buttons + sparkle */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 24px;border-radius:999px;text-decoration:none;font-family:var(--body);font-weight:500;font-size:16px;border:0;cursor:pointer;transition:transform .15s ease,background .2s;overflow:visible}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--plum-d)}
+.btn-line{background:transparent;color:var(--text);border:1px solid #CDB9C4}
+.btn-line:hover{border-color:var(--plum);color:var(--plum-d)}
+.btn:active{transform:scale(.97)}
+.spark{position:fixed;pointer-events:none;z-index:90;width:10px;height:10px;margin:-5px 0 0 -5px;color:#B795D3}
+.spark svg{display:block;width:100%;height:100%}
+@keyframes spark{0%{transform:translate(0,0) scale(.3) rotate(0);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1) rotate(90deg);opacity:0}}
+.spark{animation:spark .65s ease-out forwards}
+
+/* hero: booking first */
+.hero{padding:56px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-140px;top:-160px;width:620px;height:620px;border-radius:50%;background:var(--lilac);opacity:.75}
+.hero::after{content:"";position:absolute;left:-60px;bottom:-40px;width:260px;height:260px;border-radius:50%;border:1px solid #E2D2DA}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:54px;align-items:center}
+.hero h1{font-size:clamp(42px,6vw,68px);margin:18px 0 18px}
+.hero h1 em{font-style:normal;color:var(--plum-d);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:2px;right:2px;bottom:4px;height:6px;border-radius:6px;background:var(--lilac);z-index:-1}
+.hero .sub{font-size:19px;max-width:30em;color:var(--muted)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 16px 7px 12px;font-size:15px}
+.dot{width:10px;height:10px;border-radius:50%;background:#9A8C93}
+.dot.on{background:#2E8B57;box-shadow:0 0 0 4px rgba(46,139,87,.16)}
+.hero-photo{position:relative;margin-top:28px;display:flex;gap:12px;align-items:flex-end}
+.frame{position:relative;background:linear-gradient(150deg,var(--lilac),var(--rose));border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.frame span{font-size:13px;color:var(--muted);padding:10px;line-height:1.3}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo .frame:nth-child(1){width:170px;height:200px;border-radius:90px 90px 18px 18px}
+.hero-photo .frame:nth-child(2){width:140px;height:150px;border-radius:18px 18px 70px 70px}
+.hero-photo .cap{font-size:13px;color:var(--muted);max-width:150px;align-self:center}
+
+.book{position:relative;background:var(--paper);border-radius:28px;padding:30px 28px 26px;box-shadow:0 30px 60px -30px rgba(58,42,48,.35),0 0 0 1px var(--line)}
+.book::before{content:"";position:absolute;left:28px;right:28px;top:0;height:4px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,var(--plum),#B795D3)}
+.book h2{font-size:28px;margin-bottom:4px}
+.book .hint{font-size:14px;color:var(--muted);margin-bottom:16px}
+.field{margin-bottom:14px}
+.field label,.field .lab{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+.field select,.field input{width:100%;font:inherit;font-size:16px;color:var(--text);background:#FFFDFC;border:1px solid #D9C9D0;border-radius:12px;padding:11px 13px}
+.field select:focus,.field input:focus{outline:2px solid #B795D3;outline-offset:1px}
+.svc-chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:14px;font-weight:500;border:1px solid #D9C9D0;background:var(--paper);color:var(--text);border-radius:999px;padding:7px 13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--lilac);border-color:var(--plum);color:var(--plum-d)}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.day{font:inherit;border:1px solid #D9C9D0;background:var(--paper);color:var(--text);border-radius:12px;padding:6px 0;cursor:pointer;line-height:1.2;text-align:center}
+.day b{display:block;font-weight:500;font-size:13px}
+.day i{font-style:normal;font-size:17px;font-family:var(--head)}
+.day[aria-pressed="true"]{background:var(--cocoa);color:#fff;border-color:var(--cocoa)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book .btn{width:100%;margin-top:6px}
+.note{display:none;margin-top:14px;background:var(--lilac);border-radius:14px;padding:12px 14px;font-size:15px;color:var(--text)}
+.note.show{display:block}
+
+/* polish shelf */
+.shelf-sec{padding:84px 0 90px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shelf-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:36px}
+.shelf-head h2{font-size:clamp(32px,4vw,46px);margin-top:12px}
+.shelf-head p{max-width:30em;color:var(--muted);margin:0}
+.studio{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.shelf{position:relative;padding:20px 10px 0}
+.bottles{display:flex;justify-content:space-around;align-items:flex-end;gap:6px;position:relative;z-index:2}
+.bottle{background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;font:inherit;color:var(--text);transition:transform .25s ease}
+.bottle svg{width:62px;height:auto;display:block;filter:drop-shadow(0 8px 8px rgba(58,42,48,.12))}
+.bottle:hover{transform:translateY(-6px)}
+.bottle[aria-pressed="true"]{transform:translateY(-12px)}
+.bottle[aria-pressed="true"] .bn{color:var(--plum-d);text-decoration:underline;text-underline-offset:4px}
+.bn{font-size:13px;font-weight:500;text-align:center;line-height:1.2;max-width:76px}
+.plank{height:16px;margin-top:8px;border-radius:4px;background:linear-gradient(#4A3740,#3A2A30);box-shadow:0 14px 20px -12px rgba(58,42,48,.5)}
+.plank-lip{height:6px;margin:0 10px;border-radius:0 0 6px 6px;background:#2C1F24}
+.tap-hint{text-align:center;font-size:14px;color:var(--muted);margin-top:16px}
+.preview{position:relative;background:var(--base);border-radius:30px;padding:26px;display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;border:1px solid var(--line)}
+.hand{width:200px;height:auto}
+.hand .nail{transition:fill .5s ease}
+.match .tag{display:inline-block;background:var(--lilac);color:var(--plum-d);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:500}
+.match h3{font-size:28px;margin:10px 0 6px}
+.match p{font-size:16px;color:var(--muted);margin-bottom:14px}
+.match .shade{font-size:14px;color:var(--text);margin-bottom:12px}
+.swatch{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:6px;border:1px solid rgba(0,0,0,.12)}
+.fine{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* services list */
+.svc{padding:90px 0}
+.svc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.svc-intro h2{font-size:clamp(32px,4vw,46px);margin:12px 0 16px}
+.svc-intro p{color:var(--muted)}
+.svc-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc-list li{display:grid;grid-template-columns:54px 1fr auto;gap:16px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc-list .n{font-family:var(--head);font-size:22px;color:var(--plum-d)}
+.svc-list h3{font-size:25px;margin-bottom:4px}
+.svc-list p{margin:0;color:var(--muted);font-size:16px}
+.svc-list .ask{font-size:13px;background:var(--lilac);color:var(--plum-d);border-radius:999px;padding:4px 12px;white-space:nowrap;font-weight:500}
+
+/* gallery */
+.gal{padding:20px 0 96px}
+.gal h2{font-size:clamp(32px,4vw,46px);margin:12px 0 26px}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:14px;grid-template-areas:"a b c f" "a d d f" "g g e f"}
+.mosaic .frame{border-radius:20px}
+.mosaic .frame:nth-child(1){grid-area:a;border-radius:120px 120px 20px 20px}
+.mosaic .frame:nth-child(2){grid-area:b}.mosaic .frame:nth-child(3){grid-area:c}.mosaic .frame:nth-child(4){grid-area:d}.mosaic .frame:nth-child(5){grid-area:e}
+.mosaic .frame:nth-child(6){grid-area:f;border-radius:20px 20px 120px 120px}
+.mosaic .frame:nth-child(7){grid-area:g}
+.gal .fine{margin-top:16px}
+
+/* reviews band (the one cocoa band) */
+.rev{background:var(--cocoa);color:#fff;padding:90px 0;overflow:hidden}
+.rev::before{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;border:1px solid #5B4650}
+.rev .eyebrow{color:#E9DDE4}
+.rev .eyebrow::before{background:#C9B3DA}
+.rev h2{font-size:clamp(32px,4vw,46px);margin:12px 0 34px;color:#fff}
+.quotes{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.q{position:relative;margin:0;background:var(--paper);color:var(--text);border-radius:26px;padding:34px 30px 26px}
+.q:nth-child(2){margin-top:60px;background:var(--lilac)}
+.q blockquote{margin:0;font-family:var(--head);font-size:26px;line-height:1.3}
+.q figcaption{margin-top:16px;font-size:15px;color:var(--muted)}
+.q::before{content:"\201C";position:absolute;top:-30px;left:22px;font-family:var(--head);font-size:90px;line-height:1;color:#C9B3DA}
+.rev-foot{margin-top:34px;color:#F1E8ED;font-size:16px}
+.rev-foot a{color:#fff}
+
+/* visit */
+.visit{padding:90px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.visit h2{font-size:clamp(32px,4vw,46px);margin:12px 0 18px}
+.addr{font-size:19px;margin-bottom:6px}
+.visit .btns{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.hours{background:var(--paper);border-radius:26px;padding:26px 28px;border:1px solid var(--line);position:relative}
+.hours h3{font-size:24px;margin-bottom:12px}
+.hours table{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:10px 8px;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{background:var(--lilac);font-weight:500}
+.hours tr.today td:first-child{border-radius:10px 0 0 10px}
+.hours tr.today td:last-child{border-radius:0 10px 10px 0}
+.facts{list-style:none;padding:0;margin:0;font-size:16px}
+.facts li{padding:6px 0 6px 22px;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--plum)}
+
+/* footer */
+.foot{background:var(--cocoa);color:#fff;padding:46px 0 40px;font-size:15px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+.foot a{color:#fff}
+.foot .fb{font-family:var(--head);font-size:22px}
+.foot p{margin:4px 0;color:#F1E8ED}
+
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:var(--paper);color:var(--text);border:1px solid #CDB9C4;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:500;box-shadow:0 6px 16px -8px rgba(58,42,48,.4)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero-grid,.studio,.svc-grid,.visit-grid,.quotes{grid-template-columns:minmax(0,1fr)}
+  .hero{padding:34px 0 56px}
+  .q:nth-child(2){margin-top:10px}
+  .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;grid-template-areas:"a b" "a c" "d d" "e f" "g f"}
+}
+@media(max-width:700px){
+  body{padding-bottom:64px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--cocoa);padding:9px 12px;gap:10px}
+  .callbar a{flex:1;text-align:center;padding:11px 8px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+  .callbar .c1{background:var(--plum);color:#fff}
+  .callbar .c2{background:var(--paper);color:var(--text)}
+  .badge{bottom:76px;left:10px}
+  .preview{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .bottle svg{width:46px}
+  .bn{font-size:12px;max-width:58px}
+  .svc-list li{grid-template-columns:40px 1fr}
+  .svc-list .ask{grid-column:2;justify-self:start}
+  .book{padding:26px 18px 22px;border-radius:24px}
+  .hero::before{width:420px;height:420px;right:-200px;top:-120px}
+  .day i{font-size:15px}
+  .hero-photo .frame:nth-child(1){width:46%;height:180px}
+  .hero-photo .frame:nth-child(2){width:38%;height:140px}
+  .hero-photo .cap{display:none}
+  .days{gap:4px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .spark{display:none}
+  .bottle,.hand .nail,.btn{transition:none}
+  .bottle:hover,.bottle[aria-pressed="true"]{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Deluxe Nails and Spa, back to top">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="9" y="2" width="10" height="7" rx="2" fill="#C9B3DA"/><rect x="6" y="9" width="16" height="17" rx="5" fill="none" stroke="#fff" stroke-width="1.5"/><rect x="9" y="15" width="10" height="8" rx="3" fill="#B795D3"/></svg>
+      <span>Deluxe Nails <small>and Spa &middot; Mullica Hill</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#book">Book</a>
+      <a href="#shelf">Polish shelf</a>
+      <a href="#services">Services</a>
+      <a href="#photos">Photos</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours</a>
+    </nav>
+    <a class="pill sparkle" href="tel:+18564181641">(856) 418-1641</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="book">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Nail salon on Bridgeton Pike</span>
+      <h1>Pretty nails, <em>easy booking</em>, right in Mullica Hill.</h1>
+      <p class="sub">Manicures, pedicures, gel polish, gel refills and acrylic nails at 157 Bridgeton Pike. Open six days a week. Pick a service and a time, or just give us a call.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-plum sparkle" href="tel:+18564181641">Call (856) 418-1641</a>
+        <a class="btn btn-line sparkle" href="#shelf">Try the polish shelf</a>
+      </div>
+      <div class="status" id="status"><span class="dot" id="sdot"></span><span id="stext">Mon to Fri 9 to 7, Sat 9 to 6</span></div>
+      <div class="hero-photo">
+        <div class="frame"><span>Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Q8YNgNykTja8nevZEt6xRA/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+        <div class="frame"><span>Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Zh-BzuJFUp743wZYchLGXg/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+        <p class="cap">157 Bridgeton Pike, Ste 420, in the Bridgeton Pike shopping center.</p>
+      </div>
+    </div>
+
+    <form class="book" id="bookform" novalidate>
+      <h2>Pick your service</h2>
+      <p class="hint">Choose a day and time. We will confirm by phone.</p>
+      <div class="field">
+        <span class="lab" id="svclab">Service</span>
+        <div class="svc-chips" role="group" aria-labelledby="svclab" id="svcchips">
+          <button type="button" class="chip" data-svc="Manicure" aria-pressed="true">Manicure</button>
+          <button type="button" class="chip" data-svc="Pedicure" aria-pressed="false">Pedicure</button>
+          <button type="button" class="chip" data-svc="Gel polish" aria-pressed="false">Gel polish</button>
+          <button type="button" class="chip" data-svc="Gel refill" aria-pressed="false">Gel refill</button>
+          <button type="button" class="chip" data-svc="Acrylic nails" aria-pressed="false">Acrylic nails</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="lab" id="daylab">Day</span>
+        <div class="days" role="group" aria-labelledby="daylab" id="days"></div>
+      </div>
+      <div class="field">
+        <label for="time">Time</label>
+        <select id="time" name="time"></select>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" placeholder="First name"></div>
+        <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(856) 555-0123"></div>
+      </div>
+      <button class="btn btn-plum sparkle" type="submit">Request this time</button>
+      <div class="note" id="booknote" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section class="shelf-sec" id="shelf">
+  <div class="wrap">
+    <div class="shelf-head">
+      <div><span class="eyebrow">Polish shelf</span><h2>Tap a bottle, paint a nail</h2></div>
+      <p>Pick a shade from the shelf. The hand gets a fresh coat, and we show the service that suits it.</p>
+    </div>
+    <div class="studio">
+      <div class="shelf">
+        <div class="bottles" id="bottles"></div>
+        <div class="plank"></div><div class="plank-lip"></div>
+        <p class="tap-hint">Tap a bottle to try it on.</p>
+      </div>
+      <div class="preview" aria-live="polite">
+        <svg class="hand" viewBox="0 0 150 190" aria-hidden="true">
+          <path d="M32 185 C26 150 18 120 22 96 L26 70 C27 62 38 62 38 70 L40 96 L42 44 C43 35 55 35 55 44 L56 90 L60 30 C61 21 74 21 74 30 L74 90 L80 38 C81 29 93 30 93 39 L90 96 L100 70 C103 62 114 64 112 73 L100 120 C96 140 92 160 96 185 Z" fill="#F2DCD2" stroke="#D9BFB4" stroke-width="1.5"/>
+          <rect class="nail" x="27" y="66" width="10" height="13" rx="5"/>
+          <rect class="nail" x="43" y="38" width="11" height="15" rx="5.5"/>
+          <rect class="nail" x="61" y="24" width="12" height="16" rx="6"/>
+          <rect class="nail" x="81" y="33" width="11" height="15" rx="5.5"/>
+          <rect class="nail" x="101" y="65" width="10" height="13" rx="5" transform="rotate(14 106 71)"/>
+        </svg>
+        <div class="match">
+          <span class="tag" id="mtag">Pairs well with</span>
+          <h3 id="msvc">Manicure</h3>
+          <p class="shade" id="mshade"><span class="swatch" id="msw"></span><span id="mname">Soft blush</span></p>
+          <p id="mtext">Shape, cuticle care and a clean coat of color.</p>
+          <a class="btn btn-plum sparkle" href="#book" id="mbook">Book a manicure</a>
+        </div>
+      </div>
+    </div>
+    <p class="fine">Shades here are just for fun. Ask in the salon to see the real colors on the wall.</p>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-intro">
+      <span class="eyebrow">Services</span>
+      <h2>Hands and feet, done with care</h2>
+      <p>Deluxe Nails and Spa sits in the shopping center on Bridgeton Pike, Suite 420. Come in for a quick polish change or settle in for a pedicure.</p>
+      <p>Prices depend on the service and the design. Call and we will tell you.</p>
+      <a class="btn btn-line sparkle" href="tel:+18564181641">Ask about prices</a>
+    </div>
+    <ul class="svc-list">
+      <li><span class="n">01</span><div><h3>Manicures</h3><p>Shape, cuticle care and polish for clean, tidy hands.</p></div><span class="ask">Call for price</span></li>
+      <li><span class="n">02</span><div><h3>Pedicures</h3><p>Soak, trim, smooth and polish. Sit back and relax.</p></div><span class="ask">Call for price</span></li>
+      <li><span class="n">03</span><div><h3>Gel polish</h3><p>Glossy color that is cured under a lamp.</p></div><span class="ask">Call for price</span></li>
+      <li><span class="n">04</span><div><h3>Gel refills</h3><p>Keep your gel set looking fresh as your nails grow.</p></div><span class="ask">Call for price</span></li>
+      <li><span class="n">05</span><div><h3>Acrylic nails</h3><p>Added length and shape, finished in the color you pick.</p></div><span class="ask">Call for price</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="gal" id="photos">
+  <div class="wrap">
+    <span class="eyebrow">Photos</span>
+    <h2>From the salon</h2>
+    <div class="mosaic">
+      <div class="frame"><span>Personalized photos will go here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/3et_9q3Nv0H9uDf_96t3-g/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/_o1qk29zrpwY3QmBoLQE8w/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/SYv3RzJo5HA3R-OWLO_AAw/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Personalized photos will go here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/B3j4Q8epZlqj5gn7MkyDIQ/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/7VSpPzY-MPEiVFJruf8oDw/l.jpg" alt="Salon photo from Yelp" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Personalized photos will go here</span><img src="https://cdn10.localdatacdn.com/nj/mullica-hill/4048691/original/QsOzj8dR4C.jpeg" alt="Salon photo from a Google listing" loading="lazy" onerror="this.remove()"></div>
+      <div class="frame"><span>Your photo here</span></div>
+    </div>
+    <p class="fine">Photos from the salon's public Yelp and Google listings. On your real site we use your own pictures.</p>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What clients say</h2>
+    <div class="quotes">
+      <figure class="q"><blockquote>I've had a lot of the nail techs and they all do a beautiful job!</blockquote><figcaption>KT A. on Yelp</figcaption></figure>
+      <figure class="q"><blockquote>I love this place!</blockquote><figcaption>Olivia H. on Yellow Pages</figcaption></figure>
+    </div>
+    <p class="rev-foot">39 reviews on <a href="https://www.yelp.com/biz/deluxe-nails-and-spa-mullica-hill">Yelp</a>. Read them all and leave your own.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <span class="eyebrow">Visit</span>
+      <h2>Find us on Bridgeton Pike</h2>
+      <p class="addr">157 Bridgeton Pike, Ste 420<br>Mullica Hill, NJ 08062</p>
+      <p><a href="tel:+18564181641">(856) 418-1641</a></p>
+      <div class="btns">
+        <a class="btn btn-plum sparkle" href="https://www.google.com/maps/dir/?api=1&amp;destination=157%20Bridgeton%20Pike%20Ste%20420%2C%20Mullica%20Hill%2C%20NJ%2008062">Get directions</a>
+        <a class="btn btn-line sparkle" href="tel:+18564181641">Call the salon</a>
+      </div>
+      <ul class="facts">
+        <li>Credit cards accepted</li>
+        <li>Book by phone or with the form above</li>
+        <li>Closed Sundays</li>
+      </ul>
+    </div>
+    <div class="hours">
+      <h3>Hours</h3>
+      <table id="hours">
+        <tr data-d="1"><td>Monday</td><td>9:00 am to 7:00 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>9:00 am to 7:00 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>9:00 am to 7:00 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>9:00 am to 7:00 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>9:00 am to 7:00 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>9:00 am to 6:00 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <div class="fb">Deluxe Nails and Spa</div>
+      <p>157 Bridgeton Pike, Ste 420, Mullica Hill, NJ 08062</p>
+      <p><a href="tel:+18564181641">(856) 418-1641</a></p>
+    </div>
+    <div>
+      <p>Mon to Fri 9 am to 7 pm &middot; Sat 9 am to 6 pm &middot; Sun closed</p>
+      <p>Demo preview prepared for Deluxe Nails and Spa</p>
+    </div>
+  </div>
+</footer>
+
+<div class="badge" aria-hidden="true">Demo preview</div>
+<div class="callbar">
+  <a class="c1" href="tel:+18564181641">Call now</a>
+  <a class="c2" href="#book">Book a time</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // hours: [open, close] in hours, null = closed. index = getDay()
+  var H = [null,[9,19],[9,19],[9,19],[9,19],[9,19],[9,18]];
+  var DN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(h){var hh=Math.floor(h),m=Math.round((h-hh)*60),ap=hh>=12?'pm':'am',x=hh%12||12;return x+(m?':'+(m<10?'0':'')+m:'')+' '+ap;}
+  var now = new Date(), d = now.getDay(), t = now.getHours()+now.getMinutes()/60;
+  var row = document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.className='today';
+  var sd=document.getElementById('sdot'), st=document.getElementById('stext');
+  if(H[d] && t>=H[d][0] && t<H[d][1]){ sd.className='dot on'; st.textContent='Open now until '+fmt(H[d][1]); }
+  else { var n=d, add=0; if(H[d] && t<H[d][0]){} else { do{ n=(n+1)%7; add++; }while(!H[n]); }
+    st.textContent='Closed now. Opens '+(add===0?'today':add===1?'tomorrow':DN[n])+' at '+fmt(H[n][0]); }
+
+  // booking: next 6 open days
+  var days=document.getElementById('days'), time=document.getElementById('time'), picked=null;
+  var dt=new Date(); dt.setHours(0,0,0,0); var list=[];
+  if(H[d] && t > H[d][1]-1) dt.setDate(dt.getDate()+1);
+  while(list.length<6){ if(H[dt.getDay()]) list.push(new Date(dt)); dt.setDate(dt.getDate()+1); }
+  function fillTimes(day){
+    var h=H[day.getDay()], out='', start=h[0];
+    var isToday = day.toDateString()===now.toDateString();
+    if(isToday) start=Math.max(start, Math.ceil((t+0.5)*2)/2);
+    for(var x=start;x<=h[1]-1;x+=0.5) out+='<option>'+fmt(x)+'</option>';
+    time.innerHTML=out||'<option>First open time</option>';
+  }
+  list.forEach(function(day,i){
+    var b=document.createElement('button'); b.type='button'; b.className='day';
+    b.setAttribute('aria-pressed', i===0?'true':'false');
+    b.innerHTML='<b>'+DN[day.getDay()]+'</b><i>'+day.getDate()+'</i>';
+    b.addEventListener('click',function(){ [].forEach.call(days.children,function(c){c.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); picked=day; fillTimes(day); });
+    days.appendChild(b);
+  });
+  picked=list[0]; fillTimes(picked);
+  var svc='Manicure', chips=document.getElementById('svcchips');
+  function setSvc(name){ svc=name; [].forEach.call(chips.children,function(c){c.setAttribute('aria-pressed', c.getAttribute('data-svc')===name?'true':'false');}); }
+  [].forEach.call(chips.children,function(c){ c.addEventListener('click',function(){ setSvc(c.getAttribute('data-svc')); }); });
+  document.getElementById('bookform').addEventListener('submit',function(e){
+    e.preventDefault();
+    var note=document.getElementById('booknote');
+    note.textContent='This is a demo. On your real site this sends straight to you. ('+svc+', '+DN[picked.getDay()]+' '+picked.getDate()+' at '+time.value+')';
+    note.className='note show';
+  });
+
+  // polish shelf
+  var shades=[
+    {n:'Soft blush',c:'#E8B4B0',cap:'#3A2A30',s:'Manicure',x:'Shape, cuticle care and a clean coat of color.'},
+    {n:'Deep plum',c:'#6E4A8E',cap:'#3A2A30',s:'Gel polish',x:'A rich shade with a glossy gel finish.'},
+    {n:'Coral sun',c:'#E77B66',cap:'#3A2A30',s:'Pedicure',x:'Bright toes for sandal days. Soak, trim and polish.'},
+    {n:'Lilac mist',c:'#C7B2E0',cap:'#3A2A30',s:'Gel refill',x:'Grown out? Refresh your gel set in a new shade.'},
+    {n:'Classic red',c:'#A3242F',cap:'#3A2A30',s:'Acrylic nails',x:'Added length and shape, finished in a bold red.'},
+    {n:'Milky nude',c:'#EAD6C8',cap:'#3A2A30',s:'Manicure',x:'A quiet everyday color for clean, tidy hands.'}
+  ];
+  var wrap=document.getElementById('bottles'), nails=document.querySelectorAll('.hand .nail');
+  function bottleSVG(c,cap){return '<svg viewBox="0 0 60 100" aria-hidden="true"><rect x="22" y="2" width="16" height="34" rx="4" fill="'+cap+'"/><rect x="18" y="34" width="24" height="6" rx="2" fill="#2C1F24"/><path d="M14 44 Q14 40 18 40 L42 40 Q46 40 46 44 L50 88 Q50 98 40 98 L20 98 Q10 98 10 88 Z" fill="'+c+'" stroke="rgba(0,0,0,.15)"/><path d="M17 50 L19 86" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/></svg>';}
+  function paint(i,btn){
+    var s=shades[i];
+    [].forEach.call(nails,function(nl,k){ if(reduce){nl.setAttribute('fill',s.c);} else setTimeout(function(){nl.setAttribute('fill',s.c);},k*90); });
+    document.getElementById('msvc').textContent=s.s;
+    document.getElementById('mname').textContent=s.n;
+    document.getElementById('msw').style.background=s.c;
+    document.getElementById('mtext').textContent=s.x;
+    var mb=document.getElementById('mbook'); mb.textContent='Book '+(s.s==='Acrylic nails'?'acrylic nails':(/^[AEIOU]/.test(s.s)?'an ':'a ')+s.s.toLowerCase());
+    mb.onclick=function(){ setSvc(s.s==='Acrylic nails'?'Acrylic nails':s.s); };
+    [].forEach.call(wrap.children,function(b){b.setAttribute('aria-pressed','false');}); btn.setAttribute('aria-pressed','true');
+  }
+  shades.forEach(function(s,i){
+    var b=document.createElement('button'); b.type='button'; b.className='bottle'; b.setAttribute('aria-pressed','false');
+    b.setAttribute('aria-label','Try '+s.n+', pairs with '+s.s);
+    b.innerHTML=bottleSVG(s.c,s.cap)+'<span class="bn">'+s.n+'</span>';
+    b.addEventListener('click',function(){ paint(i,b); });
+    wrap.appendChild(b);
+  });
+  paint(0,wrap.children[0]);
+
+  // sparkle on button clicks
+  var star='<svg viewBox="0 0 10 10"><path d="M5 0 L6 4 L10 5 L6 6 L5 10 L4 6 L0 5 L4 4 Z" fill="currentColor"/></svg>';
+  document.addEventListener('click',function(e){
+    if(reduce) return;
+    var b=e.target.closest('.btn,.pill,.bottle,.chip,.day'); if(!b) return;
+    var x=e.clientX, y=e.clientY;
+    if(!x && !y){ var r=b.getBoundingClientRect(); x=r.left+r.width/2; y=r.top+r.height/2; }
+    for(var i=0;i<7;i++){
+      var s=document.createElement('span'); s.className='spark'; s.innerHTML=star;
+      var a=Math.PI*2*i/7+Math.random()*.5, dist=22+Math.random()*16;
+      s.style.left=x+'px'; s.style.top=y+'px';
+      s.style.setProperty('--dx',Math.cos(a)*dist+'px'); s.style.setProperty('--dy',Math.sin(a)*dist+'px');
+      if(i%2) s.style.color='#E8B4B0';
+      document.body.appendChild(s);
+      setTimeout((function(n){return function(){n.remove();};})(s),700);
+    }
+  });
+})();
+</script>
+</body>
+</html>

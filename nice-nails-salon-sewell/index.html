@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Nice Nail Salon | Manicures and Pedicures in Sewell, NJ</title>
+<meta name="description" content="Nice Nail Salon at 475 Hurffville Crosskeys Rd in Sewell (Washington Township), NJ. Manicures and pedicures. Call (856) 582-8824.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#33251F;      /* chocolate: header, call band, footer */
+  --sig:#9E5426;       /* copper: buttons + lines */
+  --sigdeep:#84431C;
+  --light:#FBF7F2;     /* shell white page */
+  --card:#FFFFFF;
+  --frame:#F1E6DA;     /* photo frame fill */
+  --line:#E4D3C2;
+  --text:#1D1714;
+  --muted:#5A4A41;
+  --onDark:#FFFFFF;
+  --onDarkSoft:#EBDCCD;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:400;color:var(--text);background:var(--light);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,.serif{font-family:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.005em}
+h2{font-size:clamp(32px,5vw,44px)}
+h3{font-size:22px;font-weight:500}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+@media(min-width:700px){.wrap{padding:0 28px}}
+.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--sig);font-weight:500;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--sig)}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--sig);color:#fff;text-decoration:none;font:500 16px/1 "Outfit",system-ui,sans-serif;padding:15px 22px;border-radius:4px;border:1px solid var(--sig);cursor:pointer}
+.btn:hover{background:var(--sigdeep)}
+.btn.line{background:#fff;color:var(--sig)}
+.btn.line:hover{background:#FBF1E8}
+.btn svg{width:18px;height:18px;flex:none}
+.drop{position:absolute;width:12px;height:16px;margin-left:-6px;background:#5E2A0E;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;pointer-events:none;animation:fall .32s cubic-bezier(.5,0,1,1) forwards}
+.drop.spread{animation:spread .5s ease-out forwards}
+@keyframes fall{from{transform:translateY(-34px) scale(.7);opacity:.9}to{transform:translateY(0) scale(1);opacity:.9}}
+@keyframes spread{0%{transform:scale(1,1);opacity:.85;border-radius:50%}40%{transform:scale(3.4,.7);opacity:.55}100%{transform:scale(9,1.6);opacity:0;border-radius:50%}}
+@media (prefers-reduced-motion:reduce){.drop{display:none}html{scroll-behavior:auto}}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:var(--dark);color:#fff;border-bottom:2px solid var(--sig)}
+header .wrap{height:62px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{text-decoration:none;color:#fff;display:flex;align-items:baseline;gap:8px;min-width:0}
+.logo b{font-family:"Bodoni Moda",Didot,Georgia,serif;font-weight:400;font-size:24px;white-space:nowrap}
+.logo i{font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--onDarkSoft);white-space:nowrap}
+nav{display:none;gap:24px;font-size:15px}
+nav a{text-decoration:none;color:var(--onDarkSoft)}
+nav a:hover{color:#fff}
+.hphone{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:#fff;border:1px solid #C98A5E;border-radius:999px;padding:8px 14px;font-size:15px;white-space:nowrap}
+.hphone svg{width:15px;height:15px}
+@media(max-width:560px){.logo i{display:none}}
+@media(max-width:420px){.logo b{font-size:20px}.hphone{padding:7px 10px;font-size:14px;gap:5px}header .wrap{gap:6px}}
+@media(min-width:900px){nav{display:flex}}
+
+/* hero */
+.hero{padding:30px 0 18px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.hero h1{font-size:clamp(40px,7.4vw,62px);margin:12px 0 14px}
+.hero h1 em{font-style:italic;color:var(--sig)}
+.hero .sub{color:var(--muted);max-width:34em;font-size:17px}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:15px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.dot{width:9px;height:9px;border-radius:50%;background:#8A7B72}
+.status.open .dot{background:#2F7A43}
+@media(min-width:960px){.hero{padding:52px 0 26px}.hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center}}
+
+/* photo frames */
+.ph{position:relative;background:var(--frame);border:1px solid var(--line);overflow:hidden;aspect-ratio:1/1}
+.ph:after{content:"";position:absolute;inset:7px;border:1px solid #D2B9A3;pointer-events:none}
+.ph span{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;color:var(--dark);font-size:14px;font-weight:500;padding:10px;z-index:1}
+.ph span small{font-size:12px;font-weight:400;color:#4A3A31}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.strip .ph:nth-child(2){margin-top:14px}
+.hero .strip{margin-top:20px}
+.strip-desk{display:none}
+@media(min-width:960px){.hero .strip{display:none}.strip-desk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}.strip-desk .ph{aspect-ratio:16/7}.strip-desk .ph:nth-child(2){margin-top:0}}
+
+/* ticket */
+.ticket{display:grid;grid-template-columns:minmax(0,1fr);background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px -26px rgba(51,37,31,.45);position:relative}
+.t-main{padding:22px 20px 20px}
+.t-main h2{font-size:30px;margin-bottom:4px}
+.t-main p.hint{color:var(--muted);font-size:15px;margin-bottom:14px}
+.step{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:400 15px/1 "Outfit",system-ui,sans-serif;background:#fff;color:var(--text);border:1px solid #CDB7A3;border-radius:4px;padding:11px 14px;cursor:pointer}
+.chip:hover{border-color:var(--sig)}
+.chip[aria-pressed="true"]{background:var(--sig);border-color:var(--sig);color:#fff}
+.chip.day{min-width:62px;display:flex;flex-direction:column;align-items:center;gap:5px;padding:9px 10px}
+.chip.day small{font-size:12px;color:var(--muted)}
+.chip.day[aria-pressed="true"] small{color:#fff}
+.chip.day.today{border-width:2px}
+.chip:disabled{background:#F1ECE7;color:#8B7F78;border-color:#E2D9D1;cursor:not-allowed;text-decoration:line-through}
+.perf{position:relative;height:0;border-top:2px dashed #CDB7A3;margin:0 18px}
+.perf:before,.perf:after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--light);border:1px solid var(--line)}
+.perf:before{left:-31px;clip-path:inset(0 0 0 50%)}
+.perf:after{right:-31px;clip-path:inset(0 50% 0 0)}
+.t-stub .btn{white-space:nowrap}
+.t-stub{padding:20px;display:flex;flex-direction:column;gap:12px;background:#FFFCF8;border-radius:0 0 10px 10px}
+.t-stub .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.t-line{font-family:"Bodoni Moda",Didot,Georgia,serif;font-size:21px;line-height:1.3;min-height:56px;color:var(--text)}
+.t-line .pl{color:#6E5F56;font-style:italic}
+.t-no{font-size:13px;color:var(--muted);letter-spacing:.08em}
+.t-form{display:flex;gap:8px;flex-wrap:wrap}
+.t-form input{flex:1 1 150px;min-width:0;font:400 16px "Outfit",system-ui,sans-serif;padding:12px;border:1px solid #CDB7A3;border-radius:4px;background:#fff;color:var(--text)}
+.note{display:none;font-size:14px;background:#F6EADF;border-left:3px solid var(--sig);padding:10px 12px;color:var(--text)}
+.note.show{display:block}
+@media(min-width:960px){
+ .ticket{grid-template-columns:minmax(0,1.35fr) auto minmax(0,1fr)}
+ .perf{height:auto;border-top:0;border-left:2px dashed #CDB7A3;margin:18px 0;width:0}
+ .perf:before,.perf:after{left:-13px;right:auto;clip-path:none}
+ .perf:before{top:-31px;clip-path:inset(50% 0 0 0)}
+ .perf:after{top:auto;bottom:-31px;clip-path:inset(0 0 50% 0)}
+ .t-stub{border-radius:0 10px 10px 0;justify-content:center}
+}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;margin-bottom:28px}
+.sec-head p{color:var(--muted);max-width:30em}
+.services{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media(min-width:640px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1000px){.services{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.svc{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.svc .ph{border:0;border-bottom:1px solid var(--line);aspect-ratio:4/3}
+.svc .body{padding:18px}
+.svc h3{margin-bottom:6px}
+.svc p{color:var(--muted);font-size:15.5px}
+@media(max-width:639px){.svc{flex-direction:row}.svc .ph{flex:0 0 118px;aspect-ratio:auto;min-height:150px;border-bottom:0;border-right:1px solid var(--line)}.svc .body{padding:14px 16px}}
+.svc .tag{display:inline-block;margin-top:10px;font-size:13px;color:var(--sig);border-top:1px solid var(--sig);padding-top:6px}
+
+#reviews{background:#F5EDE4}
+.revs{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+@media(min-width:860px){.revs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rev{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;position:relative}
+.rev:before{content:"\201C";font-family:"Bodoni Moda",Georgia,serif;font-size:60px;line-height:1;color:var(--sig);display:block;height:34px}
+.rev q{quotes:none;font-family:"Bodoni Moda",Didot,Georgia,serif;font-size:21px;line-height:1.35;display:block;margin-bottom:14px}
+.rev cite{font-style:normal;font-size:14px;color:var(--muted)}
+.rev-about{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:28px;align-items:center}
+.rev-about .ph{aspect-ratio:3/2}
+@media(min-width:860px){.rev-about{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+.hours-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media(min-width:860px){.hours-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+td{padding:13px 16px;border-bottom:1px solid #EFE3D7;font-size:16px}
+td:last-child{text-align:right}
+tr:last-child td{border-bottom:0}
+tr.today td{background:#F6E7DA;font-weight:500}
+tr.today td:first-child{border-left:3px solid var(--sig)}
+.small{font-size:14px;color:var(--muted);margin-top:10px}
+
+.band{background:var(--dark);color:#fff;padding:54px 0}
+.band h2{color:#fff}
+.band p{color:var(--onDarkSoft);margin:10px 0 22px;max-width:34em}
+.band .btns{display:flex;flex-wrap:wrap;gap:12px}
+.band .btn.line{background:transparent;color:#fff;border-color:#C98A5E}
+.band .btn.line:hover{background:#45322A}
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+@media(min-width:860px){.visit-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}}
+.visit-grid .ph{aspect-ratio:16/10}
+.addr{font-family:"Bodoni Moda",Didot,Georgia,serif;font-size:26px;line-height:1.25;margin:14px 0 6px}
+
+footer{background:var(--dark);color:var(--onDarkSoft);padding:34px 0 110px;font-size:15px;border-top:1px solid #4A372E}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between}
+footer a{color:#fff}
+footer b{font-family:"Bodoni Moda",Didot,Georgia,serif;font-weight:400;font-size:22px;color:#fff;display:block}
+@media(min-width:760px){footer{padding-bottom:40px}}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--dark);border-top:2px solid var(--sig);padding:10px 16px;display:flex;gap:10px}
+.callbar .btn{flex:1;padding:13px 10px}
+.callbar .btn.line{background:transparent;color:#fff;border-color:#C98A5E}
+@media(min-width:760px){.callbar{display:none}}
+.badge{position:fixed;left:12px;bottom:78px;z-index:50;background:#fff;color:var(--dark);border:1px solid var(--dark);font-size:12px;letter-spacing:.06em;padding:5px 10px;border-radius:999px}
+@media(min-width:760px){.badge{bottom:16px}}
+</style>
+</head>
+<body>
+<div class="badge">Demo preview</div>
+
+<header>
+ <div class="wrap">
+  <a class="logo" href="#top"><b>Nice Nail Salon</b><i>Washington Twp</i></a>
+  <nav aria-label="Sections"><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#hours">Hours</a><a href="#visit">Visit</a></nav>
+  <a class="hphone btn-anim" href="tel:+18565828824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(856) 582-8824</a>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div class="wrap">
+  <div class="hero-grid">
+   <div>
+    <div class="eyebrow">Sewell &middot; Hurffville-Crosskeys Rd</div>
+    <h1>Manis and pedis, <em>close to home.</em></h1>
+    <p class="sub">A neighborhood nail salon in Washington Township for over 20 years. Pick what you need and a day, then give us a call.</p>
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Hours below</span></div>
+    <div class="strip" aria-label="Salon photos">
+     <div class="ph"><span>Your photo here<small>salon</small></span></div>
+     <div class="ph"><span>Your photo here<small>nails</small></span></div>
+     <div class="ph"><span>Your photo here<small>pedi chairs</small></span></div>
+    </div>
+   </div>
+
+   <form class="ticket" id="planner" aria-label="Plan your visit">
+    <div class="t-main">
+     <h2>Plan your visit</h2>
+     <p class="hint">Two taps and your ticket fills in.</p>
+     <div class="step">1 &middot; What are you in for?</div>
+     <div class="chips" id="svcChips">
+      <button type="button" class="chip" data-svc="Mani" aria-pressed="false">Mani</button>
+      <button type="button" class="chip" data-svc="Pedi" aria-pressed="false">Pedi</button>
+      <button type="button" class="chip" data-svc="Mani + Pedi" aria-pressed="false">Both</button>
+     </div>
+     <div class="step">2 &middot; Pick a day</div>
+     <div class="chips" id="dayChips"></div>
+    </div>
+    <div class="perf" aria-hidden="true"></div>
+    <div class="t-stub">
+     <div class="lbl">Your ticket</div>
+     <div class="t-no" id="tno">No. 475 &middot; 08080</div>
+     <div class="t-line" id="tline"><span class="pl">Pick a service and a day.</span></div>
+     <a class="btn btn-anim" id="tcall" href="tel:+18565828824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the salon</a>
+     <div class="t-form">
+      <input type="text" name="name" placeholder="Your first name" aria-label="Your first name">
+      <button class="btn line btn-anim" type="submit">Send request</button>
+     </div>
+     <div class="note" id="note" role="status">This is a demo. On your real site this sends straight to you.</div>
+    </div>
+   </form>
+  </div>
+
+  <div class="strip-desk" aria-label="Salon photos">
+   <div class="ph"><span>Your photo here<small>the salon</small></span></div>
+   <div class="ph"><span>Your photo here<small>a fresh set</small></span></div>
+   <div class="ph"><span>Your photo here<small>pedicure chairs</small></span></div>
+  </div>
+ </div>
+</div>
+
+<section id="services">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><div class="eyebrow">Services</div><h2>What people come in for</h2></div>
+   <p>No price list online yet. Call and we'll tell you what's on the menu today.</p>
+  </div>
+  <div class="services">
+   <article class="svc"><div class="ph"><span>Your photo here<small>manicure</small></span></div><div class="body"><h3>Manicures</h3><p>Shaped, cleaned up and polished. Bring the color you have in mind.</p><span class="tag">Tap "Mani" up top</span></div></article>
+   <article class="svc"><div class="ph"><span>Your photo here<small>pedicure</small></span></div><div class="body"><h3>Pedicures</h3><p>The one regulars talk about. Sit back and let your feet get some care.</p><span class="tag">Tap "Pedi" up top</span></div></article>
+   <article class="svc"><div class="ph"><span>Your photo here<small>gel polish</small></span></div><div class="body"><h3>Gel soak off &amp; change</h3><p>One Yelp reviewer stopped in before a work meeting for a quick gel soak off and polish change.</p><span class="tag">Ask when you call</span></div></article>
+   <article class="svc"><div class="ph"><span>Your photo here<small>waxing</small></span></div><div class="body"><h3>Waxing</h3><p>A Yelp reviewer called this a great salon for pedicures and waxing. Call to ask what's offered.</p><span class="tag">Ask when you call</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="reviews">
+ <div class="wrap">
+  <div class="sec-head">
+   <div><div class="eyebrow">Reviews</div><h2>From people in the chair</h2></div>
+   <p>Word for word from Yelp.</p>
+  </div>
+  <div class="revs">
+   <figure class="rev"><q>I have been coming here since I was 16 years old, almost 25 years now...wow!</q><cite>Rashelle Q. &middot; Yelp</cite></figure>
+   <figure class="rev"><q>Love it here! I'll definitely be coming back. Staff is very nice and the salon is very clean.</q><cite>Reina M. &middot; Yelp</cite></figure>
+   <figure class="rev"><q>Great nail salon for pedicures and waxing.</q><cite>Karen G. &middot; Yelp</cite></figure>
+  </div>
+  <div class="rev-about">
+   <div class="ph"><span>Your photo here<small>the team</small></span></div>
+   <div>
+    <h3 class="serif" style="font-size:28px;font-weight:400;margin-bottom:10px">Same strip, same chairs, over two decades.</h3>
+    <p style="color:var(--muted)">Nice Nail Salon sits on Hurffville-Crosskeys Road in Washington Township. Some customers started coming as teenagers and still do. That's the kind of place it is.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <div class="wrap hours-grid">
+  <div>
+   <div class="eyebrow">Hours</div>
+   <h2>Open seven days</h2>
+   <p class="small" style="font-size:16px;margin-top:12px">Walk-ins and calls welcome. Today is highlighted.</p>
+   <div class="status" id="status2" style="margin-top:18px"><span class="dot"></span><span id="statusText2">Hours below</span></div>
+  </div>
+  <div>
+   <table aria-label="Opening hours"><tbody id="hoursBody"></tbody></table>
+   <p class="small">Hours can change on holidays. A quick call is the surest way to check.</p>
+  </div>
+ </div>
+</section>
+
+<div class="band">
+ <div class="wrap">
+  <h2>Easiest way to get in? Call.</h2>
+  <p>Tell us mani, pedi or both and when you want to come. We'll let you know what works.</p>
+  <div class="btns">
+   <a class="btn btn-anim" href="tel:+18565828824">Call (856) 582-8824</a>
+   <a class="btn line btn-anim" href="https://www.facebook.com/nicenailsaloninc/" target="_blank" rel="noopener">See us on Facebook</a>
+  </div>
+ </div>
+</div>
+
+<section id="visit">
+ <div class="wrap visit-grid">
+  <div class="ph"><span>Your photo here<small>storefront</small></span></div>
+  <div>
+   <div class="eyebrow">Visit</div>
+   <h2>Find us</h2>
+   <p class="addr">475 Hurffville Crosskeys Rd, Suite 7<br>Sewell, NJ 08080</p>
+   <p style="color:var(--muted);margin-bottom:20px">In Washington Township, right on Hurffville-Crosskeys Road.</p>
+   <div style="display:flex;flex-wrap:wrap;gap:12px">
+    <a class="btn btn-anim" href="https://www.google.com/maps/search/?api=1&amp;query=475%20Hurffville%20Crosskeys%20Rd%2C%20Sewell%2C%20NJ%2008080" target="_blank" rel="noopener">Get directions</a>
+    <a class="btn line btn-anim" href="tel:+18565828824">Call the salon</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><b>Nice Nail Salon</b>475 Hurffville Crosskeys Rd, Suite 7, Sewell, NJ 08080<br><a href="tel:+18565828824">(856) 582-8824</a> &middot; <a href="https://www.facebook.com/nicenailsaloninc/" target="_blank" rel="noopener">Facebook</a></div>
+  <div>Demo preview prepared for Nice Nail Salon</div>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="btn btn-anim" href="tel:+18565828824">Call now</a>
+ <a class="btn line btn-anim" href="#top" id="planBtn">Plan a visit</a>
+</div>
+
+<script>
+(function(){
+ // MapQuest hours (0=Sun). [open, close] in 24h hours.
+ var H={0:[11,16],1:[10,20],2:[10,20],3:[10,20],4:[10,20],5:[10,20],6:[9,19]};
+ var NAMES=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+ var ORDER=[1,2,3,4,5,6,0];
+ function h12(h){var x=h%12;return x===0?12:x}
+ function ampm(h){return h12(h)+(h<12?" am":" pm")}
+ function now(){
+  try{
+   var p=new Intl.DateTimeFormat("en-US",{timeZone:"America/New_York",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+   var o={};p.forEach(function(x){o[x.type]=x.value});
+   var d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(o.weekday);
+   return {d:d,h:(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60};
+  }catch(e){var n=new Date();return {d:n.getDay(),h:n.getHours()+n.getMinutes()/60}}
+ }
+ var t=now();
+ // status
+ var txt,open=false,today=H[t.d];
+ if(today&&t.h>=today[0]&&t.h<today[1]){open=true;txt="Open now · until "+ampm(today[1])}
+ else if(today&&t.h<today[0]){txt="Closed now · opens today at "+ampm(today[0])}
+ else{var n=(t.d+1)%7,k=0;while(!H[n]&&k<7){n=(n+1)%7;k++}txt="Closed now · opens "+NAMES[n]+" at "+ampm(H[n][0])}
+ [["status","statusText"],["status2","statusText2"]].forEach(function(a){var el=document.getElementById(a[0]);if(open)el.classList.add("open");document.getElementById(a[1]).textContent=txt});
+ // hours table
+ var tb=document.getElementById("hoursBody");
+ ORDER.forEach(function(d){var tr=document.createElement("tr");if(d===t.d)tr.className="today";
+  tr.innerHTML="<td>"+NAMES[d]+(d===t.d?" (today)":"")+"</td><td>"+(H[d]?ampm(H[d][0])+" – "+ampm(H[d][1]):"Closed")+"</td>";tb.appendChild(tr)});
+ // day chips from real hours
+ var dc=document.getElementById("dayChips"),svc=null,day=null;
+ ORDER.forEach(function(d){var b=document.createElement("button");b.type="button";b.className="chip day"+(d===t.d?" today":"");b.setAttribute("aria-pressed","false");b.dataset.d=d;
+  b.innerHTML=NAMES[d].slice(0,3)+"<small>"+(H[d]?h12(H[d][0])+"–"+h12(H[d][1]):"closed")+"</small>";
+  if(!H[d]){b.disabled=true;b.title="Closed"}dc.appendChild(b)});
+ function pick(group,btn){group.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",c===btn?"true":"false")})}
+ var line=document.getElementById("tline");
+ function render(){
+  if(!svc&&day===null){line.innerHTML='<span class="pl">Pick a service and a day.</span>';return}
+  var parts=[];
+  parts.push(svc||'<span class="pl">pick a service</span>');
+  if(day!==null){parts.push(NAMES[day]+(day===t.d?" (today)":""));parts.push("open "+h12(H[day][0])+" to "+h12(H[day][1]))}
+  else parts.push('<span class="pl">pick a day</span>');
+  parts.push("Call (856) 582-8824");
+  line.innerHTML=parts.join(" · ");
+ }
+ document.getElementById("svcChips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;svc=b.dataset.svc;pick(this,b);render()});
+ dc.addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b||b.disabled)return;day=parseInt(b.dataset.d,10);pick(dc,b);render()});
+ document.getElementById("planner").addEventListener("submit",function(e){e.preventDefault();document.getElementById("note").classList.add("show")});
+ // polish drop click animation
+ var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ document.addEventListener("click",function(e){
+  if(reduce)return;var b=e.target.closest(".btn,.chip,.hphone");if(!b||b.disabled)return;
+  var r=b.getBoundingClientRect(),cs=getComputedStyle(b);if(cs.position==="static")b.style.position="relative";b.style.overflow="hidden";
+  var d=document.createElement("span");d.className="drop";d.style.left=(e.clientX?e.clientX-r.left:r.width/2)+"px";d.style.top=(r.height/2-8)+"px";
+  b.appendChild(d);
+  d.addEventListener("animationend",function f(){if(!d.classList.contains("spread")){d.classList.add("spread")}else{d.remove()}});
+ });
+ // photos: hide on error (none found yet; frames stay)
+ document.querySelectorAll(".ph img").forEach(function(i){i.addEventListener("error",function(){i.style.display="none"})});
+})();
+</script>
+</body>
+</html>

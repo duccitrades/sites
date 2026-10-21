@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Doggy Details | Dog Grooming in Sewell, NJ</title>
+<meta name="description" content="Doggy Details, dog grooming at 259 Fish Pond Rd, Sewell, NJ. Baths and breed haircuts. Call (856) 307-1090 to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Lato:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF9EC; --cream2:#FBF0D9; --char:#2D2A26; --char2:#3A3631;
+  --aqua:#0F6F7C; --aquaD:#0B5964; --aquaT:#DDF0EF; --text:#24221F; --muted:#5A544C;
+  --sun:#F4D35E; --line:#E9DCC0; --white:#fff;
+  --head:"Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Lato", "Segoe UI", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--cream);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--aqua)}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.12;margin:0 0 .4em;color:var(--char)}
+h2{font-size:clamp(30px,5vw,44px)}
+h3{font-size:24px;font-weight:500}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.narrow{max-width:760px;margin:0 auto;padding:0 22px}
+.kicker{font-family:var(--head);font-weight:400;font-size:15px;letter-spacing:.06em;color:var(--aqua);display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sun);box-shadow:14px 0 0 var(--sun),28px 0 0 rgba(244,211,94,.5);margin-right:30px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:var(--char);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--head);font-weight:500;font-size:23px;white-space:nowrap}
+.logo svg{flex:none}
+nav.menu{display:flex;gap:22px}
+nav.menu a{color:#fff;text-decoration:none;font-family:var(--head);font-weight:400;font-size:16px;opacity:.92}
+nav.menu a:hover{text-decoration:underline;text-decoration-color:var(--sun);text-underline-offset:6px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--aqua);color:#fff;text-decoration:none;border-radius:999px;padding:9px 16px;font-family:var(--head);font-weight:500;font-size:16px;white-space:nowrap}
+.pill:hover{background:var(--aquaD)}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:14px 26px;font-family:var(--head);font-weight:500;font-size:18px;text-decoration:none;border:2px solid var(--aqua);cursor:pointer;transition:transform .15s,background .2s;overflow:visible}
+.btn.solid{background:var(--aqua);color:#fff}
+.btn.solid:hover{background:var(--aquaD);border-color:var(--aquaD)}
+.btn.ghost{background:var(--white);color:var(--aqua)}
+.btn.ghost:hover{background:var(--aquaT)}
+.btn:active{transform:scale(.96)}
+.pop{position:absolute;border-radius:50%;border:2px solid var(--aqua);background:rgba(221,240,239,.6);pointer-events:none;animation:pop .6s ease-out forwards}
+.pop.y{border-color:#E2B93B;background:rgba(244,211,94,.35)}
+@keyframes pop{0%{transform:translate(-50%,-50%) scale(.2);opacity:1}70%{opacity:.9}100%{transform:translate(-50%,-50%) translate(var(--dx),var(--dy)) scale(1.4);opacity:0}}
+
+/* hero */
+.hero{position:relative;padding:56px 0 90px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,66px);font-weight:500;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--aqua);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:-.02em;height:.18em;border-radius:99px;background:var(--sun);z-index:-1;opacity:.85}
+.hero .sub{font-size:19px;max-width:30em;color:var(--text)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px;color:var(--muted);padding:0;margin:0;list-style:none}
+.facts li{display:flex;align-items:center;gap:7px}
+.facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun);outline:2px solid #E7C64E}
+.tubzone{position:relative;min-height:420px}
+.blob{position:absolute;inset:0 0 40px 20px;border-radius:46% 54% 42% 58%/55% 45% 55% 45%;background:var(--white);border:2px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ph-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;background:repeating-linear-gradient(135deg,#FFF4DA 0 14px,#FFF9EC 14px 28px);color:var(--muted);font-size:14px;padding:20px}
+.ph-fallback b{font-family:var(--head);font-weight:500;color:var(--char);font-size:17px}
+.blob img,.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tub{position:absolute;left:-10px;bottom:0;width:62%;max-width:300px;filter:drop-shadow(0 10px 18px rgba(45,42,38,.14))}
+.capt{position:absolute;right:0;top:12px;background:var(--white);border:2px solid var(--line);border-radius:18px;padding:10px 14px;font-size:14px;max-width:210px;line-height:1.35;box-shadow:0 8px 20px rgba(45,42,38,.08)}
+.capt small{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.bub{position:absolute;border-radius:50%;border:2px solid rgba(15,111,124,.55);background:radial-gradient(circle at 32% 30%,#fff 0 18%,rgba(221,240,239,.55) 40%,rgba(221,240,239,.2));animation:rise 7s ease-in infinite;opacity:0}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}12%{opacity:1}85%{opacity:.9}100%{transform:translateY(-260px) translateX(18px) scale(1);opacity:0}}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:60px;color:var(--cream2)}
+
+/* story */
+.story{background:var(--cream2);padding:30px 0 70px;position:relative}
+.story-head{text-align:center;margin-bottom:34px}
+.story-head p{color:var(--muted);max-width:34em;margin:0 auto}
+.path{position:relative;max-width:760px;margin:0 auto;padding:0 22px}
+.path::before{content:"";position:absolute;left:50px;top:30px;bottom:30px;width:0;border-left:4px dotted #E3BE42}
+.stop{position:relative;display:grid;grid-template-columns:62px 1fr;gap:20px;align-items:start;margin-bottom:28px}
+.stop:nth-child(even) .card{margin-left:34px;border-radius:30px 30px 30px 10px}
+.num{width:58px;height:58px;border-radius:50%;background:var(--white);border:3px solid var(--aqua);display:flex;align-items:center;justify-content:center;font-family:var(--head);font-weight:500;color:var(--aqua);font-size:22px;position:relative;z-index:2}
+.num svg{width:30px;height:30px}
+.card{background:var(--white);border-radius:30px 30px 10px 30px;padding:22px 24px;border:2px solid var(--line);box-shadow:0 10px 26px rgba(45,42,38,.06);position:relative}
+.card .step{font-family:var(--head);font-size:14px;color:var(--aqua);letter-spacing:.05em}
+.card h3{margin-top:2px}
+.card p{margin:0;color:var(--text)}
+.card .frame{position:relative;height:210px;border-radius:22px;overflow:hidden;margin-top:16px;border:2px solid var(--line)}
+.card .frame .note{position:absolute;left:10px;bottom:10px;background:var(--white);color:var(--text);font-size:13px;border-radius:99px;padding:3px 10px;z-index:3}
+.stop .dot{position:absolute;right:18px;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--sun)}
+
+/* builder */
+.build{padding:76px 0 70px;position:relative}
+.build-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.panel{background:var(--white);border:2px solid var(--line);border-radius:34px;padding:26px}
+.q{margin-bottom:22px}
+.q h3{font-size:19px;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.q h3 span{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--aquaT);color:var(--aquaD);align-items:center;justify-content:center;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{position:relative;font-family:var(--head);font-weight:400;font-size:16px;border:2px solid #CFC3A8;background:var(--cream);color:var(--text);border-radius:999px;padding:9px 17px;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+.chip:hover{border-color:var(--aqua)}
+.chip[aria-pressed="true"]{background:var(--aqua);border-color:var(--aqua);color:#fff}
+.chip:active{transform:scale(.95)}
+.stage{position:sticky;top:90px;background:var(--white);border:2px solid var(--line);border-radius:44% 56% 40% 60%/12% 12% 10% 10%;padding:18px 18px 22px;text-align:center}
+.stage svg{width:100%;height:auto;max-height:320px}
+.meter{display:flex;justify-content:center;gap:8px;margin:6px 0 12px}
+.meter i{width:12px;height:12px;border-radius:50%;background:#EDE3CC;transition:background .3s}
+.meter i.on{background:var(--sun)}
+.recap{font-size:16px;min-height:52px;margin:0 0 14px;color:var(--text)}
+.recap b{font-family:var(--head);font-weight:500}
+.hint{font-size:14px;color:var(--muted);margin:12px 0 0}
+#dog .mud{transition:opacity .6s}
+#dog .stink{transition:opacity .5s}
+#dog .spark{transition:opacity .5s,transform .5s;transform-origin:center;transform-box:fill-box}
+#dog .scaler{transition:transform .5s cubic-bezier(.3,1.5,.6,1);transform-box:fill-box;transform-origin:50% 100%}
+#dog path.coat{transition:fill .5s}
+
+/* reviews */
+.reviews{background:var(--cream2);padding:70px 0 80px;position:relative}
+.rv-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px;margin-bottom:30px}
+.rv-head p{margin:0;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.quote{grid-column:span 3;background:var(--white);border:2px solid var(--line);border-radius:34px 34px 34px 8px;padding:24px 26px 20px;position:relative;margin:0}
+.quote:nth-child(2){grid-column:span 3;margin-top:38px;border-radius:34px 34px 8px 34px}
+.quote:nth-child(3){grid-column:span 3;margin-top:-10px}
+.quote:nth-child(4){grid-column:span 3;margin-top:28px;border-radius:34px 34px 8px 34px}
+.quote blockquote{margin:0 0 12px;font-family:var(--head);font-weight:400;font-size:20px;line-height:1.4;color:var(--char)}
+.quote figcaption{font-size:15px;color:var(--muted)}
+.quote .tag{display:inline-block;font-size:13px;background:var(--aquaT);color:var(--aquaD);border-radius:99px;padding:2px 10px;margin-bottom:10px}
+.quote::after{content:"";position:absolute;right:22px;top:-10px;width:20px;height:20px;border-radius:50%;background:var(--sun)}
+
+/* photos */
+.photos{padding:70px 0}
+.gal{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:200px 200px;gap:16px}
+.gal .frame{position:relative;border-radius:30px;overflow:hidden;border:2px solid var(--line)}
+.gal .frame:first-child{grid-row:span 2;border-radius:30px 120px 30px 30px}
+.gal .frame:nth-child(4){border-radius:30px 30px 90px 30px}
+.gal .frame .note{position:absolute;left:12px;bottom:12px;background:var(--white);color:var(--text);font-size:13px;border-radius:99px;padding:4px 12px;z-index:3}
+
+/* call band */
+.callband{background:var(--char);color:#fff;padding:70px 0;position:relative;overflow:hidden}
+.callband h2{color:#fff}
+.callband p{color:#fff}
+.cb-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center}
+.cb-grid .btn.solid{border-color:#fff}
+.cb-grid .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.cb-grid .btn.ghost:hover{background:var(--char2)}
+.infocard{background:var(--char2);border-radius:30px;padding:24px 26px;color:#fff}
+.infocard dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px}
+.infocard dt{font-family:var(--head);font-weight:500;color:#fff}
+.infocard dd{margin:0;color:#fff}
+.infocard a{color:#fff}
+.cb-dots{position:absolute;right:-30px;top:-30px;width:160px;height:160px;border-radius:50%;border:16px solid rgba(244,211,94,.18)}
+
+footer{background:var(--char);color:#fff;padding:30px 0 40px;border-top:1px solid #4A453E;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+footer a{color:#fff}
+footer p{margin:0;color:#fff}
+
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:var(--white);color:var(--char);border:2px solid var(--char);border-radius:99px;padding:5px 12px;font-family:var(--head);font-weight:500;font-size:13px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.callbar{display:none}
+
+@media (max-width:860px){
+  nav.menu{display:none}
+  .hero .wrap,.build-grid,.cb-grid{grid-template-columns:1fr}
+  .tubzone{min-height:360px}
+  .stage{position:relative;top:0;order:-1;border-radius:34px}
+  .stage svg{max-height:220px}
+  .quotes{grid-template-columns:1fr}
+  .quote,.quote:nth-child(n){grid-column:auto;margin-top:0}
+  .quote:nth-child(even){margin-left:22px}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}
+  .gal .frame:first-child{grid-column:span 2;grid-row:auto}
+}
+@media (max-width:700px){
+  body{padding-bottom:70px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--char);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:99px;padding:12px;font-family:var(--head);font-weight:500;text-decoration:none;font-size:17px}
+  .callbar .c1{background:var(--aqua);color:#fff}
+  .callbar .c2{background:var(--char2);color:#fff;border:1.5px solid #fff}
+  .badge{bottom:80px;left:10px}
+  .hero{padding:34px 0 80px}
+  .path::before{left:44px}
+  .stop{grid-template-columns:50px 1fr;gap:12px}
+  .num{width:46px;height:46px;font-size:18px}
+  .stop:nth-child(even) .card{margin-left:0}
+  .capt{max-width:170px}
+}
+@media (max-width:420px){
+  .logo{font-size:19px;gap:7px}
+  .logo svg{width:28px;height:28px}
+  .pill{padding:8px 12px;font-size:14px}
+  .top .wrap{gap:8px;padding:0 14px}
+  .wrap,.narrow,.path{padding-left:16px;padding-right:16px}
+  .panel{padding:20px}
+  .btn{padding:13px 20px;font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .bub{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Doggy Details home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="20" r="7" fill="#F4D35E"/><circle cx="8" cy="12" r="3.6" fill="#F4D35E"/><circle cx="14" cy="7" r="3.6" fill="#F4D35E"/><circle cx="21" cy="7" r="3.6" fill="#F4D35E"/><circle cx="27" cy="12" r="3.6" fill="#F4D35E"/></svg>
+      Doggy Details
+    </a>
+    <nav class="menu" aria-label="Main">
+      <a href="#visit">The visit</a>
+      <a href="#build">Build a visit</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <a class="pill bp" href="tel:+18563071090">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      (856) 307-1090
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Dog grooming on Fish Pond Road, Sewell</div>
+      <h1>Send in a scruffy pup. Pick up a <em>clean one.</em></h1>
+      <p class="sub">Doggy Details is a small grooming shop in Sewell, NJ. Baths and breed haircuts for dogs big and small. Give us a call to book a time.</p>
+      <div class="ctas">
+        <a class="btn solid bp" href="tel:+18563071090">Call to book</a>
+        <a class="btn ghost bp" href="#build">Build your pup's visit</a>
+      </div>
+      <ul class="facts">
+        <li>259 Fish Pond Rd, Sewell</li>
+        <li>Baths &amp; breed haircuts</li>
+        <li>10 reviews on Yelp</li>
+      </ul>
+    </div>
+    <div class="tubzone" aria-label="Photo and bath tub illustration">
+      <div class="blob">
+        <div class="ph-fallback"><b>Personalized photos will go here</b>Shop photo from Yelp</div>
+        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/MG4PF_ugcqbsVFI98MatCA/l.jpg" alt="Shop photo from Yelp" onerror="this.remove()">
+      </div>
+      <div class="capt">"Our happy dog, Mike, with his new bandana!"<small>Photo caption by a Yelp customer</small></div>
+      <svg class="tub" viewBox="0 0 300 200" aria-hidden="true">
+        <g fill="#fff" stroke="#2D2A26" stroke-width="4" stroke-linejoin="round">
+          <circle cx="66" cy="78" r="18"/><circle cx="92" cy="66" r="22"/><circle cx="124" cy="62" r="20"/><circle cx="160" cy="66" r="24"/><circle cx="196" cy="62" r="19"/><circle cx="226" cy="74" r="20"/>
+        </g>
+        <g stroke="#2D2A26" stroke-width="4" stroke-linecap="round" fill="none">
+          <path d="M128 44c-6-16 4-30 18-28 10 1 16 10 14 20"/>
+          <path d="M150 20c-4-8 0-14 6-15"/>
+        </g>
+        <g fill="#fff" stroke="#2D2A26" stroke-width="4">
+          <ellipse cx="140" cy="44" rx="26" ry="22"/>
+          <ellipse cx="116" cy="40" rx="9" ry="16" transform="rotate(20 116 40)" fill="#F4D35E"/>
+          <ellipse cx="164" cy="40" rx="9" ry="16" transform="rotate(-20 164 40)" fill="#F4D35E"/>
+        </g>
+        <circle cx="131" cy="42" r="3.5" fill="#2D2A26"/><circle cx="149" cy="42" r="3.5" fill="#2D2A26"/>
+        <ellipse cx="140" cy="52" rx="5" ry="3.5" fill="#2D2A26"/>
+        <path d="M134 58q6 5 12 0" stroke="#2D2A26" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M30 86h240a0 0 0 0 1 0 0v20c0 40-30 62-70 62H100c-40 0-70-22-70-62z" fill="#0F6F7C" stroke="#2D2A26" stroke-width="4" stroke-linejoin="round"/>
+        <rect x="20" y="78" width="260" height="16" rx="8" fill="#fff" stroke="#2D2A26" stroke-width="4"/>
+        <path d="M80 168l-10 22M220 168l10 22" stroke="#2D2A26" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="250" cy="120" r="7" fill="#F4D35E"/><circle cx="56" cy="128" r="5" fill="#F4D35E"/>
+      </svg>
+      <div class="bubbles" aria-hidden="true"></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 34c120-26 240-26 360 0s240 26 360 0 240-26 360 0 240 26 360 0v26H0z"/></svg>
+</section>
+
+<section class="story" id="visit">
+  <div class="story-head narrow">
+    <div class="kicker">How a visit goes</div>
+    <h2>From drop off to pick up</h2>
+    <p>Five easy stops. You handle the first and the last. We take care of the middle.</p>
+  </div>
+  <ol class="path" style="list-style:none">
+    <li class="stop">
+      <div class="num"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 25V12l10-7 10 7v13H5z" fill="none" stroke="#0F6F7C" stroke-width="2.6" stroke-linejoin="round"/><rect x="12" y="17" width="6" height="8" fill="#F4D35E"/></svg></div>
+      <div class="card"><div class="step">Stop 1</div><h3>Drop off</h3><p>Bring your dog to 259 Fish Pond Road. Tell us what you would like done and anything we should know about your pup.</p></div>
+    </li>
+    <li class="stop">
+      <div class="num"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="10" cy="12" r="5" fill="none" stroke="#0F6F7C" stroke-width="2.6"/><circle cx="20" cy="9" r="3.5" fill="#F4D35E"/><circle cx="19" cy="20" r="6" fill="none" stroke="#0F6F7C" stroke-width="2.6"/></svg></div>
+      <div class="card"><span class="dot"></span><div class="step">Stop 2</div><h3>Bath</h3><p>A good wash for a clean coat. Dogs of every size are welcome in the tub.</p></div>
+    </li>
+    <li class="stop">
+      <div class="num"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="8" cy="22" r="4" fill="none" stroke="#0F6F7C" stroke-width="2.6"/><circle cx="22" cy="22" r="4" fill="none" stroke="#0F6F7C" stroke-width="2.6"/><path d="M10.5 19L22 5M19.5 19L8 5" stroke="#0F6F7C" stroke-width="2.6" stroke-linecap="round"/><circle cx="15" cy="13" r="2" fill="#F4D35E"/></svg></div>
+      <div class="card"><div class="step">Stop 3</div><h3>Trim</h3><p>A breed haircut shaped to your dog's coat. Customers on Yelp have brought in American Eskimos, Havanese, a Pomchi and three Cavaliers.</p>
+        <div class="frame"><div class="ph-fallback"><b>Personalized photos will go here</b>Shop photo from Yelp</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/eeD-bRvx9_CL0CNWTtsxFQ/l.jpg" alt="Shop photo from Yelp" onerror="this.remove()" loading="lazy"><span class="note">Shop photo from Yelp</span></div>
+      </div>
+    </li>
+    <li class="stop">
+      <div class="num"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M15 4l2.6 7.4L25 14l-7.4 2.6L15 24l-2.6-7.4L5 14l7.4-2.6z" fill="#F4D35E" stroke="#0F6F7C" stroke-width="2.2" stroke-linejoin="round"/></svg></div>
+      <div class="card"><span class="dot"></span><div class="step">Stop 4</div><h3>Fluff &amp; finish</h3><p>Brushed out, fluffed up and looking sharp. One Yelp customer's dog, Mike, went home with a new bandana.</p></div>
+    </li>
+    <li class="stop">
+      <div class="num"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M6 16l6 6L24 8" fill="none" stroke="#0F6F7C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="card"><div class="step">Stop 5</div><h3>Pick up</h3><p>Come back to a clean, happy dog. Call ahead to set your drop off time.</p>
+        <p style="margin-top:14px"><a class="btn solid bp" href="tel:+18563071090">Call (856) 307-1090</a></p></div>
+    </li>
+  </ol>
+</section>
+
+<section class="build" id="build">
+  <div class="wrap">
+    <div class="kicker">Try it</div>
+    <h2>Build your pup's visit</h2>
+    <p style="max-width:36em;color:var(--muted)">Pick your dog's size and coat, then add services. Watch your pup get cleaner and fluffier. When it looks right, call us to book.</p>
+    <div class="build-grid">
+      <div class="panel">
+        <div class="q"><h3><span>1</span>How big is your dog?</h3>
+          <div class="chips" data-group="size">
+            <button class="chip" type="button" data-v="small" aria-pressed="false">Small</button>
+            <button class="chip" type="button" data-v="medium" aria-pressed="true">Medium</button>
+            <button class="chip" type="button" data-v="large" aria-pressed="false">Large</button>
+          </div></div>
+        <div class="q"><h3><span>2</span>What is the coat like?</h3>
+          <div class="chips" data-group="coat">
+            <button class="chip" type="button" data-v="smooth" aria-pressed="false">Short &amp; smooth</button>
+            <button class="chip" type="button" data-v="fluffy" aria-pressed="true">Fluffy, double coat</button>
+            <button class="chip" type="button" data-v="curly" aria-pressed="false">Curly</button>
+          </div></div>
+        <div class="q" style="margin-bottom:0"><h3><span>3</span>Add services</h3>
+          <div class="chips" data-group="svc">
+            <button class="chip" type="button" data-v="bath" aria-pressed="false">Bath</button>
+            <button class="chip" type="button" data-v="cut" aria-pressed="false">Breed haircut</button>
+          </div>
+          <p class="hint">Not sure what your breed needs? Ask when you call.</p>
+        </div>
+      </div>
+      <div class="stage" aria-live="polite">
+        <svg id="dog" viewBox="0 0 360 280" role="img" aria-label="Cartoon dog that changes as you pick services">
+          <ellipse cx="180" cy="256" rx="130" ry="12" fill="#F3E8CF"/>
+          <g class="scaler" id="scaler">
+            <g id="legs" fill="#fff" stroke="#2D2A26" stroke-width="4">
+              <rect x="112" y="186" width="22" height="66" rx="11"/><rect x="146" y="190" width="22" height="62" rx="11"/>
+              <rect x="206" y="190" width="22" height="62" rx="11"/><rect x="238" y="186" width="22" height="66" rx="11"/>
+            </g>
+            <path id="tail" d="M268 150q38-26 30-66" fill="none" stroke="#2D2A26" stroke-width="12" stroke-linecap="round"/>
+            <path id="tail2" d="M268 150q38-26 30-66" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+            <path id="body" class="coat" fill="#EDE2CB" stroke="#2D2A26" stroke-width="4" stroke-linejoin="round"/>
+            <path id="ear" class="coat" fill="#EDE2CB" stroke="#2D2A26" stroke-width="4" stroke-linejoin="round"/>
+            <path id="head" class="coat" fill="#EDE2CB" stroke="#2D2A26" stroke-width="4" stroke-linejoin="round"/>
+            <ellipse cx="82" cy="122" rx="20" ry="15" fill="#fff" stroke="#2D2A26" stroke-width="4"/>
+            <ellipse cx="68" cy="116" rx="7" ry="5.5" fill="#2D2A26"/>
+            <circle cx="104" cy="96" r="5" fill="#2D2A26"/>
+            <path id="mouth" d="M78 134q10 6 18 0" fill="none" stroke="#2D2A26" stroke-width="3" stroke-linecap="round"/>
+            <g class="mud" id="mud" fill="#9C7B55" opacity=".9">
+              <ellipse cx="190" cy="150" rx="13" ry="8"/><ellipse cx="228" cy="128" rx="8" ry="6"/><ellipse cx="160" cy="172" rx="7" ry="5"/><ellipse cx="124" cy="240" rx="9" ry="5"/><ellipse cx="250" cy="242" rx="9" ry="5"/>
+            </g>
+          </g>
+          <g class="stink" id="stink" fill="none" stroke="#8C8273" stroke-width="3" stroke-linecap="round">
+            <path d="M200 70q-8-8 0-16t0-16"/><path d="M222 74q-8-8 0-16t0-16"/><path d="M244 70q-8-8 0-16t0-16"/>
+          </g>
+          <g id="sparks" fill="#F4D35E" stroke="#C99D16" stroke-width="1.5">
+            <path class="spark" d="M300 40l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+            <path class="spark" d="M40 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+            <path class="spark" d="M320 190l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+          </g>
+          <g id="popper"></g>
+        </svg>
+        <div class="meter" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="recap" id="recap"></p>
+        <a class="btn solid bp" href="tel:+18563071090">Call to book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rv-head">
+      <div><div class="kicker">Kind words</div><h2>What dog owners say</h2></div>
+      <p>From Yelp, where Doggy Details has 10 reviews.<br>Checkbook customer comments mark them "Recommended."</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote"><span class="tag">Friendly staff</span><blockquote>"Very friendly staff! We've taken our dog, Mike, there twice now and loved the experience."</blockquote><figcaption>Yelp (Susan L.)</figcaption></figure>
+      <figure class="quote"><span class="tag">Kim's grooming</span><blockquote>"Kim always does a nice job grooming our American Eskimo, Koby! I have recommended Doggie Details to a few friends"</blockquote><figcaption>Yelp (Joanne R.)</figcaption></figure>
+      <figure class="quote"><span class="tag">Every visit</span><blockquote>"We take our three Cavalier King Charles Spaniels to Doggie Details and the ladies there always provide excellent service!"</blockquote><figcaption>Yelp (Alexis B.)</figcaption></figure>
+      <figure class="quote"><span class="tag">Great care</span><blockquote>"Awesome! They take such great care of my husband's pomchi."</blockquote><figcaption>Yelp (Catherine C.)</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="photos" id="photos">
+  <div class="wrap">
+    <div class="kicker">Fresh from the tub</div>
+    <h2>Happy customers</h2>
+    <div class="gal">
+      <div class="frame"><div class="ph-fallback"><b>Personalized photos will go here</b>Shop photo from Yelp</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/MG4PF_ugcqbsVFI98MatCA/l.jpg" alt="Shop photo from Yelp" onerror="this.remove()" loading="lazy"><span class="note">Mike and his new bandana (Yelp)</span></div>
+      <div class="frame"><div class="ph-fallback"><b>Personalized photos will go here</b>Shop photo from Yelp</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/eeD-bRvx9_CL0CNWTtsxFQ/l.jpg" alt="Shop photo from Yelp" onerror="this.remove()" loading="lazy"></div>
+      <div class="frame"><div class="ph-fallback"><b>Your photo here</b>A before and after</div></div>
+      <div class="frame"><div class="ph-fallback"><b>Your photo here</b>The grooming room</div></div>
+      <div class="frame"><div class="ph-fallback"><b>Your photo here</b>A freshly groomed regular</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="callband" id="find">
+  <span class="cb-dots" aria-hidden="true"></span>
+  <div class="wrap cb-grid">
+    <div>
+      <h2>Ready for a clean pup?</h2>
+      <p>Call to book a grooming visit. We will find a time that works and answer any questions about your dog's coat.</p>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+        <a class="btn solid bp" href="tel:+18563071090">Call (856) 307-1090</a>
+        <a class="btn ghost bp" href="https://www.google.com/maps/dir/?api=1&amp;destination=259%20Fish%20Pond%20Rd%2C%20Sewell%2C%20NJ%2008080" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <div class="infocard">
+      <dl>
+        <dt>Where</dt><dd>259 Fish Pond Rd<br>Sewell, NJ 08080</dd>
+        <dt>Phone</dt><dd><a href="tel:+18563071090">(856) 307-1090</a></dd>
+        <dt>Hours</dt><dd>Call to check openings</dd>
+        <dt>Social</dt><dd><a href="https://www.facebook.com/doggie-details-pet-grooming-102306746557060" target="_blank" rel="noopener">Doggie Details Pet Grooming on Facebook</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Doggy Details &middot; Dog grooming &middot; 259 Fish Pond Rd, Sewell, NJ 08080 &middot; <a href="tel:+18563071090">(856) 307-1090</a></p>
+    <p>Demo preview prepared for Doggy Details</p>
+  </div>
+</footer>
+
+<div class="badge" aria-hidden="true">Demo preview</div>
+<div class="callbar">
+  <a class="c1" href="tel:+18563071090">Call to book</a>
+  <a class="c2" href="https://www.google.com/maps/dir/?api=1&amp;destination=259%20Fish%20Pond%20Rd%2C%20Sewell%2C%20NJ%2008080" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero bubbles */
+  var bz = document.querySelector('.bubbles');
+  if (bz && !reduce){
+    for (var i=0;i<9;i++){
+      var b=document.createElement('span'); b.className='bub';
+      var s=10+Math.round(Math.random()*22);
+      b.style.width=b.style.height=s+'px';
+      b.style.left=(8+Math.random()*48)+'%';
+      b.style.bottom=(90+Math.random()*40)+'px';
+      b.style.animationDelay=(i*0.75)+'s';
+      bz.appendChild(b);
+    }
+  }
+
+  /* bubble pop on buttons */
+  function popAt(el, x, y){
+    if (reduce) return;
+    for (var i=0;i<6;i++){
+      var p=document.createElement('span'); p.className='pop'+(i%3===0?' y':'');
+      var s=8+Math.random()*12; p.style.width=p.style.height=s+'px';
+      p.style.left=x+'px'; p.style.top=y+'px';
+      var a=Math.PI*2*i/6+Math.random()*.5, d=22+Math.random()*16;
+      p.style.setProperty('--dx',Math.cos(a)*d+'px'); p.style.setProperty('--dy',Math.sin(a)*d+'px');
+      el.appendChild(p); setTimeout((function(n){return function(){n.remove();};})(p),650);
+    }
+  }
+  document.querySelectorAll('.btn,.pill,.chip').forEach(function(el){
+    el.addEventListener('click',function(e){
+      var r=el.getBoundingClientRect();
+      var x=e.clientX?e.clientX-r.left:r.width/2, y=e.clientY?e.clientY-r.top:r.height/2;
+      popAt(el,x,y);
+    });
+  });
+
+  /* pup builder */
+  var st={size:'medium',coat:'fluffy',svc:{bath:false,cut:false}};
+  function wobble(i){ return Math.sin(i*2.3)*0.6+Math.sin(i*5.1)*0.4; }
+  function blobPath(cx,cy,rx,ry,n,amp,messy){
+    if (amp===0){
+      return 'M'+(cx-rx)+' '+cy+'a'+rx+' '+ry+' 0 1 0 '+(2*rx)+' 0a'+rx+' '+ry+' 0 1 0 '+(-2*rx)+' 0z';
+    }
+    var d='',pts=[];
+    for (var i=0;i<=n;i++){
+      var t=Math.PI*2*i/n; pts.push([cx+rx*Math.cos(t),cy+ry*Math.sin(t),t]);
+    }
+    d='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+    for (var j=1;j<pts.length;j++){
+      var tm=(pts[j-1][2]+pts[j][2])/2;
+      var a=amp*(messy?1+0.9*Math.abs(wobble(j)):1);
+      var k=1+ (a*2.2)/Math.max(rx,ry);
+      var mx=cx+rx*k*Math.cos(tm)+(messy?wobble(j+3)*a*.8:0), my=cy+ry*k*Math.sin(tm)+(messy?wobble(j+7)*a*.8:0);
+      d+='Q'+mx.toFixed(1)+' '+my.toFixed(1)+' '+pts[j][0].toFixed(1)+' '+pts[j][1].toFixed(1);
+    }
+    return d+'z';
+  }
+  var COAT={smooth:{n:1,amp:0},fluffy:{n:20,amp:7},curly:{n:34,amp:4.5}};
+  var SIZE={small:.78,medium:.94,large:1.1};
+  function draw(){
+    var c=COAT[st.coat], cut=st.svc.cut, bath=st.svc.bath;
+    var amp=c.amp, messy=!cut && c.amp>0, n=c.n;
+    if (cut && amp>0){ amp=amp*0.75; }
+    var smoothMessy = !cut && c.amp===0;
+    document.getElementById('body').setAttribute('d', blobPath(190,160,92,50,n||1, smoothMessy?3:amp, messy||smoothMessy));
+    document.getElementById('head').setAttribute('d', blobPath(98,104,40,36,Math.max(1,Math.round(n*.6)), smoothMessy?2.5:amp*.8, messy||smoothMessy));
+    document.getElementById('ear').setAttribute('d', blobPath(124,118,15,30,Math.max(1,Math.round(n*.35)), smoothMessy?2:amp*.7, messy||smoothMessy));
+    var fill = bath ? '#FFFFFF' : '#EDE2CB';
+    ['body','head','ear'].forEach(function(id){document.getElementById(id).setAttribute('fill',fill);});
+    document.getElementById('mud').style.opacity = bath?0:.9;
+    document.getElementById('stink').style.opacity = bath?0:1;
+    document.querySelectorAll('#sparks .spark').forEach(function(s,i){
+      s.style.opacity = bath&&cut?1:(bath||cut)&&i===0?1:0;
+    });
+    document.getElementById('mouth').setAttribute('d', (bath||cut)?'M76 132q11 12 22 0':'M78 134q10 6 18 0');
+    document.getElementById('scaler').style.transform='scale('+SIZE[st.size]+')';
+    var lit=[bath,cut,bath&&cut];
+    document.querySelectorAll('.meter i').forEach(function(m,i){m.classList.toggle('on',!!lit[i]);});
+    var sizeW={small:'A small',medium:'A medium',large:'A large'}[st.size];
+    var coatW={smooth:'short, smooth coat',fluffy:'fluffy double coat',curly:'curly coat'}[st.coat];
+    var svc=[]; if(bath)svc.push('a bath'); if(cut)svc.push('a breed haircut');
+    var r=document.getElementById('recap');
+    r.innerHTML = svc.length
+      ? '<b>'+sizeW+' pup with a '+coatW+'</b>, in for '+svc.join(' and ')+'. '+(bath&&cut?'Clean, trimmed and ready for pick up.':'Looking better already.')+' Call to book.'
+      : '<b>'+sizeW+' pup with a '+coatW+'</b>. Tap a service to start the makeover.';
+  }
+  function burst(){
+    if (reduce) return;
+    var g=document.getElementById('popper'), ns='http://www.w3.org/2000/svg';
+    for (var i=0;i<10;i++){
+      var c=document.createElementNS(ns,'circle');
+      var x=110+Math.random()*170, y=90+Math.random()*120, r=5+Math.random()*9;
+      c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);
+      c.setAttribute('fill','rgba(221,240,239,.7)');c.setAttribute('stroke','#0F6F7C');c.setAttribute('stroke-width','2');
+      c.style.transition='transform .9s ease-out, opacity .9s ease-out';c.style.transformBox='fill-box';c.style.transformOrigin='center';
+      g.appendChild(c);
+      (function(el,dy){requestAnimationFrame(function(){requestAnimationFrame(function(){el.style.transform='translateY('+dy+'px) scale(1.5)';el.style.opacity='0';});});setTimeout(function(){el.remove();},950);})(c,-30-Math.random()*50);
+    }
+  }
+  document.querySelectorAll('.chips').forEach(function(group){
+    var name=group.getAttribute('data-group');
+    group.querySelectorAll('.chip').forEach(function(ch){
+      ch.addEventListener('click',function(){
+        var v=ch.getAttribute('data-v');
+        if (name==='svc'){
+          st.svc[v]=!st.svc[v]; ch.setAttribute('aria-pressed',st.svc[v]?'true':'false');
+          if (st.svc[v]) burst();
+        } else {
+          st[name]=v;
+          group.querySelectorAll('.chip').forEach(function(o){o.setAttribute('aria-pressed',o===ch?'true':'false');});
+        }
+        draw();
+      });
+    });
+  });
+  draw();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Matt's Pressure Washing | Glassboro, NJ</title>
+<meta name="description" content="Veteran-owned pressure washing in Glassboro, NJ. Decks, fences, patios, porches and commercial power washing. Free estimates: (609) 470-7282.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#F5F8F2;--moss:#1C2B22;--green:#3D7530;--green-d:#305E25;--ink:#1B1F1C;--lime:#DCEBC9;
+  --soft:#4A564D;--line:#C9D9B5;--card:#FFFFFF;--white-soft:#D9E4DA;
+  --r:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.65 'Lora',Georgia,serif;overflow-x:hidden}
+h1,h2,h3,.ui{font-family:'Urbanist','Segoe UI',system-ui,sans-serif}
+h1,h2,h3{font-weight:500;line-height:1.08;letter-spacing:-.015em;margin:0}
+a{color:inherit}
+img{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:var(--moss);color:#fff}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:500 19px 'Urbanist',sans-serif;letter-spacing:-.01em;white-space:nowrap}
+.logo svg{width:26px;height:26px;flex:none}
+.nav{display:flex;gap:22px;font:500 15px 'Urbanist',sans-serif}
+.nav a{color:#fff;text-decoration:none;opacity:.92}
+.nav a:hover{text-decoration:underline;text-decoration-color:var(--lime);text-underline-offset:5px}
+.hphone{display:inline-flex;align-items:center;gap:8px;font:500 15px 'Urbanist',sans-serif;color:#fff;text-decoration:none;border:1px solid rgba(220,235,201,.55);padding:8px 14px;border-radius:999px;white-space:nowrap}
+.hphone svg{width:15px;height:15px}
+
+/* buttons + droplet ring */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font:500 17px 'Urbanist',sans-serif;text-decoration:none;border-radius:999px;padding:15px 26px;border:0;cursor:pointer;overflow:visible;transition:transform .15s ease,background .2s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.go{background:var(--green);color:#fff}
+.btn.go:hover{background:var(--green-d)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn:active{transform:scale(.97)}
+.ring{position:absolute;left:var(--rx);top:var(--ry);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;pointer-events:none;border:2px solid var(--green);animation:ring .7s ease-out forwards}
+.ring.b{border-color:var(--lime);animation-delay:.12s;opacity:0}
+.drop{position:absolute;left:var(--rx);top:var(--ry);width:8px;height:11px;margin:-20px 0 0 -4px;background:var(--green);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;pointer-events:none;animation:drip .5s ease-in forwards}
+@keyframes ring{0%{transform:scale(.4);opacity:.95}100%{transform:scale(6);opacity:0}}
+@keyframes drip{0%{transform:translateY(-14px) scale(.6);opacity:0}40%{opacity:1}100%{transform:translateY(16px) scale(1);opacity:0}}
+
+/* fallback photo frames */
+.ph{position:relative;overflow:hidden;background:var(--lime);border-radius:inherit}
+.ph .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:12px;color:var(--moss);font:500 14px/1.3 'Urbanist',sans-serif}
+.ph .fb svg{width:26px;height:26px;opacity:.8}
+.ph .fb small{font:italic 400 13px 'Lora',serif;color:#33443A}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.cap{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(28,43,34,.9);color:#fff;font:500 12px 'Urbanist',sans-serif;padding:4px 10px;border-radius:999px}
+
+/* hero mosaic */
+.hero{position:relative;padding:22px 0 0}
+.mosaic{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:118px;gap:8px}
+.mosaic .ph{border-radius:16px}
+.m1{grid-column:span 2;grid-row:span 2}
+.plate{position:relative;z-index:5;margin:-70px 12px 0;background:var(--moss);color:#fff;border-radius:var(--r);padding:28px 24px 26px;box-shadow:0 24px 50px -24px rgba(28,43,34,.55)}
+.plate:before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;background:var(--lime);border-radius:0 0 3px 3px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:500 13px 'Urbanist',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--lime)}
+.eyebrow svg{width:16px;height:16px}
+.plate h1{font-size:clamp(40px,6.2vw,66px);font-weight:400;margin:14px 0 12px}
+.plate h1 em{font-family:'Lora',serif;font-style:italic;font-weight:400;color:var(--lime)}
+.plate p{margin:0 0 22px;color:var(--white-soft);max-width:32em}
+.plate .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.plate .btn.go{background:var(--green)}
+.plate .alt{font:500 15px 'Urbanist',sans-serif;color:#fff;text-decoration:none;border-bottom:1px solid var(--lime);padding:4px 0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.facts li{font:500 13px 'Urbanist',sans-serif;color:var(--moss);background:var(--lime);padding:6px 12px;border-radius:999px}
+
+/* section rhythm */
+section{scroll-margin-top:72px}
+.sec{padding:76px 0}
+.kicker{display:flex;align-items:center;gap:12px;font:500 13px 'Urbanist',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.kicker:before{content:"";width:34px;height:2px;background:var(--green)}
+.sec h2{font-size:clamp(32px,4.4vw,50px);font-weight:400;max-width:15em}
+.lead{color:var(--soft);max-width:36em;margin:14px 0 0}
+
+/* before / after */
+.ba-wrap{display:grid;gap:28px;margin-top:34px;align-items:center}
+.ba{position:relative;aspect-ratio:4/3;border-radius:28px 28px 28px 6px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;box-shadow:0 0 0 1px var(--line),0 30px 60px -36px rgba(28,43,34,.6)}
+.clean,.dirty{position:absolute;inset:0}
+.clean{background:
+  repeating-linear-gradient(90deg,transparent 0 23.8%,rgba(120,124,108,.55) 23.8% 24.2%),
+  repeating-linear-gradient(0deg,#E7E2D3 0 15.6%,#B9B6A3 15.6% 16.6%),
+  #E7E2D3}
+.clean:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 22%,rgba(255,255,255,.55),transparent 38%)}
+.dirty{clip-path:inset(0 calc(100% - var(--x,50%)) 0 0);background:
+  radial-gradient(ellipse at 22% 30%,rgba(46,58,34,.55) 0 10%,transparent 24%),
+  radial-gradient(ellipse at 64% 68%,rgba(38,50,30,.6) 0 13%,transparent 28%),
+  radial-gradient(ellipse at 40% 88%,rgba(52,48,30,.5) 0 9%,transparent 20%),
+  radial-gradient(ellipse at 88% 40%,rgba(60,74,40,.45) 0 8%,transparent 20%),
+  repeating-linear-gradient(90deg,transparent 0 23.8%,rgba(30,34,22,.6) 23.8% 24.2%),
+  repeating-linear-gradient(0deg,#7D7A62 0 15.6%,#575640 15.6% 16.6%),
+  #7D7A62}
+.wand{position:absolute;top:0;bottom:0;left:var(--x,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 22px 6px rgba(220,235,201,.85)}
+.knob{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:var(--moss);border:3px solid #fff;display:grid;place-items:center;color:#fff}
+.knob svg{width:26px;height:26px}
+.spray{position:absolute;left:50%;top:0;bottom:0;width:60px;margin-left:-30px;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(255,255,255,.0) 0 10px,rgba(255,255,255,.35) 10px 12px);opacity:.0;transition:opacity .2s}
+.ba.drag .spray{opacity:1;animation:spray .35s linear infinite}
+@keyframes spray{to{background-position:0 22px}}
+.tag{position:absolute;top:14px;z-index:3;font:500 13px 'Urbanist',sans-serif;background:rgba(28,43,34,.9);color:#fff;padding:5px 12px;border-radius:999px}
+.tag.l{left:14px}.tag.r{right:14px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;z-index:4}
+.ba:focus-within{outline:3px solid var(--green);outline-offset:4px}
+.ba-side h3{font-size:26px;font-weight:500;margin-bottom:10px}
+.ba-side p{margin:0 0 14px;color:var(--soft)}
+.steps{list-style:none;padding:0;margin:20px 0 0;border-top:1px solid var(--line)}
+.steps li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.steps b{font:500 15px 'Urbanist',sans-serif;color:var(--green);min-width:28px}
+.hint{font:italic 400 14px 'Lora',serif;color:var(--soft);margin-top:12px}
+
+/* surfaces */
+.surf{background:linear-gradient(180deg,var(--mist) 0,#EAF1E2 100%);position:relative}
+.surf:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 26px}
+.chip{display:inline-flex;align-items:center;gap:9px;font:500 16px 'Urbanist',sans-serif;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:11px 18px 11px 14px;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.chip svg{width:20px;height:20px;color:var(--green)}
+.chip:hover{border-color:var(--green)}
+.chip[aria-selected="true"]{background:var(--moss);color:#fff;border-color:var(--moss)}
+.chip[aria-selected="true"] svg{color:var(--lime)}
+.panel{display:grid;gap:0;background:var(--card);border-radius:28px 6px 28px 28px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 26px 50px -36px rgba(28,43,34,.5)}
+.panel .ph{min-height:230px;border-radius:0}
+.pbody{padding:28px 26px 30px;position:relative}
+.pbody .num{font:400 14px 'Urbanist',sans-serif;color:var(--green);letter-spacing:.06em}
+.pbody h3{font-size:clamp(28px,3.4vw,38px);font-weight:400;margin:6px 0 12px}
+.pbody p{margin:0 0 18px;color:var(--soft)}
+.pbody ul{margin:0 0 22px;padding:0;list-style:none}
+.pbody li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.pbody li:before{content:"";position:absolute;left:4px;top:15px;width:9px;height:12px;background:var(--green);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform:rotate(180deg)}
+.fade{animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:34px}
+.strip .ph{aspect-ratio:1/1;border-radius:18px}
+.strip .ph:nth-child(2){transform:translateY(22px)}
+
+/* reviews */
+.rv{position:relative}
+.stars{display:flex;align-items:center;gap:10px;font:500 15px 'Urbanist',sans-serif;color:var(--soft);margin-top:14px}
+.stars span{color:var(--green);letter-spacing:2px;font-size:18px}
+.quotes{margin-top:38px;display:grid;gap:22px}
+.q{position:relative;margin:0;padding:26px 24px 22px 28px;background:var(--card);border-radius:6px 24px 24px 24px;box-shadow:0 0 0 1px var(--line)}
+.q:before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;background:var(--lime);border-radius:3px}
+.q .t{font:500 12px 'Urbanist',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.q blockquote{margin:8px 0 14px;font:italic 400 clamp(19px,2vw,23px)/1.45 'Lora',serif;color:var(--ink)}
+.q figcaption{font:500 14px 'Urbanist',sans-serif;color:var(--soft)}
+.q.big blockquote{font-size:clamp(22px,2.6vw,30px)}
+
+/* estimate */
+.est{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.est-grid{display:grid;gap:34px}
+.form{display:grid;gap:14px}
+.form label{display:grid;gap:6px;font:500 14px 'Urbanist',sans-serif;color:var(--ink)}
+.form input,.form select,.form textarea{font:400 16px 'Lora',serif;color:var(--ink);background:var(--mist);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--green)}
+.form .note{display:none;background:var(--lime);color:var(--moss);border-radius:14px;padding:14px 16px;font:500 15px 'Urbanist',sans-serif}
+.form .note.show{display:block}
+.info{border-left:2px solid var(--lime);padding-left:22px}
+.info dl{margin:22px 0 0;display:grid;gap:16px}
+.info dt{font:500 13px 'Urbanist',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.info dd{margin:3px 0 0}
+.info dd a{color:var(--ink)}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 14px 'Urbanist',sans-serif;background:var(--lime);color:var(--moss);padding:6px 12px;border-radius:999px;margin-top:6px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+/* call band */
+.band{background:var(--moss);color:#fff;padding:64px 0;position:relative;overflow:hidden}
+.band:after{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(220,235,201,.35);box-shadow:0 0 0 30px rgba(220,235,201,.06),0 0 0 70px rgba(220,235,201,.04)}
+.band .wrap{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.band h2{font-size:clamp(32px,4.4vw,48px);font-weight:400;max-width:14em}
+.band p{color:var(--white-soft);margin:10px 0 0}
+.band .num{font:400 clamp(26px,3.4vw,36px) 'Urbanist',sans-serif;color:#fff;text-decoration:none;display:block;margin-bottom:12px}
+
+footer{background:#16221B;color:var(--white-soft);padding:30px 0 96px;font:400 14px 'Urbanist',sans-serif}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a{color:#fff}
+
+/* watermark + call bar */
+.badge{position:fixed;left:12px;bottom:12px;z-index:60;background:#fff;color:var(--moss);font:500 12px 'Urbanist',sans-serif;padding:6px 11px;border-radius:999px;box-shadow:0 0 0 1px var(--line),0 6px 18px -8px rgba(0,0,0,.35)}
+.callbar{display:none}
+
+@media (max-width:700px){
+  .nav{display:none}
+  .hphone span{display:none}
+  .hphone{padding:9px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--moss);padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;align-items:center;justify-content:space-between;box-shadow:0 -8px 24px -12px rgba(0,0,0,.5)}
+  .callbar span{color:#fff;font:500 14px 'Urbanist',sans-serif}
+  .callbar .btn{padding:11px 20px;font-size:16px}
+  .badge{bottom:76px}
+}
+@media (min-width:760px){
+  .mosaic{grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:10px}
+  .m1{grid-column:span 2;grid-row:span 2}
+  .plate{margin:-150px 0 0 4%;max-width:640px;padding:38px 40px 34px}
+  .ba-wrap{grid-template-columns:1.25fr .85fr;gap:48px}
+  .panel{grid-template-columns:1fr 1.1fr}
+  .panel .ph{min-height:100%}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .strip .ph:nth-child(2){transform:translateY(40px)}
+  .quotes{grid-template-columns:repeat(6,1fr)}
+  .q:nth-child(1){grid-column:1/5}
+  .q:nth-child(2){grid-column:4/7;margin-top:-20px;background:#FBFDF8}
+  .q:nth-child(3){grid-column:1/4}
+  .q:nth-child(4){grid-column:4/7;margin-top:30px}
+  .q:nth-child(5){grid-column:2/6}
+  .est-grid{grid-template-columns:1.1fr .9fr;gap:60px}
+}
+@media (min-width:1100px){
+  .mosaic{grid-auto-rows:175px}
+  .plate{margin-top:-190px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .ring,.drop{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Matt's Pressure Washing, back to top">
+      <svg viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 3c4 5 7 8.6 7 12.2A7 7 0 0 1 6 15.2C6 11.6 9 8 13 3Z" fill="#DCEBC9"/><path d="M10 16.5a3 3 0 0 0 3 3" stroke="#1C2B22" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Matt's Pressure Washing
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#wash">Before / after</a>
+      <a href="#surfaces">Surfaces</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#estimate">Free estimate</a>
+    </nav>
+    <a class="hphone" href="tel:+16094707282" aria-label="Call (609) 470-7282">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+      <span>(609) 470-7282</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO: gallery-first mosaic with name plate overlapping -->
+<section class="hero" id="work" aria-label="Job photos and introduction">
+  <div class="wrap">
+    <div class="mosaic">
+      <div class="ph m1"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Matt's job photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/zBeSVG4YUES0ScAmNf0y6w/l.jpg" alt="Job photo from Matt's Yelp page" loading="eager" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph m2"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/hMqBiuVXdfgKl-GkzvGP1A/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
+      <div class="ph m3"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/wPyBRXQvrp_JyTwpOphNAw/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
+      <div class="ph m4"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/JnRF3BZH0FHeWpWO5mJ3dA/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
+      <div class="ph m5"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/iaAeHroEAWRYMD54E6ieag/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
+    </div>
+    <div class="plate">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8Z"/></svg>Veteran-owned · Glassboro, NJ</span>
+      <h1>Decks, fences and patios, washed back to <em>clean</em></h1>
+      <p>Matt power washes decks, fences, patios and porches around Glassboro, seals them after if you want, and handles business jobs too. Estimates are free.</p>
+      <div class="cta">
+        <a class="btn go drip" href="tel:+16094707282"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Call (609) 470-7282</a>
+        <a class="alt" href="#wash">Drag the before and after</a>
+      </div>
+      <ul class="facts">
+        <li>Free estimates</li><li>Sealing after cleaning</li><li>Commercial too</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec" id="wash">
+  <div class="wrap">
+    <div class="kicker">Try it</div>
+    <h2>Drag the wand across the patio</h2>
+    <p class="lead">Grime on the left, clean stone on the right. That bright line is what a careful wash looks like.</p>
+    <div class="ba-wrap">
+      <div class="ba" id="ba" style="--x:62%">
+        <div class="clean"></div>
+        <div class="dirty"></div>
+        <span class="tag l">Before</span><span class="tag r">After</span>
+        <div class="wand"><div class="spray"></div><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></div></div>
+        <input type="range" min="0" max="100" value="62" aria-label="Drag to compare before and after">
+      </div>
+      <div class="ba-side">
+        <h3>How a wash with Matt goes</h3>
+        <p>Plain and simple, the way customers describe it.</p>
+        <ol class="steps">
+          <li><b>01</b><span>You call or send the form. The estimate is free.</span></li>
+          <li><b>02</b><span>Matt shows up on time, explains things and takes his time.</span></li>
+          <li><b>03</b><span>Deck, fence, patio or porch gets washed clean. Every spot.</span></li>
+          <li><b>04</b><span>Want it to last? Ask about sealing after the cleaning.</span></li>
+        </ol>
+        <p class="hint">This drawing stands in until Matt's own before and after photos go here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SURFACES -->
+<section class="sec surf" id="surfaces">
+  <div class="wrap">
+    <div class="kicker">Pick a surface</div>
+    <h2>What needs a wash?</h2>
+    <p class="lead">Tap a surface to see what Matt does with it.</p>
+    <div class="chips" role="tablist" aria-label="Surfaces">
+      <button class="chip" role="tab" aria-selected="true" data-k="deck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8h18M3 12h18M3 16h18M7 8v12M17 8v12"/></svg>Deck</button>
+      <button class="chip" role="tab" aria-selected="false" data-k="fence"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 20V7l2-3 2 3v13M15 20V7l2-3 2 3v13M3 10h18M3 16h18"/></svg>Fence</button>
+      <button class="chip" role="tab" aria-selected="false" data-k="patio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M10 4v6M15 10v5M8 15v5"/></svg>Patio</button>
+      <button class="chip" role="tab" aria-selected="false" data-k="porch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 10l9-6 9 6M5 10v10M19 10v10M3 20h18M9 20v-5h6v5"/></svg>Porch</button>
+      <button class="chip" role="tab" aria-selected="false" data-k="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/><path d="M9 14a3 3 0 0 0 3 3"/></svg>Sealing</button>
+      <button class="chip" role="tab" aria-selected="false" data-k="biz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M4 20h16M9 20v-6h6v6M8 11h2M14 11h2"/></svg>Commercial</button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel">
+      <div class="ph" id="pimg"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Personalized photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/RCYVM1MWNM5Z5PAqefunhQ/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="pbody" id="pbody">
+        <div class="num">01 / 06</div>
+        <h3>Decks</h3>
+        <p>Boards washed down and the grime rinsed out from between them, without rushing the job.</p>
+        <ul><li>Power washing for wood decks</li><li>Sealing after cleaning if you want it</li><li>Free estimate first</li></ul>
+        <a class="btn go drip" href="tel:+16094707282">Ask Matt about your deck</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE PHOTOS -->
+<section class="sec" id="photos" style="padding-bottom:110px">
+  <div class="wrap">
+    <div class="kicker">From the job site</div>
+    <h2>A few more of Matt's photos</h2>
+    <div class="strip">
+      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Pt0FmtbZt3DMQtD_xDwNKg/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/GqZj5WINnkmyE-5e6rYXrA/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph"><div class="fb">Your photo here<small>Personalized photos will go here</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec rv" id="reviews" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker">What people say</div>
+    <h2>Careful work, on time</h2>
+    <div class="stars"><span aria-hidden="true">★★★★★</span>5.0 on HomeAdvisor and Yelp</div>
+    <div class="quotes">
+      <figure class="q big"><div class="t">Careful, thorough work</div><blockquote>"He explains things, takes his time, doesn't miss a spot."</blockquote><figcaption>Marie F. · Yelp</figcaption></figure>
+      <figure class="q"><div class="t">On time and polite</div><blockquote>"On time, very polite !!"</blockquote><figcaption>Mary H. · HomeAdvisor</figcaption></figure>
+      <figure class="q"><div class="t">Detail and speed</div><blockquote>"Great attention to detail. And finished job in a timely manner."</blockquote><figcaption>Todd P. · HomeAdvisor</figcaption></figure>
+      <figure class="q"><div class="t">Would hire again</div><blockquote>"We will use him again soon!!"</blockquote><figcaption>Roxanne P. · Yelp</figcaption></figure>
+      <figure class="q big"><div class="t">Honest and meticulous</div><blockquote>"Matt is careful, honest, competent and meticulous."</blockquote><figcaption>Marie F. · Yelp</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="sec est" id="estimate">
+  <div class="wrap est-grid">
+    <div>
+      <div class="kicker">Free estimate</div>
+      <h2>Tell Matt what needs washing</h2>
+      <p class="lead">A few details and he gets back to you. Or just call.</p>
+      <form class="form" id="form" style="margin-top:26px">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>What needs a wash?
+          <select name="surface" id="surface">
+            <option>Deck</option><option>Fence</option><option>Patio</option><option>Porch</option><option>Sealing after cleaning</option><option>Commercial property</option>
+          </select>
+        </label>
+        <label>Anything else?<textarea name="msg" rows="3"></textarea></label>
+        <button class="btn go drip" type="submit" style="justify-self:start">Ask for a free estimate</button>
+        <div class="note" id="note" role="status">This is a demo. On your real site this sends straight to you.</div>
+      </form>
+    </div>
+    <aside class="info">
+      <div class="kicker">Reach Matt</div>
+      <h3 style="font-size:28px;font-weight:400">Matt's Pressure Washing</h3>
+      <dl>
+        <dt>Phone</dt><dd><a href="tel:+16094707282">(609) 470-7282</a></dd>
+        <dt>Area</dt><dd>Based in Glassboro, NJ. Mobile service, so Matt comes to you.</dd>
+        <dt>Hours</dt><dd>Out on jobs most days. Call or leave a message and he calls back.<br><span class="status" id="today"><i></i>Free estimates, any day you call</span></dd>
+        <dt>Find him on</dt><dd><a href="https://www.homeadvisor.com/rated.MattsPressureWashing.139413214.html" rel="noopener" target="_blank">HomeAdvisor</a> · <a href="https://www.mapquest.com/us/new-jersey/matts-pressure-washing-665546622" rel="noopener" target="_blank">MapQuest</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- CALL BAND -->
+<section class="band" id="call">
+  <div class="wrap">
+    <div>
+      <h2>Spring deck season comes fast. Get on the list.</h2>
+      <p>Veteran-owned and local to Glassboro.</p>
+    </div>
+    <div>
+      <a class="num" href="tel:+16094707282">(609) 470-7282</a>
+      <a class="btn go drip" href="tel:+16094707282">Call for a free estimate</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Matt's Pressure Washing · Glassboro, NJ · <a href="tel:+16094707282">(609) 470-7282</a></span>
+    <span>Demo preview prepared for Matt's Pressure Washing</span>
+  </div>
+</footer>
+
+<div class="badge" aria-hidden="true">Demo preview</div>
+<div class="callbar"><span>Free estimates</span><a class="btn go drip" href="tel:+16094707282">Call Matt</a></div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* before/after slider */
+  var ba=document.getElementById('ba'),r=ba.querySelector('input');
+  function set(v){ba.style.setProperty('--x',v+'%')}
+  r.addEventListener('input',function(){set(r.value)});
+  ['pointerdown','touchstart'].forEach(function(e){r.addEventListener(e,function(){ba.classList.add('drag')},{passive:true})});
+  ['pointerup','pointercancel','touchend','blur'].forEach(function(e){r.addEventListener(e,function(){ba.classList.remove('drag')})});
+  if(!reduce){ /* one gentle sweep on first view */
+    var done=false;
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting&&!done){done=true;var t0=null;
+      function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/1600,1),v=62-40*Math.sin(p*Math.PI);set(v);r.value=v;if(p<1)requestAnimationFrame(step)}
+      requestAnimationFrame(step)}})},{threshold:.5});
+    io.observe(ba);
+  }
+
+  /* surface chips */
+  var D={
+    deck:['Decks','Boards washed down and the grime rinsed out from between them, without rushing the job.',['Power washing for wood decks','Sealing after cleaning if you want it','Free estimate first'],'Ask Matt about your deck'],
+    fence:['Fences','Fences washed clean so the whole yard looks fresh again.',['Fence power washing','Sealing after cleaning if you want it','Free estimate first'],'Ask Matt about your fence'],
+    patio:['Patios','Patios washed clean so you can set the chairs back out.',['Patio power washing','Takes his time on the details','Free estimate first'],'Ask Matt about your patio'],
+    porch:['Porches','The first thing guests see, washed back to clean.',['Porch power washing','Takes his time on the details','Free estimate first'],'Ask Matt about your porch'],
+    seal:['Sealing','After the wash, Matt can seal the surface so the clean look holds up longer.',['Sealing after cleaning','For decks, fences, patios and porches','Ask about it with your estimate'],'Ask Matt about sealing'],
+    biz:['Commercial','Matt power washes for businesses too. Call and tell him about the property.',['Commercial power washing','Tell him about the property when you call','Free estimate first'],'Ask Matt about your business']
+  };
+  var keys=Object.keys(D),chips=document.querySelectorAll('.chip'),pb=document.getElementById('pbody'),sel=document.getElementById('surface');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(o){o.setAttribute('aria-selected','false')});c.setAttribute('aria-selected','true');
+    var k=c.getAttribute('data-k'),d=D[k],i=keys.indexOf(k);
+    pb.innerHTML='<div class="num">0'+(i+1)+' / 06</div><h3>'+d[0]+'</h3><p>'+d[1]+'</p><ul>'+d[2].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><a class="btn go drip" href="#estimate">'+d[3]+'</a>';
+    if(sel)sel.selectedIndex=i;
+    if(!reduce){pb.classList.remove('fade');void pb.offsetWidth;pb.classList.add('fade')}
+  })});
+
+  /* droplet ring click animation */
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.btn,.chip');if(!b||reduce)return;
+    var rc=b.getBoundingClientRect();
+    var x=(e.clientX||rc.left+rc.width/2)-rc.left,y=(e.clientY||rc.top+rc.height/2)-rc.top;
+    ['drop','ring','ring b'].forEach(function(cl){var s=document.createElement('span');s.className=cl;s.style.setProperty('--rx',x+'px');s.style.setProperty('--ry',y+'px');b.appendChild(s);setTimeout(function(){s.remove()},1000)});
+  });
+
+  /* form */
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('note').classList.add('show')});
+
+  /* today line (hours not published, so no open/closed claim) */
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=document.getElementById('today');if(t)t.lastChild.textContent='Today is '+days[new Date().getDay()]+'. Call for a free estimate';
+})();
+</script>
+</body>
+</html>

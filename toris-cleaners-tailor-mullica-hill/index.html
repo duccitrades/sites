@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tori's Cleaners &amp; Tailor | Alterations in Mullica Hill, NJ</title>
+<meta name="description" content="Tori's Cleaners & Tailor (Tori's Alterations): alterations, tailoring and dry cleaning at 214 N Main St, Mullica Hill, NJ. Call (856) 478-4011.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FBF9F4;--ivory2:#F4EFE6;--char:#2A2A2E;--char2:#36363B;--wine:#7E2A3A;--wine2:#66202F;
+  --ink:#1E1E22;--muted:#4A4A50;--pink:#EBD3CF;--pink2:#F5E7E4;--line:#D9CFC3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.65 'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Italiana','Didot','Bodoni 72',Georgia,serif;font-weight:400;margin:0;line-height:1.05;letter-spacing:.01em}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font:500 13px/1.3 'Jost',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--wine)}
+.seam{border:0;border-top:1.5px dashed var(--pink);margin:0}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:var(--char);color:#fff}
+.hdr .in{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1160px;margin:0 auto;padding:12px 24px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-width:0}
+.brand svg{flex:none}
+.brand b{font:400 24px/1 'Italiana',Georgia,serif;white-space:nowrap}
+.brand small{display:block;font:400 11px/1.2 'Jost',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#E2DCD6;margin-top:4px}
+.nav{display:flex;gap:24px;font-size:15px}
+.nav a{text-decoration:none;color:#fff;opacity:.92}
+.nav a:hover{text-decoration:underline;text-decoration-style:dashed;text-underline-offset:6px}
+.hdr .phone{white-space:nowrap}
+.hdr:after{content:"";display:block;height:0;border-top:1.5px dashed rgba(235,211,207,.55)}
+
+/* buttons + stitch animation */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:500 16px/1 'Jost',sans-serif;letter-spacing:.03em;padding:16px 24px;border-radius:2px;border:1.5px solid transparent;cursor:pointer;overflow:hidden;transition:background .2s}
+.btn.solid{background:var(--wine);color:#fff}
+.btn.solid:hover{background:var(--wine2)}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.line:hover{background:var(--ivory2)}
+.btn.lt{color:#fff;border-color:#fff}
+.btn.lt:hover{background:var(--char2)}
+.btn .st{position:absolute;left:10px;right:10px;bottom:7px;height:0;border-top:2px dashed currentColor;clip-path:inset(0 100% 0 0);opacity:.85;pointer-events:none}
+.btn.sew .st{animation:sew .55s steps(9,end) forwards}
+.btn.solid .st{border-color:var(--pink)}
+@keyframes sew{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.btn.sm{padding:11px 16px;font-size:15px}
+
+/* hero */
+.hero{position:relative;background:var(--ivory)}
+.hero .grid{display:grid;grid-template-columns:1.02fr 0 1fr;min-height:620px;max-width:1280px;margin:0 auto}
+.photo-side{position:relative;padding:34px 0 34px 24px;display:flex;flex-direction:column}
+.photo-side .frame.main{flex:1;height:auto;min-height:300px}
+.frame{position:relative;height:100%;min-height:340px;background:var(--pink2);border:1px solid var(--line);overflow:hidden}
+.frame .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:24px;color:var(--wine)}
+.frame .fb span{font:400 30px/1.1 'Italiana',Georgia,serif}
+.frame .fb small{font-size:14px;color:var(--ink);max-width:22em}
+/* fallback behind a real photo: solid charcoal with white words */
+.frame .fb.dk{background:var(--char);color:#fff}
+.frame .fb.dk small{color:#fff}
+.frame .fb.dk svg path{stroke:#EBD3CF}
+.frame .fb.fbt{font:400 22px/1.1 'Italiana',Georgia,serif;color:var(--wine)}
+.about .frame .fb.dk{justify-content:flex-start;padding:40px 24px 130px}
+/* measuring tape + small photo frames */
+.tape{position:relative;height:28px;margin:14px 0 10px;background:var(--pink) repeating-linear-gradient(90deg,var(--char) 0 1px,transparent 1px 12px) top left/100% 7px no-repeat;border:1px solid #CDB3AE;display:flex;justify-content:space-between;align-items:flex-end;padding:0 10px 3px;overflow:hidden}
+.tape span{display:block;width:22px;text-align:center}
+.tape span:before{content:attr(data-n);font:500 12px/1 'Jost',sans-serif;color:var(--ink);letter-spacing:.02em}
+.minis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mini{position:relative;height:124px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;background:var(--pink2);border:1.5px dashed var(--wine);outline:6px solid #fff;outline-offset:-7px;font:400 19px/1.15 'Italiana',Georgia,serif;color:var(--wine);box-shadow:0 8px 18px rgba(30,30,34,.08)}
+.mini:nth-child(2){transform:translateY(6px)}
+.counter{margin-top:70px}
+.about .wrap.counter{display:block}
+.counter .minis{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.counter .mini{height:200px;font-size:24px}
+.counter .cap2{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame .cap{position:absolute;left:14px;bottom:14px;background:var(--ivory);color:var(--ink);font-size:13px;padding:5px 10px;border:1px solid var(--line)}
+.hangtag{position:absolute;right:-22px;top:70px;z-index:3;width:150px;background:var(--ivory);border:1px solid var(--line);padding:18px 14px 14px;text-align:center;transform:rotate(5deg);box-shadow:0 10px 24px rgba(30,30,34,.12);clip-path:polygon(18% 0,82% 0,100% 14%,100% 100%,0 100%,0 14%)}
+.hangtag:before{content:"";display:block;width:12px;height:12px;border-radius:50%;margin:0 auto 10px;border:1.5px solid var(--wine)}
+.hangtag b{display:block;font:400 26px/1 'Italiana',Georgia,serif;color:var(--wine)}
+.hangtag small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px;line-height:1.4}
+.seamline{position:relative;width:0}
+.seamline svg{position:absolute;top:0;left:-6px;height:100%;width:12px;overflow:visible}
+.seamline line{stroke:var(--wine);stroke-width:1.6;stroke-dasharray:9 7}
+.seamline .hair{stroke:var(--line);stroke-width:1;stroke-dasharray:none}
+.needle{position:absolute;left:-7px;top:0;width:14px;height:40px;transform:translateY(-50px)}
+.text-side{display:flex;flex-direction:column;justify-content:center;padding:56px 32px 56px 64px}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:30px;align-self:flex-start;margin-bottom:24px}
+.status i{width:9px;height:9px;border-radius:50%;background:#2E7D4F}
+.status.closed i{background:var(--wine)}
+.hero h1{font-size:clamp(44px,6vw,70px);color:var(--ink);margin:14px 0 22px}
+.hero h1 em{font-style:normal;color:var(--wine)}
+.hero .sub{font-size:19px;color:var(--muted);max-width:30em;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;padding-top:20px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:500}
+
+/* explore */
+.explore{padding:96px 0 90px;position:relative}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;margin-bottom:46px}
+.sec-head h2{font-size:clamp(40px,5vw,62px)}
+.sec-head p{margin:0;color:var(--muted);max-width:28em}
+.rail{position:relative;height:0;border-top:2px solid var(--char);margin:0 6% 0}
+.rail:before,.rail:after{content:"";position:absolute;top:-7px;width:12px;height:12px;border-radius:50%;background:var(--char)}
+.rail:before{left:-6px}.rail:after{right:-6px}
+.garments{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:0}
+.g{display:block;width:100%;position:relative;perspective:1100px;height:460px;padding-top:38px;border:0;background:none;padding-left:0;padding-right:0;cursor:pointer;font:inherit;color:inherit;text-align:left}
+.g:nth-child(2){margin-top:26px}.g:nth-child(4){margin-top:14px}
+.g .hook{position:absolute;top:-14px;left:50%;width:30px;height:54px;transform:translateX(-50%)}
+.g .card{display:block;position:relative;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.3,1)}
+.g.on .card{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line);background:#fff;padding:22px 20px;display:flex;flex-direction:column}
+.front{align-items:center;text-align:center;justify-content:space-between}
+.front svg{width:76%;max-width:170px;height:200px}
+.front h3{font-size:32px;color:var(--ink)}
+.front .tap{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.back{transform:rotateY(180deg);background:var(--ivory2)}
+.back .eyebrow{display:block;margin-bottom:10px}
+.face h3{display:block}
+.back h3{font-size:30px;margin-bottom:12px}
+.back p{margin:0 0 12px;font-size:16px}
+.back .q{display:block;font-size:15px;color:var(--muted);border-left:2px solid var(--pink);padding-left:12px;margin:auto 0 14px}
+.back .q cite{display:block;font-style:normal;font-size:13px;margin-top:4px;color:var(--muted)}
+.back .btn{align-self:flex-start}
+.g:focus-visible{outline:2px dashed var(--wine);outline-offset:6px}
+.note{margin-top:30px;color:var(--muted);font-size:15px;text-align:center}
+
+/* reviews */
+.rev{position:relative;padding:40px 0 100px}
+.rev .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+.big{position:sticky;top:110px}
+.big .mark{font:400 120px/0.6 'Italiana',Georgia,serif;color:var(--pink);display:block;height:50px}
+.big blockquote{margin:0;font:400 clamp(32px,3.6vw,46px)/1.15 'Italiana',Georgia,serif}
+.big cite{display:block;margin-top:18px;font-style:normal;color:var(--muted);font-size:15px}
+.big .sw{display:block;width:120px;height:0;border-top:1.5px dashed var(--wine);margin-top:26px}
+.quotes{display:flex;flex-direction:column;gap:0}
+.qt{position:relative;padding:28px 0 28px 70px;border-bottom:1px solid var(--line)}
+.qt:first-child{border-top:1px solid var(--line)}
+.qt:nth-child(even){margin-left:36px}
+.qt .n{position:absolute;left:0;top:28px;font:400 34px/1 'Italiana',Georgia,serif;color:var(--wine)}
+.qt p{margin:0 0 8px;font-size:18px}
+.qt .who{font-size:14px;color:var(--muted)}
+.qt .tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:var(--pink);color:var(--ink);padding:3px 9px;margin-right:10px}
+
+/* about */
+.about{padding:20px 0 110px}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .stack{position:relative;padding:0 0 60px 0}
+.about .frame{min-height:420px;height:420px}
+.about .frame.sm{position:absolute;right:-10px;bottom:0;width:52%;height:220px;min-height:220px;border:8px solid var(--ivory);box-shadow:0 14px 30px rgba(30,30,34,.14)}
+.about .frame.sm .fb span{font-size:22px}
+.about h2{font-size:clamp(40px,4.6vw,58px);margin:12px 0 20px}
+.about p{color:var(--muted);margin:0 0 16px}
+.svc{list-style:none;padding:0;margin:26px 0 0}
+.svc li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1.5px dashed var(--pink);font-size:18px}
+.svc li span{color:var(--muted);font-size:15px;text-align:right}
+
+/* visit band */
+.visit{background:var(--char);color:#fff;padding:90px 0;position:relative}
+.visit:before,.visit:after{content:"";position:absolute;left:0;right:0;border-top:1.5px dashed rgba(235,211,207,.6)}
+.visit:before{top:14px}.visit:after{bottom:14px}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.visit .eyebrow{color:var(--pink)}
+.visit h2{font-size:clamp(40px,5vw,60px);margin:12px 0 18px;color:#fff}
+.visit p{color:#E6E2DD;margin:0 0 22px}
+.visit address{font-style:normal;font-size:19px;margin-bottom:24px;color:#fff}
+.hours{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.25)}
+.hours li{display:flex;justify-content:space-between;padding:13px 14px;border-bottom:1px solid rgba(255,255,255,.18);font-size:17px;color:#fff}
+.hours li.today{background:var(--pink);color:var(--ink);border-bottom-color:var(--pink)}
+.hours li.today b:after{content:"  · today";font-weight:400;font-size:14px}
+.hours b{font-weight:500}
+.hnote{font-size:14px;color:#D9D4CE;margin-top:14px}
+
+/* ask form */
+.ask{padding:96px 0}
+.ask .wrap{display:grid;grid-template-columns:4fr 6fr;gap:56px}
+.ask h2{font-size:clamp(38px,4.4vw,54px);margin:12px 0 16px}
+.ask p{color:var(--muted)}
+form{background:#fff;border:1px solid var(--line);padding:30px;position:relative}
+form:before{content:"";position:absolute;inset:8px;border:1.5px dashed var(--pink);pointer-events:none}
+label{display:block;font-size:14px;font-weight:500;margin:0 0 6px;color:var(--ink)}
+input,select,textarea{width:100%;font:400 16px 'Jost',sans-serif;padding:12px;border:1px solid #BDB3A8;background:var(--ivory);color:var(--ink);border-radius:2px;margin-bottom:16px}
+textarea{min-height:96px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sent{display:none;margin-top:14px;padding:12px 14px;background:var(--pink2);color:var(--ink);border-left:3px solid var(--wine);font-size:15px}
+.sent.show{display:block}
+
+/* call band + footer */
+.callband{background:var(--wine);color:#fff;text-align:center;padding:60px 24px}
+.callband h2{font-size:clamp(36px,4.6vw,54px);color:#fff;margin-bottom:22px}
+.callband .btn.lt:hover{background:var(--wine2)}
+footer{background:var(--char);color:#E6E2DD;padding:42px 0 110px;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{font:400 26px 'Italiana',Georgia,serif;color:#fff;display:block}
+footer a{color:#fff}
+.demo-line{margin-top:20px;font-size:14px;color:#D9D4CE;width:100%}
+
+.wm{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--char);color:#fff;font:500 12px/1 'Jost',sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:9px 12px;border:1px dashed var(--pink);border-radius:2px}
+.callbar{display:none}
+
+/* intro stitch on load */
+.seamline .run{stroke-dashoffset:0;animation:seamIn 1.8s ease-out .2s both}
+@keyframes seamIn{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.seamline svg.draw{clip-path:inset(0 0 100% 0);animation:seamIn 1.8s cubic-bezier(.4,.1,.3,1) .25s forwards}
+.needle{animation:needle 1.8s cubic-bezier(.4,.1,.3,1) .25s forwards}
+@keyframes needle{from{top:0}to{top:100%}}
+.hangtag{animation:swing 1.4s ease-out 1.6s both}
+@keyframes swing{0%{transform:rotate(-8deg)}40%{transform:rotate(9deg)}70%{transform:rotate(3deg)}100%{transform:rotate(5deg)}}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .garments{grid-template-columns:repeat(2,1fr)}
+  .g:nth-child(n){margin-top:0}
+  .rev .wrap,.about .wrap,.visit .wrap,.ask .wrap,.sec-head{grid-template-columns:1fr}
+  .big{position:static}
+}
+@media (max-width:760px){
+  .hero .grid{grid-template-columns:1fr;min-height:0}
+  .photo-side{padding:20px 20px 0}
+  .frame{min-height:300px;height:300px}
+  .photo-side .frame.main{flex:none;height:214px;min-height:214px}
+  .mini{height:88px;font-size:16px}
+  .photo-side .tape{margin:10px 0 8px}
+  .photo-side .fb.dk{align-items:flex-start;text-align:left;padding:24px 150px 60px 22px}
+  .photo-side .fb.dk span{font-size:24px}
+  .counter{margin-top:50px}
+  .counter .minis{gap:10px}
+  .counter .mini{height:120px;font-size:17px}
+  .hangtag{right:30px;top:34px;bottom:auto;width:112px;padding:12px 10px 10px}
+  .hangtag b{font-size:22px}
+  .photo-side .frame .fb{padding-bottom:60px}
+  .hero{overflow-x:clip}
+  .seamline{width:auto;height:14px;margin:30px 20px 0}
+  .seamline svg{display:none}
+  .needle{display:none}
+  .seamline:before{content:"";display:block;border-top:1.6px dashed var(--wine);animation:sewH 1.6s steps(20,end) .2s both}
+  .text-side{padding:22px 20px 46px}
+  .hero .sub{font-size:17px}
+  .explore{padding:70px 0}
+  .rail{display:none}
+  .garments{gap:14px}
+  .g{height:360px;padding-top:0}
+  .g .hook{display:none}
+  .front svg{height:150px}
+  .front h3{font-size:26px}
+  .back{padding:16px 14px}
+  .back h3{font-size:24px}
+  .back p{font-size:14.5px}
+  .back .q{font-size:13.5px}
+  .qt{padding-left:48px}.qt:nth-child(even){margin-left:0}
+  .about .frame{height:300px;min-height:300px}
+  .about .frame.sm{height:160px;min-height:160px;right:0}
+  .about .frame .cap{max-width:42%;line-height:1.3}
+  .row{grid-template-columns:1fr}
+  form{padding:22px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--char);border-top:1.5px dashed var(--pink);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;justify-content:center}
+  .wm{bottom:78px;right:10px;padding:7px 9px;font-size:11px}
+}
+@keyframes sewH{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (max-width:520px){
+  .garments{grid-template-columns:1fr}
+  .g{height:330px}
+  .front svg{height:160px}
+}
+@media (max-width:420px){
+  .hdr .in{padding:10px 14px;gap:8px}
+  .brand b{font-size:20px}
+  .brand small{display:none}
+  .brand svg{width:22px;height:22px}
+  .hdr .phone{padding:10px 12px;font-size:14px}
+  .wrap{padding:0 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  .seamline svg.draw{clip-path:none}
+  .needle{display:none}
+  .btn .st{display:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="in">
+    <a class="brand" href="#top" aria-label="Tori's Cleaners and Tailor, back to top">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11.5" fill="none" stroke="#EBD3CF" stroke-width="1.2"/><path d="M6 19 L20 7" stroke="#fff" stroke-width="1.3"/><ellipse cx="18.6" cy="8.2" rx="1.6" ry=".8" transform="rotate(-40 18.6 8.2)" fill="none" stroke="#fff"/><path d="M5 13 C9 9, 15 17, 21 12" stroke="#EBD3CF" stroke-width="1.1" stroke-dasharray="2 2" fill="none"/></svg>
+      <span><b>Tori's</b><small>Cleaners &amp; Tailor</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#fix">What needs fixing?</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">The shop</a>
+      <a href="#visit">Hours</a>
+    </nav>
+    <a class="btn solid sm phone" href="tel:+18564784011"><span class="st"></span>(856) 478-4011</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Welcome">
+  <div class="grid">
+    <div class="photo-side">
+      <div class="frame main">
+        <div class="fb dk"><svg width="54" height="54" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 8a5 5 0 1 1 5 5c-2 0-5 1-5 4v3M27 20 6 36h42L27 20z" fill="none" stroke="#7E2A3A" stroke-width="1.5"/></svg><span>Personalized photos will go here</span><small>Your shop, your work and your Main Street window.</small></div>
+        <img src="https://s3-media0.fl.yelpcdn.com/bphoto/k6eEUl5g8gF5duG97xI9fA/l.jpg" alt="Shop photo from Tori's Yelp listing" onerror="this.remove()">
+        <span class="cap">Shop photo from Yelp</span>
+      </div>
+      <div class="tape" aria-hidden="true"><span data-n="10"></span><span data-n="15"></span><span data-n="20"></span><span data-n="25"></span><span data-n="30"></span></div>
+      <div class="minis" aria-label="Photo spots">
+        <div class="mini">Your photo here</div>
+        <div class="mini">Your photo here</div>
+        <div class="mini">Your photo here</div>
+      </div>
+      <div class="hangtag" aria-hidden="true"><b>No. 214</b><small>North Main St<br>Mullica Hill</small></div>
+    </div>
+    <div class="seamline" aria-hidden="true">
+      <svg class="draw" preserveAspectRatio="none" viewBox="0 0 12 600"><line class="hair" x1="6" y1="0" x2="6" y2="600"/><line x1="6" y1="0" x2="6" y2="600"/></svg>
+      <svg class="needle" viewBox="0 0 14 40"><path d="M7 0 L8.2 34 L7 40 L5.8 34 Z" fill="#2A2A2E"/><ellipse cx="7" cy="6" rx="1.1" ry="3" fill="#FBF9F4"/></svg>
+    </div>
+    <div class="text-side">
+      <span class="status" id="status"><i></i><span id="statusText">Tue to Fri 11 to 4 · Sat 10 to 1</span></span>
+      <span class="eyebrow">Alterations · Tailoring · Dry cleaning</span>
+      <h1>Hems, suits and dresses, <em>made to fit you.</em></h1>
+      <p class="sub">Tori's is a small tailor shop on Main Street in Mullica Hill. Bring in what doesn't fit right. We listen to what you want and get it done with care.</p>
+      <div class="btns">
+        <a class="btn solid" href="tel:+18564784011"><span class="st"></span>Call (856) 478-4011</a>
+        <a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=214%20N%20Main%20St%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener"><span class="st"></span>Get directions</a>
+      </div>
+      <div class="facts"><span><b>214 N Main St</b>, Mullica Hill</span><span>Also on Yelp as <b>Tori's Alterations</b></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="explore" id="fix" aria-labelledby="fixh">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Tap a garment</span><h2 id="fixh">What needs fixing?</h2></div>
+      <p>Pick what's on your mind. Each tag turns over to show what Tori's does for it, with a word from a customer who's been in.</p>
+    </div>
+    <div class="rail" aria-hidden="true"></div>
+    <div class="garments">
+      <button class="g" type="button" aria-pressed="false">
+        <svg class="hook" viewBox="0 0 30 54" aria-hidden="true"><path d="M15 2a6 6 0 1 1 6 6c-3 0-6 2-6 6v40" fill="none" stroke="#2A2A2E" stroke-width="1.4"/></svg>
+        <span class="card">
+          <span class="face front">
+            <svg viewBox="0 0 120 170" aria-hidden="true"><path d="M30 8h60l8 154H70L60 52 50 162H22z" fill="#FBF9F4" stroke="#2A2A2E" stroke-width="1.4"/><path d="M30 18h60" stroke="#2A2A2E" stroke-width="1"/><path d="M22 150h28M70 150h28" stroke="#7E2A3A" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M60 18v34" stroke="#2A2A2E" stroke-width="1"/></svg>
+            <h3>Pants</h3><span class="tap">Tap to turn</span>
+          </span>
+          <span class="face back">
+            <span class="eyebrow">Alterations</span>
+            <h3>Hems and fit</h3>
+            <p>Too long, too loose or just not right. Bring your pants in and we'll hem them to the length you want.</p>
+            <span class="q">&ldquo;I get my pants hemmed here all the time and I would never go anywhere else. Karen is the best!&rdquo;<cite>Kevin H. on Yelp</cite></span>
+          </span>
+        </span>
+      </button>
+      <button class="g" type="button" aria-pressed="false">
+        <svg class="hook" viewBox="0 0 30 54" aria-hidden="true"><path d="M15 2a6 6 0 1 1 6 6c-3 0-6 2-6 6v40" fill="none" stroke="#2A2A2E" stroke-width="1.4"/></svg>
+        <span class="card">
+          <span class="face front">
+            <svg viewBox="0 0 120 170" aria-hidden="true"><path d="M44 10 60 22 76 10l26 10 8 120H86l-2 20H36l-2-20H10l8-120z" fill="#FBF9F4" stroke="#2A2A2E" stroke-width="1.4"/><path d="M44 10l12 62-4 8M76 10 64 72l4 8M60 80v80" stroke="#2A2A2E" stroke-width="1" fill="none"/><path d="M18 34 30 140M102 34 90 140" stroke="#7E2A3A" stroke-width="1.3" stroke-dasharray="4 3"/><circle cx="60" cy="100" r="2" fill="#2A2A2E"/><circle cx="60" cy="120" r="2" fill="#2A2A2E"/></svg>
+            <h3>Suit jacket</h3><span class="tap">Tap to turn</span>
+          </span>
+          <span class="face back">
+            <span class="eyebrow">Tailoring</span>
+            <h3>Suits and dress clothes</h3>
+            <p>Tailoring for suit jackets and dress clothes, so they sit right for the day you need them.</p>
+            <span class="q">&ldquo;Great place! Excellent communication. Did an awesome job on my son's suit jacket in record time.&rdquo;<cite>ChrisBlake A. on Yelp</cite></span>
+          </span>
+        </span>
+      </button>
+      <button class="g" type="button" aria-pressed="false">
+        <svg class="hook" viewBox="0 0 30 54" aria-hidden="true"><path d="M15 2a6 6 0 1 1 6 6c-3 0-6 2-6 6v40" fill="none" stroke="#2A2A2E" stroke-width="1.4"/></svg>
+        <span class="card">
+          <span class="face front">
+            <svg viewBox="0 0 120 170" aria-hidden="true"><path d="M44 8h8l8 16 8-16h8l-2 30 6 26 26 98H12l26-98 6-26z" fill="#FBF9F4" stroke="#2A2A2E" stroke-width="1.4"/><path d="M38 64h44" stroke="#2A2A2E" stroke-width="1"/><path d="M42 40c6 2 30 2 36 0" stroke="#7E2A3A" stroke-width="1.3" stroke-dasharray="4 3" fill="none"/><path d="M16 150c30 6 58 6 88 0" stroke="#7E2A3A" stroke-width="1.3" stroke-dasharray="4 3" fill="none"/></svg>
+            <h3>Dress</h3><span class="tap">Tap to turn</span>
+          </span>
+          <span class="face back">
+            <span class="eyebrow">Alterations</span>
+            <h3>Dress alterations</h3>
+            <p>Dresses taken in, let out or shortened. Tell us how you want it to fit, and we'll make helpful suggestions.</p>
+            <span class="q">&ldquo;I had two dresses altered, they were altered in a timely manner and were beautiful! Will only use Tori's for my alterations.&rdquo;<cite>Jeanine R. on Yelp</cite></span>
+          </span>
+        </span>
+      </button>
+      <button class="g" type="button" aria-pressed="false">
+        <svg class="hook" viewBox="0 0 30 54" aria-hidden="true"><path d="M15 2a6 6 0 1 1 6 6c-3 0-6 2-6 6v40" fill="none" stroke="#2A2A2E" stroke-width="1.4"/></svg>
+        <span class="card">
+          <span class="face front">
+            <svg viewBox="0 0 120 170" aria-hidden="true"><path d="M60 4a6 6 0 1 1 6 6c-3 0-6 2-6 5v3L8 44h104L60 18" fill="none" stroke="#2A2A2E" stroke-width="1.4"/><path d="M20 44h80v118H20z" fill="#EBD3CF" stroke="#2A2A2E" stroke-width="1.4"/><path d="M60 44v118" stroke="#2A2A2E" stroke-width="1" stroke-dasharray="3 3"/><path d="M34 70h20M66 70h20" stroke="#7E2A3A" stroke-width="1.3"/></svg>
+            <h3>Dry cleaning</h3><span class="tap">Tap to turn</span>
+          </span>
+          <span class="face back">
+            <span class="eyebrow">Cleaners</span>
+            <h3>Dry cleaning</h3>
+            <p>Drop off the pieces that need cleaning along with your alterations, all at one counter on Main Street.</p>
+            <span class="q">&ldquo;I have been using this tailor shop for years and the quality is always top of the line.&rdquo;<cite>David C. on Yelp</cite></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <p class="note">Not sure what your piece needs? <a href="tel:+18564784011">Call the shop</a> or stop by and ask.</p>
+  </div>
+</section>
+
+<hr class="seam" style="max-width:1112px;margin:0 auto">
+
+<section class="rev" id="reviews" aria-labelledby="revh">
+  <div class="wrap" style="padding-top:80px">
+    <div class="big">
+      <span class="eyebrow" id="revh">What customers say on Yelp</span>
+      <span class="mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>Great service. Listens to what you want. Doesn't tell you what to do but makes helpful suggestions.</blockquote>
+      &rdquo;<cite>Gregory B., Yelp</cite>
+      <span class="sw" aria-hidden="true"></span>
+    </div>
+    <div class="quotes">
+      <div class="qt"><span class="n">i.</span><p>&ldquo;I get my pants hemmed here all the time and I would never go anywhere else. Karen is the best!&rdquo;</p><div class="who"><span class="tag">Hemming</span>Kevin H., Yelp</div></div>
+      <div class="qt"><span class="n">ii.</span><p>&ldquo;Great place! Excellent communication. Did an awesome job on my son's suit jacket in record time.&rdquo;</p><div class="who"><span class="tag">Suits</span>ChrisBlake A., Yelp</div></div>
+      <div class="qt"><span class="n">iii.</span><p>&ldquo;I had two dresses altered, they were altered in a timely manner and were beautiful! Will only use Tori's for my alterations.&rdquo;</p><div class="who"><span class="tag">Dresses</span>Jeanine R., Yelp</div></div>
+      <div class="qt"><span class="n">iv.</span><p>&ldquo;I have been using this tailor shop for years and the quality is always top of the line.&rdquo;</p><div class="who"><span class="tag">Quality</span>David C., Yelp</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" aria-labelledby="abouth">
+  <div class="wrap">
+    <div class="stack">
+      <div class="frame">
+        <div class="fb dk"><span>Personalized photos will go here</span><small>The counter, the sewing machines, a finished hem.</small></div>
+        <img src="https://s.yimg.com/bj/716a/716afbd82ba090a88c749617019127af.jpg" alt="Shop photo from the Tori's Alterations Yahoo Local listing" onerror="this.remove()">
+        <span class="cap">Shop photo from Yahoo Local</span>
+      </div>
+      <div class="frame sm">
+        <div class="fb fbt">Your photo here</div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">The shop on Main Street</span>
+      <h2 id="abouth">A family tailor shop, close to home.</h2>
+      <p>Tori's Cleaners &amp; Tailor is a family shop at 214 N Main St that has served South Jersey for over 30 years. You'll also find it on Yelp as Tori's Alterations.</p>
+      <p>Customers come back for the same reasons: clear communication, honest advice and quality work, often done faster than they expected.</p>
+      <ul class="svc">
+        <li>Alterations <span>hems, pants, dresses, fit</span></li>
+        <li>Tailoring <span>suit jackets, dress clothes</span></li>
+        <li>Dry cleaning <span>drop off at the same counter</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap counter">
+    <div class="tape" aria-hidden="true"><span data-n="10"></span><span data-n="15"></span><span data-n="20"></span><span data-n="25"></span><span data-n="30"></span></div>
+    <div class="minis" aria-label="More photo spots">
+      <div><div class="mini">Your photo here</div><span class="cap2">A finished hem</span></div>
+      <div><div class="mini">Your photo here</div><span class="cap2">A suit fitting</span></div>
+      <div><div class="mini">Your photo here</div><span class="cap2">The Main Street window</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visith">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Visit the shop</span>
+      <h2 id="visith">Stop by 214 North Main.</h2>
+      <address>214 N Main St<br>Mullica Hill, NJ 08062</address>
+      <p>Walk in during open hours, or call ahead if you have a date coming up.</p>
+      <div class="btns">
+        <a class="btn lt line" href="https://www.google.com/maps/dir/?api=1&amp;destination=214%20N%20Main%20St%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener"><span class="st"></span>Get directions</a>
+        <a class="btn solid" href="tel:+18564784011"><span class="st"></span>Call (856) 478-4011</a>
+      </div>
+    </div>
+    <div>
+      <ul class="hours" id="hours">
+        <li data-d="0"><b>Sunday</b><span>Closed</span></li>
+        <li data-d="1"><b>Monday</b><span>Closed</span></li>
+        <li data-d="2"><b>Tuesday</b><span>11 am to 4 pm</span></li>
+        <li data-d="3"><b>Wednesday</b><span>11 am to 4 pm</span></li>
+        <li data-d="4"><b>Thursday</b><span>11 am to 4 pm</span></li>
+        <li data-d="5"><b>Friday</b><span>11 am to 4 pm</span></li>
+        <li data-d="6"><b>Saturday</b><span>10 am to 1 pm</span></li>
+      </ul>
+      <p class="hnote">Hours can change around holidays. A quick call is the surest way to check.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ask" id="ask" aria-labelledby="askh">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Ask before you come in</span>
+      <h2 id="askh">Tell us what needs fixing.</h2>
+      <p>Send a short note about your garment and when you need it. Or just call the shop at <a href="tel:+18564784011">(856) 478-4011</a>.</p>
+    </div>
+    <form id="askForm">
+      <div class="row">
+        <div><label for="fn">Your name</label><input id="fn" name="name" autocomplete="name"></div>
+        <div><label for="fp">Phone</label><input id="fp" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <label for="fg">What is it?</label>
+      <select id="fg" name="garment"><option>Pants</option><option>Suit jacket</option><option>Dress</option><option>Dry cleaning</option><option>Something else</option></select>
+      <label for="fm">What would you like done?</label>
+      <textarea id="fm" name="msg" placeholder="Example: hem two pairs of dress pants before a wedding on the 14th"></textarea>
+      <button class="btn solid" type="submit"><span class="st"></span>Send my note</button>
+      <div class="sent" id="sent" role="status">This is a demo. On your real site this sends straight to you.</div>
+    </form>
+  </div>
+</section>
+
+<section class="callband" aria-label="Call the shop">
+  <h2>Something not fitting right?</h2>
+  <a class="btn lt line" href="tel:+18564784011"><span class="st"></span>Call Tori's at (856) 478-4011</a>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Tori's Cleaners &amp; Tailor</b>Also known as Tori's Alterations</div>
+    <div>214 N Main St, Mullica Hill, NJ 08062<br><a href="tel:+18564784011">(856) 478-4011</a></div>
+    <div>Tue to Fri 11 am to 4 pm<br>Sat 10 am to 1 pm · Sun and Mon closed</div>
+    <div class="demo-line">Demo preview prepared for Tori's Cleaners &amp; Tailor</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn solid sm" href="tel:+18564784011"><span class="st"></span>Call the shop</a>
+  <a class="btn lt line sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=214%20N%20Main%20St%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener"><span class="st"></span>Directions</a>
+</div>
+<div class="wm" aria-hidden="true">Demo preview</div>
+
+<script>
+(function(){
+  // hours: [open, close] in minutes, null = closed
+  var H={0:null,1:null,2:[660,960],3:[660,960],4:[660,960],5:[660,960],6:[600,780]};
+  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));
+  var d=now.getDay(),m=now.getHours()*60+now.getMinutes();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]'); if(li) li.className='today';
+  var st=document.getElementById('status'),tx=document.getElementById('statusText');
+  var fmt=function(x){var h=Math.floor(x/60),mm=x%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+' '+ap;};
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var t=H[d];
+  if(t&&m>=t[0]&&m<t[1]){tx.textContent='Open now · until '+fmt(t[1]);}
+  else{
+    st.classList.add('closed');
+    if(t&&m<t[0]){tx.textContent='Closed now · opens today at '+fmt(t[0]);}
+    else{for(var i=1;i<=7;i++){var n=(d+i)%7;if(H[n]){tx.textContent='Closed now · opens '+(i===1?'tomorrow':names[n])+' at '+fmt(H[n][0]);break;}}}
+  }
+  // garment flip
+  document.querySelectorAll('.g').forEach(function(b){
+    b.addEventListener('click',function(e){
+      if(e.target.closest('a'))return;
+      var on=b.classList.toggle('on');b.setAttribute('aria-pressed',on?'true':'false');
+    });
+  });
+  // stitch sews across button on click
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('click',function(){b.classList.remove('sew');void b.offsetWidth;b.classList.add('sew');});
+  });
+  document.getElementById('askForm').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('sent').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

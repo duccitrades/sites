@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>George's Auto Care | Auto Repair in Williamstown, NJ</title>
+<meta name="description" content="George's Auto Care, 2 W Black Horse Pike, Williamstown NJ. Brakes, oil changes, diagnostics, electrical, transmission, diesel, tires and more. Call (609) 328-0314.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Sora:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3F4F6; --paper:#FFFFFF; --ink:#1B2430; --ink2:#243041; --text:#1A1D21; --muted:#4A5260;
+  --accent:#8F4F0C; --accent-d:#74400A; --lamp:#E0A100; --line:#D5DAE1; --soft:#E7EAEF;
+  --head:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Karla',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.12;letter-spacing:-.015em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--ink);color:#fff;border-bottom:1px solid #2E3A4C}
+.top .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--head);font-weight:500;font-size:18px;white-space:nowrap}
+.brand-mark{width:30px;height:30px;border-radius:50%;border:1.5px solid #3C4A5E;display:grid;place-items:center}
+.brand-mark i{width:10px;height:10px;border-radius:50%;background:var(--lamp);box-shadow:0 0 10px var(--lamp)}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{color:#fff;text-decoration:none;font-size:15px;opacity:.92}
+.nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.top-call{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;padding:9px 16px;border-radius:999px;font-weight:500;font-size:15px;white-space:nowrap}
+@media(max-width:900px){.nav{display:none}.top-call{margin-left:auto}}
+@media(max-width:420px){.top .wrap{gap:10px;padding:0 14px}.brand{font-size:15px;gap:8px}.brand-mark{width:24px;height:24px}.top-call{padding:8px 11px;font-size:14px;gap:6px}.top-call .led{display:none}}
+
+/* buttons + blink */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:12px;text-decoration:none;font-family:var(--body);font-weight:500;font-size:16px;border:0;cursor:pointer;transition:transform .15s ease,background .2s}
+.btn-main{background:var(--accent);color:#fff}
+.btn-main:hover{background:var(--accent-d)}
+.btn-line{background:#fff;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.btn-dark-line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #56657C}
+.btn-dark-line:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.btn:active{transform:translateY(1px) scale(.985)}
+.led{width:9px;height:9px;border-radius:50%;background:var(--lamp);flex:none;box-shadow:0 0 0 2px rgba(224,161,0,.25)}
+.btn.blink .led{animation:blink .9s steps(1) 1}
+.btn.blink{animation:flick .9s ease 1}
+@keyframes blink{0%{opacity:1;box-shadow:0 0 12px 3px var(--lamp)}20%{opacity:.15;box-shadow:none}40%{opacity:1;box-shadow:0 0 12px 3px var(--lamp)}60%{opacity:.15;box-shadow:none}80%,100%{opacity:1;box-shadow:0 0 0 2px rgba(224,161,0,.25)}}
+@keyframes flick{0%,100%{filter:none}20%,60%{filter:brightness(1.12)}}
+
+/* hero */
+.hero{position:relative;padding:44px 0 70px;background:
+  linear-gradient(180deg,#E9ECF0 0,#F3F4F6 70%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#DCE1E7 1px,transparent 1px),linear-gradient(90deg,#DCE1E7 1px,transparent 1px);background-size:44px 44px;opacity:.45;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 0,transparent 75%);mask-image:linear-gradient(180deg,#000 0,transparent 75%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.06em;color:var(--muted);margin-bottom:18px}
+.kicker .rule{width:34px;height:1.5px;background:var(--accent)}
+.hero h1{font-size:clamp(40px,6vw,66px);font-weight:400;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--accent);font-weight:500}
+.hero .sub{font-size:19px;color:var(--muted);max-width:34ch;margin:20px 0 26px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.frame{position:relative;margin-top:38px;border-radius:20px;background:#DDE2E8;aspect-ratio:16/9;overflow:hidden;box-shadow:0 1px 0 #fff inset}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame-label{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:var(--text)}
+.frame-label b{font-family:var(--head);font-weight:500;font-size:22px;display:block}
+.frame-label span{font-size:15px;color:var(--muted)}
+.frame .tick{position:absolute;width:22px;height:22px;border:1.5px solid var(--accent)}
+.tick.tl{top:14px;left:14px;border-right:0;border-bottom:0}.tick.tr{top:14px;right:14px;border-left:0;border-bottom:0}
+.tick.bl{bottom:14px;left:14px;border-right:0;border-top:0}.tick.br{bottom:14px;right:14px;border-left:0;border-top:0}
+.frame svg.bay{position:absolute;right:26px;top:26px;width:42%;max-width:220px;opacity:.9}
+
+/* hours board */
+.board{position:relative;background:var(--ink);color:#fff;border-radius:24px;padding:26px 26px 22px;box-shadow:0 30px 60px -30px rgba(27,36,48,.55),0 0 0 1px #2E3A4C inset;margin-top:6px}
+.board-lamps{display:flex;gap:10px;justify-content:space-between;padding:0 4px 18px;border-bottom:1px dashed #3A4659;margin-bottom:18px}
+.board-lamps svg{width:26px;height:26px;opacity:.16;transition:opacity .25s}
+.board-lamps.on svg{opacity:1;filter:drop-shadow(0 0 6px rgba(224,161,0,.7))}
+.status{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.status .dot{width:14px;height:14px;border-radius:50%;background:#6B7686;flex:none}
+.status.open .dot{background:var(--lamp);box-shadow:0 0 14px 2px rgba(224,161,0,.75)}
+.status strong{font-family:var(--head);font-weight:500;font-size:28px}
+.status-note{color:#D3DAE4;font-size:16px;margin:0 0 18px}
+.days{list-style:none;margin:0 0 20px;padding:0}
+.days li{display:flex;justify-content:space-between;gap:14px;padding:9px 12px;border-radius:10px;font-size:16px;color:#E6EBF1}
+.days li + li{border-top:1px solid #2A3647}
+.days li.today{background:#fff;color:var(--text);border-top-color:transparent}
+.days li.today + li{border-top-color:transparent}
+.days li.today .d::after{content:"Today";margin-left:10px;font-size:12px;letter-spacing:.05em;background:var(--accent);color:#fff;padding:2px 8px;border-radius:999px;vertical-align:2px}
+.board-addr{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:#D3DAE4;margin:0 0 16px}
+.board-addr svg{flex:none;margin-top:3px}
+.board-ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.board-ctas .btn{justify-content:center}
+.board-tag{position:absolute;top:-14px;right:22px;background:#fff;color:var(--text);font-size:13px;padding:5px 12px;border-radius:999px;box-shadow:0 0 0 1px var(--line)}
+
+/* section heads */
+.sec{padding:84px 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:14px;letter-spacing:.06em;color:var(--accent);margin-bottom:14px;font-weight:500}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor}
+.sec h2{font-size:clamp(30px,4vw,44px);font-weight:400;max-width:20ch}
+.lede{color:var(--muted);font-size:18px;max-width:52ch;margin-top:14px}
+
+/* dashboard */
+.dash-sec{padding:84px 0 90px;background:var(--base)}
+.cluster{position:relative;margin-top:38px;background:var(--ink);border-radius:120px 120px 28px 28px;padding:40px 34px 30px;color:#fff;box-shadow:0 0 0 8px #E2E6EB,0 0 0 9px var(--line),0 40px 70px -40px rgba(27,36,48,.6)}
+.gauges{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px}
+.gauge{width:150px;height:84px;flex:none}
+.gauge-mid{text-align:center;flex:1}
+.gauge-mid p{margin:0;font-size:15px;color:#D3DAE4}
+.gauge-mid strong{display:block;font-family:var(--head);font-weight:400;font-size:22px;color:#fff;margin-bottom:4px}
+.lights{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.light{background:#222D3B;border:1px solid #33415A;border-radius:16px;padding:16px 8px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#E6EBF1;font-family:var(--body);font-size:14px;cursor:pointer;transition:background .2s,border-color .2s,transform .15s}
+.light svg{width:40px;height:40px;opacity:.38;transition:opacity .2s,filter .2s}
+.light:hover svg{opacity:.75}
+.light[aria-pressed="true"]{background:#2B3849;border-color:var(--lamp)}
+.light[aria-pressed="true"] svg{opacity:1;filter:drop-shadow(0 0 8px rgba(224,161,0,.8));animation:lampon .5s steps(1) 1}
+.light:active{transform:scale(.97)}
+@keyframes lampon{0%{opacity:.2}30%{opacity:1}55%{opacity:.25}100%{opacity:1}}
+.readout{position:relative;margin:24px auto 0;max-width:760px;background:#fff;color:var(--text);border-radius:18px;padding:24px 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.readout-icon{width:56px;height:56px;border-radius:14px;background:var(--ink);display:grid;place-items:center}
+.readout-icon svg{width:34px;height:34px}
+.readout h3{font-size:22px;font-weight:500;margin-bottom:6px}
+.readout p{color:var(--muted);margin:0 0 10px}
+.readout .next{color:var(--text);margin:0 0 14px}
+.readout .note{font-size:14px;color:var(--muted);margin:14px 0 0}
+.dash-hint{text-align:center;color:#D3DAE4;font-size:14px;margin:14px 0 0}
+
+/* services */
+.svc{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:46px;border-top:1.5px solid var(--text)}
+.svc-col{padding:26px 28px 10px 0}
+.svc-col + .svc-col{padding-left:28px;border-left:1px solid var(--line)}
+.svc-col h3{font-size:20px;font-weight:500;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.svc-col h3 svg{width:22px;height:22px;flex:none}
+.svc-col .tag{font-size:15px;color:var(--muted);margin-bottom:16px}
+.svc-col ul{list-style:none;margin:0;padding:0}
+.svc-col li{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--soft);font-size:17px}
+.svc-col li::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--line);flex:none}
+.svc-col li:hover::after{background:var(--lamp)}
+.svc-note{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;color:var(--muted);font-size:16px}
+
+/* reviews */
+.rev .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.story{position:relative;padding-left:34px}
+.story::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1.5px;background:var(--line)}
+.beat{position:relative;margin-bottom:22px}
+.beat::before{content:"";position:absolute;left:-31px;top:10px;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 0 1.5px var(--accent)}
+.beat .t{font-size:13px;letter-spacing:.06em;color:var(--accent);font-weight:500}
+.beat blockquote{margin:4px 0 0;font-family:var(--head);font-weight:300;font-size:clamp(21px,2.4vw,27px);line-height:1.35;color:var(--text)}
+.beat.big blockquote{font-size:clamp(25px,3vw,34px);font-weight:400}
+.cite{display:flex;align-items:center;gap:12px;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--head);font-size:15px}
+.cite b{color:var(--text);font-weight:500}
+
+/* about */
+.about{background:#fff;border-top:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about p{font-size:18px}
+.facts{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:0}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--soft);font-size:16px}
+.facts li span:first-child{color:var(--muted)}
+.strip{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:420px}
+.strip .frame{margin:0;aspect-ratio:auto;height:auto}
+.strip .frame:first-child{grid-row:1/3}
+.strip .frame-label b{font-size:18px}
+
+/* contact band */
+.callband{background:var(--ink);color:#fff;padding:70px 0}
+.callband .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.callband h2{font-size:clamp(30px,4vw,44px);font-weight:400}
+.callband p{color:#D3DAE4;font-size:18px;margin:14px 0 24px}
+.callband .btns{display:flex;flex-wrap:wrap;gap:12px}
+.form{background:#fff;color:var(--text);border-radius:20px;padding:24px}
+.form h3{font-size:20px;font-weight:500;margin-bottom:14px}
+.form label{display:block;font-size:14px;color:var(--muted);margin:10px 0 4px}
+.form input,.form select{width:100%;font:inherit;font-size:16px;padding:11px 12px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--text)}
+.form input:focus,.form select:focus{outline:2px solid var(--accent);outline-offset:1px}
+.form .btn{margin-top:16px;width:100%;justify-content:center}
+.form-msg{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;background:#FBF3E6;color:var(--text);font-size:15px}
+.form-msg.show{display:block}
+
+/* footer */
+footer{background:#141B24;color:#D3DAE4;padding:40px 0 110px;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer a{color:#fff}
+footer .fine{width:100%;border-top:1px solid #2A3647;padding-top:18px;margin-top:6px;color:#C2CAD6}
+
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:#fff;color:var(--text);font-size:12px;padding:6px 11px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.15),0 0 0 1px var(--line);display:flex;align-items:center;gap:7px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero .wrap,.rev .wrap,.about .wrap,.callband .wrap,.svc-head{grid-template-columns:1fr;gap:34px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-col,.svc-col + .svc-col{padding:24px 0 6px;border-left:0}
+  .svc-col + .svc-col{border-top:1px solid var(--line)}
+  .lights{grid-template-columns:repeat(3,1fr)}
+  .gauge{width:110px;height:62px}
+  .cluster{border-radius:70px 70px 24px 24px}
+}
+@media(max-width:700px){
+  body{font-size:16px}
+  .sec,.dash-sec{padding:62px 0}
+  .hero{padding:30px 0 54px}
+  .hero .sub{font-size:17px}
+  .board{padding:22px 18px 18px}
+  .cluster{padding:28px 14px 20px;border-radius:44px 44px 20px 20px}
+  .gauges .gauge{display:none}
+  .lights{gap:8px}
+  .light{padding:12px 4px 10px;font-size:13px}
+  .light svg{width:34px;height:34px}
+  .readout{grid-template-columns:1fr;padding:20px}
+  .strip{height:340px}
+  .facts li{grid-template-columns:110px 1fr}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);padding:10px 12px;gap:10px;box-shadow:0 -6px 20px rgba(0,0,0,.18)}
+  .callbar a{flex:1;justify-content:center;padding:12px 10px}
+  .badge{bottom:76px;left:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn.blink,.btn.blink .led,.light[aria-pressed="true"] svg{animation:none}
+  .board-lamps svg{transition:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-engine" viewBox="0 0 48 48"><path d="M10 18h5v-4h12v4h4l3 4h4v-3h3v14h-3v-3h-4l-4 5H15l-3-4h-2v4H7V18h3z" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-brake" viewBox="0 0 48 48"><circle cx="24" cy="24" r="11" fill="none" stroke="#E0A100" stroke-width="2.6"/><path d="M10 13a17 17 0 0 0 0 22M38 13a17 17 0 0 1 0 22" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/><path d="M24 17v9" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="30.5" r="1.8" fill="#E0A100"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 48 48"><rect x="7" y="15" width="34" height="22" rx="2.5" fill="none" stroke="#E0A100" stroke-width="2.6"/><path d="M13 15v-4h6v4M29 15v-4h6v4M13 26h6M29 26h6M32 23v6" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-oil" viewBox="0 0 48 48"><path d="M6 20l6 2h6l2-3h8l2 3 12-5-9 13H12l-6-6z" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linejoin="round"/><path d="M15 19v-4h6" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/><path d="M42 26c0 2-1.2 3.4-2.4 3.4S37.2 28 37.2 26c0-1.5 2.4-4.4 2.4-4.4S42 24.5 42 26z" fill="#E0A100"/></symbol>
+    <symbol id="i-temp" viewBox="0 0 48 48"><path d="M24 7v20" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="30" r="4.5" fill="none" stroke="#E0A100" stroke-width="2.6"/><path d="M24 12h6M24 17h6M24 22h6" stroke="#E0A100" stroke-width="2.4" stroke-linecap="round"/><path d="M8 38c3-2 5-2 8 0s5 2 8 0 5-2 8 0 5 2 8 0" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-tire" viewBox="0 0 48 48"><path d="M13 12c-3 3-5 7-5 12 0 4 1.5 8 4 11h24c2.5-3 4-7 4-11 0-5-2-9-5-12" fill="none" stroke="#E0A100" stroke-width="2.6" stroke-linecap="round"/><path d="M11 40h26M15 40v-5M21 40v-5M27 40v-5M33 40v-5" stroke="#E0A100" stroke-width="2.4" stroke-linecap="round"/><path d="M24 15v10" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="29.5" r="1.8" fill="#E0A100"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5l3 .4 1.2 4-2 1.5a12 12 0 0 0 5.8 5.8l1.5-2 4 1.2.4 3c0 1.2-1 2.1-2.2 2.1C10.6 19.5 4.5 13.4 4.5 5.7c0-1.2.9-2.2 2.1-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 3.5a5 5 0 0 0-4.6 6.9L3.5 16.8l3.7 3.7 6.4-6.4a5 5 0 0 0 6.9-4.6l-2.9 2.9-3.1-.6-.6-3.1 2.9-2.9a5 5 0 0 0-1.3-.3z" fill="none" stroke="#8F4F0C" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark"><i></i></span>George's Auto Care</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#hours">Hours</a>
+      <a href="#dashboard">Warning lights</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="top-call btn" href="tel:+16093280314"><span class="led"></span>(609) 328-0314</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hours" aria-label="Hours and location">
+  <div class="wrap">
+    <div>
+      <div class="kicker"><span class="rule"></span>2 W Black Horse Pike · Williamstown, NJ</div>
+      <h1>Car trouble on the Pike? Pull into <em>George's.</em></h1>
+      <p class="sub">A family-run repair shop for brakes, oil changes, diagnostics and the stuff that makes a dashboard light up.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>Call (609) 328-0314</a>
+        <a class="btn btn-line" href="#dashboard">What's that light?</a>
+      </div>
+      <div class="frame" aria-label="Photo frame for the shop">
+        <div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div>
+        <svg class="bay" viewBox="0 0 220 120" aria-hidden="true"><path d="M10 110V40L110 8l100 32v70" fill="none" stroke="#B9C2CE" stroke-width="2"/><rect x="40" y="52" width="140" height="58" fill="none" stroke="#B9C2CE" stroke-width="2"/><path d="M40 66h140M40 80h140M40 94h140" stroke="#C9D0DA" stroke-width="2"/><circle cx="110" cy="32" r="5" fill="#E0A100"/></svg>
+        <div class="frame-label"><b>George's Auto Care</b><span>Personalized photos of the shop will go here</span></div>
+      </div>
+    </div>
+
+    <aside class="board" aria-label="Shop hours">
+      <span class="board-tag">Shop hours</span>
+      <div class="board-lamps" id="lamps" aria-hidden="true">
+        <svg><use href="#i-engine"/></svg><svg><use href="#i-brake"/></svg><svg><use href="#i-battery"/></svg><svg><use href="#i-oil"/></svg><svg><use href="#i-temp"/></svg><svg><use href="#i-tire"/></svg>
+      </div>
+      <div class="status" id="status"><span class="dot"></span><strong id="statusText">Open Mon to Fri</strong></div>
+      <p class="status-note" id="statusNote">8 am to 5 pm on weekdays. Saturday by appointment.</p>
+      <ul class="days" id="days">
+        <li data-d="1"><span class="d">Monday</span><span>8 am – 5 pm</span></li>
+        <li data-d="2"><span class="d">Tuesday</span><span>8 am – 5 pm</span></li>
+        <li data-d="3"><span class="d">Wednesday</span><span>8 am – 5 pm</span></li>
+        <li data-d="4"><span class="d">Thursday</span><span>8 am – 5 pm</span></li>
+        <li data-d="5"><span class="d">Friday</span><span>8 am – 5 pm</span></li>
+        <li data-d="6"><span class="d">Saturday</span><span>By appointment</span></li>
+        <li data-d="0"><span class="d">Sunday</span><span>Closed</span></li>
+      </ul>
+      <p class="board-addr"><svg width="18" height="18"><use href="#i-pin"/></svg><span>2 W Black Horse Pike<br>Williamstown, NJ 08094</span></p>
+      <div class="board-ctas">
+        <a class="btn btn-main" href="https://www.google.com/maps/dir/?api=1&amp;destination=2%20W%20Black%20Horse%20Pike%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener"><span class="led"></span>Directions</a>
+        <a class="btn btn-dark-line" href="tel:+16093280314"><svg width="18" height="18"><use href="#i-phone"/></svg>Call</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="dash-sec" id="dashboard">
+  <div class="wrap">
+    <div class="eyebrow">Tap a light</div>
+    <h2>Something lit up on your dash?</h2>
+    <p class="lede">Tap the light you're seeing. Here's what it usually means and how soon to get it looked at.</p>
+
+    <div class="cluster">
+      <div class="gauges">
+        <svg class="gauge" viewBox="0 0 150 84" aria-hidden="true"><path d="M12 78a63 63 0 0 1 126 0" fill="none" stroke="#33415A" stroke-width="6" stroke-linecap="round"/><path d="M12 78a63 63 0 0 1 40-58" fill="none" stroke="#56657C" stroke-width="6" stroke-linecap="round"/><line x1="75" y1="78" x2="40" y2="40" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/><circle cx="75" cy="78" r="5" fill="#E6EBF1"/></svg>
+        <div class="gauge-mid"><strong id="clusterTitle">All clear?</strong><p id="clusterSub">Pick a light below</p></div>
+        <svg class="gauge" viewBox="0 0 150 84" aria-hidden="true"><path d="M12 78a63 63 0 0 1 126 0" fill="none" stroke="#33415A" stroke-width="6" stroke-linecap="round"/><path d="M12 78a63 63 0 0 1 90-62" fill="none" stroke="#56657C" stroke-width="6" stroke-linecap="round"/><line x1="75" y1="78" x2="96" y2="30" stroke="#E0A100" stroke-width="3" stroke-linecap="round"/><circle cx="75" cy="78" r="5" fill="#E6EBF1"/></svg>
+      </div>
+      <div class="lights" role="group" aria-label="Warning lights">
+        <button class="light" type="button" data-k="engine" aria-pressed="false"><svg aria-hidden="true"><use href="#i-engine"/></svg>Check engine</button>
+        <button class="light" type="button" data-k="brake" aria-pressed="false"><svg aria-hidden="true"><use href="#i-brake"/></svg>Brakes</button>
+        <button class="light" type="button" data-k="battery" aria-pressed="false"><svg aria-hidden="true"><use href="#i-battery"/></svg>Battery</button>
+        <button class="light" type="button" data-k="oil" aria-pressed="false"><svg aria-hidden="true"><use href="#i-oil"/></svg>Oil pressure</button>
+        <button class="light" type="button" data-k="temp" aria-pressed="false"><svg aria-hidden="true"><use href="#i-temp"/></svg>Engine temp</button>
+        <button class="light" type="button" data-k="tire" aria-pressed="false"><svg aria-hidden="true"><use href="#i-tire"/></svg>Tire pressure</button>
+      </div>
+      <div class="readout" id="readout" aria-live="polite">
+        <div class="readout-icon"><svg aria-hidden="true" id="readIcon"><use href="#i-engine"/></svg></div>
+        <div>
+          <h3 id="readTitle">Check engine light</h3>
+          <p id="readWhat">Your car's computer found a problem with the engine or emissions system. It can be as small as a loose gas cap or something that needs a closer look.</p>
+          <p class="next" id="readNext"><b>What to do:</b> If it's steady, book a visit soon. If it's flashing, ease off and get it checked right away.</p>
+          <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>George's can check it</a>
+          <p class="note">General guidance only. Your owner's manual has the exact meaning for your car.</p>
+        </div>
+      </div>
+      <p class="dash-hint">Six of the most common lights. Not sure which one you have? Call and describe it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <div class="eyebrow">Services</div>
+        <h2>From a quick oil change to the harder stuff</h2>
+      </div>
+      <p class="lede">George's handles everyday maintenance and real repairs, including electrical, transmission and diesel work. Call to ask about your car or truck.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-col">
+        <h3><svg><use href="#i-wrench"/></svg>Keep it running</h3>
+        <p class="tag">The regular stuff, done right.</p>
+        <ul><li>Oil changes</li><li>Tune-ups</li><li>Batteries</li><li>General repair and maintenance</li></ul>
+      </div>
+      <div class="svc-col">
+        <h3><svg><use href="#i-wrench"/></svg>Stop, steer, ride</h3>
+        <p class="tag">What keeps you safe on the road.</p>
+        <ul><li>Brakes</li><li>Alignment and tires</li><li>Suspension</li><li>Muffler and exhaust</li></ul>
+      </div>
+      <div class="svc-col">
+        <h3><svg><use href="#i-wrench"/></svg>Under the hood</h3>
+        <p class="tag">Finding the problem, then fixing it.</p>
+        <ul><li>Diagnostics</li><li>Electrical and wiring</li><li>Transmission</li><li>Diesel</li><li>Radiator repair</li><li>A/C</li></ul>
+      </div>
+    </div>
+    <div class="svc-note">
+      <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>Ask about a repair</a>
+      <span>Weekdays 8 am to 5 pm. Saturday by appointment.</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev" id="reviews">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Reviews</div>
+      <h2>One driver's afternoon, in her own words</h2>
+      <p class="lede">A low tire on the way to the shore turned into a stop at George's. Here's how she told it.</p>
+    </div>
+    <div>
+      <div class="story">
+        <div class="beat big"><div class="t">The welcome</div><blockquote>“George and his sons were so gracious and helpful even at 4:00.”</blockquote></div>
+        <div class="beat"><div class="t">The straight answer</div><blockquote>“Unfortunately my tire was not able to be fixed but they put the spare on for me.”</blockquote></div>
+        <div class="beat"><div class="t">The takeaway</div><blockquote>“I do appreciate their assistance and honesty!”</blockquote></div>
+      </div>
+      <div class="cite"><span class="avatar">S</span><span><b>Susanna K.</b> · review on Birdeye</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">About the shop</div>
+      <h2>George, his sons, and a shop on the Black Horse Pike</h2>
+      <p class="lede" style="color:var(--text)">George's Auto Care is a family repair shop at 2 W Black Horse Pike in Williamstown. George works alongside his sons, and a recent customer thanked them for their help and their honesty about what could and couldn't be fixed.</p>
+      <p>The shop is part of Auto Value's Confidence Plus Certified Service Center network.</p>
+      <ul class="facts">
+        <li><span>Where</span><span>2 W Black Horse Pike, Williamstown, NJ 08094</span></li>
+        <li><span>Phone</span><span><a href="tel:+16093280314">(609) 328-0314</a></span></li>
+        <li><span>Hours</span><span>Mon to Fri 8 am – 5 pm, Saturday by appointment</span></li>
+        <li><span>Network</span><span>Auto Value Confidence Plus</span></li>
+      </ul>
+    </div>
+    <div class="strip" aria-label="Photo frames for the shop">
+      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>The shop</b><span>Personalized photos will go here</span></div></div>
+      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>In the bay</b><span>Your photo here</span></div></div>
+      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>The crew</b><span>Your photo here</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="callband" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Light still on? Give George's a call.</h2>
+      <p>Describe what you're seeing or hearing and set up a time to bring it in.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>Call (609) 328-0314</a>
+        <a class="btn btn-dark-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=2%20W%20Black%20Horse%20Pike%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#i-pin"/></svg>Get directions</a>
+      </div>
+    </div>
+    <form class="form" id="callback">
+      <h3>Ask for a call back</h3>
+      <label for="f-name">Your name</label>
+      <input id="f-name" name="name" autocomplete="name" required>
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="f-what">What's going on?</label>
+      <select id="f-what" name="what">
+        <option>A warning light is on</option>
+        <option>Brakes</option>
+        <option>Oil change or tune-up</option>
+        <option>Tires or alignment</option>
+        <option>Something else</option>
+      </select>
+      <button class="btn btn-main" type="submit"><span class="led"></span>Send</button>
+      <p class="form-msg" id="formMsg" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff;font-family:var(--head);font-weight:500">George's Auto Care</strong><br>2 W Black Horse Pike, Williamstown, NJ 08094</div>
+    <div><a href="tel:+16093280314">(609) 328-0314</a><br>Mon to Fri 8 am – 5 pm · Sat by appointment</div>
+    <p class="fine">Demo preview prepared for George's Auto Care</p>
+  </div>
+</footer>
+
+<div class="badge"><i></i>Demo preview</div>
+<div class="callbar">
+  <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>Call now</a>
+  <a class="btn btn-dark-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=2%20W%20Black%20Horse%20Pike%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hours: open/closed in shop time */
+  var now;
+  try { now = new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'})); } catch(e){ now = new Date(); }
+  var d = now.getDay(), mins = now.getHours()*60 + now.getMinutes();
+  var names = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var li = document.querySelector('#days li[data-d="'+d+'"]'); if (li) li.classList.add('today');
+  var st = document.getElementById('status'), stT = document.getElementById('statusText'), stN = document.getElementById('statusNote');
+  var weekday = d >= 1 && d <= 5;
+  function nextOpen(){
+    if (weekday && mins < 480) return 'Opens today at 8 am.';
+    if (d >= 1 && d <= 4) return 'Opens tomorrow at 8 am.';
+    return 'Opens Monday at 8 am. Saturday visits by appointment.';
+  }
+  if (weekday && mins >= 480 && mins < 1020){
+    st.classList.add('open'); stT.textContent = 'Open now';
+    var left = 1020 - mins;
+    stN.textContent = left <= 60 ? 'Closing soon, at 5 pm. Call before you head over.' : 'Open until 5 pm today, ' + names[d] + '.';
+  } else if (d === 6){
+    stT.textContent = 'By appointment';
+    stN.textContent = 'Saturdays by appointment. Call to set up a time.';
+  } else {
+    stT.textContent = 'Closed now';
+    stN.textContent = nextOpen();
+  }
+
+  /* ignition self-test on the hours board */
+  var lamps = document.getElementById('lamps');
+  if (!reduce){ setTimeout(function(){ lamps.classList.add('on'); }, 350); setTimeout(function(){ lamps.classList.remove('on'); }, 1500); }
+
+  /* blink on click */
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (reduce) return;
+      b.classList.remove('blink'); void b.offsetWidth; b.classList.add('blink');
+      setTimeout(function(){ b.classList.remove('blink'); }, 950);
+    });
+  });
+
+  /* dashboard */
+  var info = {
+    engine:{t:'Check engine light',w:"Your car's computer found a problem with the engine or emissions system. It can be as small as a loose gas cap or something that needs a closer look.",n:"If it's steady, book a visit soon. If it's flashing, ease off and get it checked right away.",s:'Engine or emissions'},
+    brake:{t:'Brake warning light',w:'It can mean the parking brake is still on, the brake fluid is low, or there is a problem in the brake system.',n:"Check the parking brake first. If the light stays on, don't put it off. Brakes are not a wait-and-see item.",s:'Brake system'},
+    battery:{t:'Battery / charging light',w:"The charging system isn't keeping up. That's often the battery, the alternator or a loose connection.",n:'Skip extra stops if you can and head in. A car with a failing charge can stall without much warning.',s:'Charging system'},
+    oil:{t:'Oil pressure light',w:"The engine isn't getting enough oil pressure. Running low on oil is common, but it can be more than that.",n:'Pull over safely and shut the engine off. Driving with this light on can damage the engine. Call before you go further.',s:'Oil pressure'},
+    temp:{t:'Engine temperature light',w:'The engine is running hot. Common causes are low coolant, a leak, a radiator problem or a fan that isn\'t working.',n:"Pull over and let it cool. Don't open a hot radiator cap. Then call to get the cooling system checked.",s:'Running hot'},
+    tire:{t:'Tire pressure light',w:'One or more tires is low. A cold morning can trigger it, and so can a slow leak or a nail.',n:'Check and fill your tires. If the light comes back, a tire may have a leak that needs a look.',s:'Low tire'}
+  };
+  var btns = document.querySelectorAll('.light');
+  var rT = document.getElementById('readTitle'), rW = document.getElementById('readWhat'), rN = document.getElementById('readNext'), rI = document.querySelector('#readIcon use');
+  var cT = document.getElementById('clusterTitle'), cS = document.getElementById('clusterSub');
+  function pick(k){
+    var x = info[k]; if (!x) return;
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-k') === k ? 'true' : 'false'); });
+    rT.textContent = x.t; rW.textContent = x.w; rN.innerHTML = '<b>What to do:</b> ' + x.n;
+    rI.setAttribute('href', '#i-' + k);
+    cT.textContent = x.s; cS.textContent = "George's can check it";
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ pick(b.getAttribute('data-k')); }); });
+  pick('engine');
+
+  /* demo form */
+  document.getElementById('callback').addEventListener('submit', function(e){
+    e.preventDefault(); document.getElementById('formMsg').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

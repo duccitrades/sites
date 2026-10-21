@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Peterson's Broadway Auto | Auto Repair in Pitman, NJ</title>
+<meta name="description" content="Peterson's Broadway Auto, 59 N Broadway, Pitman, NJ. Brakes, diagnostics, exhaust, batteries, radiators, oil changes and general repair. Call (856) 582-0061.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --concrete:#F2F0EB;
+  --paper:#FAF9F6;
+  --stone:#E7E4DD;
+  --graphite:#23272B;
+  --graphite2:#2E3338;
+  --teal:#1D6B6B;
+  --teal-d:#155454;
+  --pale:#CFE3E0;
+  --text:#1E1F21;
+  --muted:#4A4E52;
+  --on-dark:#E9EEEC;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:400;color:var(--text);background:var(--concrete);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;font-weight:600;letter-spacing:-.015em;line-height:1.08}
+h2{font-size:clamp(30px,4.2vw,44px);font-weight:500}
+h3{font-size:21px;font-weight:600}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-weight:400;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- buttons + ratchet tick ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;background:var(--teal);color:#fff;text-decoration:none;font-weight:500;font-size:17px;padding:14px 22px 14px 18px;border-radius:12px;border:1px solid var(--teal);transition:background .2s,transform .12s;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--teal-d)}
+.btn:active{transform:translateY(1px)}
+.btn .wr{width:22px;height:22px;flex:none;transform-origin:50% 50%}
+.btn.line{background:transparent;color:var(--text);border-color:var(--text)}
+.btn.line:hover{background:var(--stone)}
+.btn.ondark{background:transparent;color:#fff;border-color:rgba(233,238,236,.6)}
+.btn.ondark:hover{background:var(--graphite2)}
+.btn.tick .wr{animation:ratchet .5s steps(1,end)}
+.btn.tick{animation:nudge .5s ease}
+@keyframes ratchet{0%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(-28deg)}60%{transform:rotate(-42deg)}80%{transform:rotate(-20deg)}100%{transform:rotate(0)}}
+@keyframes nudge{0%,100%{transform:none}20%,60%{transform:translateX(1px)}40%,80%{transform:translateX(-1px)}}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--graphite);color:#fff;border-bottom:1px solid #3A4046}
+header .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:600;font-size:18px;letter-spacing:-.01em;white-space:nowrap}
+.logo svg{width:34px;height:34px;flex:none}
+.logo small{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--pale);font-weight:400;line-height:1.1}
+.logo b{display:block;font-weight:600;line-height:1.1}
+nav{display:flex;gap:22px}
+nav a{color:var(--on-dark);text-decoration:none;font-size:15px}
+nav a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--pale);text-underline-offset:5px}
+.hphone{padding:9px 14px 9px 12px;font-size:15px}
+.hphone .wr{width:18px;height:18px}
+
+/* ---------- hero + garage door ---------- */
+.hero{position:relative;background:var(--graphite);color:#fff;overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,rgba(207,227,224,.07) 1px,transparent 1px) 0 0/80px 80px,
+  radial-gradient(ellipse at 78% 30%,rgba(29,107,107,.35),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:120px}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(207,227,224,.35);border-radius:999px;padding:6px 14px;margin-bottom:22px;color:var(--on-dark)}
+.dot{width:9px;height:9px;border-radius:50%;background:#9AA1A6;flex:none}
+.dot.on{background:#6FD3B3;box-shadow:0 0 0 4px rgba(111,211,179,.18)}
+.hero h1{font-size:clamp(42px,6.4vw,70px);font-weight:500;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;display:block;color:var(--pale);font-weight:400}
+.hero .sub{font-size:19px;color:var(--on-dark);max-width:520px;margin:20px 0 22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.again{margin-top:26px;display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:var(--pale);cursor:pointer;padding:4px 0;border-bottom:1px dashed rgba(207,227,224,.5)}
+.again:hover{color:#fff}
+.bay{position:relative}
+.bay .frame{position:relative;aspect-ratio:4/3.2;border-radius:var(--r);overflow:hidden;background:var(--graphite2);border:1px solid rgba(207,227,224,.3);
+  background-image:repeating-linear-gradient(0deg,transparent 0 34px,rgba(207,227,224,.06) 34px 35px)}
+.bay .frame span{position:absolute;left:20px;top:18px;background:var(--paper);color:var(--text);padding:6px 12px;border-radius:6px;font-size:14px;border-left:3px solid var(--teal)}
+.has>span{visibility:hidden}
+/* bay windows photo strip */
+.bwin{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 28px;max-width:520px;padding:8px;background:#1B1E21;border-radius:10px;border-top:2px solid var(--pale)}
+.bwin .w{position:relative;aspect-ratio:3/2;border-radius:4px;overflow:hidden;background:linear-gradient(180deg,#3E5654,#2A3A3A);box-shadow:inset 0 0 0 1px rgba(207,227,224,.25);display:flex;align-items:center;justify-content:center;padding:6px}
+.bwin .w span{background:var(--paper);color:var(--text);padding:4px 8px;border-radius:5px;font-size:11px;text-align:center;line-height:1.3}
+.bwin .w img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.bay .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.bay .plaque{position:absolute;left:-26px;bottom:-30px;z-index:2;background:var(--paper);color:var(--text);border-radius:14px;padding:14px 18px;box-shadow:0 18px 40px rgba(0,0,0,.35);border-left:4px solid var(--teal);max-width:260px}
+.bay .plaque .mono{color:var(--teal);font-size:11.5px}
+.bay .plaque strong{display:block;font-weight:600;font-size:17px;line-height:1.3}
+.ticks{position:absolute;right:-8px;top:18px;bottom:18px;width:10px;background:repeating-linear-gradient(180deg,var(--pale) 0 1px,transparent 1px 14px);opacity:.55}
+
+.door{position:absolute;inset:0;z-index:40;pointer-events:none;transform:translateY(0);
+  animation:rollup 2.1s .35s cubic-bezier(.65,0,.25,1) forwards}
+.door .slats{position:absolute;inset:0;background:
+   repeating-linear-gradient(180deg,#2B3035 0 44px,#1B1E21 44px 46px,#3A4046 46px 47px,#2B3035 47px 58px);
+}
+.door .slats:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.04),transparent 30%,transparent 70%,rgba(255,255,255,.05))}
+.door .windows{position:absolute;left:0;right:0;top:34%;display:flex;justify-content:center;gap:2.2%;padding:0 6%}
+.door .windows i{flex:1;max-width:150px;height:46px;border-radius:4px;background:linear-gradient(180deg,#3E5654,#2A3A3A);border:3px solid #1B1E21;box-shadow:inset 0 0 0 1px rgba(207,227,224,.25)}
+.door .name{position:absolute;left:0;right:0;top:54%;text-align:center;color:var(--on-dark)}
+.door .name b{display:block;font-weight:500;font-size:clamp(26px,4vw,40px);letter-spacing:-.01em;color:#fff}
+.door .name .mono{color:var(--pale)}
+.door .rail{position:absolute;left:0;right:0;bottom:0;height:22px;background:#17191C;border-top:2px solid var(--pale)}
+.door .handle{position:absolute;left:50%;bottom:30px;width:110px;height:12px;margin-left:-55px;border-radius:6px;background:#4A5157;box-shadow:inset 0 -2px 0 #1B1E21}
+@keyframes rollup{0%{transform:translateY(0)}6%{transform:translateY(-1.5%)}11%{transform:translateY(-.8%)}100%{transform:translateY(-104%)}}
+.hero .lift{opacity:0;animation:lift .8s 1.5s ease forwards}
+@keyframes lift{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- bento ---------- */
+.bento-zone{position:relative;margin-top:-72px;z-index:5;padding-bottom:40px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:16px}
+.tile{position:relative;background:var(--paper);border-radius:var(--r);padding:26px;border:1px solid #DEDAD2;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.tile .label{display:flex;align-items:center;gap:10px;color:var(--teal);margin-bottom:12px}
+.tile .label:before{content:"";width:18px;height:1px;background:var(--teal)}
+.t-noise{grid-column:span 8;grid-row:span 2;padding:30px}
+.t-hours{grid-column:span 4}
+.t-rating{grid-column:span 4;background:var(--pale);border-color:#B9D4D0}
+.t-serv{grid-column:span 7}
+.t-photo{grid-column:span 5;padding:0;overflow:hidden;min-height:280px;background:var(--stone)}
+.t-pick{grid-column:span 6}
+.t-cert{grid-column:span 6}
+.t-visit{grid-column:span 12}
+.t-quote{grid-column:span 5}
+.t-q2{grid-column:span 4}
+.t-q3{grid-column:span 3}
+
+/* noise picker */
+.t-noise h2{max-width:560px}
+.t-noise p.lead{color:var(--muted);margin:8px 0 20px;max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:inherit;font-size:15px;color:var(--text);background:#fff;border:1px solid #CFCAC0;border-radius:999px;padding:9px 15px;cursor:pointer;transition:border-color .2s,background .2s}
+.chip:hover{border-color:var(--teal)}
+.chip[aria-pressed="true"]{background:var(--graphite);border-color:var(--graphite);color:#fff}
+.readout{margin-top:22px;display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start;border-top:1px solid var(--pale);padding-top:22px}
+.scope{height:110px;border-radius:12px;background:var(--graphite);display:flex;align-items:center;justify-content:center;gap:3px;padding:0 12px;overflow:hidden;position:relative}
+.scope:after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(207,227,224,.25)}
+.scope i{display:block;width:4px;border-radius:2px;background:var(--pale);height:6px;transition:height .35s ease}
+.scope.live i{animation:pulse 1s ease-in-out infinite alternate}
+@keyframes pulse{from{transform:scaleY(.55)}to{transform:scaleY(1)}}
+.out h3{font-size:24px;font-weight:500;margin-bottom:6px}
+.out p{color:var(--muted)}
+.out .tag{display:inline-block;margin:12px 0 16px;background:var(--pale);color:var(--text);border-radius:6px;padding:3px 10px}
+.out .fine{font-size:14px;color:var(--muted);margin-top:14px}
+.out .placeholder{color:var(--muted)}
+
+/* hours */
+.hours{list-style:none;font-family:"IBM Plex Mono",monospace;font-size:14px}
+.hours li{display:flex;justify-content:space-between;padding:6px 8px;border-bottom:1px dashed #D5D1C8;border-radius:6px}
+.hours li.today{background:var(--graphite);color:#fff;border-bottom-color:transparent}
+.open-line{display:flex;align-items:center;gap:8px;font-weight:500;margin-bottom:10px}
+.open-line .dot{background:#9AA1A6}
+.open-line .dot.on{background:#1D8A6B;box-shadow:0 0 0 4px rgba(29,138,107,.18)}
+
+/* rating */
+.big{font-size:64px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.stars{letter-spacing:3px;color:var(--teal);font-size:20px;margin:6px 0}
+.t-rating p{color:var(--text)}
+
+/* services */
+.svc{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.svc span{border:1px solid var(--pale);background:#fff;border-radius:8px;padding:8px 12px;font-size:15.5px;display:inline-flex;gap:8px;align-items:center}
+.svc span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.t-serv p{color:var(--muted);margin-top:14px;font-size:15.5px}
+
+/* photo tiles */
+.pf{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px;background:var(--stone);
+  background-image:repeating-linear-gradient(180deg,transparent 0 28px,rgba(35,39,43,.06) 28px 29px)}
+.pf span{background:var(--paper);color:var(--text);padding:6px 12px;border-radius:6px;border-left:3px solid var(--teal);font-size:13.5px}
+.pf img{z-index:1}
+.pf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* pickup */
+.t-pick svg{width:120px;height:auto;display:block;margin-bottom:12px}
+.t-pick p,.t-cert p{color:var(--muted)}
+.t-cert{display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.cert-badge{width:62px;height:62px}
+
+/* visit */
+.t-visit{display:grid;grid-template-columns:1fr 1.5fr;gap:26px;align-items:center}
+.addr{font-size:30px;font-weight:500;line-height:1.15;letter-spacing:-.02em;margin:4px 0 16px}
+.t-visit .btns{display:flex;gap:10px;flex-wrap:wrap}
+.mapart{border-radius:14px;background:#EDEAE3;border:1px solid #DEDAD2;aspect-ratio:21/9;overflow:hidden}
+.mapart svg{width:100%;height:100%;display:block}
+
+/* quotes */
+.q blockquote{font-size:19px;line-height:1.45;font-weight:400}
+.t-quote blockquote{font-size:23px;font-weight:500;letter-spacing:-.01em}
+.q cite{display:block;margin-top:14px;font-style:normal;color:var(--muted)}
+.q .qmark{font-size:54px;line-height:.6;color:var(--teal);font-weight:500;display:block;height:26px}
+
+/* gallery strip */
+.strip-sec{padding:56px 0 30px}
+.strip-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.strip-head p{color:var(--muted);max-width:430px}
+.strip{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;grid-template-rows:190px 190px;gap:14px}
+.strip .ph{position:relative;border-radius:14px;overflow:hidden}
+.strip .ph:first-child{grid-row:span 2}
+.strip .ph:nth-child(6){grid-column:span 2}
+
+/* call band */
+.band{background:var(--graphite);color:#fff;margin-top:50px;position:relative;overflow:hidden}
+.band:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,transparent 0 44px,rgba(207,227,224,.07) 44px 45px)}
+.band .wrap{position:relative;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-top:54px;padding-bottom:54px}
+.band h2{font-weight:500;max-width:560px}
+.band .mono{color:var(--pale);display:block;margin-bottom:8px}
+.band .num{font-size:clamp(30px,4.6vw,46px);font-weight:500;color:#fff;text-decoration:none;border-bottom:2px solid var(--pale);letter-spacing:-.01em}
+
+footer{background:#1A1D20;color:var(--on-dark);padding:34px 0 40px;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#fff}
+footer .mono{color:var(--pale)}
+
+.wm{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--graphite);color:#fff;border:1px solid var(--pale);border-radius:8px;padding:6px 10px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;pointer-events:none}
+.callbar{display:none}
+
+@media (max-width:980px){
+  nav{display:none}
+  .t-noise{grid-column:span 12}
+  .t-hours,.t-rating{grid-column:span 6}
+  .t-serv,.t-visit{grid-column:span 12}
+  .t-photo,.t-pick{grid-column:span 6}
+  .t-cert{grid-column:span 6}.t-pick{grid-column:span 6}.t-photo{grid-column:span 12}
+  .t-quote{grid-column:span 12}.t-q2,.t-q3{grid-column:span 6}
+}
+@media (max-width:700px){
+  body{font-size:16.5px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:110px}
+  .bay .plaque{left:12px;bottom:-24px}
+  .ticks{display:none}
+  .bento{grid-template-columns:1fr;gap:12px}
+  .bento>.tile{grid-column:1/-1;grid-row:auto}
+  .t-photo{min-height:240px}
+  .tile{padding:22px}
+  .t-noise{padding:22px}
+  .readout{grid-template-columns:1fr}
+  .scope{height:70px}
+  .t-visit{grid-template-columns:1fr}
+  .strip{grid-template-columns:1fr 1fr;grid-template-rows:200px 130px 130px 130px}
+  .strip .ph:first-child{grid-row:auto;grid-column:span 2}
+  .strip .ph:nth-child(6){grid-column:span 2}
+  .hphone .txt{display:none}
+  .hphone{padding:9px 12px}
+  .logo{font-size:16px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--graphite);padding:10px 12px;border-top:1px solid #3A4046}
+  .callbar .btn{flex:1;justify-content:center}
+  .wm{bottom:78px;right:10px;font-size:11px}
+  footer{padding-bottom:100px}
+  .door .windows i{height:30px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .door{display:none}
+  .hero .lift{opacity:1;animation:none}
+  .btn.tick,.btn.tick .wr{animation:none}
+  .scope.live i{animation:none}
+  .scope i{transition:none}
+  .again{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Peterson's Broadway Auto, back to top">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 14 17 4l14 10v17H3z" fill="#2E3338" stroke="#CFE3E0" stroke-width="1.4"/><g stroke="#CFE3E0" stroke-width="1.2"><path d="M8 17h18M8 21h18M8 25h18M8 29h18"/></g><path d="M8 15h18v16H8z" fill="none" stroke="#CFE3E0" stroke-width="1.2"/></svg>
+      <span><small>59 N Broadway · Pitman</small><b>Peterson's Broadway Auto</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#noise">What's that noise?</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="btn hphone" href="tel:+18565820061"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"/></svg><span class="txt">(856) 582-0061</span></a>
+  </div>
+</header>
+
+<section class="hero" id="top" aria-label="Peterson's Broadway Auto">
+  <div class="door" id="door" aria-hidden="true">
+    <div class="slats"></div>
+    <div class="windows"><i></i><i></i><i></i><i></i></div>
+    <div class="name"><span class="mono">Bay door · 59 N Broadway</span><b>Peterson's Broadway Auto</b></div>
+    <div class="handle"></div>
+    <div class="rail"></div>
+  </div>
+  <div class="wrap">
+    <div class="lift">
+      <div class="status mono"><span class="dot" id="hdot"></span><span id="hstatus">Auto repair · Pitman, NJ</span></div>
+      <h1>Peterson's Broadway Auto <em>Pitman's shop on Broadway.</em></h1>
+      <p class="sub">Brakes, diagnostics, exhaust, batteries and everyday repairs at 59 N Broadway. Customers keep saying the same three things: friendly, honest, fair prices.</p>
+      <div class="bwin" aria-label="Shop photos">
+        <div class="w"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/sc14yTBJB1.jpg" alt="Shop photo from the Google listing" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div>
+        <div class="w"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/fJ8wb1AXuW.jpg" alt="Shop photo from the Google listing" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div>
+        <div class="w"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/OBi0byydWt.jpg" alt="Shop photo from the Google listing" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="tel:+18565820061"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"/></svg>Call (856) 582-0061</a>
+        <a class="btn ondark" href="https://www.google.com/maps/dir/?api=1&amp;destination=59%20N%20Broadway%2C%20Pitman%2C%20NJ%2008071"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Get directions</a>
+      </div>
+      <button class="again mono" type="button" id="again">↓ Close the bay door and open it again</button>
+    </div>
+    <div class="bay lift">
+      <div class="frame">
+        <span class="mono">Your photo here · the shop</span>
+        <img src="https://img.p.mapq.st/?url=https%3A%2F%2Fimages.data-axle.com%2Fd894a7c6d5409ef1e352ac9a23a79bf9150d3e91_l.jpg&amp;w=1200&amp;q=75" alt="Shop photo from the MapQuest listing" onload="this.parentNode.classList.add('has')" onerror="this.remove()">
+      </div>
+      <div class="ticks"></div>
+      <div class="plaque"><span class="mono">Auto Value</span><strong>Certified Service Center on N Broadway</strong></div>
+    </div>
+  </div>
+</section>
+
+<div class="bento-zone">
+  <div class="wrap">
+    <div class="bento">
+
+      <article class="tile t-noise" id="noise">
+        <div class="label mono">Tap a sound</div>
+        <h2>What's that noise?</h2>
+        <p class="lead">Pick the sound your car is making. We'll tell you what it often turns out to be, then you can call Peterson's and describe it.</p>
+        <div class="chips" role="group" aria-label="Car noises">
+          <button class="chip" type="button" data-n="squeal" aria-pressed="false">Squeal when braking</button>
+          <button class="chip" type="button" data-n="grind" aria-pressed="false">Grinding when braking</button>
+          <button class="chip" type="button" data-n="clunk" aria-pressed="false">Clunk over bumps</button>
+          <button class="chip" type="button" data-n="click" aria-pressed="false">Click when starting</button>
+          <button class="chip" type="button" data-n="roar" aria-pressed="false">Roar that gets louder</button>
+          <button class="chip" type="button" data-n="hiss" aria-pressed="false">Hiss under the hood</button>
+          <button class="chip" type="button" data-n="belt" aria-pressed="false">Squeal at startup</button>
+          <button class="chip" type="button" data-n="other" aria-pressed="false">Not sure</button>
+        </div>
+        <div class="readout">
+          <div class="scope" id="scope" aria-hidden="true"></div>
+          <div class="out" id="out" aria-live="polite">
+            <p class="placeholder">Pick a sound above to see what it often means.</p>
+          </div>
+        </div>
+      </article>
+
+      <aside class="tile t-hours" aria-label="Shop hours">
+        <div class="label mono">Shop hours</div>
+        <div class="open-line"><span class="dot" id="bdot"></span><span id="bstatus">Weekdays from 7 am</span></div>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Mon</span><span>7:00 – 4:00</span></li>
+          <li data-d="2"><span>Tue</span><span>7:00 – 4:00</span></li>
+          <li data-d="3"><span>Wed</span><span>7:00 – 4:00</span></li>
+          <li data-d="4"><span>Thu</span><span>7:00 – 4:00</span></li>
+          <li data-d="5"><span>Fri</span><span>7:00 – 3:00</span></li>
+          <li data-d="6"><span>Sat</span><span>Closed</span></li>
+          <li data-d="0"><span>Sun</span><span>Closed</span></li>
+        </ul>
+      </aside>
+
+      <aside class="tile t-rating" id="reviews" aria-label="Rating">
+        <div class="label mono">Google reviews</div>
+        <div class="big">4.9</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Average from 92 Google reviews. Regulars keep coming back.</p>
+      </aside>
+
+      <article class="tile t-quote q">
+        <span class="qmark" aria-hidden="true">“</span>
+        <blockquote>Always great service !! Trustworthy and fair prices too. Only shop I go to, been going for years !!!</blockquote>
+        <cite class="mono">Bret Y. · Google, via Birdeye</cite>
+      </article>
+
+      <article class="tile t-q2 q">
+        <span class="qmark" aria-hidden="true">“</span>
+        <blockquote>The staff is friendly, the mechanics really know what they’re doing, and the prices are very fair.</blockquote>
+        <cite class="mono">Jennifer T. · Google, via Birdeye</cite>
+      </article>
+
+      <article class="tile t-q3 q">
+        <span class="qmark" aria-hidden="true">“</span>
+        <blockquote>This place is amazingly professional and totally honest with you.</blockquote>
+        <cite class="mono">David R. · Yelp, via MapQuest</cite>
+      </article>
+
+      <article class="tile t-serv" id="services">
+        <div class="label mono">Service menu</div>
+        <h2>What we work on</h2>
+        <div class="svc" style="margin-top:16px">
+          <span>General repair</span><span>Brakes</span><span>Diagnostics</span><span>Oil changes</span><span>Auto electrical</span><span>Batteries</span><span>Exhaust &amp; mufflers</span><span>Tune-ups</span><span>Radiators</span><span>Tires</span>
+        </div>
+        <p>Not on the list? Call and ask. If you're not sure what's wrong, that's what diagnostics are for.</p>
+      </article>
+
+      <figure class="tile t-photo">
+        <div class="pf"><span class="mono">Personalized photos will go here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/MlNdeKD3ug.jpg" alt="Shop photo from the Google listing" loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div>
+      </figure>
+
+      <article class="tile t-pick">
+        <svg viewBox="0 0 120 60" aria-hidden="true"><path d="M2 54h116" stroke="#CFE3E0" stroke-width="2" stroke-dasharray="6 6"/><path d="M14 44V32l12-12h42l16 12h18a6 6 0 0 1 6 6v6z" fill="none" stroke="#1E1F21" stroke-width="2"/><path d="M30 22h14v10H22zM50 22h16l12 10H50z" fill="#CFE3E0"/><circle cx="34" cy="46" r="7" fill="#F2F0EB" stroke="#1E1F21" stroke-width="2"/><circle cx="88" cy="46" r="7" fill="#F2F0EB" stroke="#1E1F21" stroke-width="2"/><path d="M2 38h8M0 30h8" stroke="#1D6B6B" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Can't get the car here?</h3>
+        <p>Peterson's offers car pickup. Call and ask how it works for you.</p>
+      </article>
+
+      <article class="tile t-cert">
+        <svg class="cert-badge" viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="31" r="29" fill="none" stroke="#1D6B6B" stroke-width="1.5"/><circle cx="31" cy="31" r="23" fill="#CFE3E0"/><path d="M21 31l7 7 13-14" fill="none" stroke="#1E1F21" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><h3>Auto Value Certified Service Center</h3><p>Part of the Auto Value parts network.</p></div>
+      </article>
+
+      <article class="tile t-visit" id="visit">
+        <div>
+          <div class="label mono">Find the shop</div>
+          <p class="addr">59 N Broadway<br>Pitman, NJ 08071</p>
+          <div class="btns">
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=59%20N%20Broadway%2C%20Pitman%2C%20NJ%2008071"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Get directions</a>
+            <a class="btn line" href="tel:+18565820061"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"/></svg>Call ahead</a>
+          </div>
+        </div>
+        <div class="mapart" aria-hidden="true">
+          <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
+            <rect width="320" height="200" fill="#EDEAE3"/>
+            <g fill="none" stroke="#DCD8CF" stroke-width="10"><path d="M0 60h320M0 150h320M70 0v200M250 0v200"/></g>
+            <path d="M160 0v200" stroke="#CFE3E0" stroke-width="22"/>
+            <path d="M160 0v200" stroke="#1D6B6B" stroke-width="1.2" stroke-dasharray="8 8"/>
+            <rect x="172" y="40" width="88" height="19" rx="4" fill="#FFFFFF"/><text x="176" y="54" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#1E1F21" letter-spacing="1" textLength="80">N BROADWAY</text>
+            <rect x="182" y="88" width="40" height="30" rx="3" fill="#23272B"/>
+            <g stroke="#CFE3E0" stroke-width="1"><path d="M188 98h28M188 104h28M188 110h28"/></g>
+            <circle cx="160" cy="103" r="6" fill="#1D6B6B" stroke="#FAF9F6" stroke-width="2"/>
+            <rect x="226" y="92" width="58" height="24" rx="5" fill="#FFFFFF" stroke="#23272B" stroke-width="1"/><text x="255" y="109" text-anchor="middle" font-family="Archivo, sans-serif" font-size="14" font-weight="600" fill="#1E1F21">No. 59</text>
+          </svg>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<section class="strip-sec" id="photos">
+  <div class="wrap">
+    <div class="strip-head">
+      <div><div class="mono" style="color:var(--teal);margin-bottom:6px">From the shop</div><h2>Inside the bays</h2></div>
+      <p>Photos from the shop's public listings. On your real site these become your own pictures of the crew, the bays and the cars you fix.</p>
+    </div>
+    <div class="strip">
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/91lDKyKaa2.jpg" alt="Shop photo from the Google listing" loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div></div>
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/KPCUNXQKWL.jpg" alt="Shop photo from the Google listing" loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div></div>
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span><img src="https://cdn10.localdatacdn.com/nj/pitman/4645263/original/4gDBNNMRxo.jpg" alt="Shop photo from the Google listing" loading="lazy" onload="this.parentNode.classList.add('has')" onerror="this.remove()"></div></div>
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span></div></div>
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span></div></div>
+      <div class="ph"><div class="pf"><span class="mono">Your photo here</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-label="More reviews" style="padding-top:26px">
+  <div class="bento">
+    <article class="tile q" style="grid-column:span 7">
+      <span class="qmark" aria-hidden="true">“</span>
+      <blockquote>Friendly, honest, communicate well and care about the customer. Good people, and a good business.</blockquote>
+      <cite class="mono">Google review, via Birdeye</cite>
+    </article>
+    <article class="tile q" style="grid-column:span 5;background:var(--pale);border-color:#B9D4D0">
+      <span class="qmark" aria-hidden="true">“</span>
+      <blockquote>Peterson's Broadway Automotive deserve 100 stars for the work they did.</blockquote>
+      <cite class="mono" style="color:var(--text)">Ruth S. · Yelp, via MapQuest</cite>
+    </article>
+  </div>
+</section>
+
+<section class="band" aria-label="Call Peterson's">
+  <div class="wrap">
+    <div><span class="mono">Car acting up?</span><h2>Describe the noise on the phone. We'll take it from there.</h2></div>
+    <a class="num" href="tel:+18565820061">(856) 582-0061</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Peterson's Broadway Auto</strong> · 59 N Broadway, Pitman, NJ 08071 · <a href="tel:+18565820061">(856) 582-0061</a></div>
+    <div class="mono">Demo preview prepared for Peterson's Broadway Auto</div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn" href="tel:+18565820061"><svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"/></svg>Call Peterson's · (856) 582-0061</a></div>
+<div class="wm">Demo preview</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* open / closed + today (America/New_York) */
+  var H={0:null,1:[420,960],2:[420,960],3:[420,960],4:[420,960],5:[420,900],6:null};
+  var d=new Date().getDay(), m=0;
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var g=function(t){for(var i=0;i<p.length;i++)if(p[i].type===t)return p[i].value};
+    d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday'));
+    m=(parseInt(g('hour'),10)%24)*60+parseInt(g('minute'),10);
+  }catch(e){var n=new Date();m=n.getHours()*60+n.getMinutes();}
+  var row=document.querySelector('#hours li[data-d="'+d+'"]'); if(row) row.className='today';
+  var h=H[d], open=!!(h&&m>=h[0]&&m<h[1]);
+  var msg;
+  if(open){ msg='Open now · closes '+(d===5?'3 pm':'4 pm'); }
+  else if(h&&m<h[0]){ msg='Closed now · opens 7 am today'; }
+  else { msg='Closed now · opens '+((d>=5||d===0)?'Monday':'tomorrow')+' 7 am'; }
+  ['hdot','bdot'].forEach(function(id){document.getElementById(id).className='dot'+(open?' on':'');});
+  document.getElementById('hstatus').textContent=msg;
+  document.getElementById('bstatus').textContent=msg;
+
+  /* ratchet tick on buttons */
+  document.querySelectorAll('.btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(reduce) return;
+      b.classList.remove('tick'); void b.offsetWidth; b.classList.add('tick');
+    });
+    b.addEventListener('animationend',function(e){ if(e.target===b) b.classList.remove('tick'); });
+  });
+
+  /* garage door: roll it again */
+  var door=document.getElementById('door');
+  document.getElementById('again').addEventListener('click',function(){
+    if(reduce) return;
+    door.style.animation='none'; void door.offsetWidth;
+    door.style.animation='';
+    var top=document.getElementById('top');
+    if(top.getBoundingClientRect().top<-40) top.scrollIntoView();
+  });
+
+  /* what's that noise? */
+  var N={
+    squeal:{t:'Squeal when braking',w:[2,5,9,14,9,5,2,5,9,14,9,5],s:'Brakes',
+      a:'Often the brake pads. Many pads have a small metal tab that squeals when they start to wear thin. Best to have them looked at before it turns into grinding.'},
+    grind:{t:'Grinding when braking',w:[10,14,12,15,11,14,13,15,12,14,10,13],s:'Brakes',
+      a:'Grinding can mean the pads are worn down and metal is touching metal. Try not to put this one off; call and get it in soon.'},
+    clunk:{t:'Clunk over bumps',w:[2,2,16,3,2,2,2,15,3,2,2,2],s:'General repair',
+      a:'Usually something in the suspension or steering, such as a worn joint, link, shock or strut. A mechanic can usually find it with the car up on a lift.'},
+    click:{t:'Click when starting',w:[2,10,2,10,2,10,2,10,2,10,2,10],s:'Batteries · Auto electrical',
+      a:'Quick clicking with no start often points to a weak battery or a loose or corroded connection. A single click can point to the starter.'},
+    roar:{t:'Roar that gets louder',w:[3,4,5,6,7,8,9,10,11,12,13,14],s:'Exhaust & mufflers',
+      a:'A rumble or roar that grows as you speed up is often an exhaust leak or a worn muffler. If it changes when you turn, it may be a wheel bearing.'},
+    hiss:{t:'Hiss under the hood',w:[4,5,4,6,5,4,5,6,4,5,4,5],s:'Radiators',
+      a:'A hiss after you shut the car off, sometimes with steam or a sweet smell, can be coolant leaking from the radiator or a hose. Keep an eye on the temperature gauge.'},
+    belt:{t:'Squeal at startup',w:[14,12,10,8,6,5,4,3,3,2,2,2],s:'General repair · Tune-ups',
+      a:'A high squeal from the engine on cold starts is often a loose or worn drive belt.'},
+    other:{t:'Not sure what it is',w:[3,7,4,9,5,8,3,10,6,4,8,5],s:'Diagnostics',
+      a:'Hard to describe? That is what diagnostics are for. Tell the shop when it happens (braking, turning, starting, at speed) and bring it by.'}
+  };
+  var scope=document.getElementById('scope'), out=document.getElementById('out');
+  var bars=[]; for(var i=0;i<24;i++){var b=document.createElement('i');b.style.animationDelay=(i*0.04)+'s';scope.appendChild(b);bars.push(b);}
+  var chips=document.querySelectorAll('.chip');
+  var wrench='<svg class="wr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.6 2.6l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.5 2.5-2.4-.4-.4-2.4z"/></svg>';
+  function pick(k){
+    var n=N[k]; if(!n) return;
+    chips.forEach(function(c){c.setAttribute('aria-pressed',c.getAttribute('data-n')===k?'true':'false');});
+    bars.forEach(function(b,i){b.style.height=(n.w[i%12]*5+4)+'px';});
+    if(!reduce) scope.classList.add('live');
+    out.innerHTML='<div class="mono" style="color:var(--teal)">You picked</div><h3>'+n.t+'</h3><p>'+n.a+'</p>'+
+      '<span class="tag mono">'+n.s.replace('&','&amp;')+'</span><br>'+
+      '<a class="btn" href="tel:+18565820061">'+wrench+'Call Peterson\'s</a>'+
+      '<p class="fine">These are common causes, not a diagnosis. Only a look at your car can tell for sure.</p>';
+    var nb=out.querySelector('.btn');
+    nb.addEventListener('click',function(){ if(reduce) return; nb.classList.remove('tick'); void nb.offsetWidth; nb.classList.add('tick'); });
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){pick(c.getAttribute('data-n'));});});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>X.O Nails &amp; Spa | Nail salon on N Main St, Mullica Hill NJ</title>
+<meta name="description" content="X.O Nails &amp; Spa at 215 N Main St, Mullica Hill, NJ. Manicures, gel, builder gel, dip powder, pedicures, custom nail art and waxing. Call (856) 417-3619.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&amp;family=Syne:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--chalk:#F7F6F2;--paper:#FFFFFF;--ink:#16171F;--muted:#454757;--night:#22243A;--denim:#34407A;--denim2:#2A3466;--rose:#E9C9CF;--rose2:#F3E1E4;--line:#DCDAD2;--r:18px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--chalk);color:var(--ink);font:400 17px/1.55 'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Syne','Trebuchet MS',system-ui,sans-serif;font-weight:500;margin:0;line-height:1.08;letter-spacing:-.01em}
+a{color:inherit}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+section{padding:64px 0}
+.eyebrow{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--denim);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--denim)}
+h2{font-size:clamp(32px,4.6vw,48px)}
+.lede{color:var(--muted);max-width:36em;margin-top:12px}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:var(--night);color:#fff}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;min-width:0}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{font:500 19px/1 'Syne','Trebuchet MS',sans-serif;white-space:nowrap}
+.nav{display:flex;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:#fff}
+.nav a:hover{text-decoration:underline}
+.pill{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:var(--denim);color:#fff;text-decoration:none;font-weight:500;font-size:16px;padding:9px 16px;border-radius:40px;border:1px solid rgba(255,255,255,.35)}
+.pill svg{width:16px;height:16px}
+
+/* buttons */
+.btn{position:relative;overflow:visible;cursor:pointer}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--denim);color:#fff;text-decoration:none;font:500 17px/1 'DM Sans',sans-serif;padding:15px 22px;border-radius:14px;border:0}
+.b svg{width:20px;height:20px;flex:none}
+.b:hover{background:var(--denim2)}
+.b.ghost{background:var(--paper);color:var(--denim);box-shadow:inset 0 0 0 2px var(--denim)}
+.stamp{position:fixed;z-index:90;pointer-events:none;font:500 34px/1 'Syne','Trebuchet MS',sans-serif;color:var(--denim);transform:translate(-50%,-50%);animation:stamp .5s ease-out forwards}
+@keyframes stamp{0%{opacity:0;transform:translate(-50%,-50%) scale(2.4) rotate(-18deg)}35%{opacity:1;transform:translate(-50%,-50%) scale(.9) rotate(4deg)}60%{transform:translate(-50%,-50%) scale(1.05)}100%{opacity:0;transform:translate(-50%,-50%) scale(1) translateY(-10px)}}
+
+/* tiles + photos */
+.tile{border-radius:var(--r);background:var(--paper);border:1px solid var(--line);overflow:hidden;min-width:0}
+.ph{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--rose2);border:1px dashed var(--denim);display:flex;align-items:center;justify-content:center;min-height:90px}
+.ph .pl{font-size:14px;font-weight:500;color:var(--night);text-align:center;padding:6px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph.ok{border-style:solid;border-color:var(--line)}
+.ph.ok .pl{display:none}
+.frame{border-radius:var(--r);background:var(--rose2);border:1.5px dashed var(--denim);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--night);font-weight:500;font-size:15px;padding:12px;min-height:120px}
+
+/* hero bento */
+.hero{padding:12px 0 18px}
+.hb{display:grid;gap:10px;grid-template-columns:repeat(6,minmax(0,1fr))}
+.t-name{grid-column:span 6;background:var(--night);color:#fff;border:0;padding:24px 20px 22px;display:flex;flex-direction:column;gap:14px}
+.t-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.t-top .where{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#E3E4EE}
+.xo-mark{display:flex;gap:6px;flex:none}
+.xo-mark i{width:30px;height:30px;border-radius:9px;background:var(--denim);display:block;position:relative}
+.xo-mark i:nth-child(2){background:var(--rose)}
+.xo-mark i:nth-child(1):before,.xo-mark i:nth-child(1):after{content:"";position:absolute;left:7px;right:7px;top:14px;height:2px;background:#fff;transform:rotate(45deg)}
+.xo-mark i:nth-child(1):after{transform:rotate(-45deg)}
+.xo-mark i:nth-child(2):before{content:"";position:absolute;inset:7px;border:2px solid var(--night);border-radius:50%}
+.t-name h1{font-size:clamp(40px,6vw,66px);max-width:11em}
+.t-name .sub{color:#E8E9F2;font-size:17px;max-width:32em}
+.rating{display:flex;align-items:center;gap:8px;font-size:15px;color:#fff;flex-wrap:wrap}
+.stars{color:var(--rose);letter-spacing:2px;font-size:16px}
+.t-ph{grid-column:span 2;aspect-ratio:1/1}
+.t-call{order:2;grid-column:span 3;background:var(--denim);color:#fff;border:0;text-decoration:none;padding:18px 16px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-height:132px}
+.t-call .k{font-size:14px;color:#fff;letter-spacing:.05em;text-transform:uppercase}
+
+.t-call .s{font-size:15px;color:#E8E9F2}
+.t-open .wk{display:none;font-size:14px;color:var(--ink);border-top:1px solid rgba(34,36,58,.25);padding-top:8px;margin-top:4px}
+.t-call strong{white-space:nowrap;font:500 19px/1.15 'Syne','Trebuchet MS',sans-serif}
+.t-call:hover{background:var(--denim2)}
+.t-open{order:2;grid-column:span 3;background:var(--rose);border:0;padding:18px 16px;display:flex;flex-direction:column;gap:6px;color:var(--ink)}
+.state{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:15px}
+.state i{width:10px;height:10px;border-radius:50%;background:#1C7A44;flex:none}
+.state.closed i{background:#A3243B}
+.t-open .today{font-size:15px}
+.t-open a{font-weight:500;font-size:15px;margin-top:auto;color:var(--night)}
+
+/* xo game */
+.game{display:grid;gap:28px;align-items:start}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:520px;width:100%}
+.sq{aspect-ratio:1/1;border-radius:var(--r);border:1.5px solid var(--denim);background:var(--paper);padding:0;cursor:pointer;font:inherit;color:var(--ink);position:relative;overflow:hidden;text-align:left;min-width:0}
+.sq:nth-child(even) .front{background:var(--rose2)}
+.sq .front,.sq .back{position:absolute;inset:0;display:flex;flex-direction:column;padding:10px}
+.sq .front{justify-content:space-between}
+.sq .front .tap{font:500 26px/1 'Syne','Trebuchet MS',sans-serif;color:var(--denim);align-self:flex-end}
+.sq .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.sq .back{display:none;background:var(--paper);gap:3px}
+.sq.on .front{display:none}
+.sq.on .back{display:flex}
+.sq.on{border-color:var(--night);cursor:default}
+.sq .mk{position:absolute;right:8px;top:4px;font:500 30px/1 'Syne','Trebuchet MS',sans-serif;color:var(--denim)}
+.sq strong{font:500 16px/1.15 'Syne','Trebuchet MS',sans-serif;margin-top:4px;padding-right:2px}
+.sq .d{display:none;font-size:14px;line-height:1.3;color:var(--ink);overflow:hidden}
+.readout{padding:18px;display:flex;flex-direction:column;gap:6px;border:1.5px solid var(--denim)}
+.readout .k{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.readout strong{font:500 22px/1.15 'Syne','Trebuchet MS',sans-serif}
+.readout .rm{font:500 22px/1 'Syne','Trebuchet MS',sans-serif;color:var(--denim)}
+.sq.flip{animation:flip .32s ease-in-out}
+@keyframes flip{0%{transform:scaleX(1)}50%{transform:scaleX(.05)}100%{transform:scaleX(1)}}
+.sq.on .mk{animation:mk .35s ease-out .16s both}
+@keyframes mk{0%{transform:scale(2.2) rotate(-20deg);opacity:0}70%{transform:scale(.9)}100%{transform:scale(1);opacity:1}}
+.sq.winline{border-color:var(--denim);box-shadow:0 0 0 3px var(--denim)}
+.side{display:flex;flex-direction:column;gap:14px}
+.howto{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.howto ol{margin:8px 0 0;padding-left:20px}
+.win{display:none;background:var(--night);color:#fff;border-radius:var(--r);padding:22px 20px;flex-direction:column;gap:12px}
+.win.show{display:flex;animation:pop .4s ease-out}
+@keyframes pop{0%{transform:scale(.92);opacity:0}100%{transform:scale(1);opacity:1}}
+.win h3{font-size:26px}
+.win p{color:#E8E9F2}
+.win .b{background:var(--denim);border:1px solid rgba(255,255,255,.4);font-size:20px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.linkbtn{background:none;border:0;padding:6px 0;font:500 16px 'DM Sans',sans-serif;color:var(--denim);text-decoration:underline;cursor:pointer}
+
+/* services bento */
+.sb{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:28px}
+.sv{display:flex;flex-direction:column}
+.sv .ph{border-radius:0;border:0;border-bottom:1px solid var(--line);aspect-ratio:4/3;min-height:0}
+.sv-t{padding:16px;display:flex;flex-direction:column;gap:6px}
+.sv.ask{padding:16px;gap:6px;text-decoration:none;background:var(--paper);border:1.5px solid var(--denim)}
+.sv.ask b{margin-top:auto;font:500 18px 'Syne','Trebuchet MS',sans-serif;color:var(--denim)}
+.num{font:500 14px 'Syne','Trebuchet MS',sans-serif;color:var(--denim)}
+.sv h3{font-size:21px}
+.sv p{color:var(--muted);font-size:15px}
+.sv.rose{background:var(--rose);border-color:var(--rose)}
+.sv.rose p{color:var(--ink)}
+
+/* reviews */
+.rvb{display:grid;gap:10px;grid-template-columns:minmax(0,1fr);margin-top:28px}
+.rv{margin:0;padding:22px 20px;display:flex;flex-direction:column;gap:12px}
+.rv .qm{font:500 22px/1 'Syne','Trebuchet MS',sans-serif;color:var(--denim)}
+.rv p{font-size:17px}
+.rv.big p{font:500 clamp(24px,3vw,32px)/1.2 'Syne','Trebuchet MS',sans-serif}
+.rv cite{font-style:normal;font-weight:500;font-size:15px;color:var(--muted);margin-top:auto}
+.rv.rose{background:var(--rose);border-color:var(--rose)}
+.rv.rose cite{color:var(--ink)}
+.rate-line{display:inline-flex;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:40px;padding:8px 16px;margin-top:16px;font-size:15px}
+.rate-line .stars{color:var(--denim)}
+
+/* gallery */
+.gb{display:grid;gap:10px;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:28px;grid-auto-rows:150px;grid-auto-flow:dense}
+.gb .ph{min-height:0}
+.gb .g-big{grid-column:span 2;grid-row:span 2}
+.gb .g-wide{grid-column:span 2}
+.gb .frame{min-height:0}
+.cap{margin-top:14px;color:var(--muted);font-size:15px;max-width:44em}
+
+/* visit */
+.vb{display:grid;gap:10px;grid-template-columns:minmax(0,1fr);margin-top:28px}
+.vt{padding:22px 20px}
+.vt h3{font-size:24px;margin-bottom:12px}
+.addr{font-size:20px;font-weight:500;margin-bottom:16px}
+.hours{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:9px 10px;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{background:var(--denim);color:#fff;font-weight:500;border-color:var(--denim)}
+.hours tr.today td:first-child{border-radius:10px 0 0 10px}
+.hours tr.today td:last-child{border-radius:0 10px 10px 0}
+.soc{display:flex;gap:16px;margin-top:16px;font-weight:500;flex-wrap:wrap}
+.soc a{color:var(--denim)}
+.vt.rose{background:var(--rose);border-color:var(--rose)}
+.vt.rose p{color:var(--ink)}
+
+/* band + footer */
+.band{background:var(--night);color:#fff;padding:56px 0}
+.band .wrap{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.band h2{font-size:clamp(32px,5vw,52px)}
+.band p{color:#E8E9F2}
+.band .b{font-size:22px;padding:16px 26px;border:1px solid rgba(255,255,255,.4)}
+footer{background:#191A2B;color:#E3E4EE;padding:26px 0 96px;font-size:15px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}footer a{white-space:nowrap}
+.badge{position:fixed;left:12px;bottom:72px;z-index:60;background:var(--night);color:#fff;font-size:13px;font-weight:500;padding:6px 11px;border-radius:30px;border:1px solid rgba(255,255,255,.35)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--denim);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;height:58px;font-weight:500;font-size:18px;border-top:1px solid rgba(255,255,255,.3)}
+.form{display:grid;gap:10px;margin-top:6px}
+.form label{font-size:15px;font-weight:500;display:grid;gap:4px}
+.form input,.form select{font:inherit;padding:11px 12px;border-radius:12px;border:1px solid #9A9CA8;background:#fff;color:var(--ink)}
+.note{display:none;background:var(--rose);color:var(--ink);border-radius:12px;padding:12px;font-weight:500}
+.note.show{display:block}
+
+@media (max-width:420px){.logo span{font-size:16px}.logo svg{width:28px;height:28px}.pill{padding:8px 11px;font-size:15px}.pill svg{display:none}}
+@media (max-width:719px){.nav{display:none}}
+@media (min-width:720px){
+ .sb{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .sb{grid-auto-flow:dense}
+ .sv.tall{grid-row:span 2}
+ .sv.ask{grid-column:span 2}
+ .sv.tall .ph{aspect-ratio:auto;flex:1;min-height:200px}
+ .rvb{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .rv.big{grid-column:span 2}
+ .gb{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:190px}
+ .vb{grid-template-columns:1.1fr 1fr 1fr}
+ .game{grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:40px}
+ .sq{padding:0}.sq .front,.sq .back{padding:14px}
+ .sq strong{font-size:19px}.sq .k{font-size:13px}
+}
+@media (min-width:1000px){
+ .sq .d{display:block}
+ .callbar{display:none}
+ .badge{bottom:16px}
+ footer{padding-bottom:30px}
+ .hero{padding:14px 0 22px}
+ .hb{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));height:min(calc(100vh - 100px),760px);min-height:560px;gap:12px}
+ .t-name{grid-column:1/3;grid-row:1/3;padding:34px 34px 30px;justify-content:space-between}
+ .t-ph{grid-column:3;aspect-ratio:auto}
+ .t-ph.p1{grid-row:1}.t-ph.p2{grid-row:2}.t-ph.p3{grid-row:3}
+ .t-call{grid-column:1;grid-row:3;padding:24px}
+ .t-call strong{font-size:30px}
+ .t-call .s{font-size:16px}
+ .t-call{justify-content:flex-start}.t-call strong{margin-top:auto}
+ .t-open{grid-column:2;grid-row:3;padding:24px}
+ .t-open .state{font-size:17px}
+ .t-open .wk{display:block}
+ section{padding:84px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.stamp,.sq.flip,.sq.on .mk,.win.show{animation:none!important}.stamp{display:none}}
+</style></head><body>
+<header class="hdr"><div class="wrap">
+<a class="logo" href="#top"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#34407A"/><path d="M7 11l8 12M15 11l-8 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/><circle cx="23.5" cy="17" r="5.2" stroke="#E9C9CF" stroke-width="2.2" fill="none"/></svg><span>X.O Nails &amp; Spa</span></a>
+<nav class="nav" aria-label="Sections"><a href="#xo">Play X-O</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#photos">Photos</a><a href="#visit">Visit</a></nav>
+<a class="pill btn" href="tel:+18564173619"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(856) 417-3619</a>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="X.O Nails and Spa"><div class="wrap"><div class="hb">
+<div class="tile t-name">
+ <div class="t-top"><span class="where">Mullica Hill, NJ</span><span class="xo-mark" aria-hidden="true"><i></i><i></i></span></div>
+ <h1>Fresh nails on North Main Street.</h1>
+ <p class="sub">Gel, builder gel, dip, pedicures, custom nail art and waxing in a clean, roomy salon at 215 N Main St. Call ahead to book your chair.</p>
+ <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.7 on Google from 133 reviews</span></p>
+</div>
+<figure class="ph tile t-ph p1"><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/NczdvRHInk3nwy5A0_PjGw/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure>
+<figure class="ph tile t-ph p2"><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/4cMCEWIRHYWB95GvEB7kug/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure>
+<a class="tile t-call btn" href="tel:+18564173619"><span class="k">Call to book</span><strong>(856) 417-3619</strong><span class="s">Tap to call the salon and pick a time.</span></a>
+<div class="tile t-open"><span class="state" id="state"><i></i><span id="stateTxt">Mon to Fri 10am to 7pm</span></span><span class="today" id="todayTxt">Sat 9:30am to 6pm, Sun closed</span><span class="wk">Mon to Fri 10am to 7pm<br>Sat 9:30am to 6pm, Sun closed</span><a href="https://www.google.com/maps/search/?api=1&amp;query=215%20N%20Main%20St%2C%20Mullica%20Hill%2C%20NJ%2008062" class="btn">Get directions</a></div>
+<figure class="ph tile t-ph p3"><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/husO8rg1jcpkT7GqoN6flA/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure>
+</div></div></section>
+
+<section id="xo"><div class="wrap">
+<p class="eyebrow">Play X-O</p>
+<h2>Tic-tac-toe, but every square is the salon.</h2>
+<p class="lede">Tap a square to drop an X or an O. It turns over a real service, the hours, the address or a review. Get three in a row and you win a call.</p>
+<div class="game" style="margin-top:28px">
+<div class="board" id="board"><button class="sq" type="button" data-i="0" aria-label="Square 1: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Gel manicures</strong><span class="d">Glossy color that holds up between visits.</span></span></button><button class="sq" type="button" data-i="1" aria-label="Square 2: tap to reveal a hours"><span class="front"><span class="k">Hours</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Hours</span><strong>Open six days</strong><span class="d">Mon to Fri 10am to 7pm. Sat 9:30am to 6pm. Sunday closed.</span></span></button><button class="sq" type="button" data-i="2" aria-label="Square 3: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Builder gel</strong><span class="d">&ldquo;I get builder gel manicures on natural nails.&rdquo; Allie S., Google</span></span></button><button class="sq" type="button" data-i="3" aria-label="Square 4: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Pedicures</strong><span class="d">Book a few chairs and come with friends.</span></span></button><button class="sq" type="button" data-i="4" aria-label="Square 5: tap to reveal a review"><span class="front"><span class="k">Review</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Review</span><strong>&ldquo;A step above&rdquo;</strong><span class="d">&ldquo;The atmosphere is just a step above anywhere else.&rdquo; Emily D., Yelp</span></span></button><button class="sq" type="button" data-i="5" aria-label="Square 6: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Dip powder</strong><span class="d">Dipped, sealed and made to last.</span></span></button><button class="sq" type="button" data-i="6" aria-label="Square 7: tap to reveal a address"><span class="front"><span class="k">Address</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Address</span><strong>215 N Main St</strong><span class="d">Right on North Main Street in Mullica Hill.</span></span></button><button class="sq" type="button" data-i="7" aria-label="Square 8: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Custom nail art</strong><span class="d">&ldquo;Wanted some witchy nails and Henry delivered.&rdquo; Shan, Google</span></span></button><button class="sq" type="button" data-i="8" aria-label="Square 9: tap to reveal a service"><span class="front"><span class="k">Service</span><span class="tap">Tap</span></span><span class="back"><span class="mk" aria-hidden="true"></span><span class="k">Service</span><strong>Waxing</strong><span class="d">Quick waxing while you are in.</span></span></button></div>
+<div class="side">
+ <div class="tile readout" id="readout" aria-live="polite"><span class="k">Last square flipped</span><strong id="roT">Nothing yet. Tap a square.</strong><p id="roD">Nine squares, nine real things about X.O.</p></div>
+ <div class="howto"><h3 style="font-size:20px">How it works</h3><ol><li>Tap any square. X goes first, then O.</li><li>Each one flips to show something real about X.O.</li><li>Three flipped in a line, any direction, wins.</li></ol></div>
+ <div class="win" id="win" role="status"><h3>Three in a row.</h3><p>You win a call. Ask about a set, a pedicure or a time that works.</p><a class="b btn" href="tel:+18564173619"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(856) 417-3619</a></div>
+ <div class="row"><button class="linkbtn" type="button" id="all">Flip them all</button><button class="linkbtn" type="button" id="reset">Clear the board</button></div>
+</div>
+</div></div></section>
+
+<section id="services" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+<p class="eyebrow">Services</p>
+<h2>What X.O does</h2>
+<p class="lede">Hands, feet and a little waxing. Ask about colors, shapes and timing when you call.</p>
+<div class="sb"><article class="tile sv "><div class="sv-t"><span class="num">01</span><h3>Manicures</h3><p>Shape, cuticle care and polish. The everyday classic.</p></div></article><article class="tile sv tall"><figure class="ph "><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/rcLt5QevWyTOn_ZZ5r7sqg/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><div class="sv-t"><span class="num">02</span><h3>Gel manicures</h3><p>A glossy finish that holds up between visits.</p></div></article><article class="tile sv rose"><div class="sv-t"><span class="num">03</span><h3>Builder gel</h3><p>Extra strength and structure on your natural nails.</p></div></article><article class="tile sv "><div class="sv-t"><span class="num">04</span><h3>Dip powder</h3><p>Color that is dipped, sealed and made to last.</p></div></article><article class="tile sv "><figure class="ph "><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/lqIvq8ohyMoaOasyAEtkEA/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><div class="sv-t"><span class="num">05</span><h3>Pedicures</h3><p>Sit back, or book side by side with friends.</p></div></article><article class="tile sv tall"><figure class="ph "><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/cOqJTHvy7ZPxc96ivG5BOg/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><div class="sv-t"><span class="num">06</span><h3>Custom nail art</h3><p>Bring a picture or an idea and design it with your tech.</p></div></article><article class="tile sv rose"><div class="sv-t"><span class="num">07</span><h3>Nail repair</h3><p>Fix a chipped or broken nail between sets.</p></div></article><article class="tile sv "><div class="sv-t"><span class="num">08</span><h3>Waxing</h3><p>Quick waxing while you are already in the chair.</p></div></article><a class="tile sv ask btn" href="tel:+18564173619"><span class="num">?</span><h3>Not sure what to get?</h3><p>Call and ask. They will walk you through it.</p><b>(856) 417-3619</b></a></div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+<p class="eyebrow">Reviews</p>
+<h2>What people say after</h2>
+<p class="rate-line"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>4.7 on Google, 133 reviews</p>
+<div class="rvb"><blockquote class="tile rv big rose"><span class="qm" aria-hidden="true">X</span><p>The atmosphere is just a step above anywhere else. True salon aesthetic.</p><cite>Emily D., Yelp</cite></blockquote><blockquote class="tile rv "><span class="qm" aria-hidden="true">O</span><p>This is the best nail salon in the area BY FAR! It is so clean and spacious and all of the nail techs do a great job.</p><cite>Becki M., Yelp</cite></blockquote><blockquote class="tile rv "><span class="qm" aria-hidden="true">X</span><p>Such a nice place! The workers were friendly and Trish did a great job on my nails! Very clean and professional salon.</p><cite>Emma S., Yelp</cite></blockquote><blockquote class="tile rv "><span class="qm" aria-hidden="true">O</span><p>Got a pedicure done with my friends by my side. It was absolutely lovely and I was extremely happy with the service provided.</p><cite>Meridith D., Yelp</cite></blockquote><blockquote class="tile rv rose"><span class="qm" aria-hidden="true">X</span><p>Great place for a manicure! I get builder gel manicures on natural nails.</p><cite>Allie S., Google</cite></blockquote></div>
+</div></section>
+
+<section id="photos" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+<p class="eyebrow">Photos</p>
+<h2>Inside X.O</h2>
+<div class="gb"><figure class="ph g-big"><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/6EmZzXfJg_raPcTmPo1luQ/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/nr2VVmFC52Y9mhe8YXR0Ig/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/-QWao6paofBfQO-FUXp2zw/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph g-wide"><span class="pl">Your photo here</span><img src="https://s3-media0.fl.yelpcdn.com/bphoto/RoZgOtSCIcns0l_dtimpag/l.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://static.where-e.com/United_States/New_Jersey_State/Xo-Nails-Spa-Mullica-Hill_46822fef7880032241abc735f8c0d874.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://static.where-e.com/United_States/New_Jersey_State/Xo-Nails-Spa-Mullica-Hill_95af9db168ce3b8bccd7b2fb17dde196.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://static.where-e.com/United_States/New_Jersey_State/Xo-Nails-Spa-Mullica-Hill_0e03bce0e3c933dd3b2d97325ee060ac.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph g-wide"><span class="pl">Your photo here</span><img src="https://static.where-e.com/United_States/New_Jersey_State/Xo-Nails-Spa-Mullica-Hill_e2cc8247f560e956e7861b58f7e30d19.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><figure class="ph "><span class="pl">Your photo here</span><img src="https://static.where-e.com/United_States/New_Jersey_State/Xo-Nails-Spa-Mullica-Hill_bb27618a1ac1aeac2811c2fceeab292c.jpg" alt="Photo from X.O Nails &amp; Spa's public listing" onload="this.parentNode.classList.add('ok')" onerror="this.remove()"></figure><div class="frame">Your photo here: your newest set</div></div>
+<p class="cap">These come from the salon's public listings. On the real site, your own photos of your sets, chairs and team go here.</p>
+</div></section>
+
+<section id="visit"><div class="wrap">
+<p class="eyebrow">Visit</p>
+<h2>Find us on Main Street</h2>
+<div class="vb">
+ <div class="tile vt"><h3>Hours</h3><table class="hours" id="hours"><tbody>
+ <tr data-d="1"><td>Monday</td><td>10am to 7pm</td></tr><tr data-d="2"><td>Tuesday</td><td>10am to 7pm</td></tr><tr data-d="3"><td>Wednesday</td><td>10am to 7pm</td></tr><tr data-d="4"><td>Thursday</td><td>10am to 7pm</td></tr><tr data-d="5"><td>Friday</td><td>10am to 7pm</td></tr><tr data-d="6"><td>Saturday</td><td>9:30am to 6pm</td></tr><tr data-d="0"><td>Sunday</td><td>Closed</td></tr></tbody></table></div>
+ <div class="tile vt"><h3>Address</h3><p class="addr">215 N Main St<br>Mullica Hill, NJ 08062</p><div class="row"><a class="b btn" href="https://www.google.com/maps/search/?api=1&amp;query=215%20N%20Main%20St%2C%20Mullica%20Hill%2C%20NJ%2008062">Get directions</a><a class="b ghost btn" href="tel:+18564173619">Call</a></div>
+ <div class="soc"><a href="https://www.instagram.com/xo_nails_mullicahill/">Instagram</a><a href="https://www.facebook.com/p/XO-Nails-Spa-100077517650203/">Facebook</a><a href="https://www.yelp.com/biz/x-o-nails-and-spa-mullica-hill-mullica-hill">Yelp</a></div></div>
+ <div class="tile vt rose"><h3>Ask for a call back</h3>
+ <form class="form" id="form"><label>Your name<input name="n" autocomplete="name" required></label><label>Phone<input name="p" type="tel" autocomplete="tel" required></label><label>What for?<select name="s"><option>Manicure or gel</option><option>Builder gel or dip</option><option>Pedicure</option><option>Nail art</option><option>Waxing</option></select></label><button class="b btn" type="submit">Send</button><p class="note" id="note" role="status">This is a demo. On your real site this sends straight to you.</p></form></div>
+</div>
+</div></section>
+</main>
+
+<section class="band" aria-label="Call X.O"><div class="wrap">
+<h2>Ready for fresh nails?</h2>
+<p>Call the salon and grab a time. Open six days a week.</p>
+<a class="b btn" href="tel:+18564173619"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>(856) 417-3619</a>
+</div></section>
+<footer><div class="wrap"><strong>X.O Nails &amp; Spa</strong><span>215 N Main St, Mullica Hill, NJ 08062 &middot; <a href="tel:+18564173619">(856) 417-3619</a></span><span>Demo preview prepared for X.O Nails &amp; Spa</span></div></footer>
+<div class="badge">Demo preview</div>
+<a class="callbar btn" href="tel:+18564173619"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call X.O: (856) 417-3619</a>
+
+<script>
+(function(){
+var HRS={0:null,1:[10,19],2:[10,19],3:[10,19],4:[10,19],5:[10,19],6:[9.5,18]},DN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+function f(x){var h=Math.floor(x),m=Math.round((x-h)*60);return (h%12||12)+(m?':'+(m<10?'0':'')+m:'')+(h>=12?'pm':'am')}
+var day,t;try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday);t=(parseInt(o.hour,10)%24)+parseInt(o.minute,10)/60}catch(e){var d=new Date();day=d.getDay();t=d.getHours()+d.getMinutes()/60}
+var r=document.querySelector('#hours tr[data-d="'+day+'"]');if(r)r.className='today';
+var st=document.getElementById('state'),sx=document.getElementById('stateTxt'),tt=document.getElementById('todayTxt'),h=HRS[day];
+if(h&&t>=h[0]&&t<h[1]){sx.textContent='Open now';tt.textContent='Until '+f(h[1])+' today'}
+else{st.className+=' closed';sx.textContent='Closed now';if(h&&t<h[0]){tt.textContent='Opens today at '+f(h[0])}else{for(var i=1;i<8;i++){var k=(day+i)%7;if(HRS[k]){tt.textContent='Opens '+(i==1?'tomorrow':DN[k])+' at '+f(HRS[k][0]);break}}}}
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,turn=0;
+function stamp(x,y,ch){if(RM)return;var s=document.createElement('span');s.className='stamp';s.textContent=ch;s.style.left=x+'px';s.style.top=y+'px';document.body.appendChild(s);setTimeout(function(){s.remove()},560)}
+document.addEventListener('click',function(e){var b=e.target.closest('.btn');if(!b)return;var x=e.clientX,y=e.clientY;if(!x&&!y){var rc=b.getBoundingClientRect();x=rc.left+rc.width/2;y=rc.top+rc.height/2}stamp(x,y,(turn++%2)?'O':'X')});
+var sqs=[].slice.call(document.querySelectorAll('.sq')),mark=0,won=false,L=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]],win=document.getElementById('win');
+function check(){if(won)return;for(var i=0;i<L.length;i++){var l=L[i];if(l.every(function(n){return sqs[n].classList.contains('on')})){won=true;l.forEach(function(n){sqs[n].classList.add('winline')});win.classList.add('show');return}}}
+function flip(s){if(s.classList.contains('on'))return;var m=(mark++%2)?'O':'X';s.querySelector('.mk').textContent=m;document.getElementById('roT').textContent=m+'  '+s.querySelector('.back strong').textContent;document.getElementById('roD').innerHTML=s.querySelector('.back .d').innerHTML;s.setAttribute('aria-label',s.getAttribute('aria-label').replace('tap to reveal','revealed with '+m+','));if(RM){s.classList.add('on');check();return}s.classList.add('flip');setTimeout(function(){s.classList.add('on')},160);setTimeout(function(){s.classList.remove('flip');check()},330)}
+sqs.forEach(function(s){s.addEventListener('click',function(){flip(s)})});
+document.getElementById('all').addEventListener('click',function(){sqs.forEach(function(s,i){setTimeout(function(){flip(s)},RM?0:i*70)})});
+document.getElementById('reset').addEventListener('click',function(){won=false;mark=0;win.classList.remove('show');document.getElementById('roT').textContent='Nothing yet. Tap a square.';document.getElementById('roD').textContent='Nine squares, nine real things about X.O.';sqs.forEach(function(s){s.classList.remove('on','winline','flip');s.querySelector('.mk').textContent='';s.setAttribute('aria-label',s.getAttribute('aria-label').replace(/revealed with [XO],/,'tap to reveal'))})});
+document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('note').classList.add('show')});
+})();
+</script>
+</body></html>
