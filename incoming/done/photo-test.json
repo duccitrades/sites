@@ -1,0 +1,24 @@
+{
+ "slug": "photo-test",
+ "submission": "Yj758x6",
+ "at": "2026-10-27T21:49:41.926080Z",
+ "files": [
+  {
+   "kind": "photo",
+   "question": "Photos for your site (your work, your shop, your team)",
+   "name": "Screenshot 2026-09-08 092056.png",
+   "path": "photo-test/assets/photo-1.png",
+   "bytes": 710381,
+   "ok": true
+  },
+  {
+   "kind": "logo",
+   "question": "Your logo, if you have one",
+   "name": "UY.svg",
+   "path": "photo-test/assets/logo.svg",
+   "bytes": 1823,
+   "ok": true
+  }
+ ],
+ "ok": true
+}
