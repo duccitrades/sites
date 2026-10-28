@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mavath LLC | Social Media Marketing &amp; Brand Consulting, Flemington NJ</title>
+<meta name="description" content="Mavath LLC: social media growth, brand development, digital advertising and monetization consulting in Flemington, NJ. 130,000+ Instagram followers, 200+ private clients. Call (908) 938-2630.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F6F2; --card:#FFFFFF; --ink:#141416; --text:#17171A; --muted:#4B4B52; --line:#DEDCD4;
+  --hi:#F2DE4B; --tile:#ECEAE3; --tile2:#E4E1D8;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+a{color:var(--ink)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.hl{background:linear-gradient(transparent 58%,var(--hi) 58%,var(--hi) 92%,transparent 92%);background-size:0 100%;background-repeat:no-repeat;transition:background-size 1.1s .5s cubic-bezier(.6,.1,.2,1)}
+.ready .hl{background-size:100% 100%}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(247,246,242,.97);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:64px}
+.logo{font-family:var(--serif);font-size:28px;text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:8px;white-space:nowrap}
+.logo small{font-family:var(--sans);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--text)}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--ink);cursor:pointer;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-line{background:var(--card);color:var(--ink)}
+.top .btn{padding:10px 16px;font-size:15px}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:420px){.top .wrap{gap:10px}.logo{font-size:24px}.logo small{display:none}.top .btn{padding:9px 13px;font-size:14px}}
+.heart{position:fixed;z-index:90;pointer-events:none;width:18px;height:18px;animation:float .9s ease-out forwards}
+@keyframes float{0%{transform:translate(-50%,-50%) scale(.4);opacity:1}100%{transform:translate(-50%,-160%) scale(1.25);opacity:0}}
+
+/* hero: feed wall */
+.hero{position:relative;padding:22px 0 64px}
+.wall{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;padding:0 8px}
+.post{aspect-ratio:5/4;background:var(--tile);border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:500;color:#3A3A40;padding:6px;opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
+.post:nth-child(3n){background:var(--tile2)}
+.ready .post{opacity:1;transform:none}
+.hero-card{position:relative;z-index:2;max-width:760px;margin:-150px auto 0;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:38px 40px 34px;text-align:center;box-shadow:0 30px 60px -40px rgba(20,20,22,.45)}
+.hero-card h1{font-size:clamp(44px,6.4vw,70px)}
+.hero-card h1 em{font-style:italic}
+.hero-card .sub{font-size:19px;color:var(--muted);max-width:36ch;margin:18px auto 24px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.where{margin-top:20px;font-size:14px;color:var(--muted)}
+
+/* stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat{padding:30px 18px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,56px);line-height:1}
+.stat span{font-size:15px;color:var(--muted)}
+
+.sec{padding:84px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(36px,4.6vw,54px);max-width:16ch}
+.sec-head p{max-width:40ch;color:var(--muted);margin:0}
+
+/* tap the feed */
+.feed-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.phone{max-width:380px;margin:0 auto;background:var(--ink);border-radius:42px;padding:14px;box-shadow:0 40px 70px -40px rgba(20,20,22,.6)}
+.screen{background:var(--card);border-radius:30px;overflow:hidden}
+.ig-top{display:flex;align-items:center;gap:12px;padding:16px 16px 10px}
+.ig-av{width:46px;height:46px;border-radius:50%;background:var(--hi);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;color:var(--ink);flex:none}
+.ig-top b{font-size:15px;display:block;line-height:1.2}
+.ig-top span{font-size:13px;color:var(--muted)}
+.grid9{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;padding:3px}
+.tap{position:relative;aspect-ratio:1;border:0;padding:8px;background:var(--tile);cursor:pointer;font:inherit;color:var(--text);display:flex;align-items:center;justify-content:center;text-align:center;transition:transform .35s}
+.tap:nth-child(even){background:var(--tile2)}
+.tap .f{font-family:var(--serif);font-size:30px;line-height:1}
+.tap .f small{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#3A3A40;margin-top:6px}
+.tap .bk{display:none;font-size:12.5px;line-height:1.3;font-weight:500}
+.tap .bk b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1;margin-bottom:4px}
+.tap.on{background:var(--ink);color:#fff;animation:pop .35s}
+.tap.on .f{display:none}.tap.on .bk{display:block}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+.tap:focus-visible{outline:3px solid var(--hi);outline-offset:-3px}
+.readout{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.readout h3{font-size:34px;margin-bottom:10px}
+.readout p{color:var(--muted)}
+.count{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.bar{height:6px;background:var(--tile);border-radius:6px;margin:10px 0 20px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .4s}
+
+/* services */
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:56px}
+.svc li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;padding:22px 0;border-top:1px solid var(--line)}
+.svc li span{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1;color:var(--muted)}
+.svc h3{font-size:28px;margin-bottom:6px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.wk figure{margin:0}
+.ph{aspect-ratio:4/5;background:var(--tile);border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;font-weight:500;color:#3A3A40;padding:10px;border:1px dashed #A9A69C}
+.wk figcaption{padding-top:12px}
+.wk figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.1}
+.wk figcaption span{font-size:15px;color:var(--muted)}
+
+/* recognition */
+.rec{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.note{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px 28px 26px}
+.note:before{content:"";position:absolute;top:-10px;left:28px;width:70px;height:20px;background:var(--hi);transform:rotate(-3deg);border-radius:2px}
+.note .kick{display:block;margin-bottom:10px}
+.note h3{font-size:34px;margin-bottom:10px}
+.note p{margin:0;color:var(--muted)}
+.mission{max-width:820px;margin:56px auto 0;text-align:center;font-family:var(--serif);font-size:clamp(28px,3.4vw,38px);line-height:1.2}
+
+/* book */
+.book{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.book h2{font-size:clamp(38px,4.8vw,56px);margin-bottom:16px}
+.contact-list{list-style:none;padding:0;margin:26px 0 0}
+.contact-list li{padding:14px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.contact-list li span{color:var(--muted);font-size:15px}
+.contact-list a{font-weight:600;text-decoration:none;word-break:break-all}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+label{display:block;font-size:14px;font-weight:600;margin:0 0 6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid #BDBAB0;border-radius:10px;background:#fff;color:var(--text);margin-bottom:16px}
+textarea{min-height:96px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{border:1px solid #BDBAB0;background:#fff;border-radius:999px;padding:8px 14px;font:500 14px var(--sans);cursor:pointer;color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.formnote{display:none;margin-top:14px;padding:14px 16px;background:#FBF4C2;border-radius:10px;font-weight:500;color:var(--text)}
+.formnote.show{display:block}
+
+footer{background:var(--ink);color:#fff;padding:56px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .logo{color:#fff;font-size:34px}
+footer p{color:#D9D9DE;margin:6px 0 0;font-size:15px}
+footer a{color:#fff}
+.fine{font-size:14px;color:#C9C9CF}
+
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:#fff;color:var(--ink);border:1px solid #BDBAB0;border-radius:999px;padding:7px 13px;font:600 13px var(--sans);box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .wall{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 6px}
+  .wall .post:nth-child(n+7){display:none}
+  .hero-card{margin:-70px 14px 0;padding:28px 22px 26px}
+  .stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr));padding:0}
+  .stat{padding:22px 20px;border-top:1px solid var(--line)}
+  .stat:nth-child(odd){border-left:0}
+  .stat:nth-child(-n+2){border-top:0}
+  .feed-wrap,.book,.svc,.notes{grid-template-columns:minmax(0,1fr)}
+  .work{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sec-head{display:block}.sec-head p{margin-top:12px}
+  .sec{padding:60px 0}
+}
+@media(max-width:700px){
+  .hero{padding-top:12px}
+  .wall .post:nth-child(n+4){display:none}
+  .post{aspect-ratio:1}
+  .hero-card{margin-top:-34px}
+  .hero-card h1{font-size:42px}
+  .hero-card .sub{font-size:17px}
+  .badge{bottom:80px;left:10px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 10px}
+  .callbar .btn-line{background:transparent;color:#fff;border-color:#fff}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.post{opacity:1;transform:none}.hl{background-size:100% 100%}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Mavath <small>LLC</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#feed">Tap the feed</a><a href="#services">Services</a><a href="#work">Work</a><a href="#recognition">Recognition</a><a href="#book">Book</a>
+    </nav>
+    <a class="btn btn-ink pop" href="tel:+19089382630">(908) 938-2630</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <div class="wall" aria-label="Photo frames for Mavath's posts">
+    <div class="post" style="transition-delay:.02s">Your photo here</div><div class="post" style="transition-delay:.08s">Your photo here</div><div class="post" style="transition-delay:.14s">Your photo here</div><div class="post" style="transition-delay:.2s">Your photo here</div><div class="post" style="transition-delay:.26s">Your photo here</div><div class="post" style="transition-delay:.32s">Your photo here</div>
+    <div class="post" style="transition-delay:.38s">Your photo here</div><div class="post" style="transition-delay:.44s">Your photo here</div><div class="post" style="transition-delay:.5s">Your photo here</div><div class="post" style="transition-delay:.56s">Your photo here</div><div class="post" style="transition-delay:.62s">Your photo here</div><div class="post" style="transition-delay:.68s">Your photo here</div>
+  </div>
+  <div class="hero-card">
+    <p class="kick">Social media · Brand · Monetization</p>
+    <h1>Turn your following into a <span class="hl"><em>business.</em></span></h1>
+    <p class="sub">Mavath LLC helps people and brands grow on social media, build a brand that sticks, and turn views into real revenue.</p>
+    <div class="ctas">
+      <a class="btn btn-ink pop" href="tel:+19089382630">Book a consult</a>
+      <a class="btn btn-line pop" href="mailto:amavath29@gmail.com?subject=Consult%20with%20Mavath%20LLC">Email Mavath</a>
+    </div>
+    <p class="where">Based in Flemington, NJ</p>
+  </div>
+</section>
+
+<section class="stats" aria-label="By the numbers">
+  <div class="wrap">
+    <div class="stat"><b>130K+</b><span>Instagram followers on its own page</span></div>
+    <div class="stat"><b>~30M</b><span>views a month across its pages</span></div>
+    <div class="stat"><b>200+</b><span>private clients helped</span></div>
+    <div class="stat"><b>100+</b><span>campus businesses through Movement App</span></div>
+  </div>
+</section>
+
+<section class="sec" id="feed">
+  <div class="wrap feed-wrap">
+    <div class="phone" aria-label="Tap the feed">
+      <div class="screen">
+        <div class="ig-top"><div class="ig-av" aria-hidden="true">M</div><div><b>Mavath LLC</b><span>Social media marketing · Flemington, NJ</span></div></div>
+        <div class="grid9" id="grid9">
+          <button class="tap" type="button" data-t="Audience growth" data-d="Personal coaching on growing a real audience: what to post, when, and how to keep people watching."><span class="f">01<small>Tap</small></span><span class="bk"><b>130K+</b>followers on Mavath's own Instagram</span></button>
+          <button class="tap" type="button" data-t="Reach" data-d="Mavath's pages bring in about 30 million views a month, so the advice comes from running pages, not reading about them."><span class="f">02<small>Tap</small></span><span class="bk"><b>~30M</b>views a month</span></button>
+          <button class="tap" type="button" data-t="Clients" data-d="Individuals, influencers and businesses have worked with Mavath to set up and scale their online presence."><span class="f">03<small>Tap</small></span><span class="bk"><b>200+</b>private clients</span></button>
+          <button class="tap" type="button" data-t="Monetization" data-d="Turning a following into income through product sales, services, digital offerings and smart monetization."><span class="f">04<small>Tap</small></span><span class="bk"><b>$</b>Followers into revenue</span></button>
+          <button class="tap" type="button" data-t="Brand development" data-d="A name, look and voice people remember, built to grow with you for the long run."><span class="f">05<small>Tap</small></span><span class="bk"><b>Brand</b>that people remember</span></button>
+          <button class="tap" type="button" data-t="Hospitality marketing" data-d="Promotional campaigns, digital content and customer acquisition for spots like Peabody and Yamitsuki, plus nightlife events with well-known DJs."><span class="f">06<small>Tap</small></span><span class="bk"><b>Nights</b>Peabody, Yamitsuki, DJ events</span></button>
+          <button class="tap" type="button" data-t="Movement App" data-d="Partnered with Movement App, a student-focused platform working with over 100 businesses around college campuses."><span class="f">07<small>Tap</small></span><span class="bk"><b>100+</b>campus businesses</span></button>
+          <button class="tap" type="button" data-t="Yahoo Finance" data-d="Featured in Yahoo Finance at age 16 for helping 100 private clients monetize their social media."><span class="f">08<small>Tap</small></span><span class="bk"><b>16</b>Featured in Yahoo Finance</span></button>
+          <button class="tap" type="button" data-t="Websites and e-commerce" data-d="Websites, online stores and the day-to-day of running a digital business."><span class="f">09<small>Tap</small></span><span class="bk"><b>Shop</b>Sites and e-commerce</span></button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="kick">Tap the feed</p>
+      <h2 style="font-size:clamp(36px,4.6vw,54px);margin:10px 0 18px">Nine posts. <em>Every one is real.</em></h2>
+      <div class="readout" aria-live="polite">
+        <div class="count" id="count">0 of 9 opened</div>
+        <div class="bar"><i id="bar"></i></div>
+        <h3 id="rt">Tap any post</h3>
+        <p id="rd">Each square flips to show a real number or a service Mavath offers. Open all nine to finish the grid.</p>
+        <a class="btn btn-ink pop" href="#book">Book a consult</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head"><h2>What Mavath does for you</h2><p>Hands-on help for people, creators and local businesses, from the first post to the first sale.</p></div>
+    <ul class="svc">
+      <li><span>01</span><div><h3>Social media growth</h3><p>Audience strategy and personal coaching to grow followers who stick around.</p></div></li>
+      <li><span>02</span><div><h3>Brand development</h3><p>A recognizable brand: name, look, voice and the story behind it.</p></div></li>
+      <li><span>03</span><div><h3>Digital advertising</h3><p>Paid campaigns that put you in front of the right people.</p></div></li>
+      <li><span>04</span><div><h3>Content strategy</h3><p>What to post, how often, and how it ties back to your goals.</p></div></li>
+      <li><span>05</span><div><h3>Monetization</h3><p>Turn a following into income with products, services and digital offerings.</p></div></li>
+      <li><span>06</span><div><h3>E-commerce and websites</h3><p>Online stores, websites and the operations behind selling online.</p></div></li>
+      <li><span>07</span><div><h3>Hospitality and nightlife</h3><p>Promotions, content and events that bring guests through the door.</p></div></li>
+      <li><span>08</span><div><h3>1:1 consulting</h3><p>Long-term business development, one conversation at a time.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="work" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Work and partners</h2><p>From college campuses to restaurants and nights out, Mavath's marketing has been out in the real world.</p></div>
+    <div class="work">
+      <figure class="wk"><div class="ph">Your photo here</div><figcaption><b>Movement App</b><span>Partner on a student platform with 100+ campus businesses</span></figcaption></figure>
+      <figure class="wk"><div class="ph">Your photo here</div><figcaption><b>Peabody</b><span>Promotional campaigns and digital content</span></figcaption></figure>
+      <figure class="wk"><div class="ph">Your photo here</div><figcaption><b>Yamitsuki</b><span>Customer acquisition and content</span></figcaption></figure>
+      <figure class="wk"><div class="ph">Your photo here</div><figcaption><b>Nightlife events</b><span>Concepts and events with well-known DJs</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec rec" id="recognition">
+  <div class="wrap">
+    <div class="notes">
+      <div class="note"><span class="kick">In the press</span><h3>Yahoo Finance, at 16</h3><p>Featured for helping 100 private clients monetize their social media presence.</p></div>
+      <div class="note"><span class="kick">Local recognition</span><h3>Hunterdon County Chamber of Commerce</h3><p>An award for entrepreneurial accomplishments and contributions to business at a young age.</p></div>
+    </div>
+    <p class="mission">The mission: help businesses and people build recognizable brands, grow their audiences and turn digital influence into <span class="hl">measurable business growth.</span></p>
+  </div>
+</section>
+
+<section class="sec" id="book">
+  <div class="wrap book">
+    <div>
+      <p class="kick">Book a consult</p>
+      <h2>Tell Mavath where you want to grow.</h2>
+      <p style="color:var(--muted)">Call, email or send a quick note. A short first conversation is the easiest way to see what fits.</p>
+      <ul class="contact-list">
+        <li><span>Phone</span><a class="pop" href="tel:+19089382630">(908) 938-2630</a></li>
+        <li><span>Email</span><a class="pop" href="mailto:amavath29@gmail.com">amavath29@gmail.com</a></li>
+        <li><span>Based in</span><strong>Flemington, NJ</strong></li>
+      </ul>
+    </div>
+    <form id="form">
+      <label for="n">Your name</label><input id="n" name="n" autocomplete="name" required>
+      <label for="c">Phone or email</label><input id="c" name="c" required>
+      <label>What do you want help with?</label>
+      <div class="chips" role="group" aria-label="Topics">
+        <button class="chip" type="button" aria-pressed="false">Growth</button><button class="chip" type="button" aria-pressed="false">Branding</button><button class="chip" type="button" aria-pressed="false">Ads</button><button class="chip" type="button" aria-pressed="false">Monetization</button><button class="chip" type="button" aria-pressed="false">Website or store</button><button class="chip" type="button" aria-pressed="false">Hospitality</button>
+      </div>
+      <label for="m">Anything else?</label><textarea id="m" name="m"></textarea>
+      <button class="btn btn-ink pop" type="submit">Send my note</button>
+      <p class="formnote" id="formnote" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top">Mavath <small style="color:#D9D9DE">LLC</small></a><p>Social media marketing, brand development and business consulting · Flemington, NJ</p></div>
+    <div><p><a href="tel:+19089382630">(908) 938-2630</a></p><p><a href="mailto:amavath29@gmail.com">amavath29@gmail.com</a></p><p class="fine">Demo preview prepared for Mavath LLC</p></div>
+  </div>
+</footer>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-ink pop" style="background:#fff;color:var(--ink);border-color:#fff" href="tel:+19089382630">Call</a><a class="btn btn-line pop" href="mailto:amavath29@gmail.com">Email</a></div>
+
+<script>
+(function(){
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  requestAnimationFrame(function(){document.body.classList.add('ready')});
+  // heart burst on buttons
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.pop'); if(!b||rm) return;
+    var h=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    h.setAttribute('viewBox','0 0 24 24'); h.setAttribute('class','heart'); h.setAttribute('aria-hidden','true');
+    h.innerHTML='<path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.4 21.6 11.8 19.5 16.4 12 21 12 21z" fill="#F2DE4B" stroke="#141416" stroke-width="1.4"/>';
+    h.style.left=(e.clientX||b.getBoundingClientRect().left+20)+'px'; h.style.top=(e.clientY||b.getBoundingClientRect().top)+'px';
+    document.body.appendChild(h); setTimeout(function(){h.remove()},950);
+  });
+  // tap the feed
+  var opened=0, taps=document.querySelectorAll('.tap');
+  taps.forEach(function(t){t.addEventListener('click',function(){
+    if(!t.classList.contains('on')){t.classList.add('on');opened++;}
+    document.getElementById('rt').textContent=t.dataset.t;
+    document.getElementById('rd').textContent=t.dataset.d;
+    document.getElementById('count').textContent=opened===9?'All 9 opened. Ready to grow yours?':opened+' of 9 opened';
+    document.getElementById('bar').style.width=(opened/9*100)+'%';
+  })});
+  // chips + form
+  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true')})});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formnote').classList.add('show')});
+})();
+</script>
+</body>
+</html>
