@@ -225,6 +225,20 @@ footer .fine{width:100%;border-top:1px solid #2A3647;padding-top:18px;margin-top
   .btn.blink,.btn.blink .led,.light[aria-pressed="true"] svg{animation:none}
   .board-lamps svg{transition:none}
 }
+
+/* photo spots (phone fix) */
+.ph{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#E4E8ED;border:1px solid var(--line);min-height:70px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph .ph-l{display:none}
+.ph.miss .ph-l{display:flex;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--head);font-size:15px;color:#1B2430;background:#E4E8ED}
+.pf{position:relative;border-radius:14px;background:#E4E8ED;border:1.5px dashed #8C97A6;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--head);font-size:15px;color:#1B2430;min-height:70px;padding:10px}
+.collage{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:10px;height:230px;margin-top:30px}
+.collage .ph:first-child{grid-row:1/3}
+.collage{grid-template-rows:1fr 1fr}
+.collage .ph:nth-child(2),.collage .ph:nth-child(3){grid-column:2/4}
+.strip{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr;height:420px}
+.strip > :first-child{grid-row:1/3;grid-column:1/3}
+@media(max-width:700px){.collage{height:190px;margin-top:22px;gap:8px}.strip{height:380px;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1.4fr 1fr 1fr}.strip > :first-child{grid-row:auto;grid-column:1/3}}
 </style>
 </head>
 <body>
@@ -268,11 +282,7 @@ footer .fine{width:100%;border-top:1px solid #2A3647;padding-top:18px;margin-top
         <a class="btn btn-main" href="tel:+16093280314"><span class="led"></span>Call (609) 328-0314</a>
         <a class="btn btn-line" href="#dashboard">What's that light?</a>
       </div>
-      <div class="frame" aria-label="Photo frame for the shop">
-        <div class="tick tl"></div><div class="tick tr"></div><div class="tick bl"></div><div class="tick br"></div>
-        <svg class="bay" viewBox="0 0 220 120" aria-hidden="true"><path d="M10 110V40L110 8l100 32v70" fill="none" stroke="#B9C2CE" stroke-width="2"/><rect x="40" y="52" width="140" height="58" fill="none" stroke="#B9C2CE" stroke-width="2"/><path d="M40 66h140M40 80h140M40 94h140" stroke="#C9D0DA" stroke-width="2"/><circle cx="110" cy="32" r="5" fill="#E0A100"/></svg>
-        <div class="frame-label"><b>George's Auto Care</b><span>Personalized photos of the shop will go here</span></div>
-      </div>
+      <div class="collage" aria-label="Photos of the shop"><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f0b5d69c-2024-01-31.png" alt="Photo of George's Auto Care, from its business listing" loading="eager" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f0d91a37-2024-01-31.jpeg" alt="Photo of George's Auto Care, from its business listing" loading="eager" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f0f654f2-2024-01-31.jpeg" alt="Photo of George's Auto Care, from its business listing" loading="eager" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure></div>
     </div>
 
     <aside class="board" aria-label="Shop hours">
@@ -400,11 +410,7 @@ footer .fine{width:100%;border-top:1px solid #2A3647;padding-top:18px;margin-top
         <li><span>Network</span><span>Auto Value Confidence Plus</span></li>
       </ul>
     </div>
-    <div class="strip" aria-label="Photo frames for the shop">
-      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>The shop</b><span>Personalized photos will go here</span></div></div>
-      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>In the bay</b><span>Your photo here</span></div></div>
-      <div class="frame"><div class="tick tl"></div><div class="tick br"></div><div class="frame-label"><b>The crew</b><span>Your photo here</span></div></div>
-    </div>
+    <div class="strip" aria-label="Photos of the shop"><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f11917ff-2024-01-31.jpeg" alt="Photo of George's Auto Care, from its business listing" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f12ab7d5-2024-01-31.jpeg" alt="Photo of George's Auto Care, from its business listing" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f1d1eb13-2024-01-31.png" alt="Photo of George's Auto Care, from its business listing" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><figure class="ph "><img src="https://app.meetsoci.com/uploads/projects/photos/photo_upload_65ba9f20aaff0-2024-01-31.png" alt="Photo of George's Auto Care, from its business listing" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="ph-l">Your photo here</span></figure><div class="pf">Your photo here</div></div>
   </div>
 </section>
 

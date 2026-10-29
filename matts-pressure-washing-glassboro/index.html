@@ -222,6 +222,11 @@ footer a{color:#fff}
   html{scroll-behavior:auto}
   .ring,.drop{display:none}
 }
+
+/* phone fix: photo labels only show when there is no photo, on their own solid backing */
+.ph .fb{display:none;background:#E7EFDD}
+.ph.miss .fb{display:flex}
+.ph.miss .cap{display:none}
 </style>
 </head>
 <body>
@@ -251,11 +256,11 @@ footer a{color:#fff}
 <section class="hero" id="work" aria-label="Job photos and introduction">
   <div class="wrap">
     <div class="mosaic">
-      <div class="ph m1"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Matt's job photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/zBeSVG4YUES0ScAmNf0y6w/l.jpg" alt="Job photo from Matt's Yelp page" loading="eager" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
-      <div class="ph m2"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/hMqBiuVXdfgKl-GkzvGP1A/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
-      <div class="ph m3"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/wPyBRXQvrp_JyTwpOphNAw/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
-      <div class="ph m4"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/JnRF3BZH0FHeWpWO5mJ3dA/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
-      <div class="ph m5"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/iaAeHroEAWRYMD54E6ieag/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"></div>
+      <div class="ph m1"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Matt's job photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/zBeSVG4YUES0ScAmNf0y6w/l.jpg" alt="Job photo from Matt's Yelp page" loading="eager" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph m2"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/hMqBiuVXdfgKl-GkzvGP1A/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.parentNode.classList.add('miss');this.remove()"></div>
+      <div class="ph m3"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/wPyBRXQvrp_JyTwpOphNAw/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.parentNode.classList.add('miss');this.remove()"></div>
+      <div class="ph m4"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/JnRF3BZH0FHeWpWO5mJ3dA/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.parentNode.classList.add('miss');this.remove()"></div>
+      <div class="ph m5"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/iaAeHroEAWRYMD54E6ieag/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.parentNode.classList.add('miss');this.remove()"></div>
     </div>
     <div class="plate">
       <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8Z"/></svg>Veteran-owned · Glassboro, NJ</span>
@@ -316,7 +321,7 @@ footer a{color:#fff}
       <button class="chip" role="tab" aria-selected="false" data-k="biz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M4 20h16M9 20v-6h6v6M8 11h2M14 11h2"/></svg>Commercial</button>
     </div>
     <div class="panel" role="tabpanel" id="panel">
-      <div class="ph" id="pimg"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Personalized photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/RCYVM1MWNM5Z5PAqefunhQ/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph" id="pimg"><div class="fb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c3.5 4.4 6 7.5 6 10.6a6 6 0 0 1-12 0C6 10.5 8.5 7.4 12 3Z"/></svg>Your photo here<small>Personalized photos will go here</small></div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/RCYVM1MWNM5Z5PAqefunhQ/l.jpg" alt="Job photo from Matt's Yelp page" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="cap">Job photo · Yelp</span></div>
       <div class="pbody" id="pbody">
         <div class="num">01 / 06</div>
         <h3>Decks</h3>
@@ -334,9 +339,9 @@ footer a{color:#fff}
     <div class="kicker">From the job site</div>
     <h2>A few more of Matt's photos</h2>
     <div class="strip">
-      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Pt0FmtbZt3DMQtD_xDwNKg/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
-      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/GqZj5WINnkmyE-5e6rYXrA/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.remove()"><span class="cap">Job photo · Yelp</span></div>
-      <div class="ph"><div class="fb">Your photo here<small>Personalized photos will go here</small></div></div>
+      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/Pt0FmtbZt3DMQtD_xDwNKg/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph"><div class="fb">Your photo here</div><img src="https://s3-media0.fl.yelpcdn.com/bphoto/GqZj5WINnkmyE-5e6rYXrA/l.jpg" alt="Job photo from Matt's Yelp page" loading="lazy" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="cap">Job photo · Yelp</span></div>
+      <div class="ph miss"><div class="fb">Your photo here<small>Personalized photos will go here</small></div></div>
     </div>
   </div>
 </section>

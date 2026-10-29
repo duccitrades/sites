@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Jaybird Home Remodeling &amp; Handyman Services | Pitman, NJ</title>
+<meta name="description" content="Jaybird Home Remodeling & Handyman Services, Pitman NJ. Renovations, handyman repairs, countertop installs and door replacements. Free estimates. Call (856) 275-3198.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500&family=Zilla+Slab:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oak:#FAF7F1; --card:#FFFFFF; --char:#2E3236; --char2:#3A3F44; --text:#202326; --muted:#53585D; --line:#E4DDD0;
+  --maple:#B07A2A; --maple-l:#E9D3AE; --frame:#EFE8DC;
+  --slab:'Zilla Slab',Georgia,serif;
+  --sans:'Rethink Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oak);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--slab);font-weight:500;line-height:1.1;margin:0}
+p{margin:0 0 1em}
+a{color:var(--text)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.tag{font-size:14px;font-weight:500;color:#7A5418;letter-spacing:.03em}
+
+.top{position:sticky;top:0;z-index:40;background:rgba(250,247,241,.97);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-family:var(--slab);font-size:22px;font-weight:500;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{text-decoration:none;font-size:15px;font-weight:500}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:3px;font:500 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--char);cursor:pointer}
+.btn-c{background:var(--char);color:#fff}
+.btn-c:hover{background:#1E2124}
+.btn-l{background:var(--card);color:var(--text)}
+.top .btn{padding:10px 14px;font-size:15px}
+.btn.tap{animation:hammer .32s}
+@keyframes hammer{0%,100%{transform:none}25%{transform:translateY(3px)}50%{transform:none}75%{transform:translateY(2px)}}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:430px){.top .wrap{gap:10px}.brand{font-size:19px}.brand .long{display:none}.top .btn{padding:9px 11px;font-size:14px}}
+
+/* ruler */
+.ruler{height:22px;background:var(--maple-l);border-top:1px solid #C9A56C;border-bottom:1px solid #C9A56C;background-image:repeating-linear-gradient(90deg,#8A6224 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,#8A6224 0 1px,transparent 1px 60px);background-size:100% 8px,100% 14px;background-repeat:no-repeat;background-position:0 0,0 0}
+
+/* gallery hero */
+.hero{padding:22px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:22px;align-items:stretch}
+.mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:220px 180px;gap:10px}
+.ph{position:relative;margin:0;background:var(--frame);border:1px solid var(--line);overflow:hidden;cursor:zoom-in;padding:0;font:inherit;color:var(--text)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph .lbl{display:none}
+.ph.miss{cursor:default}
+.ph.miss .lbl{display:flex;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;padding:8px;font-size:14px;background:var(--frame);color:var(--text)}
+.mosaic .ph:nth-child(1){grid-column:1/3}
+.mosaic .ph:nth-child(4),.mosaic .ph:nth-child(5){grid-column:span 2}
+.pf{background:var(--frame);border:1.5px dashed #C9A56C;display:flex;align-items:center;justify-content:center;text-align:center;font-size:15px;color:var(--text);padding:8px}
+.plate{background:var(--char);color:#fff;padding:30px 28px;display:flex;flex-direction:column;justify-content:center}
+.plate .tag{color:#E9D3AE}
+.plate h1{font-size:clamp(34px,3.6vw,46px);margin:12px 0 14px;color:#fff}
+.plate p{color:#E3E1DC;font-size:17px}
+.plate .btn-c{background:#fff;color:var(--char);border-color:#fff}
+.plate .btn-l{background:transparent;color:#fff;border-color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+
+/* picker */
+.sec{padding:76px 0}
+.sec h2{font-size:clamp(32px,4.2vw,46px)}
+.pick{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{font:500 16px var(--sans);padding:12px 18px;border-radius:3px;border:1.5px solid #B9AE9C;background:var(--card);color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--char);color:#fff;border-color:var(--char)}
+.note{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--maple);padding:22px 24px}
+.note h3{font-size:26px;margin:4px 0 8px}
+.note p{margin:0 0 14px;color:var(--muted)}
+.note q{display:block;font-family:var(--slab);font-size:19px;color:var(--text);margin-bottom:14px}
+.pickph{height:360px}
+
+/* services planks */
+.planks{margin-top:30px;display:grid;gap:12px}
+.plank{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);padding:20px 24px;position:relative}
+.plank:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--maple)}
+.plank .m{font-family:var(--slab);font-size:15px;color:#7A5418}
+.plank h3{font-size:24px}
+.plank p{margin:0;color:var(--muted);font-size:16px}
+
+/* way */
+.way{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.way .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:46px;align-items:center}
+.quotes q{display:block;font-family:var(--slab);font-size:clamp(22px,2.6vw,28px);line-height:1.3;padding:16px 0;border-top:1px solid var(--line)}
+.quotes q:first-child{border-top:0}
+.quotes small{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+.more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.more > *{height:170px}
+
+/* estimate */
+.est .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:46px}
+form{background:var(--card);border:1px solid var(--line);padding:26px}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #B9AE9C;border-radius:3px;background:#fff;color:var(--text);margin-bottom:14px}
+.fn{display:none;margin-top:12px;padding:12px;background:#F6EAD5;font-weight:500}
+.fn.show{display:block}
+.facts{list-style:none;margin:20px 0 24px;padding:0}
+.facts li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.facts li span{color:var(--muted)}
+
+/* lightbox */
+.lb{display:none;position:fixed;inset:0;z-index:80;background:rgba(20,22,24,.92);align-items:center;justify-content:center;padding:20px}
+.lb.show{display:flex}
+.lb figure{margin:0;max-width:900px;width:100%;background:var(--card)}
+.lb .imgbox{position:relative;height:min(62vh,560px);background:var(--frame)}
+.lb img{width:100%;height:100%;object-fit:contain;display:block}
+.lb figcaption{padding:16px 20px;font-family:var(--slab);font-size:19px;color:var(--text)}
+.lb button{position:absolute;top:16px;right:16px;font:500 16px var(--sans);background:#fff;color:var(--text);border:0;padding:10px 14px;cursor:pointer}
+
+footer{background:var(--char);color:#fff;padding:48px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{margin:4px 0;color:#E3E1DC;font-size:15px}
+footer a{color:#fff}
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:#fff;color:var(--char);border:1px solid #B9AE9C;padding:7px 12px;font:500 13px var(--sans)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero .wrap,.pick,.way .wrap,.est .wrap{grid-template-columns:minmax(0,1fr)}
+  .plank{grid-template-columns:minmax(0,1fr)}
+  .plank .m{order:-1}
+  .sec{padding:56px 0}
+  .pickph{height:260px}
+}
+@media(max-width:700px){
+  .hero{padding:12px 0 46px}
+  .hero .wrap{gap:12px}
+  .mosaic{grid-template-rows:150px 110px;gap:6px}
+  .plate{padding:22px 20px}
+  .plate h1{font-size:32px}
+  .more > *{height:120px}
+  .badge{bottom:80px;left:10px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--char);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 8px}
+  .callbar .btn-c{background:#fff;color:var(--char);border-color:#fff}
+  .callbar .btn-l{background:transparent;color:#fff;border-color:#fff}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 20c3-9 10-14 19-12l4-3-1 5c-2 7-8 12-16 12H5z" fill="#2E3236"/><circle cx="22" cy="11" r="1.6" fill="#FAF7F1"/><path d="M5 20l-3 4h6" fill="#B07A2A"/></svg><span>Jaybird <span class="long">Home Remodeling</span></span></a>
+    <nav class="nav" aria-label="Main"><a href="#projects">Projects</a><a href="#services">Services</a><a href="#way">The Jaybird way</a><a href="#estimate">Free estimate</a></nav>
+    <a class="btn btn-c hm" href="tel:+18562753198">(856) 275-3198</a>
+  </div>
+</header>
+<div class="ruler" aria-hidden="true"></div>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="mosaic" aria-label="Jaybird project photos">
+      <button class="ph" type="button" data-cap="Delivering skilled craftsmanship with integrity -- at a fair and honest price."><img src="https://s3-media0.fl.yelpcdn.com/bphoto/MW-3_6XQOatnKa8tg3eOXA/l.jpg" alt="Jaybird project photo" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="lbl">Your photo here</span></button>
+      <button class="ph" type="button" data-cap="Modern design meets expert craftsmanship in this countertop installation. Get your free estimate today from JAYBIRD!"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/wpCu0AXJlsySoxq0jNwYdg/l.jpg" alt="Countertop installation by Jaybird" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="lbl">Your photo here</span></button>
+      <button class="ph" type="button" data-cap="Built with precision, crafted with care, and always focused on your safety - that's the JAYBIRD way!"><img src="https://s3-media0.fl.yelpcdn.com/bphoto/zaeUQ8tUkJebBpI6oZI-Ew/l.jpg" alt="Jaybird project photo" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="lbl">Your photo here</span></button>
+      <button class="ph" type="button" data-cap="This basement door went from damaged to dependable with a custom replacement made to last."><img src="https://s3-media0.fl.yelpcdn.com/bphoto/bWu2OG6SK34JfjUh3hrDZg/l.jpg" alt="Custom basement door replacement by Jaybird" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="lbl">Your photo here</span></button>
+      <button class="ph" type="button" data-cap="A Jaybird project."><img src="https://s3-media0.fl.yelpcdn.com/bphoto/g1X-rZSAyGJS__xve-PKAg/l.jpg" alt="Jaybird project photo" onerror="this.parentNode.classList.add('miss');this.remove()"><span class="lbl">Your photo here</span></button>
+    </div>
+    <div class="plate">
+      <span class="tag">Pitman, NJ · Remodeling &amp; handyman</span>
+      <h1>Skilled craftsmanship at a fair and honest price.</h1>
+      <p>Jaybird Home Remodeling &amp; Handyman Services takes on renovations, repairs, countertops and doors.</p>
+      <div class="ctas">
+        <a class="btn btn-c hm" href="tel:+18562753198">Call for a free estimate</a>
+        <a class="btn btn-l hm" href="#projects">See the projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects" style="padding-top:10px">
+  <div class="wrap">
+    <span class="tag">Pick a project</span>
+    <h2 style="margin-top:8px">What are you working on?</h2>
+    <div class="pick">
+      <div>
+        <div class="chips" role="group" aria-label="Project types">
+          <button class="chip" type="button" aria-pressed="true" data-k="counter">Countertops</button>
+          <button class="chip" type="button" aria-pressed="false" data-k="door">Doors</button>
+          <button class="chip" type="button" aria-pressed="false" data-k="repair">Repairs</button>
+          <button class="chip" type="button" aria-pressed="false" data-k="reno">Renovation</button>
+        </div>
+        <div class="note" aria-live="polite">
+          <span class="tag" id="pk">Countertops</span>
+          <h3 id="pt">Countertop installation</h3>
+          <q id="pq">Modern design meets expert craftsmanship in this countertop installation.</q>
+          <a class="btn btn-c hm" href="#estimate" id="pa">Get a free estimate</a>
+        </div>
+      </div>
+      <button class="ph pickph" type="button" id="pickph" data-cap="Modern design meets expert craftsmanship in this countertop installation. Get your free estimate today from JAYBIRD!"><img id="pimg" src="https://s3-media0.fl.yelpcdn.com/bphoto/wpCu0AXJlsySoxq0jNwYdg/l.jpg" alt="Jaybird project photo" onerror="this.parentNode.classList.add('miss');this.style.display='none'"><span class="lbl">Your photo here</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:10px">
+  <div class="wrap">
+    <span class="tag">Services</span>
+    <h2 style="margin-top:8px">Big jobs and small ones</h2>
+    <div class="planks">
+      <div class="plank"><span class="m">01 · Renovate</span><div><h3>Home remodeling and renovations</h3><p>Updating rooms and spaces around your home.</p></div><a class="btn btn-l hm" href="#estimate">Ask</a></div>
+      <div class="plank"><span class="m">02 · Fix</span><div><h3>Handyman repairs</h3><p>The repairs on your list that keep getting pushed back.</p></div><a class="btn btn-l hm" href="#estimate">Ask</a></div>
+      <div class="plank"><span class="m">03 · Install</span><div><h3>Countertop installation</h3><p>New countertops, installed and finished.</p></div><a class="btn btn-l hm" href="#estimate">Ask</a></div>
+      <div class="plank"><span class="m">04 · Replace</span><div><h3>Door replacement</h3><p>Custom replacements, like a damaged basement door made dependable again.</p></div><a class="btn btn-l hm" href="#estimate">Ask</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec way" id="way">
+  <div class="wrap">
+    <div class="quotes">
+      <span class="tag">The Jaybird way, in their own words</span>
+      <q>Built with precision, crafted with care, and always focused on your safety.</q>
+      <q>Delivering skilled craftsmanship with integrity, at a fair and honest price.</q>
+      <small>From Jaybird's project posts</small>
+    </div>
+    <div class="more" aria-label="More photo frames">
+      <div class="pf">Your photo here</div><div class="pf">Your photo here</div><div class="pf">Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec est" id="estimate">
+  <div class="wrap">
+    <div>
+      <span class="tag">Free estimate</span>
+      <h2 style="margin-top:8px">Tell Jaybird about the job.</h2>
+      <ul class="facts">
+        <li><span>Phone</span><a class="hm" href="tel:+18562753198">(856) 275-3198</a></li>
+        <li><span>Based in</span><strong>Pitman, NJ</strong></li>
+        <li><span>Estimates</span><strong>Free</strong></li>
+      </ul>
+      <a class="btn btn-c hm" href="tel:+18562753198">Call now</a>
+    </div>
+    <form id="form">
+      <label for="n">Name</label><input id="n" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required>
+      <label for="t">Project</label><select id="t"><option value="counter">Countertops</option><option value="door">Doors</option><option value="repair">Repairs</option><option value="reno">Renovation</option></select>
+      <label for="m">Details</label><textarea id="m"></textarea>
+      <button class="btn btn-c hm" type="submit">Request my free estimate</button>
+      <p class="fn" id="fn" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><p style="color:#fff;font-family:var(--slab);font-size:22px">Jaybird Home Remodeling &amp; Handyman Services</p><p>Pitman, NJ</p></div>
+    <div><p><a href="tel:+18562753198">(856) 275-3198</a></p><p>Demo preview prepared for Jaybird Home Remodeling &amp; Handyman Services</p></div>
+  </div>
+</footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project photo"><button type="button" id="lbx">Close</button><figure><div class="imgbox"><img id="lbimg" alt="Jaybird project photo"></div><figcaption id="lbcap"></figcaption></figure></div>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-c" href="tel:+18562753198">Call Jaybird</a><a class="btn btn-l" href="#estimate">Free estimate</a></div>
+
+<script>
+(function(){
+  var Y='https://s3-media0.fl.yelpcdn.com/bphoto/';
+  var P={counter:['Countertops','Countertop installation','Modern design meets expert craftsmanship in this countertop installation.','wpCu0AXJlsySoxq0jNwYdg','Modern design meets expert craftsmanship in this countertop installation. Get your free estimate today from JAYBIRD!'],
+    door:['Doors','Door replacement','This basement door went from damaged to dependable with a custom replacement made to last.','bWu2OG6SK34JfjUh3hrDZg','This basement door went from damaged to dependable with a custom replacement made to last.'],
+    repair:['Repairs','Handyman repairs','Built with precision, crafted with care, and always focused on your safety.','zaeUQ8tUkJebBpI6oZI-Ew','Built with precision, crafted with care, and always focused on your safety - that’s the JAYBIRD way!'],
+    reno:['Renovation','Home remodeling and renovations','Delivering skilled craftsmanship with integrity, at a fair and honest price.','MW-3_6XQOatnKa8tg3eOXA','Delivering skilled craftsmanship with integrity -- at a fair and honest price.']};
+  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});c.setAttribute('aria-pressed','true');var p=P[c.dataset.k];
+    document.getElementById('pk').textContent=p[0];document.getElementById('pt').textContent=p[1];document.getElementById('pq').textContent=p[2];
+    var ph=document.getElementById('pickph'),im=document.getElementById('pimg');ph.classList.remove('miss');im.style.display='';im.src=Y+p[3]+'/l.jpg';ph.dataset.cap=p[4];
+    document.getElementById('t').value=c.dataset.k;})});
+  var lb=document.getElementById('lb');
+  document.querySelectorAll('.ph').forEach(function(b){b.addEventListener('click',function(){
+    if(b.classList.contains('miss'))return;var im=b.querySelector('img');if(!im)return;
+    document.getElementById('lbimg').src=im.src;document.getElementById('lbcap').textContent=b.dataset.cap;lb.classList.add('show');document.getElementById('lbx').focus();})});
+  function close(){lb.classList.remove('show')}
+  document.getElementById('lbx').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.addEventListener('click',function(e){var b=e.target.closest('.hm');if(!b)return;b.classList.remove('tap');void b.offsetWidth;b.classList.add('tap')});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('fn').classList.add('show')});
+})();
+</script>
+</body>
+</html>

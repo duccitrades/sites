@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Riddell Electric | Electrician in Pitman, NJ since 2007</title>
+<meta name="description" content="Riddell Electric LLC, Pitman NJ. Residential and commercial electrical installs, repairs and maintenance since 2007. A+ BBB rating. Call (856) 589-6401.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F5F0; --card:#FFFFFF; --graph:#1F2124; --graph2:#2C2F33; --text:#1B1C1F; --muted:#4D5056; --line:#D9D9D1; --rule:#1F2124;
+  --spark:#C6D93A; --spark-soft:#EEF3C8; --frame:#E7E7E0;
+  --serif:'Literata',Georgia,'Times New Roman',serif;
+  --sans:'Red Hat Text',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0;letter-spacing:-.015em}
+p{margin:0 0 1em}
+a{color:var(--text)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.cap{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.top{position:sticky;top:0;z-index:40;background:var(--graph);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:20px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--serif);font-size:22px;white-space:nowrap}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--spark);box-shadow:0 0 10px var(--spark)}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:#fff;text-decoration:none;font-size:15px}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:4px;font:500 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--graph);cursor:pointer;overflow:visible}
+.btn-g{background:var(--graph);color:#fff}
+.btn-g:hover{background:#000}
+.btn-l{background:var(--card);color:var(--text)}
+.top .btn{padding:10px 14px;font-size:15px;background:#fff;color:var(--graph);border-color:#fff}
+.sparkfx{position:absolute;right:-6px;top:-6px;width:16px;height:16px;pointer-events:none;animation:zap .45s ease-out forwards}
+@keyframes zap{0%{transform:scale(.3) rotate(0);opacity:1}100%{transform:scale(1.4) rotate(40deg);opacity:0}}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:420px){.top .wrap{gap:10px}.brand{font-size:19px}.top .btn{padding:9px 11px;font-size:14px}}
+
+/* masthead + hero */
+.mast{border-bottom:3px double var(--rule);padding:22px 0 12px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.mast .cap{color:var(--text)}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:50px;padding:34px 0 60px;border-bottom:1px solid var(--rule)}
+.hero h1{font-size:clamp(40px,5.4vw,64px)}
+.stand{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.45;color:var(--muted);margin:20px 0 24px;max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.byline{margin-top:22px;font-size:15px;color:var(--muted)}
+.byline strong{color:var(--text)}
+.diagram{position:relative}
+.diagram svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.wires path{fill:none;stroke:#8A8C84;stroke-width:1.5}
+.wires path.live{stroke:var(--spark);stroke-width:3;stroke-dasharray:420;stroke-dashoffset:420;animation:run 1.6s .4s ease forwards}
+@keyframes run{to{stroke-dashoffset:0}}
+.nodes{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;gap:22px}
+.fig{margin:0}
+.fr{background:var(--frame);border:1px solid #C9C9C0;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text);font-size:15px;padding:8px}
+.fig .fr{height:180px}
+.fig:first-child{grid-column:1/3}
+.fig:first-child .fr{height:200px}
+.fig figcaption{font-size:13px;color:var(--muted);padding-top:6px;letter-spacing:.04em}
+
+/* switch panel */
+.sec{padding:76px 0}
+.sec h2{font-size:clamp(34px,4.4vw,50px)}
+.panelwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:30px}
+.plate{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.sw{text-align:center}
+.sw .cap{display:block;margin-bottom:10px}
+.rocker{width:100%;max-width:150px;height:160px;margin:0 auto;border-radius:12px;background:#ECECE6;border:1px solid #C9C9C0;padding:10px;display:grid;grid-template-rows:1fr 1fr;gap:6px}
+.rocker button{border:0;border-radius:6px;background:#fff;font:500 16px var(--sans);color:var(--text);cursor:pointer;box-shadow:0 2px 0 #C9C9C0;transition:transform .15s,background .15s}
+.rocker button[aria-pressed="true"]{background:var(--graph);color:#fff;transform:translateY(2px);box-shadow:none}
+.rocker.three{grid-template-rows:1fr 1fr 1fr;height:190px}
+.bulbcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;align-items:center}
+.bulb{width:90px;height:120px}
+.bulb .glass{fill:#F1F1EC;stroke:#8A8C84;stroke-width:2;transition:fill .3s}
+.bulb .fil{fill:none;stroke:#8A8C84;stroke-width:2}
+.lit .bulb .glass{fill:var(--spark-soft)}
+.lit .bulb .fil{stroke:#7E8E10}
+.bulbcard h3{font-size:28px;margin:4px 0 8px}
+.bulbcard p{margin:0 0 14px;color:var(--muted)}
+
+/* columns */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule)}
+.col{padding:26px 26px 6px 0}
+.col+.col{padding-left:26px;border-left:1px solid var(--line)}
+.col h3{font-size:26px;margin:8px 0 12px}
+.col ul{margin:0;padding:0;list-style:none}
+.col li{padding:8px 0;border-top:1px solid var(--line)}
+.pull{margin:40px 0 0;padding:26px 0;border-top:3px double var(--rule);border-bottom:3px double var(--rule);text-align:center}
+.pull blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(26px,3.4vw,38px);line-height:1.25}
+.pull cite{display:block;font-style:normal;margin-top:12px;color:var(--muted);font-size:15px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+.rv{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--graph);padding:24px}
+.rv blockquote{margin:0;font-family:var(--serif);font-size:20px;line-height:1.4}
+.rv cite{display:block;font-style:normal;color:var(--muted);font-size:14px;margin-top:12px}
+.score{font-family:var(--serif);font-size:20px}
+
+.legend{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:28px}
+.legend .fr{height:170px}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+form{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #A9AAA2;border-radius:4px;background:#fff;color:var(--text);margin-bottom:14px}
+.fn{display:none;margin-top:12px;padding:12px;background:var(--spark-soft);border-radius:4px;font-weight:500}
+.fn.show{display:block}
+.facts{list-style:none;margin:20px 0 24px;padding:0}
+.facts li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.facts li span{color:var(--muted)}
+
+footer{background:var(--graph);color:#fff;padding:48px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{margin:4px 0;color:#D6D7D2;font-size:15px}
+footer a{color:#fff}
+.badge{position:fixed;right:14px;bottom:14px;z-index:60;background:#fff;color:var(--graph);border:1px solid #A9AAA2;border-radius:4px;padding:7px 12px;font:500 13px var(--sans);letter-spacing:.06em}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero,.panelwrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .cols{grid-template-columns:minmax(0,1fr)}
+  .col,.col+.col{padding:22px 0 6px;border-left:0}
+  .col+.col{border-top:1px solid var(--line)}
+  .revs{grid-template-columns:minmax(0,1fr)}
+  .legend{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .legend .fr:last-child{grid-column:1/3}
+  .sec{padding:56px 0}
+}
+@media(max-width:700px){
+  .mast{padding:14px 0 8px}
+  .mast .cap:last-child{display:none}
+  .hero{padding:20px 0 44px;gap:26px}
+  .hero h1{font-size:36px}
+  .stand{font-size:18px;margin:12px 0 18px}
+  .byline{display:none}
+  .nodes{gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fig:first-child{grid-column:auto}
+  .fig .fr,.fig:first-child .fr{height:104px;font-size:13px}
+  .diagram{order:-1}
+  .plate{padding:20px;gap:14px}
+  .bulbcard{grid-template-columns:minmax(0,1fr)}
+  .legend .fr{height:130px}
+  .badge{bottom:80px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--graph);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 8px}
+  .callbar .btn-g{background:#fff;color:var(--graph);border-color:#fff}
+  .callbar .btn-l{background:transparent;color:#fff;border-color:#fff}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.wires path.live{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Riddell Electric</a>
+    <nav class="nav" aria-label="Main"><a href="#switch">Flip a switch</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></nav>
+    <a class="btn zap" href="tel:+18565896401">(856) 589-6401</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="mast"><span class="cap">Riddell Electric LLC · Pitman, New Jersey</span><span class="cap">Since 2007 · Homes and businesses</span></div>
+  <section class="hero" aria-label="Introduction">
+    <div>
+      <h1>Wiring, repairs and upkeep from a Pitman electrician since 2007.</h1>
+      <p class="stand">Riddell Electric handles electrical installs, repairs and maintenance for homes and businesses.</p>
+      <div class="ctas">
+        <a class="btn btn-g zap" href="tel:+18565896401">Call (856) 589-6401</a>
+        <a class="btn btn-l zap" href="#switch">Flip a switch</a>
+      </div>
+      <p class="byline"><strong>5.0</strong> from 7 reviews · <strong>A+</strong> with the BBB · Managing member Chris Riddell</p>
+    </div>
+    <div class="diagram" aria-label="Photo frames for Riddell's work">
+      <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="live" d="M50 0 V8 H25 V58 M50 8 H75 V58" vector-effect="non-scaling-stroke"/></svg>
+      <div class="nodes">
+        <figure class="fig"><div class="fr">Your photo here</div><figcaption>Fig. 1 · On the job</figcaption></figure>
+        <figure class="fig"><div class="fr">Your photo here</div><figcaption>Fig. 2 · Panel work</figcaption></figure>
+        <figure class="fig"><div class="fr">Your photo here</div><figcaption>Fig. 3 · Finished install</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="sec" id="switch">
+  <div class="wrap">
+    <span class="cap">Flip a switch</span>
+    <h2 style="margin-top:8px">What kind of job is it?</h2>
+    <div class="panelwrap">
+      <div class="plate" role="group" aria-label="Job switches">
+        <div class="sw"><span class="cap">Where</span><div class="rocker" id="where"><button type="button" aria-pressed="false" data-v="home">Home</button><button type="button" aria-pressed="false" data-v="biz">Business</button></div></div>
+        <div class="sw"><span class="cap">What</span><div class="rocker three" id="what"><button type="button" aria-pressed="false" data-v="install">Install</button><button type="button" aria-pressed="false" data-v="repair">Repair</button><button type="button" aria-pressed="false" data-v="maint">Maintain</button></div></div>
+      </div>
+      <div class="bulbcard" id="bulbcard" aria-live="polite">
+        <svg class="bulb" viewBox="0 0 90 120" aria-hidden="true"><path class="glass" d="M45 6a34 34 0 0 0-20 61c5 4 7 9 7 15v8h26v-8c0-6 2-11 7-15A34 34 0 0 0 45 6z"/><path class="fil" d="M36 88V64l5-10 4 8 4-8 5 10v24"/><rect x="32" y="92" width="26" height="8" rx="2" fill="#8A8C84"/><rect x="35" y="102" width="20" height="8" rx="2" fill="#8A8C84"/></svg>
+        <div><span class="cap" id="bk">Both switches off</span><h3 id="bt">Flip both switches</h3><p id="bd">Pick where and what, and the bulb tells you if it's Riddell's kind of job.</p><a class="btn btn-g zap" href="tel:+18565896401">Call Riddell</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:10px">
+  <div class="wrap">
+    <div class="cols">
+      <div class="col"><span class="cap">Services</span><h3>What Riddell does</h3><ul><li>Residential electrical installation</li><li>Commercial electrical installation</li><li>Electrical repairs</li><li>Electrical maintenance</li></ul></div>
+      <div class="col"><span class="cap">The record</span><h3>Since 2007</h3><p>Riddell Electric LLC started in June 2007. Chris Riddell is the managing member, and the company holds an A+ rating with the Better Business Bureau.</p></div>
+      <div class="col"><span class="cap">Reach</span><h3>One call</h3><p>Call <a class="zap" href="tel:+18565896401">(856) 589-6401</a> and describe the job. One customer review mentions timely call backs and appointments set around her schedule.</p></div>
+    </div>
+    <div class="pull"><blockquote>"They are very dependable and can handle a variety of electrical services."</blockquote><cite>Mary Ann I. · Merchant Circle</cite></div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" style="padding-top:10px">
+  <div class="wrap">
+    <span class="cap">Reviews</span>
+    <h2 style="margin-top:8px">Efficient, neat and fair.</h2>
+    <p class="score" style="margin-top:12px">5.0 from 7 reviews</p>
+    <div class="revs">
+      <figure class="rv" style="margin:0"><blockquote>"Not only were they efficient and neat, their fees were extremely fair."</blockquote><cite>Eric · Merchant Circle</cite></figure>
+      <figure class="rv" style="margin:0"><blockquote>"Work was done in an efficient manner."</blockquote><cite>Mary Ann I. · Merchant Circle</cite></figure>
+      <figure class="rv" style="margin:0"><blockquote>"I will use them again"</blockquote><cite>Eric · Merchant Circle</cite></figure>
+    </div>
+    <div class="legend" aria-label="More photo frames">
+      <div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div>
+      <span class="cap">Contact</span>
+      <h2 style="margin-top:8px">Tell Riddell about the job.</h2>
+      <ul class="facts">
+        <li><span>Phone</span><a class="zap" href="tel:+18565896401">(856) 589-6401</a></li>
+        <li><span>Based in</span><strong>Pitman, NJ</strong></li>
+        <li><span>Works on</span><strong>Homes and businesses</strong></li>
+      </ul>
+      <a class="btn btn-g zap" href="tel:+18565896401">Call now</a>
+    </div>
+    <form id="form">
+      <label for="n">Name</label><input id="n" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required>
+      <label for="t">Job type</label><select id="t"><option>Install</option><option>Repair</option><option>Maintenance</option><option>Not sure</option></select>
+      <label for="m">Details</label><textarea id="m"></textarea>
+      <button class="btn btn-g zap" type="submit">Send</button>
+      <p class="fn" id="fn" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><p style="color:#fff;font-family:var(--serif);font-size:22px">Riddell Electric LLC</p><p>Pitman, NJ · Since 2007</p></div>
+    <div><p><a href="tel:+18565896401">(856) 589-6401</a></p><p>Demo preview prepared for Riddell Electric</p></div>
+  </div>
+</footer>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-g" href="tel:+18565896401">Call Riddell</a><a class="btn btn-l" href="#contact">Send details</a></div>
+
+<script>
+(function(){
+  var sel={where:null,what:null};
+  var W={home:'your home',biz:'your business'},T={install:'Electrical installation',repair:'Electrical repair',maint:'Electrical maintenance'};
+  function upd(){
+    var c=document.getElementById('bulbcard');
+    if(sel.where&&sel.what){c.classList.add('lit');
+      document.getElementById('bk').textContent='Switches on';
+      document.getElementById('bt').textContent=T[sel.what]+' for '+W[sel.where];
+      document.getElementById('bd').textContent='That is Riddell’s kind of job: '+(sel.where==='home'?'residential':'commercial')+' electrical '+(sel.what==='maint'?'maintenance':sel.what==='install'?'installation':'repairs')+'. Call and describe what you need.';
+    } else {document.getElementById('bk').textContent='One more switch';}
+  }
+  ['where','what'].forEach(function(id){document.querySelectorAll('#'+id+' button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('#'+id+' button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');sel[id]=b.dataset.v;upd();})})});
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click',function(e){var b=e.target.closest('.zap');if(!b||rm)return;
+    var s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 16 16');s.setAttribute('class','sparkfx');s.setAttribute('aria-hidden','true');
+    s.innerHTML='<path d="M9 0L3 9h4l-1 7 7-10H9z" fill="#C6D93A" stroke="#1F2124" stroke-width=".8"/>';
+    if(getComputedStyle(b).position==='static')b.style.position='relative';b.appendChild(s);setTimeout(function(){s.remove()},480);});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('fn').classList.add('show')});
+})();
+</script>
+</body>
+</html>

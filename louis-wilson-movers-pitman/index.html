@@ -237,6 +237,19 @@ footer .demo-line{width:100%;border-top:1px solid rgba(217,185,138,.35);padding-
   html{scroll-behavior:auto}
   .truck{left:auto;right:10%}
 }
+
+/* photo spots (phone fix): solid backing, text straight in the frame */
+.photo-frame{flex-direction:column;font-family:"Young Serif",Georgia,serif;font-size:18px;color:var(--text);gap:4px;padding:12px}
+.photo-frame small{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:13px;color:#5A4A3C}
+.stage .pf1,.strip .photo-frame{background:#FBF6EE!important;border:1.5px dashed #B99A6E}
+.strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.strip .photo-frame{margin-top:0!important}
+.polas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;max-width:470px}
+.pola{position:relative;height:118px;background:#FBF6EE;border:1.5px dashed #B99A6E;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:"Young Serif",Georgia,serif;font-size:15px;line-height:1.2;color:var(--text);padding:8px;box-shadow:0 10px 22px -16px rgba(58,42,30,.6)}
+.pola small{font-family:"Hanken Grotesk",system-ui,sans-serif;font-size:12px;color:#5A4A3C;margin-top:4px}
+.pola:before{content:"";position:absolute;top:-8px;left:50%;width:46px;height:14px;margin-left:-23px;background:rgba(217,185,138,.85);transform:rotate(-4deg)}
+.pola:nth-child(1){transform:rotate(-2deg)}.pola:nth-child(3){transform:rotate(2deg)}
+@media(max-width:600px){.polas{gap:9px;margin-top:18px}.pola{height:96px;font-size:13px}.strip{grid-template-columns:1fr 1fr!important}.strip .photo-frame{height:150px!important}}
 </style>
 </head>
 <body>
@@ -263,9 +276,10 @@ footer .demo-line{width:100%;border-top:1px solid rgba(217,185,138,.35);padding-
         <a class="btn ghost" href="#pack">Plan your move</a>
       </div>
       <div class="status" id="status"><i></i><span>Mon to Fri, 8am to 6pm</span></div>
+      <div class="polas" aria-label="Photo frames for Louis's moves"><div class="pola">Your photo here<small>Moving day</small></div><div class="pola">Your photo here<small>The truck</small></div><div class="pola">Your photo here<small>Happy customers</small></div></div>
     </div>
     <div class="stage" aria-hidden="true">
-      <div class="photo-frame pf1"><span class="t1"></span><span class="t2"></span><div class="ph"><b>Your truck photo here</b>Personalized photos of Louis's trucks and crew will go here</div></div>
+      <div class="photo-frame pf1"><span class="t1"></span><span class="t2"></span>Your photo here<small>Louis's trucks and crew</small></div>
       <div class="box" id="heroBox">
         <div class="body">
           <div class="arrows"><i></i><i></i></div>
@@ -329,8 +343,8 @@ footer .demo-line{width:100%;border-top:1px solid rgba(217,185,138,.35);padding-
       <div class="row"><span class="n">d.</span><div><h3>Hauling</h3><p>Furniture, storage units and the big items that won't fit in your car.</p></div></div>
     </div>
     <div class="strip">
-      <div class="photo-frame"><span class="t1"></span><div class="ph"><b>Your crew photo here</b>Personalized photos will go here</div></div>
-      <div class="photo-frame"><span class="t1"></span><div class="ph"><b>Your job photo here</b>Personalized photos will go here</div></div>
+      <div class="photo-frame"><span class="t1"></span>Your photo here<small>The crew</small></div>
+      <div class="photo-frame"><span class="t1"></span>Your photo here<small>A recent move</small></div><div class="photo-frame"><span class="t1"></span>Your photo here<small>Loading the truck</small></div><div class="photo-frame"><span class="t1"></span>Your photo here<small>Boxes, wrapped and labeled</small></div>
     </div>
   </div>
 </section>

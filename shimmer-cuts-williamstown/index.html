@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Shimmer Cuts | Haircuts in Williamstown, NJ</title>
+<meta name="description" content="Shimmer Cuts, 621 S Main St, Williamstown NJ. Haircuts for men, women and kids, plus styling. Rated 4.9 on Google. Call (856) 629-8002.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#FBF6F0; --card:#FFFFFF; --dark:#2B2420; --clay:#A84A26; --clay-d:#8E3D1E; --apricot:#F2B38C; --peach:#FBE3D3;
+  --text:#231D1A; --muted:#5A4E47; --line:#E8DCD0; --mirror:#F3E9DF;
+  --serif:'Gloock',Georgia,'Times New Roman',serif;
+  --sans:'Nunito Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--linen);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0}
+p{margin:0 0 1em}
+a{color:var(--clay-d)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--clay-d);letter-spacing:.04em}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(251,246,240,.97);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:22px;height:66px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-size:25px;color:var(--text);text-decoration:none;white-space:nowrap}
+.spark{width:18px;height:18px;color:var(--clay)}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:600}
+.nav a:hover{color:var(--clay-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:14px;font:600 16px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn-clay{background:var(--clay);color:#fff}
+.btn-clay:hover{background:var(--clay-d)}
+.btn-soft{background:var(--card);color:var(--text);border-color:#D5C4B4}
+.top .btn{padding:10px 15px;font-size:15px}
+.sc{width:18px;height:18px;flex:none}
+.sc .b1,.sc .b2{transform-origin:12px 12px;transition:transform .18s}
+.btn.snip .sc .b1{transform:rotate(14deg)}
+.btn.snip .sc .b2{transform:rotate(-14deg)}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:420px){.top .wrap{gap:10px}.logo{font-size:21px}.top .btn{padding:9px 11px;font-size:14px;gap:6px}}
+
+/* hero split */
+.hero{padding:54px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:50px;align-items:center}
+.hero h1{font-size:clamp(42px,5.6vw,64px);margin:14px 0 18px}
+.hero .sub{font-size:19px;color:var(--muted);max-width:34ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:600}
+.status i{width:10px;height:10px;border-radius:50%;background:#9A8B80}
+.status.open i{background:#2F7A4C;box-shadow:0 0 0 4px rgba(47,122,76,.16)}
+.stars{margin-top:14px;font-size:15px;color:var(--muted)}
+.stars b{color:var(--text)}
+.mirrors{position:relative;height:470px}
+.mir{position:absolute;border-radius:50%;background:var(--mirror);border:10px solid var(--card);box-shadow:0 0 0 1.5px #D9C3B0,0 24px 40px -26px rgba(43,36,32,.55);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-size:20px;color:var(--text);overflow:hidden;padding:20px}
+.mir{isolation:isolate}.mir:after{content:"";z-index:-1;position:absolute;top:-20%;bottom:-20%;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-14deg);animation:sweep 1.6s .6s ease-out forwards}
+.mir.m2:after{animation-delay:.85s}.mir.m3:after{animation-delay:1.1s}
+@keyframes sweep{to{left:160%}}
+.m1{width:300px;height:300px;left:2%;top:10px}
+.m2{width:210px;height:210px;right:2%;top:40px}
+.m3{width:230px;height:230px;right:16%;bottom:0}
+.stand{position:absolute;left:50%;bottom:-6px;width:70%;height:12px;margin-left:-35%;border-radius:12px;background:var(--apricot);opacity:.6}
+
+/* day picker */
+.sec{padding:80px 0}
+.sec h2{font-size:clamp(34px,4.4vw,50px)}
+.days-wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;align-items:center;margin-top:34px}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.day{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px 4px;text-align:center;cursor:pointer;font:600 15px var(--sans);color:var(--text);transition:transform .2s}
+.day small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:4px}
+.day:hover{transform:translateY(-3px)}
+.day.closed{background:#F4EEE8;color:var(--muted)}
+.day[aria-pressed="true"]{background:var(--dark);border-color:var(--dark);color:#fff}
+.day[aria-pressed="true"] small{color:#E9DDD3}
+.appt{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 30px 26px;box-shadow:0 24px 40px -32px rgba(43,36,32,.5)}
+.appt:before{content:"";position:absolute;left:24px;right:24px;top:0;height:6px;border-radius:0 0 6px 6px;background:var(--apricot)}
+.appt .eyebrow{display:block}
+.appt h3{font-size:38px;margin:8px 0 6px}
+.appt .hrs{font-size:20px;font-weight:600;margin-bottom:8px}
+.appt p{color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 22px;min-height:230px;text-align:left;cursor:pointer;font:inherit;color:var(--text);display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s}
+.card:hover{transform:translateY(-3px)}
+.card h3{font-size:28px}
+.card .hint{font-size:14px;font-weight:600;color:var(--clay-d)}
+.card .back{display:none}
+.card.on{background:var(--peach);border-color:#EBC7AE;animation:turn .35s}
+.card.on .front{display:none}.card.on .back{display:block}
+.card .back p{margin:0 0 10px;font-size:16px}
+.card .back q{display:block;font-family:var(--serif);font-size:19px;line-height:1.3;quotes:"\201C" "\201D"}
+.card .back cite{display:block;font-style:normal;font-size:14px;color:var(--muted);margin-top:8px}
+@keyframes turn{0%{transform:scaleX(.9)}100%{transform:none}}
+
+/* reviews */
+.rev{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.score{font-family:var(--serif);font-size:64px;line-height:1}
+.score small{font-family:var(--sans);font-size:16px;color:var(--muted);display:block;margin-top:6px}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:34px}
+.qt{background:var(--linen);border:1px solid var(--line);border-radius:20px;padding:28px}
+.qt blockquote{margin:0;font-family:var(--serif);font-size:24px;line-height:1.3}
+.qt cite{display:block;font-style:normal;font-size:15px;color:var(--muted);margin-top:14px}
+.qt:nth-child(2){transform:rotate(.6deg)}.qt:nth-child(3){transform:rotate(-.6deg)}
+
+/* photos */
+.arches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:30px}
+.arch{height:260px;border-radius:200px 200px 16px 16px;background:var(--mirror);border:1px solid #E2CDBB;display:flex;align-items:center;justify-content:center;text-align:center;font-size:15px;font-weight:600;color:var(--text);padding:12px}
+.arch:nth-child(even){margin-top:34px}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.hours{list-style:none;margin:20px 0 0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.hours li{display:flex;justify-content:space-between;padding:13px 22px;border-top:1px solid var(--line)}
+.hours li:first-child{border-top:0}
+.hours li.today{background:var(--dark);color:#fff;font-weight:600}
+.addr{font-size:20px;margin:20px 0 22px}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin-top:26px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid #CDB9A8;border-radius:12px;background:#fff;color:var(--text);margin-bottom:14px}
+.formnote{display:none;margin-top:12px;padding:12px 14px;background:var(--peach);border-radius:12px;font-weight:600}
+.formnote.show{display:block}
+
+footer{background:var(--dark);color:#fff;padding:50px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+footer p{margin:4px 0;color:#E9DDD3;font-size:15px}
+footer a{color:#fff}
+footer .logo{color:#fff}
+.badge{position:fixed;right:14px;bottom:14px;z-index:60;background:var(--card);color:var(--text);border:1px solid #D5C4B4;border-radius:12px;padding:7px 12px;font:600 13px var(--sans);box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero .wrap,.days-wrap,.visit .wrap{grid-template-columns:minmax(0,1fr)}
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes{grid-template-columns:minmax(0,1fr)}
+  .arches{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .arches .arch:nth-child(n+4){height:200px}
+  .sec{padding:60px 0}
+}
+@media(max-width:700px){
+  .hero{padding:26px 0 50px}
+  .hero .wrap{gap:24px}
+  .hero h1{font-size:40px;margin:10px 0 12px}
+  .hero .sub{font-size:17px}
+  .ctas{margin-top:18px}
+  .mirrors{height:170px;order:-1}
+  .mir{border-width:6px;font-size:15px;padding:10px}
+  .m1{width:150px;height:150px;left:0;top:6px}
+  .m2{width:110px;height:110px;left:auto;right:0;top:0}
+  .m3{width:120px;height:120px;right:auto;left:132px;bottom:0}
+  .week{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .arch{height:180px;font-size:13px}
+  .arch:nth-child(even){margin-top:20px}
+  .card{min-height:200px}
+  .badge{bottom:80px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--dark);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 8px}
+  .callbar .btn-soft{background:transparent;color:#fff;border-color:#fff}
+}
+@media(max-width:420px){.svc{grid-template-columns:minmax(0,1fr)}.card{min-height:0;gap:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.mir:after{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="spark" viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z" fill="currentColor"/></symbol>
+</defs></svg>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="spark" aria-hidden="true"><use href="#spark"/></svg>Shimmer Cuts</a>
+    <nav class="nav" aria-label="Main"><a href="#day">Hours</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+    <a class="btn btn-clay snippy" href="tel:+18566298002"><svg class="sc" viewBox="0 0 24 24" aria-hidden="true"><g class="b1"><path d="M12 12L21 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.3 15L12 12" stroke="currentColor" stroke-width="2"/></g><g class="b2"><path d="M12 12L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.3 9L12 12" stroke="currentColor" stroke-width="2"/></g></svg>(856) 629-8002</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">621 S Main St · Williamstown, NJ</span>
+      <h1>Good haircuts on South Main Street.</h1>
+      <p class="sub">Shimmer Cuts is a small, friendly shop in Williamstown cutting hair for men, women and kids.</p>
+      <div class="ctas">
+        <a class="btn btn-clay snippy" href="tel:+18566298002"><svg class="sc" viewBox="0 0 24 24" aria-hidden="true"><g class="b1"><path d="M12 12L21 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="2"/></g><g class="b2"><path d="M12 12L21 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="2"/></g></svg>Call to book</a>
+        <a class="btn btn-soft snippy" href="#day">Pick a day</a>
+      </div>
+      <div class="status" id="status"><i></i><span id="statusText">Hours vary by day</span></div>
+      <p class="stars"><b>4.9 on Google</b> from 20 reviews</p>
+    </div>
+    <div class="mirrors" aria-label="Photo frames for the shop">
+      <div class="mir m1">Your photo here</div>
+      <div class="mir m2">Your photo here</div>
+      <div class="mir m3">Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="day" style="padding-top:20px">
+  <div class="wrap">
+    <span class="eyebrow">Plan your visit</span>
+    <h2 style="margin-top:8px">Pick a day to see the hours.</h2>
+    <div class="days-wrap">
+      <div class="week" role="group" aria-label="Days of the week" id="week"></div>
+      <div class="appt" aria-live="polite">
+        <span class="eyebrow" id="apDay">Today</span>
+        <h3 id="apTitle">Pick a day</h3>
+        <div class="hrs" id="apHrs">&nbsp;</div>
+        <p id="apNote">Hours change through the week, so a quick call is the easiest way to get a time.</p>
+        <a class="btn btn-clay snippy" href="tel:+18566298002">Call (856) 629-8002</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:20px">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 style="margin-top:8px">Cuts for the whole family. Tap a card.</h2>
+    <div class="svc">
+      <button class="card" type="button"><span class="front"><h3>Men's haircuts</h3></span><span class="front hint">Tap to see more</span><span class="back"><p>Regular trims and fresh cuts.</p><q>Donna is the only one will cut my hair now</q><cite>Thomas C. · Google</cite></span></button>
+      <button class="card" type="button"><span class="front"><h3>Women's haircuts</h3></span><span class="front hint">Tap to see more</span><span class="back"><p>Cuts and trims with time to talk about what you want.</p><q>Great service and conversation.</q><cite>Scott G. · Google</cite></span></button>
+      <button class="card" type="button"><span class="front"><h3>Kids' haircuts</h3></span><span class="front hint">Tap to see more</span><span class="back"><p>A calm chair for little ones.</p><q>She is patient and personable, and made him feel at ease.</q><cite>Lisa A. · Google</cite></span></button>
+      <button class="card" type="button"><span class="front"><h3>Styling</h3></span><span class="front hint">Tap to see more</span><span class="back"><p>Styling to finish your look. Call to ask about what you have in mind.</p><q>Donna the owner operator is a kind and attentive person.</q><cite>Ariel L. · Google</cite></span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev" id="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <div><span class="eyebrow">What neighbors say</span><h2 style="margin-top:8px">Kind, patient and easy to talk to.</h2></div>
+      <div class="score">4.9<small>from 20 Google reviews</small></div>
+    </div>
+    <div class="quotes">
+      <figure class="qt"><blockquote>"It's about people, and Donna the owner operator is a kind and attentive person."</blockquote><cite>Ariel L. · Google</cite></figure>
+      <figure class="qt"><blockquote>"Donna was amazing with my young son's hair. She is patient and personable, and made him feel at ease."</blockquote><cite>Lisa A. · Google</cite></figure>
+      <figure class="qt"><blockquote>"Donna is the only one will cut my hair now"</blockquote><cite>Thomas C. · Google</cite></figure>
+      <figure class="qt"><blockquote>"Great service and conversation."</blockquote><cite>Scott G. · Google</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="photos">
+  <div class="wrap">
+    <span class="eyebrow">Inside the shop</span>
+    <h2 style="margin-top:8px">Fresh cuts, coming soon to this wall.</h2>
+    <div class="arches">
+      <div class="arch">Your photo here</div><div class="arch">Your photo here</div><div class="arch">Your photo here</div><div class="arch">Your photo here</div><div class="arch">Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit" style="padding-top:20px">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Visit</span>
+      <h2 style="margin-top:8px">621 S Main St</h2>
+      <p class="addr">Williamstown, NJ 08094</p>
+      <div class="ctas">
+        <a class="btn btn-clay snippy" href="tel:+18566298002">Call (856) 629-8002</a>
+        <a class="btn btn-soft snippy" href="https://www.google.com/maps/dir/?api=1&amp;destination=621%20S%20Main%20St%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <form id="form">
+        <label for="n">Name</label><input id="n" autocomplete="name" required>
+        <label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required>
+        <label for="w">Who's the cut for?</label><select id="w"><option>Me</option><option>My child</option><option>The whole family</option></select>
+        <button class="btn btn-clay snippy" type="submit">Ask for a time</button>
+        <p class="formnote" id="note" role="status">This is a demo. On your real site this sends straight to you.</p>
+      </form>
+    </div>
+    <div>
+      <span class="eyebrow">Hours</span>
+      <ul class="hours" id="hours"></ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top"><svg class="spark" aria-hidden="true" style="color:#F2B38C"><use href="#spark"/></svg>Shimmer Cuts</a><p>621 S Main St, Williamstown, NJ 08094</p></div>
+    <div><p><a href="tel:+18566298002">(856) 629-8002</a></p><p>Demo preview prepared for Shimmer Cuts</p></div>
+  </div>
+</footer>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-clay" href="tel:+18566298002">Call to book</a><a class="btn btn-soft" href="https://www.google.com/maps/dir/?api=1&amp;destination=621%20S%20Main%20St%2C%20Williamstown%2C%20NJ%2008094" target="_blank" rel="noopener">Directions</a></div>
+
+<script>
+(function(){
+  var N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var H={0:null,1:[10,17],2:[12,17],3:null,4:[12,17],5:[10,17],6:[9,14]};
+  var fmt=function(h){return (h>12?h-12:h)+(h>=12?' pm':' am')};
+  var txt=function(d){return H[d]?fmt(H[d][0])+' to '+fmt(H[d][1]):'Closed'};
+  var now=new Date(), today=now.getDay(), hr=now.getHours()+now.getMinutes()/60;
+  // status
+  var st=document.getElementById('status'), t=H[today];
+  if(t&&hr>=t[0]&&hr<t[1]){st.classList.add('open');document.getElementById('statusText').textContent='Open now until '+fmt(t[1]);}
+  else{var n=1;while(n<8&&!H[(today+n)%7])n++;var nd=(today+n)%7;
+    if(t&&hr<t[0]){document.getElementById('statusText').textContent='Closed now, opens today at '+fmt(t[0]);}
+    else{document.getElementById('statusText').textContent='Closed now, opens '+(n===1?'tomorrow':N[nd])+' at '+fmt(H[nd][0]);}}
+  // hours list
+  var ul=document.getElementById('hours'),order=[1,2,3,4,5,6,0];
+  order.forEach(function(d){var li=document.createElement('li');if(d===today)li.className='today';li.innerHTML='<span>'+N[d]+(d===today?' (today)':'')+'</span><span>'+txt(d)+'</span>';ul.appendChild(li)});
+  // day picker
+  var wk=document.getElementById('week');
+  function pick(d,btn){
+    wk.querySelectorAll('.day').forEach(function(b){b.setAttribute('aria-pressed','false')});btn.setAttribute('aria-pressed','true');
+    document.getElementById('apDay').textContent=d===today?'Today':'Plan ahead';
+    document.getElementById('apTitle').textContent=N[d];
+    document.getElementById('apHrs').textContent=txt(d);
+    document.getElementById('apNote').textContent=H[d]?(H[d][1]-H[d][0]<=5?'A shorter day, so call ahead for a time.':'One of the longer days. Call to grab a time.'):'The shop is closed '+N[d]+'s. Pick another day or call to plan ahead.';
+  }
+  order.forEach(function(d){var b=document.createElement('button');b.type='button';b.className='day'+(H[d]?'':' closed');b.setAttribute('aria-pressed','false');
+    b.innerHTML=N[d].slice(0,3)+'<small>'+(H[d]?fmt(H[d][0]).replace(' ',''):'Closed')+'</small>';
+    b.addEventListener('click',function(){pick(d,b)});wk.appendChild(b);if(d===today)pick(d,b);});
+  // flip cards
+  document.querySelectorAll('.card').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('on')})});
+  // snip
+  document.addEventListener('click',function(e){var b=e.target.closest('.snippy');if(!b)return;b.classList.add('snip');setTimeout(function(){b.classList.remove('snip')},220)});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('note').classList.add('show')});
+})();
+</script>
+</body>
+</html>

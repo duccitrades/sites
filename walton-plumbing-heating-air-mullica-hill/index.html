@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Walton Plumbing, Heating &amp; Air | Mullica Hill, NJ</title>
+<meta name="description" content="Walton Plumbing, Heating & Air Conditioning, 1020 Mullica Hill Rd, Mullica Hill NJ. Family owned plumbing, heating and AC for homes and businesses in South Jersey. Call (856) 769-1403.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3F5F2; --card:#FFFFFF; --spruce:#17292B; --teal:#0E6A68; --teal-d:#0B5553; --text:#16201F; --muted:#4A5755;
+  --line:#D6DDD9; --tag:#E9E3D2; --tagline:#B9A57A; --flame:#E07A3F; --frame:#E4EAE6;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-weight:500;line-height:1.1;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--teal-d)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--spruce);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:500;font-size:18px;white-space:nowrap}
+.brand svg{width:30px;height:30px;flex:none}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:#fff;text-decoration:none;font-size:15px}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:8px;font:500 16px/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn .valve{width:18px;height:18px;flex:none;transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.btn.turn .valve{transform:rotate(90deg)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d)}
+.btn-line{background:var(--card);color:var(--text);border-color:#9FB0AB}
+.top .btn{padding:10px 15px;font-size:15px;background:#fff;color:var(--spruce)}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:430px){.top .wrap{gap:10px}.brand{font-size:15px}.brand svg{width:24px;height:24px}.brand .long{display:none}.top .btn{padding:9px 11px;font-size:14px;gap:6px}}
+
+/* hero */
+.hero{padding:76px 0 40px;text-align:center}
+.hero .mono{display:inline-flex;align-items:center;gap:10px}
+.flame{width:9px;height:12px;background:var(--flame);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;display:inline-block;animation:flick 2.4s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.82)}}
+.hero h1{font-size:clamp(40px,6vw,66px);max-width:17ch;margin:18px auto 20px}
+.hero .sub{font-size:19px;color:var(--muted);max-width:44ch;margin:0 auto 28px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.pipe{display:block;width:100%;height:70px;margin-top:34px}
+.pipe path{fill:none;stroke:var(--teal);stroke-width:6;stroke-linecap:round;stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 2.2s .3s cubic-bezier(.6,.1,.3,1) forwards}
+.pipe circle{fill:var(--card);stroke:var(--teal);stroke-width:3;opacity:0;animation:show .3s 2.3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes show{to{opacity:1}}
+.frames{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:-6px}
+.fr{position:relative;height:190px;border-radius:10px;background:var(--frame);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;font-size:15px;color:var(--text);padding:10px}
+.fr .ttag{position:absolute;top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);background:var(--tag);border:1px solid var(--tagline);border-radius:3px 3px 3px 3px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:3px 9px;color:#3B3322;white-space:nowrap}
+
+/* picker */
+.sec{padding:84px 0}
+.sec h2{font-size:clamp(34px,4.4vw,50px)}
+.center{text-align:center}
+.center p.lead{max-width:48ch;margin:14px auto 0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:38px 0 30px}
+.btag{position:relative;background:var(--tag);border:1px solid var(--tagline);color:#2D2719;font:500 16px var(--sans);padding:14px 22px 14px 40px;border-radius:6px 22px 22px 6px;cursor:pointer;transition:transform .2s}
+.btag:before{content:"";position:absolute;left:14px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--base);border:1.5px solid var(--tagline)}
+.btag:hover{transform:rotate(-2deg)}
+.btag[aria-pressed="true"]{background:var(--spruce);color:#fff;border-color:var(--spruce)}
+.btag[aria-pressed="true"]:before{background:var(--flame);border-color:var(--flame)}
+.answer{max-width:720px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 30px;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center}
+.answer h3{font-size:26px;margin:6px 0 8px}
+.answer p{margin:0;color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:40px}
+.col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.col h3{font-size:28px;margin:6px 0 14px}
+.col ul{list-style:none;margin:0;padding:0}
+.col li{padding:12px 0;border-top:1px solid var(--line);display:flex;gap:12px}
+.col li:before{content:"";flex:none;width:8px;height:8px;margin-top:10px;border-radius:50%;background:var(--teal)}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.about h2{margin:10px 0 18px}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.areas span{font-family:var(--mono);font-size:13px;padding:6px 12px;border:1px solid #9FB0AB;border-radius:999px;color:var(--text);background:var(--card)}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.duo .fr{height:280px}
+.duo .fr:nth-child(2){margin-top:46px}
+
+/* visit */
+.visit{background:var(--spruce);color:#fff}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.visit h2{color:#fff;margin:8px 0 16px}
+.visit .mono{color:#C9D6D3}
+.visit p{color:#DCE5E2}
+.visit .btn-line{background:transparent;color:#fff;border-color:#fff}
+.visit .ctas{justify-content:flex-start}
+.facts{list-style:none;margin:0 0 26px;padding:0}
+.facts li{padding:12px 0;border-top:1px solid #35504F;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.facts li span{color:#C9D6D3}
+.facts a{color:#fff}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.strip .fr{height:170px;background:#24393B;border-color:#35504F;color:#fff}
+
+/* form */
+.quote{max-width:640px;margin:0 auto}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:30px;text-align:left}
+label{display:block;font-size:14px;font-weight:500;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid #A9B7B3;border-radius:8px;background:#fff;color:var(--text);margin-bottom:16px}
+textarea{min-height:90px}
+.formnote{display:none;margin-top:14px;padding:14px;border-radius:8px;background:#E3F0EE;color:var(--text);font-weight:500}
+.formnote.show{display:block}
+
+footer{background:#0F1C1D;color:#fff;padding:48px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+footer p{margin:4px 0;color:#D3DDDA;font-size:15px}
+footer a{color:#fff}
+.badge{position:fixed;right:14px;bottom:14px;z-index:60;background:#fff;color:var(--spruce);border:1px solid #9FB0AB;border-radius:6px;padding:7px 12px;font:500 13px var(--mono);box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .frames{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+  .fr{height:150px}
+  .svc,.about .wrap,.visit .wrap{grid-template-columns:minmax(0,1fr)}
+  .answer{grid-template-columns:minmax(0,1fr)}
+  .sec{padding:60px 0}
+}
+@media(max-width:700px){
+  .hero{padding:40px 0 30px}
+  .hero h1{font-size:35px}
+  .hero .sub{font-size:17px;margin-bottom:22px}
+  .pipe{height:44px;margin-top:20px}
+  .frames .fr{height:118px;font-size:14px}
+  .duo .fr{height:200px}
+  .strip{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .strip .fr{height:110px;font-size:13px;padding:6px}
+  .badge{bottom:80px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--spruce);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 8px}
+  .callbar .btn-line{background:transparent;color:#fff;border-color:#fff}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pipe path{stroke-dashoffset:0}.pipe circle{opacity:1}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="valve" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3.5v17M3.5 12h17" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/></symbol>
+</defs></svg>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg aria-hidden="true" style="color:#fff"><use href="#valve"/></svg><span>Walton <span class="long">Plumbing, Heating &amp; Air</span></span></a>
+    <nav class="nav" aria-label="Main"><a href="#help">What's going on?</a><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+    <a class="btn turnable" href="tel:+18567691403"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>(856) 769-1403</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <span class="mono"><i class="flame" aria-hidden="true"></i>Family owned · Mullica Hill, NJ</span>
+    <h1>Plumbing, heat and AC from a family shop on Mullica Hill Rd.</h1>
+    <p class="sub">Walton Plumbing, Heating &amp; Air is family owned and operated, serving homes and businesses across South Jersey.</p>
+    <div class="ctas">
+      <a class="btn btn-teal turnable" href="tel:+18567691403"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>Call (856) 769-1403</a>
+      <a class="btn btn-line turnable" href="#help"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>What's going on?</a>
+    </div>
+    <svg class="pipe" viewBox="0 0 1080 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 14 H420 Q440 14 440 34 V36 Q440 56 460 56 H1080"/>
+      <circle cx="405" cy="14" r="7"/><circle cx="675" cy="56" r="7"/><circle cx="945" cy="56" r="7"/>
+    </svg>
+    <div class="frames" aria-label="Photo frames for Walton's work">
+      <div class="fr"><span class="ttag">No. 01 · Plumbing</span>Your photo here</div>
+      <div class="fr"><span class="ttag">No. 02 · Heating</span>Your photo here</div>
+      <div class="fr"><span class="ttag">No. 03 · Air</span>Your photo here</div>
+      <div class="fr"><span class="ttag">No. 04 · The shop</span>Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec center" id="help">
+  <div class="wrap">
+    <span class="mono">Pick a tag</span>
+    <h2 style="margin-top:10px">What's going on at your place?</h2>
+    <p class="lead">Tap what sounds like your problem to see who handles it. Then call and tell Walton the details.</p>
+    <div class="tags" role="group" aria-label="Problems">
+      <button class="btag" type="button" aria-pressed="false" data-k="heat">No heat</button>
+      <button class="btag" type="button" aria-pressed="false" data-k="water">No hot water</button>
+      <button class="btag" type="button" aria-pressed="false" data-k="ac">AC not cooling</button>
+      <button class="btag" type="button" aria-pressed="false" data-k="leak">Leak or drip</button>
+      <button class="btag" type="button" aria-pressed="false" data-k="drain">Slow drain</button>
+      <button class="btag" type="button" aria-pressed="false" data-k="biz">Commercial job</button>
+    </div>
+    <div class="answer" aria-live="polite">
+      <div><span class="mono" id="aTag">Tag not picked yet</span><h3 id="aT">Pick a tag above</h3><p id="aD">Plumbing, heating and air conditioning all come from one family shop, so one call covers it.</p></div>
+      <a class="btn btn-teal turnable" href="tel:+18567691403"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>Call Walton</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:10px">
+  <div class="wrap">
+    <div class="center"><span class="mono">Services</span><h2 style="margin-top:10px">Homes and businesses</h2></div>
+    <div class="svc">
+      <div class="col"><span class="mono">Residential</span><h3>For your home</h3>
+        <ul><li>Plumbing service and repairs</li><li>Heating</li><li>Air conditioning</li><li>Drains, piping and pumps</li></ul></div>
+      <div class="col"><span class="mono">Commercial</span><h3>For your business</h3>
+        <ul><li>Commercial plumbing and HVAC</li><li>Assisted living, retail, offices and restaurants</li><li>New work, renovations and interior fit-ups</li><li>Service work and repairs</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about" style="padding-top:10px">
+  <div class="wrap">
+    <div>
+      <span class="mono">About the shop</span>
+      <h2>Family owned and operated.</h2>
+      <p>Walton Plumbing, Heating &amp; Air Conditioning is a family owned and operated contractor at 1020 Mullica Hill Rd, led by owner C.D. Walton.</p>
+      <p>The shop takes on residential work and commercial jobs like assisted living, retail, office buildings and restaurants.</p>
+      <div class="areas"><span>Gloucester County</span><span>South Jersey</span><span>Central Jersey</span></div>
+    </div>
+    <div class="duo" aria-label="Photo frames for the shop">
+      <div class="fr"><span class="ttag">No. 05 · The crew</span>Your photo here</div>
+      <div class="fr"><span class="ttag">No. 06 · On the job</span>Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="mono">Find us</span>
+      <h2>1020 Mullica Hill Rd</h2>
+      <ul class="facts">
+        <li><span>Address</span><strong>1020 Mullica Hill Rd, Mullica Hill, NJ 08062</strong></li>
+        <li><span>Phone</span><a href="tel:+18567691403">(856) 769-1403</a></li>
+        <li><span>Owner</span><strong>C.D. Walton</strong></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-teal turnable" href="tel:+18567691403"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>Call</a>
+        <a class="btn btn-line turnable" href="https://www.google.com/maps/dir/?api=1&amp;destination=1020%20Mullica%20Hill%20Rd%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>Get directions</a>
+      </div>
+    </div>
+    <div class="strip" aria-label="More photo frames">
+      <div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec center" id="quote">
+  <div class="wrap quote">
+    <span class="mono">Ask for a visit</span>
+    <h2 style="margin-top:10px">Tell Walton what you need.</h2>
+    <form id="form">
+      <label for="n">Name</label><input id="n" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required>
+      <label for="t">What kind of job?</label>
+      <select id="t"><option>Plumbing</option><option>Heating</option><option>Air conditioning</option><option>Commercial job</option><option>Something else</option></select>
+      <label for="m">What's going on?</label><textarea id="m"></textarea>
+      <button class="btn btn-teal turnable" type="submit"><svg class="valve" aria-hidden="true"><use href="#valve"/></svg>Send</button>
+      <p class="formnote" id="note" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><p style="color:#fff;font-size:18px;font-weight:500">Walton Plumbing, Heating &amp; Air Conditioning</p><p>1020 Mullica Hill Rd, Mullica Hill, NJ 08062</p></div>
+    <div><p><a href="tel:+18567691403">(856) 769-1403</a></p><p>Demo preview prepared for Walton Plumbing Heating &amp; Air</p></div>
+  </div>
+</footer>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-teal" href="tel:+18567691403">Call Walton</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=1020%20Mullica%20Hill%20Rd%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener">Directions</a></div>
+
+<script>
+(function(){
+  var A={
+    heat:['Heating','No heat','Walton works on heating for homes and businesses. Call and say what the system is doing (no heat, short cycling, odd noises).'],
+    water:['Plumbing','No hot water','Hot water problems fall under plumbing, which is Walton\u2019s main trade. Call with the age and type of your heater if you know it.'],
+    ac:['Air conditioning','AC not cooling','Air conditioning and air distribution are part of what the shop does. Call to set up a visit.'],
+    leak:['Plumbing','Leak or drip','From a dripping fixture to a leaking pipe, plumbing repairs are Walton’s everyday work. Shut the water off if you can, then call.'],
+    drain:['Plumbing','Slow drain','Drains, sanitary piping and pumps are on Walton’s list. Call and tell them which drains are slow.'],
+    biz:['Commercial','Commercial job','Assisted living, retail, offices and restaurants: new work, renovations, fit-ups and service calls. Call to talk through the job.']
+  };
+  document.querySelectorAll('.btag').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.btag').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true'); var a=A[b.dataset.k];
+    document.getElementById('aTag').textContent='Handled by: '+a[0];
+    document.getElementById('aT').textContent=a[1];
+    document.getElementById('aD').textContent=a[2];
+  })});
+  document.addEventListener('click',function(e){var b=e.target.closest('.turnable');if(!b)return;b.classList.add('turn');setTimeout(function(){b.classList.remove('turn')},600)});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('note').classList.add('show')});
+})();
+</script>
+</body>
+</html>

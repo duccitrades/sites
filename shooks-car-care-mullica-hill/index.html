@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Shook's Car Care | Auto Repair in Mullica Hill, NJ</title>
+<meta name="description" content="Shook's Car Care, 169 Bridgeton Pike, Mullica Hill NJ. Independent auto repair, maintenance and detailing, about 25 years running. Mon to Fri 9 to 6. Call (856) 478-9670.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Saira:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#F3F2EF; --card:#FFFFFF; --gun:#22282D; --gun2:#2C3339; --petrol:#1B5269; --petrol-d:#154356; --sig:#2F7A97;
+  --text:#1C2024; --muted:#4B535A; --line:#DAD8D2; --frame:#E6E5E0; --chalk:#F1F4F5;
+  --head:'Saira',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--head);font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+a{color:var(--petrol)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.label{font-family:var(--head);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+.top{position:sticky;top:0;z-index:40;background:var(--gun);color:#fff}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{color:#fff;text-decoration:none;font-family:var(--head);font-size:21px;font-weight:500;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.brand i{width:26px;height:20px;border-radius:3px;background:repeating-linear-gradient(180deg,#2F7A97 0 4px,#24627A 4px 5px);display:inline-block}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{color:#fff;text-decoration:none;font-size:15px}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:6px;font:500 17px/1 var(--head);text-decoration:none;border:1.5px solid transparent;cursor:pointer}
+.btn .wr{width:18px;height:18px;flex:none;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.btn.turn .wr{transform:rotate(-90deg)}
+.btn-p{background:var(--petrol);color:#fff}
+.btn-p:hover{background:var(--petrol-d)}
+.btn-l{background:var(--card);color:var(--text);border-color:#A7ADB2}
+.top .btn{padding:10px 14px;font-size:15px;background:#fff;color:var(--gun)}
+@media(max-width:900px){.nav{display:none}.top .btn{margin-left:auto}}
+@media(max-width:420px){.top .wrap{gap:10px}.brand{font-size:17px}.brand i{display:none}.top .btn{padding:9px 11px;font-size:14px;gap:6px}}
+
+/* hero */
+.hero{padding:46px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:46px;align-items:center}
+.hero h1{font-size:clamp(40px,5.4vw,62px);margin:12px 0 16px}
+.hero .sub{font-size:19px;color:var(--muted);max-width:36ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.meta span{font-size:14px;padding:6px 12px;border:1px solid #BFC3C6;border-radius:999px;background:var(--card)}
+/* garage bay */
+.bay{position:relative;border-radius:14px 14px 6px 6px;background:var(--gun2);padding:16px;overflow:hidden;box-shadow:0 0 0 6px #D3D2CC,0 30px 50px -30px rgba(34,40,45,.6)}
+.bay:before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:#3A434A}
+.door{position:absolute;inset:0;z-index:5;background:repeating-linear-gradient(180deg,#2F7A97 0 46px,#26667F 46px 50px);transform:translateY(0);transition:transform 1.6s .5s cubic-bezier(.65,0,.35,1)}
+.door:after{content:"";position:absolute;left:50%;bottom:14px;width:70px;height:10px;margin-left:-35px;border-radius:6px;background:#1A4C60}
+.open .door{transform:translateY(-101%)}
+.bay-in{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.shots{grid-column:1/3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.fr{height:120px;border-radius:6px;background:var(--frame);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text);font-size:15px;padding:8px}
+.board{background:var(--gun);border:1px solid #3E474E;border-radius:8px;padding:18px 18px 14px;color:#fff}
+.status{display:flex;align-items:center;gap:10px;font-family:var(--head);font-size:22px}
+.status i{width:12px;height:12px;border-radius:50%;background:#9AA3AA;flex:none}
+.status.on i{background:#4CC38A;box-shadow:0 0 0 4px rgba(76,195,138,.2)}
+.snote{font-size:14px;color:#D2D8DC;margin:4px 0 12px}
+.days{list-style:none;margin:0;padding:0;font-size:15px}
+.days li{display:flex;justify-content:space-between;padding:5px 8px;border-radius:4px;color:#E8ECEE}
+.days li.today{background:var(--chalk);color:var(--gun);font-weight:700}
+.map{background:var(--chalk);border-radius:8px;padding:12px;display:flex;flex-direction:column}
+.map svg{width:100%;height:auto;flex:1}
+.map p{margin:8px 0 10px;font-size:14px;color:var(--text)}
+.map .btn{padding:11px 14px;font-size:15px}
+
+/* noise */
+.sec{padding:80px 0}
+.sec h2{font-size:clamp(34px,4.4vw,48px)}
+.noise{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font:500 16px var(--head);padding:12px 18px;border-radius:6px;border:1.5px solid #A7ADB2;background:var(--card);color:var(--text);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gun);color:#fff;border-color:var(--gun)}
+.readout{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--sig);border-radius:8px;padding:24px}
+.readout h3{font-size:26px;margin:6px 0 8px}
+.readout p{color:var(--muted)}
+
+/* services */
+.bays{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.svc .num{background:var(--gun);color:#fff;font-family:var(--head);font-size:14px;letter-spacing:.12em;padding:10px 18px}
+.svc .fr{height:170px;border-radius:0}
+.svc h3{font-size:24px;padding:18px 18px 4px}
+.svc p{padding:0 18px 18px;margin:0;color:var(--muted)}
+
+/* reviews */
+.rev{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.score{font-family:var(--head);font-size:56px;line-height:1}
+.score small{display:block;font-family:var(--body);font-size:15px;color:var(--muted);margin-top:6px}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.q{border:1px solid var(--line);border-radius:8px;padding:24px;background:var(--base)}
+.q blockquote{margin:0;font-size:19px;line-height:1.5}
+.q cite{display:block;font-style:normal;color:var(--muted);font-size:15px;margin-top:12px}
+
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
+.strip .fr{height:170px}
+
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:46px}
+.facts{list-style:none;padding:0;margin:20px 0 24px}
+.facts li{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--line)}
+.facts li span{color:var(--muted)}
+form{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px}
+label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px;border:1px solid #A7ADB2;border-radius:6px;background:#fff;color:var(--text);margin-bottom:14px}
+.formnote{display:none;margin-top:12px;padding:12px;border-radius:6px;background:#E2EEF2;font-weight:700}
+.formnote.show{display:block}
+
+footer{background:var(--gun);color:#fff;padding:48px 0 110px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{margin:4px 0;color:#D2D8DC;font-size:15px}
+footer a{color:#fff}
+.badge{position:fixed;left:14px;bottom:14px;z-index:60;background:#fff;color:var(--gun);border:1px solid #A7ADB2;border-radius:6px;padding:7px 12px;font:500 13px var(--head);letter-spacing:.04em}
+.callbar{display:none}
+
+@media(max-width:900px){
+  .hero .wrap,.noise,.visit .wrap{grid-template-columns:minmax(0,1fr)}
+  .bays{grid-template-columns:minmax(0,1fr)}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes{grid-template-columns:minmax(0,1fr)}
+  .sec{padding:60px 0}
+}
+@media(max-width:700px){
+  .hero{padding:24px 0 50px}
+  .hero .wrap{gap:24px}
+  .hero h1{font-size:38px;margin:8px 0 10px}
+  .hero .sub{font-size:17px}
+  .ctas{margin-top:16px}
+  .meta{display:none}
+  .bay{padding:10px}
+  .bay-in{grid-template-columns:minmax(0,1fr)}
+  .shots{grid-column:auto}
+  .shots .fr{height:92px;font-size:13px}
+  .svc .fr{height:140px}
+  .strip .fr{height:130px}
+  .badge{bottom:80px;left:10px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--gun);padding:10px 12px;gap:10px}
+  .callbar a{flex:1;padding:13px 8px}
+  .callbar .btn-l{background:transparent;color:#fff;border-color:#fff}
+}
+@media(prefers-reduced-motion:reduce){.door{display:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="wr" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-2.6-2.6 6-6-2.4-2.4-6 6L5.4 13.4l8-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</defs></svg>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>Shook's Car Care</a>
+    <nav class="nav" aria-label="Main"><a href="#hours">Hours</a><a href="#noise">What's that noise?</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+    <a class="btn wturn" href="tel:+18564789670"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>(856) 478-9670</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hours">
+  <div class="wrap">
+    <div>
+      <span class="label">169 Bridgeton Pike · Mullica Hill, NJ</span>
+      <h1>Your car, looked after on Bridgeton Pike.</h1>
+      <p class="sub">Shook's Car Care is an independent repair shop for maintenance, repairs and detailing, about 25 years running.</p>
+      <div class="ctas">
+        <a class="btn btn-p wturn" href="tel:+18564789670"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>Call (856) 478-9670</a>
+        <a class="btn btn-l wturn" href="#noise"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>What's that noise?</a>
+      </div>
+      <div class="meta"><span>About 25 years</span><span>A+ with the BBB</span><span>4.6 on Google</span></div>
+    </div>
+    <div class="bay" aria-label="Shop hours and location">
+      <div class="door" aria-hidden="true"></div>
+      <div class="bay-in">
+        <div class="shots" aria-label="Photo frames for the shop">
+          <div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div>
+        </div>
+        <div class="board">
+          <div class="status" id="status"><i></i><span id="stxt">Mon to Fri, 9 to 6</span></div>
+          <p class="snote" id="snote">Closed Saturday and Sunday.</p>
+          <ul class="days" id="days"></ul>
+        </div>
+        <div class="map">
+          <svg viewBox="0 0 220 120" aria-hidden="true"><rect width="220" height="120" rx="6" fill="#E3E8EA"/><path d="M-5 92 C60 80 120 60 225 30" stroke="#fff" stroke-width="14" fill="none"/><path d="M-5 92 C60 80 120 60 225 30" stroke="#B8C3C8" stroke-width="1.5" stroke-dasharray="6 6" fill="none"/><path d="M70 -5 L95 125" stroke="#fff" stroke-width="8"/><circle cx="128" cy="57" r="9" fill="#1B5269"/><circle cx="128" cy="57" r="3.5" fill="#fff"/></svg>
+          <p><strong>169 Bridgeton Pike</strong><br>Mullica Hill, NJ 08062</p>
+          <a class="btn btn-p wturn" href="https://www.google.com/maps/dir/?api=1&amp;destination=169%20Bridgeton%20Pike%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="noise" style="padding-top:20px">
+  <div class="wrap">
+    <span class="label">Tap what you hear</span>
+    <h2 style="margin-top:8px">What's that noise?</h2>
+    <div class="noise">
+      <div class="chips" role="group" aria-label="Car noises">
+        <button class="chip" type="button" aria-pressed="false" data-k="squeal">Squeal when braking</button>
+        <button class="chip" type="button" aria-pressed="false" data-k="grind">Grinding</button>
+        <button class="chip" type="button" aria-pressed="false" data-k="click">Clicking, won't start</button>
+        <button class="chip" type="button" aria-pressed="false" data-k="thump">Thump over bumps</button>
+        <button class="chip" type="button" aria-pressed="false" data-k="hiss">Hiss under the hood</button>
+        <button class="chip" type="button" aria-pressed="false" data-k="light">A light came on</button>
+      </div>
+      <div class="readout" aria-live="polite">
+        <span class="label" id="nk">Pick a sound</span>
+        <h3 id="nt">Tell the shop what you're hearing</h3>
+        <p id="nd">Every car is different, so the only sure answer comes from a look in the bay. Pick a sound to see what it often points to.</p>
+        <a class="btn btn-p wturn" href="tel:+18564789670"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>Call Shook's</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="padding-top:10px">
+  <div class="wrap">
+    <span class="label">Services</span>
+    <h2 style="margin-top:8px">What the shop does</h2>
+    <div class="bays">
+      <div class="svc"><div class="num">01</div><div class="fr">Your photo here</div><h3>Repair and service</h3><p>Repairs for the problems that come up between oil changes.</p></div>
+      <div class="svc"><div class="num">02</div><div class="fr">Your photo here</div><h3>Maintenance</h3><p>Regular upkeep that keeps your car running and on the road.</p></div>
+      <div class="svc"><div class="num">03</div><div class="fr">Your photo here</div><h3>Detailing</h3><p>A clean car inside and out, done at the same shop that fixes it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev" id="reviews">
+  <div class="wrap">
+    <div class="rev-top">
+      <div><span class="label">What customers say</span><h2 style="margin-top:8px">Kind, straightforward and helpful.</h2></div>
+      <div class="score">4.6<small>from 20 Google reviews</small></div>
+    </div>
+    <div class="quotes">
+      <figure class="q" style="margin:0"><blockquote>"I love this place, Bob and the crew always make sure to get the job done. I will always call them first."</blockquote><cite>Thomas C. · Google</cite></figure>
+      <figure class="q" style="margin:0"><blockquote>"They are always so kind, straightforward, and helpful. I feel really comfortable going to them whenever I have car trouble."</blockquote><cite>Sarah H. · Google</cite></figure>
+      <figure class="q" style="margin:0"><blockquote>"The car was repaired at a reasonable cost within 24 hours."</blockquote><cite>Paul N. · Google</cite></figure>
+    </div>
+    <div class="strip" aria-label="More photo frames"><div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div><div class="fr">Your photo here</div></div>
+  </div>
+</section>
+
+<section class="sec visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="label">Visit</span>
+      <h2 style="margin-top:8px">169 Bridgeton Pike</h2>
+      <ul class="facts">
+        <li><span>Address</span><strong>169 Bridgeton Pike, Mullica Hill, NJ 08062</strong></li>
+        <li><span>Phone</span><a href="tel:+18564789670">(856) 478-9670</a></li>
+        <li><span>Hours</span><strong>Mon to Fri 9 am to 6 pm</strong></li>
+        <li><span>Payment</span><strong>Visa, Mastercard, Discover, Amex</strong></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-p wturn" href="tel:+18564789670"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>Call</a>
+        <a class="btn btn-l wturn" href="https://www.google.com/maps/dir/?api=1&amp;destination=169%20Bridgeton%20Pike%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <form id="form">
+      <label for="n">Name</label><input id="n" autocomplete="name" required>
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="tel" required>
+      <label for="c">Car (year, make, model)</label><input id="c">
+      <label for="m">What's going on?</label><textarea id="m"></textarea>
+      <button class="btn btn-p wturn" type="submit"><svg class="wr" aria-hidden="true"><use href="#wr"/></svg>Ask for a time</button>
+      <p class="formnote" id="fn" role="status">This is a demo. On your real site this sends straight to you.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><p style="color:#fff;font-family:var(--head);font-size:22px">Shook's Car Care</p><p>169 Bridgeton Pike, Mullica Hill, NJ 08062</p></div>
+    <div><p><a href="tel:+18564789670">(856) 478-9670</a></p><p>Demo preview prepared for Shook's Car Care</p></div>
+  </div>
+</footer>
+<div class="badge">Demo preview</div>
+<div class="callbar"><a class="btn btn-p" href="tel:+18564789670">Call Shook's</a><a class="btn btn-l" href="https://www.google.com/maps/dir/?api=1&amp;destination=169%20Bridgeton%20Pike%2C%20Mullica%20Hill%2C%20NJ%2008062" target="_blank" rel="noopener">Directions</a></div>
+
+<script>
+(function(){
+  requestAnimationFrame(function(){document.body.classList.add('open')});
+  var N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var d=new Date(),t=d.getDay(),h=d.getHours()+d.getMinutes()/60,ul=document.getElementById('days');
+  [1,2,3,4,5,6,0].forEach(function(i){var li=document.createElement('li');if(i===t)li.className='today';li.innerHTML='<span>'+N[i]+'</span><span>'+(i>0&&i<6?'9 am – 6 pm':'Closed')+'</span>';ul.appendChild(li)});
+  var open=t>0&&t<6&&h>=9&&h<18,st=document.getElementById('status');
+  if(open){st.classList.add('on');document.getElementById('stxt').textContent='Open now';document.getElementById('snote').textContent='Open until 6 pm today, '+N[t]+'.';}
+  else{var nx=(t>0&&t<6&&h<9)?'today at 9 am':((t===5||t===6)?'Monday at 9 am':(t===0?'tomorrow at 9 am':'tomorrow at 9 am'));
+    document.getElementById('stxt').textContent='Closed now';document.getElementById('snote').textContent='Opens '+nx+'.';}
+  var A={squeal:['Brakes','Squeal when braking','A squeal when you brake often means the pads are getting low. Worth a look before it turns into grinding.'],
+    grind:['Brakes or bearings','Grinding','Grinding can come from worn brakes or a wheel bearing. Best not to wait on this one.'],
+    click:['Starting system','Clicking, won’t start','A click with no start often points to the battery, a connection or the starter.'],
+    thump:['Suspension','Thump over bumps','A thump over bumps can come from worn suspension parts or loose components.'],
+    hiss:['Cooling or vacuum','Hiss under the hood','A hiss can be a coolant or vacuum leak. If the temperature gauge climbs, pull over.'],
+    light:['Dashboard light','A light came on','Check engine, brake or battery: each light means something different. Call and say which one is on.']};
+  document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});c.setAttribute('aria-pressed','true');var a=A[c.dataset.k];
+    document.getElementById('nk').textContent='Often: '+a[0];document.getElementById('nt').textContent=a[1];document.getElementById('nd').textContent=a[2]+' Call Shook’s to have it checked.';})});
+  document.addEventListener('click',function(e){var b=e.target.closest('.wturn');if(!b)return;b.classList.add('turn');setTimeout(function(){b.classList.remove('turn')},450)});
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('fn').classList.add('show')});
+})();
+</script>
+</body>
+</html>
