@@ -1,0 +1,134 @@
+{
+ "slug": "v5-cycles-flemington",
+ "submission": null,
+ "at": "2026-11-03T19:37:36.065502Z",
+ "files": [
+  {
+   "kind": "web",
+   "name": "logo.png",
+   "path": "v5-cycles-flemington/assets/logo.png",
+   "bytes": 25940,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "logo-footer.png",
+   "path": "v5-cycles-flemington/assets/logo-footer.png",
+   "bytes": 23967,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "shop-supercaliber.jpg",
+   "path": "v5-cycles-flemington/assets/shop-supercaliber.jpg",
+   "bytes": 16905,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "banner-domane.png",
+   "path": "v5-cycles-flemington/assets/banner-domane.png",
+   "bytes": 5614,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "banner-borrego.png",
+   "path": "v5-cycles-flemington/assets/banner-borrego.png",
+   "bytes": 13693,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "fx2.png",
+   "path": "v5-cycles-flemington/assets/fx2.png",
+   "bytes": 41762,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "marlin5.png",
+   "path": "v5-cycles-flemington/assets/marlin5.png",
+   "bytes": 42344,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "checkpoint-alr3.png",
+   "path": "v5-cycles-flemington/assets/checkpoint-alr3.png",
+   "bytes": 46383,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "verve3.png",
+   "path": "v5-cycles-flemington/assets/verve3.png",
+   "bytes": 45671,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "roscoe8.png",
+   "path": "v5-cycles-flemington/assets/roscoe8.png",
+   "bytes": 44379,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "fxsport3.png",
+   "path": "v5-cycles-flemington/assets/fxsport3.png",
+   "bytes": 42437,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "precaliber20.png",
+   "path": "v5-cycles-flemington/assets/precaliber20.png",
+   "bytes": 42634,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "domane-al2.png",
+   "path": "v5-cycles-flemington/assets/domane-al2.png",
+   "bytes": 43799,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "bolinas.png",
+   "path": "v5-cycles-flemington/assets/bolinas.png",
+   "bytes": 42990,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "topfuel.jpg",
+   "path": "v5-cycles-flemington/assets/topfuel.jpg",
+   "bytes": 11236,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "checkpoint-alr5.png",
+   "path": "v5-cycles-flemington/assets/checkpoint-alr5.png",
+   "bytes": 45833,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "micro-ripper.jpg",
+   "path": "v5-cycles-flemington/assets/micro-ripper.jpg",
+   "bytes": 11171,
+   "ok": true
+  },
+  {
+   "kind": "web",
+   "name": "verve1.png",
+   "path": "v5-cycles-flemington/assets/verve1.png",
+   "bytes": 43587,
+   "ok": true
+  }
+ ],
+ "ok": true
+}
