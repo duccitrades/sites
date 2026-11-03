@@ -35,6 +35,18 @@ for f in sorted(glob.glob('incoming/*.json')):
     slug = re.sub(r'[^a-z0-9-]', '', job.get('slug', ''))
     res = {'slug': slug, 'submission': job.get('submission'), 'at': datetime.datetime.utcnow().isoformat() + 'Z', 'files': []}
     try:
+        if job.get('urls'):  # public images (for example a business's own site), no key needed
+            for u in job['urls']:
+                url, name = (u['url'], u['name']) if isinstance(u, dict) else (u, None)
+                name = re.sub(r'[^a-z0-9.-]', '-', (name or url.split('?')[0].rsplit('/', 1)[-1]).lower())
+                dest = f'{slug}/assets/{name}'
+                try:
+                    data = get(url, auth=False); os.makedirs(os.path.dirname(dest), exist_ok=True); open(dest, 'wb').write(data)
+                    res['files'].append({'kind': 'web', 'name': name, 'path': dest, 'bytes': len(data), 'ok': True})
+                except Exception as e:
+                    res['files'].append({'kind': 'web', 'name': name, 'ok': False, 'error': str(e)[:200]})
+            res['ok'] = all(x['ok'] for x in res['files'])
+            raise StopIteration
         if not KEY: raise RuntimeError('TALLY_API_KEY secret is missing')
         if not slug: raise RuntimeError('missing slug')
         qs, sub = find_submission(job.get('form', 'q5Zyxg'), job.get('submission'))
@@ -58,6 +70,8 @@ for f in sorted(glob.glob('incoming/*.json')):
                 except Exception as e:
                     res['files'].append({'kind': k, 'question': label, 'name': a.get('name'), 'ok': False, 'error': str(e)[:200]})
         res['ok'] = all(x['ok'] for x in res['files'])
+    except StopIteration:
+        pass
     except Exception as e:
         res['ok'] = False; res['error'] = str(e)[:300]
     os.makedirs('incoming/done', exist_ok=True)
