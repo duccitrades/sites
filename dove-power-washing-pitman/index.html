@@ -114,6 +114,8 @@ p{margin:0 0 1em}
 .s-siding{background:repeating-linear-gradient(180deg,#F1F5F9 0 26px,#D9E2EB 26px 29px,#C2CEDA 29px 30px)}
 .s-deck{background:repeating-linear-gradient(90deg,#F3EEE6 0 40px,#E3D9CB 40px 42px,#D7CBBA 42px 43px)}
 .s-patio{background:repeating-linear-gradient(90deg,transparent 0 58px,#CBD4DD 58px 61px),repeating-linear-gradient(0deg,#EEF1F4 0 58px,#CBD4DD 58px 61px)}
+.scrub .ph-note{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;background:#fff;color:var(--text);border:1px dashed #8FA3B8;border-radius:12px;padding:10px 14px;text-align:center;font-family:var(--head);font-size:14px;font-weight:400;line-height:1.35;max-width:82%;width:max-content}
+.scrub .ph-note small{display:block;font-size:12.5px;color:var(--muted);font-weight:300}
 .scrub canvas{position:absolute;inset:0;width:100%;height:100%;transition:opacity .7s ease}
 .scrub.done canvas{opacity:0;pointer-events:none}
 .scrub .name{position:absolute;top:14px;left:14px;z-index:3;background:#fff;color:var(--text);font-family:var(--head);font-size:14px;font-weight:400;padding:5px 12px;border-radius:999px;border:1px solid var(--line)}
@@ -316,6 +318,7 @@ footer .brand{font-size:18px}
         </div>
         <div class="tile scrub t-drive" data-kind="drive">
           <div class="surface s-drive"></div>
+          <div class="ph-note">Your photo here<small>Your before and after</small></div>
           <span class="name">Driveway</span>
           <canvas aria-hidden="true"></canvas>
           <span class="hint">Rub to clean</span>
@@ -323,6 +326,7 @@ footer .brand{font-size:18px}
         </div>
         <div class="tile scrub t-siding" data-kind="siding">
           <div class="surface s-siding"></div>
+          <div class="ph-note">Your photo here<small>Your before and after</small></div>
           <span class="name">Siding</span>
           <canvas aria-hidden="true"></canvas>
           <span class="hint">Rub to clean</span>
@@ -330,6 +334,7 @@ footer .brand{font-size:18px}
         </div>
         <div class="tile scrub t-deck" data-kind="deck">
           <div class="surface s-deck"></div>
+          <div class="ph-note">Your photo here<small>Your before and after</small></div>
           <span class="name">Deck</span>
           <canvas aria-hidden="true"></canvas>
           <span class="hint">Rub to clean</span>
@@ -337,13 +342,14 @@ footer .brand{font-size:18px}
         </div>
         <div class="tile scrub t-patio" data-kind="patio">
           <div class="surface s-patio"></div>
+          <div class="ph-note">Your photo here<small>Your before and after</small></div>
           <span class="name">Patio</span>
           <canvas aria-hidden="true"></canvas>
           <span class="hint">Rub to clean</span>
           <div class="reveal"><b>Patio, done.</b><a href="tel:+18566937011">Call Dove to set up a look</a></div>
         </div>
       </div>
-      <p class="scrub-note">Not sure if your surface is a fit? Ask when you call.</p>
+      <p class="scrub-note">Demo preview: the tiles use drawn surfaces for now. Send us your before and after photos and they go right into these tiles. Not sure if your surface is a fit? Ask when you call.</p>
     </div>
   </section>
 
