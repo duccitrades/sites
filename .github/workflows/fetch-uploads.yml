@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: pip install --quiet pillow pillow-heif
       - run: python3 .github/scripts/fetch_uploads.py
         env:
           TALLY_API_KEY: ${{ secrets.TALLY_API_KEY }}

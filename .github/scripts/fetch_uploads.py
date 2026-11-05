@@ -18,6 +18,32 @@ def find_submission(form, sid):
     qs = {q['id']: q for q in d.get('questions', [])}
     return qs, d.get('submission')
 
+
+def web_ready(dest):
+    """Phones often send HEIC photos (Chrome can't show them) or huge files. Save a web-ready JPG/PNG instead."""
+    try:
+        from PIL import Image, ImageOps
+        try:
+            import pillow_heif; pillow_heif.register_heif_opener()
+        except Exception:
+            pass
+        low = dest.lower()
+        if not low.endswith(('.heic', '.heif', '.jpg', '.jpeg', '.png', '.webp')): return dest
+        im = Image.open(dest); im = ImageOps.exif_transpose(im)
+        heic = low.endswith(('.heic', '.heif'))
+        if not heic and max(im.size) <= 2400: return dest
+        im.thumbnail((2400, 2400))
+        out = re.sub(r'\.(heic|heif)$', '.jpg', dest, flags=re.I) if heic else dest
+        if out.lower().endswith(('.jpg', '.jpeg')):
+            im.convert('RGB').save(out, 'JPEG', quality=85, optimize=True)
+        else:
+            im.save(out, optimize=True)
+        if out != dest: os.remove(dest)
+        return out
+    except Exception as e:
+        print('web_ready skipped', dest, e)
+        return dest
+
 def kind(label):
     l = (label or '').lower()
     if 'logo' in l: return 'logo'
@@ -41,7 +67,7 @@ for f in sorted(glob.glob('incoming/*.json')):
                 name = re.sub(r'[^a-z0-9.-]', '-', (name or url.split('?')[0].rsplit('/', 1)[-1]).lower())
                 dest = f'{slug}/assets/{name}'
                 try:
-                    data = get(url, auth=False); os.makedirs(os.path.dirname(dest), exist_ok=True); open(dest, 'wb').write(data)
+                    data = get(url, auth=False); os.makedirs(os.path.dirname(dest), exist_ok=True); open(dest, 'wb').write(data); dest = web_ready(dest)
                     res['files'].append({'kind': 'web', 'name': name, 'path': dest, 'bytes': len(data), 'ok': True})
                 except Exception as e:
                     res['files'].append({'kind': 'web', 'name': name, 'ok': False, 'error': str(e)[:200]})
@@ -66,7 +92,8 @@ for f in sorted(glob.glob('incoming/*.json')):
                     data = get(a['url'], auth=False)
                     os.makedirs(os.path.dirname(dest), exist_ok=True)
                     open(dest, 'wb').write(data)
-                    res['files'].append({'kind': k, 'question': label, 'name': a.get('name'), 'path': dest, 'bytes': len(data), 'ok': True})
+                    dest = web_ready(dest)
+                    res['files'].append({'kind': k, 'question': label, 'name': a.get('name'), 'path': dest, 'bytes': os.path.getsize(dest), 'ok': True})
                 except Exception as e:
                     res['files'].append({'kind': k, 'question': label, 'name': a.get('name'), 'ok': False, 'error': str(e)[:200]})
         res['ok'] = all(x['ok'] for x in res['files'])
